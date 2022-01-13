@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@font-face {
+    font-family: "Mont";
+    src: local("Mont"), url(./src/fonts/Mont.otf) format("otf");
+}
+
+@tailwind utilities;
+@layer base {
+    h1 {
+        @apply text-3xl;
+    }
+    h2 {
+        @apply text-2xl;
+    }
+    h3 {
+        @apply text-lg;
+    }
+    h4 {
+        @apply text-base;
+    }
+}
