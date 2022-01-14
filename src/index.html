@@ -719,22 +719,94 @@
           <div class="flex justify-center mt-12 form-check">
             <label class="inline-flex items-center">
               <input type="checkbox"
-                class="form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary focus:border-0 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                class="form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary checked:border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
                 checked>
             </label>
           </div>
           <div class="text-lg text-secondary-20 flex justify-center mt-16">
             <label class="inline-flex items-center">
               <input type="checkbox"
-                class="form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary focus:border-0 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                class="form-checkbox opacity-20 text-secondary w-4.5 h-4.5 rounded border-2 checked:border-secondary border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
                 checked>
             </label>
           </div>
         </div>
-
+        <div class="flex flex-col items-align content-center">
+          <span class="text-checkboxTitle font-extrabold leading-none text-dark">Indeterminate</span>
+          <div class="flex justify-center mt-12 form-check">
+            <label class="inline-flex items-center">
+              <input type="checkbox"
+                class="form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary checked:border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                 id="intermediate">
+            </label>
+          </div>
+          <div class="text-lg text-secondary-20 flex justify-center mt-16">
+            <label class="inline-flex items-center">
+              <input type="checkbox"
+                class="form-checkbox opacity-20 text-secondary w-4.5 h-4.5 rounded border-2 border-secondary checked:border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                id="intermediate1">
+            </label>
+          </div>
+        </div>
+        <div class="flex flex-col items-align content-center">
+          <span class="text-checkboxTitle font-extrabold leading-none text-dark">Unselected</span>
+          <div class="flex justify-center mt-12 form-check">
+            <label class="inline-flex items-center">
+              <input type="checkbox"
+                class="form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary checked:border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0">
+            </label>
+          </div>
+          <div class="text-lg text-secondary-20 flex justify-center mt-16">
+            <label class="inline-flex items-center">
+              <input type="checkbox"
+                class="form-checkbox opacity-20 text-secondary w-4.5 h-4.5 rounded border-2 checked:border-secondary border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0">
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-19 mb-7 ml-25 flex flex-col space-y-17">
+      <span class="text-primary-20 text-6xl font-extrabold">Radio</span>
+      <div class="flex space-x-15">
+        <div class="flex flex-col items-align content-center">
+          <span class="text-checkboxTitle font-extrabold leading-none text-dark">Unselected</span>
+          <div class="flex justify-center mt-12 form-check">
+            <label class="inline-flex items-center">
+              <input type="radio"
+                class="form-radio text-secondary w-4.5 h-4.5 rounded-full checked:bg-white checked:border-secondary checked:bg-bgImg border-2 border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0">
+            </label>
+          </div>
+          <div class="text-lg text-secondary-20 flex justify-center mt-16">
+            <label class="inline-flex items-center">
+              <input type="radio"
+                class="form-radio opacity-20 text-secondary w-4.5 h-4.5 rounded-full checked:bg-white checked:border-secondary checked:bg-bgImg border-2 border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0">
+            </label>
+          </div>
+        </div>
+        <div class="flex flex-col items-align content-center">
+          <span class="text-checkboxTitle font-extrabold leading-none text-dark">Selected</span>
+          <div class="flex justify-center mt-12 form-check">
+            <label class="inline-flex items-center">
+              <input type="radio"
+                class="form-radio text-secondary w-4.5 h-4.5 rounded-full border-2 checked:bg-white checked:bg-bgImg checked:border-secondary border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                checked>
+            </label>
+          </div>
+          <div class="text-lg text-secondary-20 flex justify-center mt-16">
+            <label class="inline-flex items-center">
+              <input type="radio"
+                class="form-radio opacity-20 text-secondary w-4.5 h-4.5 rounded-full border-2 checked:bg-white checked:bg-bgImg checked:border-secondary border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                checked>
+            </label>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <script>
+    document.getElementById('intermediate').indeterminate = true;
+    document.getElementById('intermediate1').indeterminate = true;
+  </script>
 </body>
 
 </html>

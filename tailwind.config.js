@@ -23,8 +23,37 @@ module.exports = {
             tag: "7px",
         },
         extend: {
+            customForms: theme => ({
+                default: {
+                  checkbox: {
+                    position: 'relative',
+                    '&:indeterminate': {                        
+                      background: `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e")`,
+                      borderColor: 'transparent',
+                      backgroundColor: 'currentColor',
+                      backgroundSize: '100% 100%',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      '&:before':{
+                        content:'""',
+                        left: '-6px',
+                        right: '2px',
+                        top: '2px',
+                        bottom: '-6px',
+                        border: '2px solid #D13BC7',
+                        position: 'absolute',
+                        borderRadius: '4px',
+                        zIndex:'-1',
+                    },
+                    },                   
+                  }
+                }
+            }),
             fontSize: {
                 checkboxTitle: '22px'
+            },
+            backgroundImage:{
+                bgImg: `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='rgba(167, 47, 159, 1)' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`,       
             },
             boxShadow: {
                 base: "0px 1px 2px rgba(16, 16, 155, 0.08), 0px 1px 3px rgba(16, 16, 155, 0.08)",
