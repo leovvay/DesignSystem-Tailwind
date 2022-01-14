@@ -1,521 +1,740 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Basic HTML/Tailwind starter</title>
-    <meta name="description" content="Basic HTML/Tailwind starter" />
-    <meta name="author" content="Daily Dev Tips" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/icomoon.css" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
 
-  <body class="font-Mont flex flex-col space-y-36">
-    <!-- Colors section -->
-    <div class="w-full flex flex-col">
-      <div class="bg-background py-20 px-25">
-        <span
-          class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic"
-          >Colors</span
-        >
+<head>
+  <meta charset="utf-8" />
+  <title>Basic HTML/Tailwind starter</title>
+  <meta name="description" content="Basic HTML/Tailwind starter" />
+  <meta name="author" content="Daily Dev Tips" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/icomoon.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="font-Mont flex flex-col space-y-36">
+  <!-- Colors section -->
+  <div class="w-full flex flex-col">
+    <div class="bg-background py-20 px-25">
+      <span class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic">Colors</span>
+    </div>
+    <div class="flex gap-25 py-20 px-25">
+      <div class="flex-auto flex flex-col gap-37">
+        <!-- primary color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-primary rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-primaryDark rounded-tr-lg"></div>
+          </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-primary-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-primary-60"></div>
+            <div class="w-1/5 h-25 bg-primary-40"></div>
+            <div class="w-1/5 h-25 bg-primary-20"></div>
+            <div class="w-1/5 h-25 bg-primary-5 rounded-br-lg"></div>
+          </div>
+        </div>
+
+        <!-- dark color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-full h-25 bg-dark rounded-t-lg"></div>
+          </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-dark-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-dark-60"></div>
+            <div class="w-1/5 h-25 bg-dark-40"></div>
+            <div class="w-1/5 h-25 bg-dark-20"></div>
+            <div class="w-1/5 h-25 bg-dark-5 rounded-br-lg"></div>
+          </div>
+        </div>
+
+        <!-- blue color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-blue rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-blueDark rounded-tr-lg"></div>
+          </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-blue-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-blue-60"></div>
+            <div class="w-1/5 h-25 bg-blue-40"></div>
+            <div class="w-1/5 h-25 bg-blue-20"></div>
+            <div class="w-1/5 h-25 bg-blue-5 rounded-br-lg"></div>
+          </div>
+        </div>
+
+        <!-- green color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-green rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-greenDark rounded-tr-lg"></div>
+          </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-green-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-green-60"></div>
+            <div class="w-1/5 h-25 bg-green-40"></div>
+            <div class="w-1/5 h-25 bg-green-20"></div>
+            <div class="w-1/5 h-25 bg-green-5 rounded-br-lg"></div>
+          </div>
+        </div>
+
+        <!-- basic colors -->
+        <div class="flex space-x-4">
+          <div class="h-25 flex-auto rounded-lg bg-black"></div>
+          <div class="h-25 flex-auto border border-solid rounded-lg bg-white"></div>
+          <div class="h-25 flex-auto rounded-lg bg-background"></div>
+        </div>
       </div>
-      <div class="flex gap-25 py-20 px-25">
-        <div class="flex-auto flex flex-col gap-37">
-          <!-- primary color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-primary rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-primaryDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-primary-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-primary-60"></div>
-              <div class="w-1/5 h-25 bg-primary-40"></div>
-              <div class="w-1/5 h-25 bg-primary-20"></div>
-              <div class="w-1/5 h-25 bg-primary-5 rounded-br-lg"></div>
-            </div>
+      <div class="flex-auto flex flex-col gap-37">
+        <!-- secondary color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-secondary rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-secondaryDark rounded-tr-lg"></div>
           </div>
-
-          <!-- dark color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-full h-25 bg-dark rounded-t-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-dark-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-dark-60"></div>
-              <div class="w-1/5 h-25 bg-dark-40"></div>
-              <div class="w-1/5 h-25 bg-dark-20"></div>
-              <div class="w-1/5 h-25 bg-dark-5 rounded-br-lg"></div>
-            </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-secondary-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-secondary-60"></div>
+            <div class="w-1/5 h-25 bg-secondary-40"></div>
+            <div class="w-1/5 h-25 bg-secondary-20"></div>
+            <div class="w-1/5 h-25 bg-secondary-5 rounded-br-lg"></div>
           </div>
+        </div>
 
-          <!-- blue color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-blue rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-blueDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-blue-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-blue-60"></div>
-              <div class="w-1/5 h-25 bg-blue-40"></div>
-              <div class="w-1/5 h-25 bg-blue-20"></div>
-              <div class="w-1/5 h-25 bg-blue-5 rounded-br-lg"></div>
-            </div>
+        <!-- violet color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-violet rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-violetDark rounded-tr-lg"></div>
           </div>
-
-          <!-- green color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-green rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-greenDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-green-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-green-60"></div>
-              <div class="w-1/5 h-25 bg-green-40"></div>
-              <div class="w-1/5 h-25 bg-green-20"></div>
-              <div class="w-1/5 h-25 bg-green-5 rounded-br-lg"></div>
-            </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-violet-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-violet-60"></div>
+            <div class="w-1/5 h-25 bg-violet-40"></div>
+            <div class="w-1/5 h-25 bg-violet-20"></div>
+            <div class="w-1/5 h-25 bg-violet-5 rounded-br-lg"></div>
           </div>
+        </div>
 
-          <!-- basic colors -->
+        <!-- orange color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-orange rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-orangeDark rounded-tr-lg"></div>
+          </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-orange-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-orange-60"></div>
+            <div class="w-1/5 h-25 bg-orange-40"></div>
+            <div class="w-1/5 h-25 bg-orange-20"></div>
+            <div class="w-1/5 h-25 bg-orange-5 rounded-br-lg"></div>
+          </div>
+        </div>
+
+        <!-- red color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-red rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-redDark rounded-tr-lg"></div>
+          </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-red-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-red-60"></div>
+            <div class="w-1/5 h-25 bg-red-40"></div>
+            <div class="w-1/5 h-25 bg-red-20"></div>
+            <div class="w-1/5 h-25 bg-red-5 rounded-br-lg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- shadow -->
+    <div class="pt-20 px-25 flex space-x-12 items-center">
+      <span class="text-6xl font-extrabold not-italic text-primary-20">Shadows</span>
+      <div class="flex space-x-12 pt-8 pr-6 pb-10 pl-3.5">
+        <!-- shadow Base -->
+        <div class="flex flex-col space-y-1.5">
+          <span
+            class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider">Base</span>
+          <div class="w-25 h-25 rounded shadow-base"></div>
+        </div>
+
+        <!-- shadow MD -->
+        <div class="flex flex-col space-y-1.5">
+          <span class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider">md</span>
+          <div class="w-25 h-25 rounded shadow-md"></div>
+        </div>
+
+        <!-- shadow LG -->
+        <div class="flex flex-col space-y-1.5">
+          <span class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider">lg</span>
+          <div class="w-25 h-25 rounded shadow-lg"></div>
+        </div>
+
+        <!-- shadow XL -->
+        <div class="flex flex-col space-y-1.5">
+          <span class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider">xl</span>
+          <div class="w-25 h-25 rounded shadow-xl"></div>
+        </div>
+
+        <!-- shadow Inner -->
+        <div class="flex flex-col space-y-1.5">
+          <span
+            class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider">inner</span>
+          <div class="w-25 h-25 rounded shadow-inner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Typography section -->
+  <div class="w-full flex flex-col">
+    <div class="py-20 px-25 bg-background">
+      <span class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic">Typography</span>
+    </div>
+    <!-- Headings section -->
+    <div class="ml-25 mt-20 flex flex-col space-y-11">
+      <span class="text-primary-20 text-6xl font-extrabold">Headings</span>
+      <div class="ml-28 flex flex-col space-y-8">
+        <!-- h1 element -->
+        <div class="flex flex-col">
           <div class="flex space-x-4">
-            <div class="h-25 flex-auto rounded-lg bg-black"></div>
-            <div
-              class="h-25 flex-auto border border-solid rounded-lg bg-white"
-            ></div>
-            <div class="h-25 flex-auto rounded-lg bg-background"></div>
+            <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-3xl
+              1.875rem/1.625</span>
+            <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">H1 30 BOLD</span>
           </div>
+          <h1 class="font-extrabold leading-relaxed text-primary">
+            The quick brown fox jumps over the lazy dog
+          </h1>
         </div>
-        <div class="flex-auto flex flex-col gap-37">
-          <!-- secondary color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-secondary rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-secondaryDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-secondary-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-secondary-60"></div>
-              <div class="w-1/5 h-25 bg-secondary-40"></div>
-              <div class="w-1/5 h-25 bg-secondary-20"></div>
-              <div class="w-1/5 h-25 bg-secondary-5 rounded-br-lg"></div>
-            </div>
+        <!-- h2 element -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-2xl
+              1.5rem/1.625</span>
+            <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">H2 24 BOLD</span>
           </div>
-
-          <!-- violet color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-violet rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-violetDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-violet-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-violet-60"></div>
-              <div class="w-1/5 h-25 bg-violet-40"></div>
-              <div class="w-1/5 h-25 bg-violet-20"></div>
-              <div class="w-1/5 h-25 bg-violet-5 rounded-br-lg"></div>
-            </div>
-          </div>
-
-          <!-- orange color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-orange rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-orangeDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-orange-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-orange-60"></div>
-              <div class="w-1/5 h-25 bg-orange-40"></div>
-              <div class="w-1/5 h-25 bg-orange-20"></div>
-              <div class="w-1/5 h-25 bg-orange-5 rounded-br-lg"></div>
-            </div>
-          </div>
-
-          <!-- red color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-red rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-redDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-red-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-red-60"></div>
-              <div class="w-1/5 h-25 bg-red-40"></div>
-              <div class="w-1/5 h-25 bg-red-20"></div>
-              <div class="w-1/5 h-25 bg-red-5 rounded-br-lg"></div>
-            </div>
-          </div>
+          <h2 class="font-extrabold leading-relaxed text-primary">
+            The quick brown fox jumps over the lazy dog
+          </h2>
         </div>
-      </div>
-      <!-- shadow -->
-      <div class="pt-20 px-25 flex space-x-12 items-center">
-        <span class="text-6xl font-extrabold not-italic text-primary-20"
-          >Shadows</span
-        >
-        <div class="flex space-x-12 pt-8 pr-6 pb-10 pl-3.5">
-          <!-- shadow Base -->
-          <div class="flex flex-col space-y-1.5">
-            <span
-              class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider"
-              >Base</span
-            >
-            <div class="w-25 h-25 rounded shadow-base"></div>
+        <!-- h3 element -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-lg
+              1.125rem/1.625</span>
+            <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">H3 18 BOLD</span>
           </div>
-
-          <!-- shadow MD -->
-          <div class="flex flex-col space-y-1.5">
-            <span
-              class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider"
-              >md</span
-            >
-            <div class="w-25 h-25 rounded shadow-md"></div>
+          <h3 class="font-extrabold leading-relaxed text-primary">
+            The quick brown fox jumps over the lazy dog
+          </h3>
+        </div>
+        <!-- h4 element -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-base
+              1rem/1.625</span>
+            <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">H4 16 BOLD</span>
           </div>
-
-          <!-- shadow LG -->
-          <div class="flex flex-col space-y-1.5">
-            <span
-              class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider"
-              >lg</span
-            >
-            <div class="w-25 h-25 rounded shadow-lg"></div>
-          </div>
-
-          <!-- shadow XL -->
-          <div class="flex flex-col space-y-1.5">
-            <span
-              class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider"
-              >xl</span
-            >
-            <div class="w-25 h-25 rounded shadow-xl"></div>
-          </div>
-
-          <!-- shadow Inner -->
-          <div class="flex flex-col space-y-1.5">
-            <span
-              class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider"
-              >inner</span
-            >
-            <div class="w-25 h-25 rounded shadow-inner"></div>
-          </div>
+          <h4 class="font-extrabold leading-relaxed text-primary">
+            The quick brown fox jumps over the lazy dog
+          </h4>
         </div>
       </div>
     </div>
 
-    <!-- Typography section -->
-    <div class="w-full flex flex-col">
-      <div class="py-20 px-25 bg-background">
-        <span
-          class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic"
-          >Typography</span
-        >
-      </div>
-      <!-- Headings section -->
-      <div class="ml-25 mt-20 flex flex-col space-y-11">
-        <span class="text-primary-20 text-6xl font-extrabold">Headings</span>
-        <div class="ml-28 flex flex-col space-y-8">
-          <!-- h1 element -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span
-                class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                >text-3xl 1.875rem/1.625</span
-              >
-              <span
-                class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                >H1 30 BOLD</span
-              >
-            </div>
-            <h1 class="font-extrabold leading-relaxed text-primary">
-              The quick brown fox jumps over the lazy dog
-            </h1>
+    <!-- Text section -->
+    <div class="ml-25 mt-36 flex flex-col space-y-15">
+      <span class="text-primary-20 text-6xl font-extrabold">Text</span>
+      <div class="ml-28 flex flex-col space-y-8">
+        <!-- text regular -->
+        <div class="flex flex-col space-y-1.25">
+          <div class="flex space-x-4">
+            <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-base
+              1rem/1.625</span>
+            <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">Text Regular 16
+              Regular</span>
           </div>
-          <!-- h2 element -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span
-                class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                >text-2xl 1.5rem/1.625</span
-              >
-              <span
-                class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                >H2 24 BOLD</span
-              >
-            </div>
-            <h2 class="font-extrabold leading-relaxed text-primary">
-              The quick brown fox jumps over the lazy dog
-            </h2>
+          <span class="font-Heebo text-base leading-relaxed text-dark font-normal">Far far away, behind the word
+            mountains, far from the countries
+            Vokalia and Consonantia</span>
+        </div>
+        <!-- text medium -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-base
+              1rem/1.625</span>
+            <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">Text Regular 16
+              Medium</span>
           </div>
-          <!-- h3 element -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span
-                class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                >text-lg 1.125rem/1.625</span
-              >
-              <span
-                class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                >H3 18 BOLD</span
-              >
-            </div>
-            <h3 class="font-extrabold leading-relaxed text-primary">
-              The quick brown fox jumps over the lazy dog
-            </h3>
+          <span class="font-Heebo text-base leading-relaxed text-dark font-medium">Far far away, behind the word
+            mountains, far from the countries
+            Vokalia and Consonantia</span>
+        </div>
+        <!-- text bold -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-base
+              1rem/1.625</span>
+            <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">Text Regular 16
+              BOLD</span>
           </div>
-          <!-- h4 element -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span
-                class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                >text-base 1rem/1.625</span
-              >
-              <span
-                class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                >H4 16 BOLD</span
-              >
-            </div>
-            <h4 class="font-extrabold leading-relaxed text-primary">
-              The quick brown fox jumps over the lazy dog
-            </h4>
-          </div>
+          <span class="font-Heebo text-base leading-relaxed text-dark font-bold">Far far away, behind the word
+            mountains, far from the countries
+            Vokalia and Consonantia</span>
         </div>
       </div>
+    </div>
 
-      <!-- Text section -->
-      <div class="ml-25 mt-36 flex flex-col space-y-15">
-        <span class="text-primary-20 text-6xl font-extrabold">Text</span>
-        <div class="ml-28 flex flex-col space-y-8">
-          <!-- text regular -->
+    <!-- Labels -->
+    <div class="ml-25 mt-36 flex flex-col space-y-15">
+      <span class="text-primary-20 text-6xl font-extrabold">Labels</span>
+      <div class="ml-28 flex flex-col space-y-8">
+        <!-- button label 16 medium -->
+        <div class="flex flex-col space-y-1.25">
+          <div class="flex space-x-4">
+            <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-base
+              1rem/1.5</span>
+            <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">Button Label 16
+              MEDIUM</span>
+          </div>
+          <span class="font-Heebo text-base text-dark font-medium">This is a demo link</span>
+        </div>
+        <!-- label 12 bold -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-xs
+              0.75rem/1.5</span>
+            <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">LAbel 12
+              Bold</span>
+          </div>
+          <span class="font-Heebo text-xs leading-normal tracking-wide text-dark font-bold">The quick brown fox jumps
+            over the lazy dog</span>
+        </div>
+        <!-- uppercase label 12 medium -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-xs
+              0.75rem/1.5 Uppercase</span>
+            <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">Uppercase LAbel 12
+              MEDIUM</span>
+          </div>
+          <span class="font-Heebo text-xs leading-normal tracking-wider text-dark font-medium uppercase">The quick brown
+            fox jumps over the lazy dog</span>
+        </div>
+        <!-- small labels -->
+        <div class="flex flex-col space-y-8">
+          <!-- regular -->
           <div class="flex flex-col space-y-1.25">
             <div class="flex space-x-4">
-              <span
-                class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                >text-base 1rem/1.625</span
-              >
-              <span
-                class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                >Text Regular 16 Regular</span
-              >
+              <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-sm
+                0.75rem/1.5</span>
+              <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">SMALL LABEL 14
+                Regular</span>
             </div>
-            <span
-              class="font-Heebo text-base leading-relaxed text-dark font-normal"
-              >Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia</span
-            >
+            <span class="font-Heebo text-xs leading-normal text-dark font-normal">The quick brown fox jumps over the
+              lazy dog</span>
           </div>
-          <!-- text medium -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span
-                class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                >text-base 1rem/1.625</span
-              >
-              <span
-                class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                >Text Regular 16 Medium</span
-              >
-            </div>
-            <span
-              class="font-Heebo text-base leading-relaxed text-dark font-medium"
-              >Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia</span
-            >
-          </div>
-          <!-- text bold -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span
-                class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                >text-base 1rem/1.625</span
-              >
-              <span
-                class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                >Text Regular 16 BOLD</span
-              >
-            </div>
-            <span
-              class="font-Heebo text-base leading-relaxed text-dark font-bold"
-              >Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia</span
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Labels -->
-      <div class="ml-25 mt-36 flex flex-col space-y-15">
-        <span class="text-primary-20 text-6xl font-extrabold">Labels</span>
-        <div class="ml-28 flex flex-col space-y-8">
-          <!-- button label 16 medium -->
+          <!-- medium -->
           <div class="flex flex-col space-y-1.25">
             <div class="flex space-x-4">
-              <span
-                class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                >text-base 1rem/1.5</span
-              >
-              <span
-                class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                >Button Label 16 MEDIUM</span
-              >
+              <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-sm
+                0.75rem/1.5</span>
+              <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">SMALL LABEL 14
+                Medium</span>
             </div>
-            <span class="font-Heebo text-base text-dark font-medium"
-              >This is a demo link</span
-            >
+            <span class="font-Heebo text-xs leading-normal text-dark font-medium">The quick brown fox jumps over the
+              lazy dog</span>
           </div>
-          <!-- label 12 bold -->
-          <div class="flex flex-col">
+          <!-- bold -->
+          <div class="flex flex-col space-y-1.25">
             <div class="flex space-x-4">
-              <span
-                class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                >text-xs 0.75rem/1.5</span
-              >
-              <span
-                class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                >LAbel 12 Bold</span
-              >
+              <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal">text-sm
+                0.75rem/1.5</span>
+              <span class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal">SMALL LABEL 14
+                Bold</span>
             </div>
-            <span
-              class="font-Heebo text-xs leading-normal tracking-wide text-dark font-bold"
-              >The quick brown fox jumps over the lazy dog</span
-            >
+            <span class="font-Heebo text-xs leading-normal text-dark font-extrabold">The quick brown fox jumps over the
+              lazy dog</span>
           </div>
-          <!-- uppercase label 12 medium -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span
-                class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                >text-xs 0.75rem/1.5 Uppercase</span
-              >
-              <span
-                class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                >Uppercase LAbel 12 MEDIUM</span
-              >
-            </div>
-            <span
-              class="font-Heebo text-xs leading-normal tracking-wider text-dark font-medium uppercase"
-              >The quick brown fox jumps over the lazy dog</span
-            >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button section -->
+  <div class="w-full flex flex-col">
+    <div class="py-20 px-25 bg-background">
+      <span class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic">Buttons</span>
+    </div>
+
+    <!-- Basic Buttons Section -->
+    <div class="ml-25 mt-19 flex flex-col space-y-15">
+      <span class="text-primary-20 text-6xl font-extrabold">Basic Buttons</span>
+      <div class="px-3 py-5 grid grid-cols-2 gap-x-19 gap-y-13">
+        <!-- primary buttons -->
+        <div class="flex flex-col space-y-6">
+          <div class="flex space-x-8">
+            <button
+              class="bg-primary hover:bg-primary-80 active:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-secondary-40 rounded-lg py-3 px-5 text-white font-medium text-base font-Heebo">
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-primary hover:bg-primary-80 active:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-secondary-40 rounded-lg py-3 px-5 text-white font-medium text-base font-Heebo">
+              <span class="icon-settings"></span>
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-primary hover:bg-primary-80 active:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-secondary-40 rounded-lg py-3 px-5 text-white font-medium text-base font-Heebo">
+              <span>Submit</span>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button
+              class="flex items-center bg-primary hover:bg-primary-80 active:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-secondary-40 rounded-lg p-4 text-white font-medium text-base font-Heebo">
+              <span class="icon-arrow-forward"></span>
+            </button>
           </div>
-          <!-- small labels -->
-          <div class="flex flex-col space-y-8">
-            <!-- regular -->
-            <div class="flex flex-col space-y-1.25">
-              <div class="flex space-x-4">
-                <span
-                  class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                  >text-sm 0.75rem/1.5</span
-                >
-                <span
-                  class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                  >SMALL LABEL 14 Regular</span
-                >
-              </div>
-              <span
-                class="font-Heebo text-xs leading-normal text-dark font-normal"
-                >The quick brown fox jumps over the lazy dog</span
-              >
-            </div>
-            <!-- medium -->
-            <div class="flex flex-col space-y-1.25">
-              <div class="flex space-x-4">
-                <span
-                  class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                  >text-sm 0.75rem/1.5</span
-                >
-                <span
-                  class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                  >SMALL LABEL 14 Medium</span
-                >
-              </div>
-              <span
-                class="font-Heebo text-xs leading-normal text-dark font-medium"
-                >The quick brown fox jumps over the lazy dog</span
-              >
-            </div>
-            <!-- bold -->
-            <div class="flex flex-col space-y-1.25">
-              <div class="flex space-x-4">
-                <span
-                  class="font-Heebo text-secondaryDark uppercase tracking-wider text-xs leading-normal"
-                  >text-sm 0.75rem/1.5</span
-                >
-                <span
-                  class="font-Heebo text-primary-60 uppercase tracking-wider text-xs leading-normal"
-                  >SMALL LABEL 14 Bold</span
-                >
-              </div>
-              <span
-                class="font-Heebo text-xs leading-normal text-dark font-extrabold"
-                >The quick brown fox jumps over the lazy dog</span
-              >
-            </div>
+          <div class="flex space-x-8">
+            <button
+              class="bg-primary hover:bg-primary-80 active:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-secondary-40 px-3 py-2 rounded-lg font-Heebo font-medium text-white text-sm leading-normal">
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-primary hover:bg-primary-80 active:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-secondary-40 px-3 py-2 rounded-lg font-Heebo font-medium text-white text-sm leading-normal">
+              <span class="icon-settings"></span>
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-primary hover:bg-primary-80 active:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-secondary-40 px-3 py-2 rounded-lg font-Heebo font-medium text-white text-sm leading-normal">
+              <span>Submit</span>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button
+              class="flex items-center bg-primary hover:bg-primary-80 active:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-secondary-40 p-2.5 rounded-lg font-Heebo font-medium text-white text-sm leading-normal">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+        </div>
+        <!-- minimal buttons -->
+        <div class="flex flex-col space-y-6">
+          <div class="flex space-x-8">
+            <button
+              class="bg-white focus:bg-primary-5 rounded-lg py-3 px-5 border-2 border-solid border-primary-5 hover:border-primary-20 active:border-primary focus:outline-none focus:border-primary-40 text-primaryDark font-medium text-base font-Heebo">
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-white focus:bg-primary-5 rounded-lg py-3 px-5 border-2 border-solid border-primary-5 hover:border-primary-20 active:border-primary focus:outline-none focus:border-primary-40 text-primaryDark font-medium text-base font-Heebo">
+              <span class="icon-settings"></span>
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-white focus:bg-primary-5 rounded-lg py-3 px-5 border-2 border-solid border-primary-5 hover:border-primary-20 active:border-primary focus:outline-none focus:border-primary-40 text-primaryDark font-medium text-base font-Heebo">
+              <span>Submit</span>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button
+              class="flex items-center bg-white focus:bg-primary-5 rounded-lg p-4 border-2 border-solid border-primary-5 hover:border-primary-20 active:border-primary focus:outline-none focus:border-primary-40 text-primaryDark font-medium text-base font-Heebo">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+          <div class="flex space-x-8">
+            <button
+              class="bg-white focus:bg-primary-5 rounded-lg py-2 px-3 border-2 border-solid border-primary-5 hover:border-primary-20 active:border-primary focus:outline-none focus:border-primary-40 text-primaryDark font-medium text-sm leading-normal font-Heebo">
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-white focus:bg-primary-5 rounded-lg py-2 px-3 border-2 border-solid border-primary-5 hover:border-primary-20 active:border-primary focus:outline-none focus:border-primary-40 text-primaryDark font-medium text-sm leading-normal font-Heebo">
+              <span class="icon-settings"></span>
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-white focus:bg-primary-5 rounded-lg py-2 px-3 border-2 border-solid border-primary-5 hover:border-primary-20 active:border-primary focus:outline-none focus:border-primary-40 text-primaryDark font-medium text-sm leading-normal font-Heebo">
+              <span>Submit</span>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button
+              class="flex items-center bg-white focus:bg-primary-5 rounded-lg p-2.5 border-2 border-solid border-primary-5 hover:border-primary-20 active:border-primary focus:outline-none focus:border-primary-40 text-primaryDark font-medium text-sm leading-normal font-Heebo">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+        </div>
+        <!-- disabled primary buttons -->
+        <div class="flex flex-col space-y-6">
+          <div class="flex space-x-8">
+            <button
+              class="bg-primary-5 rounded-lg py-3 px-5 text-primary-20 font-medium text-base font-Heebo cursor-not-allowed focus:outline-none">
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-primary-5 rounded-lg py-3 px-5 text-primary-20 font-medium text-base font-Heebo cursor-not-allowed focus:outline-none">
+              <span class="icon-settings"></span>
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-primary-5 rounded-lg py-3 px-5 text-primary-20 font-medium text-base font-Heebo cursor-not-allowed focus:outline-none">
+              <span>Submit</span>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button
+              class="flex items-center bg-primary-5 rounded-lg p-4 text-primary-20 font-medium text-base font-Heebo cursor-not-allowed focus:outline-none">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+          <div class="flex space-x-8">
+            <button
+              class="bg-primary-5 rounded-lg py-2 px-3 text-primary-20 font-medium text-sm font-Heebo leading-normal cursor-not-allowed focus:outline-none">
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-primary-5 rounded-lg py-2 px-3 text-primary-20 font-medium text-sm font-Heebo leading-normal cursor-not-allowed focus:outline-none">
+              <span class="icon-settings"></span>
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-primary-5 rounded-lg py-2 px-3 text-primary-20 font-medium text-sm font-Heebo leading-normal cursor-not-allowed focus:outline-none">
+              <span>Submit</span>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button
+              class="flex items-center bg-primary-5 rounded-lg p-2.5 text-primary-20 font-medium text-sm font-Heebo leading-normal cursor-not-allowed focus:outline-none">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+        </div>
+        <!-- small minimal buttons -->
+        <div class="flex flex-col space-y-6">
+          <div class="flex space-x-8">
+            <button
+              class="bg-white rounded-lg py-3 px-5 border-2 border-solid border-primary-5 focus:outline-none text-primary-20 font-medium text-base font-Heebo cursor-not-allowed">
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-white rounded-lg py-3 px-5 border-2 border-solid border-primary-5 focus:outline-none text-primary-20 font-medium text-base font-Heebo cursor-not-allowed">
+              <span class="icon-settings"></span>
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-white rounded-lg py-3 px-5 border-2 border-solid border-primary-5 focus:outline-none text-primary-20 font-medium text-base font-Heebo cursor-not-allowed">
+              <span>Submit</span>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button
+              class="flex items-center bg-white rounded-lg p-4 border-2 border-solid border-primary-5 focus:outline-none text-primary-20 font-medium text-base font-Heebo cursor-not-allowed">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+          <div class="flex space-x-8">
+            <button
+              class="bg-white rounded-lg py-2 px-3 border-2 border-solid border-primary-5 focus:outline-none text-primary-20 font-medium text-sm leading-normal font-Heebo cursor-not-allowed">
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-white rounded-lg py-2 px-3 border-2 border-solid border-primary-5 focus:outline-none text-primary-20 font-medium text-sm leading-normal font-Heebo cursor-not-allowed">
+              <span class="icon-settings"></span>
+              <span>Submit</span>
+            </button>
+            <button
+              class="flex items-center space-x-2 bg-white rounded-lg py-2 px-3 border-2 border-solid border-primary-5 focus:outline-none text-primary-20 font-medium text-sm leading-normal font-Heebo cursor-not-allowed">
+              <span>Submit</span>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button
+              class="flex items-center bg-white rounded-lg p-2.5 border-2 border-solid border-primary-5 focus:outline-none text-primary-20 font-medium text-sm leading-normal font-Heebo cursor-not-allowed">
+              <span class="icon-arrow-forward"></span>
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Button section -->
-    <div class="w-full flex flex-col">
-      <div class="py-20 px-25 bg-background">
-        <span
-          class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic"
-          >Buttons</span
-        >
+    <!-- Tiny Icon BTN -->
+    <div class="ml-25 mt-31 flex flex-col space-y-11">
+      <span class="text-primary-20 text-6xl font-extrabold">Tiny Icon BTN</span>
+      <div class="w-6 h-6 p-1 bg-primary-5 flex items-center rounded-tag text-primaryDark">
+        <span class="icon-close"></span>
       </div>
+    </div>
 
-      <!-- Basic Buttons Section -->
-      <div class="ml-25 mt-19 flex flex-col space-y-15">
-        <span class="text-primary-20 text-6xl font-extrabold"
-          >Basic Buttons</span
-        >
-        <div class="px-3 py-5 grid grid-cols-2 gap-x-19 gap-y-13">
-          <div class="flex flex-col space-y-6">
-            <div class="flex space-x-8">
-              <button
-                class="bg-primary hover:bg-primary-80 active:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-secondary-40 rounded-lg py-3 px-5 text-white font-medium text-base font-Heebo"
-              >
-                <span>Submit</span>
-              </button>
-              <button
-                class="flex items-center space-x-2 bg-primary hover:bg-primary-80 active:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-secondary-40 rounded-lg py-3 px-5 text-white font-medium text-base font-Heebo"
-              >
-                <span class="icon-settings"></span>
-                <span>Submit</span>
-              </button>
-              <button
-                class="flex items-center space-x-2 bg-primary hover:bg-primary-80 active:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-secondary-40 rounded-lg py-3 px-5 text-white font-medium text-base font-Heebo"
-              >
-                <span>Submit</span>
-                <span class="icon-arrow-forward"></span>
-              </button>
-              <button
-                class="flex items-center space-x-2 bg-primary hover:bg-primary-80 active:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-secondary-40 rounded-lg p-4 text-white font-medium text-base font-Heebo"
-              >
-                <span class="icon-arrow-forward"></span>
-              </button>
-            </div>
-            <div class="flex space-x-8"></div>
+    <!-- Links -->
+    <div class="ml-25 mt-20 flex flex-col space-y-11">
+      <span class="text-primary-20 text-6xl font-extrabold">Links</span>
+      <div class="flex items-center space-x-10">
+        <a href="" class="font-Heebo text-primaryDark text-base font-medium underline">
+          Submit
+        </a>
+        <a href="" class="font-Heebo text-primaryDark text-sm leading-normal font-medium underline">
+          Submit
+        </a>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="ml-25 mt-20 flex flex-col space-y-11">
+      <span class="text-primary-20 text-6xl font-extrabold">Tags</span>
+      <div class="flex items-center space-x-20">
+        <div class="flex items-center space-x-2 rounded-lg border-2 border-primary-5 py-2 pr-2 pl-4">
+          <span class="font-Heebo text-primaryDark text-base font-medium">Tag Label</span>
+          <div class="p-1 bg-primary-5 flex items-center rounded-tag text-primaryDark text-2xl">
+            <span class="icon-close"></span>
           </div>
-          <div></div>
-          <div>
-            <div class="flex space-x-8">
-              <button
-                class="rounded-lg py-3 px-5 text-white font-medium text-base font-Heebo"
-              >
-                <span>Submit</span>
-              </button>
-            </div>
+        </div>
+        <div class="flex items-center space-x-2 rounded-lg border-2 border-primary-5 py-2 pr-2 pl-3">
+          <span class="font-Heebo text-primaryDark text-sm leading-normal font-medium">Tag Label</span>
+          <div class="p-1 bg-primary-5 flex items-center rounded-tag text-primaryDark text-xl">
+            <span class="icon-close"></span>
           </div>
-          <div></div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+
+  <!-- Badges section -->
+  <div class="w-full flex flex-col">
+    <div class="w-1/2 py-20 px-25 bg-background">
+      <span class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic">Badges</span>
+    </div>
+
+    <!-- Badges -->
+    <div class="mt-19 ml-25 flex flex-col space-y-8">
+      <span class="text-primary-20 text-6xl font-extrabold">Badges</span>
+      <div class="p-3 flex items-center space-x-6.5">
+        <div class="px-1.5 py-0.5 flex items-center bg-dark-5 rounded">
+          <span class="font-Heebo text-dark-80 font-bold text-xs leading-normal tracking-wide">NEUTRAL</span>
+        </div>
+        <div class="px-1.5 py-0.5 flex items-center bg-blue-5 rounded">
+          <span class="font-Heebo text-blue font-bold text-xs leading-normal tracking-wide">BLUE</span>
+        </div>
+        <div class="px-1.5 py-0.5 flex items-center bg-green-5 rounded">
+          <span class="font-Heebo text-green font-bold text-xs leading-normal tracking-wide">GREEN</span>
+        </div>
+        <div class="px-1.5 py-0.5 flex items-center bg-orange-5 rounded">
+          <span class="font-Heebo text-orange font-bold text-xs leading-normal tracking-wide">ORANGE</span>
+        </div>
+        <div class="px-1.5 py-0.5 flex items-center bg-red-5 rounded">
+          <span class="font-Heebo text-red-80 font-bold text-xs leading-normal tracking-wide">RED</span>
+        </div>
+        <div class="px-1.5 py-0.5 flex items-center bg-violet-5 rounded">
+          <span class="font-Heebo text-violet-80 font-bold text-xs leading-normal tracking-wide">VIOLET</span>
+        </div>
+        <div class="px-1.5 py-0.5 flex items-center bg-primary-5 rounded">
+          <span class="font-Heebo text-primary-80 font-bold text-xs leading-normal tracking-wide">PRIMARY</span>
+        </div>
+        <div class="px-1.5 py-0.5 flex items-center bg-secondary-5 rounded">
+          <span class="font-Heebo text-secondary font-bold text-xs leading-normal tracking-wide">SECONDARY</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Icon Circles -->
+    <div class="mt-19 ml-25 flex flex-col space-y-8">
+      <span class="text-primary-20 text-6xl font-extrabold">Icon Circles</span>
+      <div class="flex items-center space-x-8">
+        <div class="flex flex-col gap-16 font-Heebo text-primary-60 text-xs leading-normal font-medium tracking-wider">
+          <span>BIG</span>
+          <span>SMALL</span>
+        </div>
+        <div class="p-5 flex flex-col space-y-12">
+          <div class="flex space-x-10">
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="bg-dark-5 p-2 flex items-center justify-center rounded-full text-dark-80 text-2xl">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="bg-dark-5 p-2 flex items-center justify-center rounded-full text-dark-80 text-base">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="bg-blue-5 p-2 flex items-center justify-center rounded-full text-blue text-2xl">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="bg-blue-5 p-2 flex items-center justify-center rounded-full text-blue text-base">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="bg-green-5 p-2 flex items-center justify-center rounded-full text-green text-2xl">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="bg-green-5 p-2 flex items-center justify-center rounded-full text-green text-base">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="bg-orange-5 p-2 flex items-center justify-center rounded-full text-orange text-2xl">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="bg-orange-5 p-2 flex items-center justify-center rounded-full text-orange text-base">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="bg-red-5 p-2 flex items-center justify-center rounded-full text-red-80 text-2xl">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="bg-red-5 p-2 flex items-center justify-center rounded-full text-red-80 text-base">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="bg-violet-5 p-2 flex items-center justify-center rounded-full text-violet-80 text-2xl">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="bg-violet-5 p-2 flex items-center justify-center rounded-full text-violet-80 text-base">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="bg-primary-5 p-2 flex items-center justify-center rounded-full text-primary-80 text-2xl">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="bg-primary-5 p-2 flex items-center justify-center rounded-full text-primary-80 text-base">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="bg-secondary-5 p-2 flex items-center justify-center rounded-full text-secondary text-2xl">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="bg-secondary-5 p-2 flex items-center justify-center rounded-full text-secondary text-base">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls section -->
+  <div class="w-full flex flex-col">
+    <div class="py-20 px-25 bg-background">
+      <span class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic">Controls</span>
+    </div>
+
+    <div class="mt-19 ml-25 flex flex-col space-y-17">
+      <span class="text-primary-20 text-6xl font-extrabold">Checkbox</span>
+      <div class="flex space-x-15">
+        <div class="flex flex-col items-align content-center">
+          <span class="text-checkboxTitle font-extrabold leading-none text-dark">Selected</span>
+          <div class="flex justify-center mt-12 form-check">
+            <label class="inline-flex items-center">
+              <input type="checkbox"
+                class="form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary focus:border-0 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                checked>
+            </label>
+          </div>
+          <div class="text-lg text-secondary-20 flex justify-center mt-16">
+            <label class="inline-flex items-center">
+              <input type="checkbox"
+                class="form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary focus:border-0 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                checked>
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

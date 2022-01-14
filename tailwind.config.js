@@ -1,3 +1,6 @@
+const colors = require("tailwindcss/colors");
+const { theme } = require("tailwindcss/stubs/defaultConfig.stub");
+
 module.exports = {
     purge: {
         enabled: true,
@@ -9,7 +12,20 @@ module.exports = {
             Mont: ["Mont", "sans-serif"],
             Heebo: ["Heebo", "sans-serif"],
         },
+        borderRadius: {
+            none: "0",
+            sm: "0.125rem",
+            DEFAULT: "0.25rem",
+            md: "0.375rem",
+            lg: "0.5rem",
+            full: "9999px",
+            large: "12px",
+            tag: "7px",
+        },
         extend: {
+            fontSize: {
+                checkboxTitle: '22px'
+            },
             boxShadow: {
                 base: "0px 1px 2px rgba(16, 16, 155, 0.08), 0px 1px 3px rgba(16, 16, 155, 0.08)",
                 md: "0px 2px 4px rgba(16, 16, 155, 0.08), 0px 4px 6px rgba(16, 16, 155, 0.08)",
@@ -20,10 +36,15 @@ module.exports = {
             spacing: {
                 1.25: "0.3125rem",
                 2.25: "0.5625rem",
+                4.5: "1.125rem",
+                6.5: "1.625rem",
                 13: "3.3125rem",
                 15: "3.75rem",
+                17: "4.375rem",
                 19: "4.6875rem",
+                21: "5.1875rem",
                 25: "6.25rem",
+                31: "7.75rem",
                 37: "9.375rem",
                 39: "9.6875rem",
             },
@@ -92,5 +113,17 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/custom-forms'),
+        function({ addUtilities }) {
+            const extendUnderline = {
+                ".underline": {
+                    "text-decoration-thickness": "2px",
+                    "text-decoration-color": "#FCF3FC",
+                    "text-underline-offset": "2px",
+                },
+            };
+            addUtilities(extendUnderline);
+        },
+    ],
 };
