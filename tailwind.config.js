@@ -23,9 +23,12 @@ module.exports = {
             tag: "7px",
         },
         extend: {
-            fontSize: {
-                checkboxTitle: '22px'
-            },
+        fontSize: {
+            checkboxTitle: '22px'
+        },
+        backgroundImage:{
+            bgImg: `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='rgba(167, 47, 159, 1)' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`,       
+        },
             boxShadow: {
                 base: "0px 1px 2px rgba(16, 16, 155, 0.08), 0px 1px 3px rgba(16, 16, 155, 0.08)",
                 md: "0px 2px 4px rgba(16, 16, 155, 0.08), 0px 4px 6px rgba(16, 16, 155, 0.08)",

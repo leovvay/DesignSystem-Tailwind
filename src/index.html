@@ -739,32 +739,69 @@
       <div class="ml-25 mt-20 flex flex-col space-y-11">
         <span class="text-primary-20 text-6xl font-extrabold">Tags</span>
         <div class="flex items-center space-x-20">
-          <div
-            class="flex items-center space-x-2 rounded-lg border-2 border-primary-5 py-2 pr-2 pl-4 hover:border-primary-20 active:border-primary focus:border-primary-40"
-          >
-            <span
-              class="font-Heebo text-primaryDark text-base leading-normal font-medium"
-              >Tag Label</span
-            >
+          <button class="group">
             <div
-              class="p-1 bg-primary-5 flex items-center rounded-tag text-primaryDark text-2xl"
+              class="flex items-center space-x-2 rounded-lg border-2 border-primary-5 py-2 pr-2 pl-4 group-hover:border-primary-20 group-active:border-primary focus:bg-primary-5 group-focus:border-primary-40"
             >
-              <span class="icon-close"></span>
+              <span
+                class="font-Heebo text-primaryDark text-base leading-normal font-medium"
+                >Tag Label</span
+              >
+              <div
+                class="p-1 bg-primary-5 flex items-center rounded-tag text-primaryDark text-2xl group-hover:bg-primary-80 group-hover:text-white group-active:bg-primaryDark group-active:text-white group-focus:bg-primary-20 group-focus:text-primaryDark"
+              >
+                <span class="icon-close"></span>
+              </div>
             </div>
-          </div>
-          <div
-            class="flex items-center space-x-2 rounded-lg border-2 border-primary-5 py-2 pr-2 pl-3 hover:border-primary-20 active:border-primary focus:border-primary-40"
-          >
-            <span
-              class="font-Heebo text-primaryDark text-sm leading-normal font-medium"
-              >Tag Label</span
-            >
+          </button>
+          <button class="group">
             <div
-              class="p-1 bg-primary-5 flex items-center rounded-tag text-primaryDark text-xl"
+              class="flex items-center space-x-2 rounded-lg border-2 border-primary-5 py-2 pr-2 pl-3 group-hover:border-primary-20 group-active:border-primary focus:bg-primary-5 group-focus:border-primary-40"
             >
-              <span class="icon-close"></span>
+              <span
+                class="font-Heebo text-primaryDark text-sm leading-normal font-medium"
+                >Tag Label</span
+              >
+              <div
+                class="p-1 bg-primary-5 flex items-center rounded-tag text-primaryDark text-xl group-hover:bg-primary-80 group-hover:text-white group-active:bg-primaryDark group-active:text-white group-focus:bg-primary-20 group-focus:text-primaryDark"
+              >
+                <span class="icon-close"></span>
+              </div>
             </div>
-          </div>
+          </button>
+        </div>
+
+        <div class="flex items-center space-x-20">
+          <button class="group" disabled>
+            <div
+              class="flex items-center space-x-2 rounded-lg border-2 border-primary-5 py-2 pr-2 pl-4 cursor-not-allowed"
+            >
+              <span
+                class="font-Heebo text-primary-20 text-base leading-normal font-medium"
+                >Tag Label</span
+              >
+              <div
+                class="p-1 bg-primary-5 flex items-center rounded-tag text-primary-20 text-2xl"
+              >
+                <span class="icon-close"></span>
+              </div>
+            </div>
+          </button>
+          <button class="group" disabled>
+            <div
+              class="flex items-center space-x-2 rounded-lg border-2 border-primary-5 py-2 pr-2 pl-3 cursor-not-allowed"
+            >
+              <span
+                class="font-Heebo text-primary-20 text-sm leading-normal font-medium"
+                >Tag Label</span
+              >
+              <div
+                class="p-1 bg-primary-5 flex items-center rounded-tag text-primary-20 text-xl"
+              >
+                <span class="icon-close"></span>
+              </div>
+            </div>
+          </button>
         </div>
       </div>
     </div>
@@ -957,6 +994,7 @@
           >Controls</span
         >
       </div>
+
       <!-- Checkbox -->
       <div class="mt-19 ml-25 flex flex-col space-y-17">
         <span class="text-primary-20 text-6xl font-extrabold">Checkbox</span>
@@ -970,7 +1008,7 @@
               <label class="inline-flex items-center">
                 <input
                   type="checkbox"
-                  class="form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary focus:border-0 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                  class="form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary focus:border-secondary focus:outline-0 active:outline-0 active:ring-0"
                   checked
                 />
               </label>
@@ -979,9 +1017,235 @@
               <label class="inline-flex items-center">
                 <input
                   type="checkbox"
-                  class="form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary focus:border-0 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                  class="form-checkbox text-secondary-20 w-4.5 h-4.5 rounded border-2 border-secondary-20 focus:border-secondary-20 focus:outline-0 active:outline-0"
                   checked
                 />
+              </label>
+            </div>
+          </div>
+          <div class="flex flex-col items-align content-center">
+            <span
+              class="text-checkboxTitle font-extrabold leading-none text-dark"
+              >Indeterminate</span
+            >
+            <div class="flex justify-center mt-11 text-2xl text-secondary">
+              <input
+                type="checkbox"
+                class="w-4.5 h-4.5 absolute peer appearance-none rounded"
+              />
+              <span class="icon-multiselect"></span>
+            </div>
+            <div class="flex justify-center mt-15 text-2xl text-secondary-20">
+              <input
+                type="checkbox"
+                class="w-4.5 h-4.5 absolute peer appearance-none rounded"
+              />
+              <span class="icon-multiselect"></span>
+            </div>
+          </div>
+          <div class="flex flex-col items-align content-center">
+            <span
+              class="text-checkboxTitle font-extrabold leading-none text-dark"
+              >Unelected</span
+            >
+            <div class="flex justify-center mt-12 form-check">
+              <label class="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary focus:border-secondary focus:outline-0 active:outline-0 active:ring-0"
+                />
+              </label>
+            </div>
+            <div class="text-lg text-secondary-20 flex justify-center mt-16">
+              <label class="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox text-secondary-20 w-4.5 h-4.5 rounded border-2 border-secondary-20 focus:border-secondary-20 focus:outline-0 active:outline-0"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Radio -->
+      <div class="mt-19 mb-7 ml-25 flex flex-col space-y-17">
+        <span class="text-primary-20 text-6xl font-extrabold">Radio</span>
+        <div class="flex space-x-15">
+          <div class="flex flex-col items-align content-center">
+            <span
+              class="text-checkboxTitle font-extrabold leading-none text-dark"
+              >Unselected</span
+            >
+            <div class="flex justify-center mt-12 form-check">
+              <label class="inline-flex items-center">
+                <input
+                  type="radio"
+                  class="form-radio text-secondary w-4.5 h-4.5 rounded-full checked:bg-white checked:border-secondary checked:bg-bgImg border-2 border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                />
+              </label>
+            </div>
+            <div class="text-lg text-secondary-20 flex justify-center mt-16">
+              <label class="inline-flex items-center">
+                <input
+                  type="radio"
+                  class="form-radio opacity-20 text-secondary w-4.5 h-4.5 rounded-full checked:bg-white checked:border-secondary checked:bg-bgImg border-2 border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                />
+              </label>
+            </div>
+          </div>
+          <div class="flex flex-col items-align content-center">
+            <span
+              class="text-checkboxTitle font-extrabold leading-none text-dark"
+              >Selected</span
+            >
+            <div class="flex justify-center mt-12 form-check">
+              <label class="inline-flex items-center">
+                <input
+                  type="radio"
+                  class="form-radio text-secondary w-4.5 h-4.5 rounded-full border-2 checked:bg-white checked:bg-bgImg checked:border-secondary border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                  checked
+                />
+              </label>
+            </div>
+            <div class="text-lg text-secondary-20 flex justify-center mt-16">
+              <label class="inline-flex items-center">
+                <input
+                  type="radio"
+                  class="form-radio opacity-20 text-secondary w-4.5 h-4.5 rounded-full border-2 checked:bg-white checked:bg-bgImg checked:border-secondary border-secondary focus:border-2 focus:ring-0 focus:outline-0 active:outline-0 active:ring-0"
+                  checked
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toggle -->
+      <div class="mt-12 ml-25 flex flex-col space-y-17">
+        <span class="text-primary-20 text-6xl font-extrabold">Toggle</span>
+        <div class="flex space-x-40 items-center">
+          <div class="flex space-x-16 items-center">
+            <div class="flex flex-col justify-start">
+              <label
+                class="text-dark font-extrabold text-checkboxTitle leading-normal"
+                ><p>Small</p>
+                <p>Selected</p></label
+              >
+              <label
+                class="mt-8 w-8 relative flex justify-between items-center text-xl"
+              >
+                <input
+                  type="checkbox"
+                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+                  checked
+                />
+                <span
+                  class="w-9 h-6 flex items-center flex-shrink-0 p-1 bg-white border-2 border-secondary rounded-full transition duration-100 ease-in-out peer-checked:bg-secondary after:w-3 after:h-3 after:bg-secondary peer-checked:after:bg-white after:rounded-full after:shadow-md after:transition after:duration-100 peer-checked:after:translate-x-3"
+                ></span>
+              </label>
+              <label
+                class="mt-8 w-8 relative flex justify-between items-center text-xl"
+              >
+                <input
+                  type="checkbox"
+                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+                  checked
+                />
+                <span
+                  class="w-9 h-6 flex items-center flex-shrink-0 p-1 bg-white border-2 border-secondary-20 rounded-full transition duration-100 ease-in-out peer-checked:bg-secondary-20 after:w-3 after:h-3 after:bg-secondary-20 peer-checked:after:bg-white after:rounded-full after:shadow-md after:transition after:duration-100 peer-checked:after:translate-x-3"
+                ></span>
+              </label>
+            </div>
+            <div class="flex flex-col justify-start">
+              <label
+                class="text-dark font-extrabold text-checkboxTitle leading-normal"
+                ><p>Small</p>
+                <p>Unselected</p></label
+              >
+              <label
+                class="mt-8 w-8 relative flex justify-between items-center text-xl"
+              >
+                <input
+                  type="checkbox"
+                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+                />
+                <span
+                  class="w-9 h-6 flex items-center flex-shrink-0 p-1 bg-white border-2 border-secondary rounded-full transition duration-100 ease-in-out peer-checked:bg-secondary after:w-3 after:h-3 after:bg-secondary peer-checked:after:bg-white after:rounded-full after:shadow-md after:transition after:duration-100 peer-checked:after:translate-x-3"
+                ></span>
+              </label>
+              <label
+                class="mt-8 w-8 relative flex justify-between items-center text-xl"
+              >
+                <input
+                  type="checkbox"
+                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+                />
+                <span
+                  class="w-9 h-6 flex items-center flex-shrink-0 p-1 bg-white border-2 border-secondary-20 rounded-full transition duration-100 ease-in-out peer-checked:bg-secondary-20 after:w-3 after:h-3 after:bg-secondary-20 peer-checked:after:bg-white after:rounded-full after:shadow-md after:transition after:duration-100 peer-checked:after:translate-x-3"
+                ></span>
+              </label>
+            </div>
+          </div>
+          <div class="flex space-x-16 items-center">
+            <div class="flex flex-col justify-start">
+              <label
+                class="text-dark font-extrabold text-checkboxTitle leading-normal"
+                ><p>Big</p>
+                <p>Selected</p></label
+              >
+              <label
+                class="mt-8 w-10 relative flex justify-between items-center text-xl"
+              >
+                <input
+                  type="checkbox"
+                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+                  checked
+                />
+                <span
+                  class="w-10 h-7 flex items-center flex-shrink-0 p-1 bg-white border-4 border-secondary rounded-full transition duration-100 ease-in-out peer-checked:bg-secondary after:w-4 after:h-4 after:bg-secondary peer-checked:after:bg-white after:rounded-full after:shadow-md after:transition after:duration-100 peer-checked:after:translate-x-2"
+                ></span>
+              </label>
+              <label
+                class="mt-8 w-10 relative flex justify-between items-center text-xl"
+              >
+                <input
+                  type="checkbox"
+                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+                  checked
+                />
+                <span
+                  class="w-10 h-7 flex items-center flex-shrink-0 p-1 bg-white border-4 border-secondary-20 rounded-full transition duration-100 ease-in-out peer-checked:bg-secondary-20 after:w-4 after:h-4 after:bg-secondary-20 peer-checked:after:bg-white after:rounded-full after:shadow-md after:transition after:duration-100 peer-checked:after:translate-x-2"
+                ></span>
+              </label>
+            </div>
+            <div class="flex flex-col justify-start">
+              <label
+                class="text-dark font-extrabold text-checkboxTitle leading-normal"
+                ><p>Big</p>
+                <p>Unselected</p></label
+              >
+              <label
+                class="mt-8 w-10 relative flex justify-between items-center text-xl"
+              >
+                <input
+                  type="checkbox"
+                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+                />
+                <span
+                  class="w-10 h-7 flex items-center flex-shrink-0 p-1 bg-white border-4 border-secondary rounded-full transition duration-100 ease-in-out peer-checked:bg-secondary after:w-4 after:h-4 after:bg-secondary peer-checked:after:bg-white after:rounded-full after:shadow-md after:transition after:duration-100 peer-checked:after:translate-x-2"
+                ></span>
+              </label>
+              <label
+                class="mt-8 w-10 relative flex justify-between items-center text-xl"
+              >
+                <input
+                  type="checkbox"
+                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+                />
+                <span
+                  class="w-10 h-7 flex items-center flex-shrink-0 p-1 bg-white border-4 border-secondary-20 rounded-full transition duration-100 ease-in-out peer-checked:bg-secondary-20 after:w-4 after:h-4 after:bg-secondary-20 peer-checked:after:bg-white after:rounded-full after:shadow-md after:transition after:duration-100 peer-checked:after:translate-x-2"
+                ></span>
               </label>
             </div>
           </div>
