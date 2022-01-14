@@ -119,7 +119,6 @@ module.exports = {
             const extendUnderline = {
                 ".underline": {
                     "text-decoration-thickness": "2px",
-                    "text-decoration-color": "#FCF3FC",
                     "text-underline-offset": "2px",
                 },
             };
