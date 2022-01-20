@@ -91,6 +91,9 @@
         @apply bg-primary rounded-lg text-white font-medium leading-normal;
         &:hover {
             @apply bg-primary-80;
+            label {
+                @apply cursor-pointer;
+            }
         }
         &:active {
             @apply bg-primaryDark;
@@ -130,6 +133,11 @@
     .default-primary-btn_disabled {
         @extend .heebo-font;
         @apply bg-primary-5 rounded-lg text-primary-20 font-medium leading-normal cursor-not-allowed;
+        &:hover {
+            label {
+                @apply cursor-not-allowed;
+            }
+        }
         &:focus {
             @apply outline-none;
         }
@@ -173,6 +181,9 @@
         }
         &:hover {
             @apply border-primary-20;
+            label {
+                @apply cursor-pointer;
+            }
         }
         span {
             @apply text-base leading-none;
@@ -206,6 +217,11 @@
     .default-minimal-btn_disabled {
         @extend .heebo-font;
         @apply bg-white rounded-lg border-2 border-solid border-primary-5 text-primary-20 font-medium leading-normal cursor-not-allowed;
+        &:hover {
+            label {
+                @apply cursor-not-allowed;
+            }
+        }
         &:focus {
             @apply outline-none;
         }
@@ -276,7 +292,7 @@
             @apply decoration-secondaryDark;
         }
         &:focus {
-            @apply decoration-secondary-5;
+            @apply decoration-secondary-5 bg-secondary-5;
         }
     }
     .text-link {
