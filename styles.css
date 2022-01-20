@@ -119,7 +119,7 @@
     }
     .small-primary-btn {
         @extend .default-primary-btn;
-        @apply px-3 py-2 text-sm;
+        @apply px-3 py-2 text-sm leading-normal;
     }
     .small-primary-mix-btn {
         @extend .small-primary-btn;
@@ -127,7 +127,7 @@
     }
     .small-primary-icon-btn {
         @extend .default-primary-btn;
-        @apply flex text-sm p-2.5;
+        @apply flex text-sm p-2.5 leading-normal;
     }
     /* disabled primary buttons */
     .default-primary-btn_disabled {
@@ -159,7 +159,7 @@
     }
     .small-primary-btn_disabled {
         @extend .default-primary-btn_disabled;
-        @apply px-3 py-2 text-sm;
+        @apply px-3 py-2 text-sm leading-normal;
     }
     .small-primary-mix-btn_disabled {
         @extend .small-primary-btn_disabled;
@@ -167,7 +167,7 @@
     }
     .small-primary-icon-btn_disabled {
         @extend .default-primary-btn_disabled;
-        @apply flex text-sm p-2.5;
+        @apply flex text-sm p-2.5 leading-normal;
     }
     /* minimal buttons */
     .default-minimal-btn {
@@ -203,7 +203,7 @@
     }
     .small-minimal-btn {
         @extend .default-minimal-btn;
-        @apply text-sm py-1.5 px-2.5;
+        @apply text-sm py-1.5 px-2.5 leading-normal;
     }
     .small-minimal-mix-btn {
         @extend .small-minimal-btn;
@@ -211,7 +211,7 @@
     }
     .small-minimal-icon-btn {
         @extend .default-minimal-btn;
-        @apply flex text-sm p-2;
+        @apply flex text-sm p-2 leading-normal;
     }
     /* disabled minimal buttons */
     .default-minimal-btn_disabled {
@@ -243,7 +243,7 @@
     }
     .small-minimal-btn_disabled {
         @extend .default-minimal-btn_disabled;
-        @apply text-sm py-1.5 px-2.5;
+        @apply text-sm py-1.5 px-2.5 leading-normal;
     }
     .small-minimal-mix-btn_disabled {
         @extend .small-minimal-btn_disabled;
@@ -251,7 +251,7 @@
     }
     .small-minimal-icon-btn_disabled {
         @extend .default-minimal-btn_disabled;
-        @apply flex text-sm p-2;
+        @apply flex text-sm p-2 leading-normal;
     }
     /* tiny icon button */
     .tiny-icon-btn {
