@@ -539,6 +539,14 @@
                 }
             }
         }
+        &:active {
+            span {
+                @apply border-secondaryDark;
+                &::after {
+                    @apply bg-secondaryDark;
+                }
+            }
+        }
     }
     .small-toggle-checked_disabled {
         @apply w-8 relative flex justify-between items-center text-xl;
@@ -559,6 +567,58 @@
         }
         span {
             @apply w-7.5 h-5.5 flex items-center flex-shrink-0 p-1 bg-white border-2 border-secondary-20 rounded-full transition duration-100 ease-in-out;
+            &::after {
+                @apply bg-secondary-20 rounded-full shadow-md transition duration-100;
+            }
+        }
+    }
+    .big-toggle {
+        @apply w-10 relative flex justify-between items-center text-xl;
+        input {
+            @apply absolute left-1/2 -translate-x-1/2 w-full h-full appearance-none rounded-md;
+        }
+        span {
+            @apply w-10 h-7 flex items-center flex-shrink-0 p-1 bg-white border-4 border-secondary rounded-full transition duration-100 ease-in-out;
+            &::after {
+                @apply bg-secondary rounded-full shadow-md transition duration-100;
+            }
+        }
+        &:hover {
+            span {
+                @apply border-secondary-80;
+                &::after {
+                    @apply bg-secondary-80;
+                }
+            }
+        }
+        &:active {
+            span {
+                @apply border-secondaryDark;
+                &::after {
+                    @apply bg-secondaryDark;
+                }
+            }
+        }
+    }
+    .big-toggle-checked_disabled {
+        @apply w-10 relative flex justify-between items-center text-xl;
+        input {
+            @apply absolute left-1/2 -translate-x-1/2 w-full h-full appearance-none rounded-md;
+        }
+        span {
+            @apply w-10 h-7 flex items-center flex-shrink-0 p-1 bg-secondary-20 border-4 border-secondary-20 rounded-full transition duration-100 ease-in-out;
+            &::after {
+                @apply bg-white rounded-full shadow-md transition duration-100 translate-x-2.25;
+            }
+        }
+    }
+    .big-toggle-unchecked_disabled {
+        @apply w-10 relative flex justify-between items-center text-xl;
+        input {
+            @apply absolute left-1/2 -translate-x-1/2 w-full h-full appearance-none rounded-md;
+        }
+        span {
+            @apply w-10 h-7 flex items-center flex-shrink-0 p-1 bg-white border-4 border-secondary-20 rounded-full transition duration-100 ease-in-out;
             &::after {
                 @apply bg-secondary-20 rounded-full shadow-md transition duration-100;
             }

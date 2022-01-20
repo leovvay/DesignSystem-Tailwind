@@ -1,972 +1,846 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Basic HTML/Tailwind starter</title>
-    <meta name="description" content="Basic HTML/Tailwind starter" />
-    <meta name="author" content="Daily Dev Tips" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Heebo:400,500,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/icomoon.css" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
 
-  <body class="heebo-font flex flex-col space-y-36">
-    <!-- Colors section -->
-    <div class="w-full flex flex-col">
-      <div class="bg-background py-20 px-25">
-        <span
-          class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic"
-          >Colors</span
-        >
+<head>
+  <meta charset="utf-8" />
+  <title>Basic HTML/Tailwind starter</title>
+  <meta name="description" content="Basic HTML/Tailwind starter" />
+  <meta name="author" content="Daily Dev Tips" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/icomoon.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="heebo-font flex flex-col space-y-36">
+  <!-- Colors section -->
+  <div class="w-full flex flex-col">
+    <div class="bg-background py-20 px-25">
+      <span class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic">Colors</span>
+    </div>
+    <div class="flex gap-25 py-20 px-25">
+      <div class="flex-auto flex flex-col gap-37">
+        <!-- primary color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-primary rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-primaryDark rounded-tr-lg"></div>
+          </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-primary-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-primary-60"></div>
+            <div class="w-1/5 h-25 bg-primary-40"></div>
+            <div class="w-1/5 h-25 bg-primary-20"></div>
+            <div class="w-1/5 h-25 bg-primary-5 rounded-br-lg"></div>
+          </div>
+        </div>
+
+        <!-- dark color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-full h-25 bg-dark rounded-t-lg"></div>
+          </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-dark-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-dark-60"></div>
+            <div class="w-1/5 h-25 bg-dark-40"></div>
+            <div class="w-1/5 h-25 bg-dark-20"></div>
+            <div class="w-1/5 h-25 bg-dark-5 rounded-br-lg"></div>
+          </div>
+        </div>
+
+        <!-- blue color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-blue rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-blueDark rounded-tr-lg"></div>
+          </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-blue-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-blue-60"></div>
+            <div class="w-1/5 h-25 bg-blue-40"></div>
+            <div class="w-1/5 h-25 bg-blue-20"></div>
+            <div class="w-1/5 h-25 bg-blue-5 rounded-br-lg"></div>
+          </div>
+        </div>
+
+        <!-- green color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-green rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-greenDark rounded-tr-lg"></div>
+          </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-green-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-green-60"></div>
+            <div class="w-1/5 h-25 bg-green-40"></div>
+            <div class="w-1/5 h-25 bg-green-20"></div>
+            <div class="w-1/5 h-25 bg-green-5 rounded-br-lg"></div>
+          </div>
+        </div>
+
+        <!-- basic colors -->
+        <div class="flex space-x-4">
+          <div class="h-25 flex-auto rounded-lg bg-black"></div>
+          <div class="h-25 flex-auto border border-solid rounded-lg bg-white"></div>
+          <div class="h-25 flex-auto rounded-lg bg-background"></div>
+        </div>
       </div>
-      <div class="flex gap-25 py-20 px-25">
-        <div class="flex-auto flex flex-col gap-37">
-          <!-- primary color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-primary rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-primaryDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-primary-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-primary-60"></div>
-              <div class="w-1/5 h-25 bg-primary-40"></div>
-              <div class="w-1/5 h-25 bg-primary-20"></div>
-              <div class="w-1/5 h-25 bg-primary-5 rounded-br-lg"></div>
-            </div>
+      <div class="flex-auto flex flex-col gap-37">
+        <!-- secondary color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-secondary rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-secondaryDark rounded-tr-lg"></div>
           </div>
-
-          <!-- dark color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-full h-25 bg-dark rounded-t-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-dark-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-dark-60"></div>
-              <div class="w-1/5 h-25 bg-dark-40"></div>
-              <div class="w-1/5 h-25 bg-dark-20"></div>
-              <div class="w-1/5 h-25 bg-dark-5 rounded-br-lg"></div>
-            </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-secondary-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-secondary-60"></div>
+            <div class="w-1/5 h-25 bg-secondary-40"></div>
+            <div class="w-1/5 h-25 bg-secondary-20"></div>
+            <div class="w-1/5 h-25 bg-secondary-5 rounded-br-lg"></div>
           </div>
+        </div>
 
-          <!-- blue color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-blue rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-blueDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-blue-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-blue-60"></div>
-              <div class="w-1/5 h-25 bg-blue-40"></div>
-              <div class="w-1/5 h-25 bg-blue-20"></div>
-              <div class="w-1/5 h-25 bg-blue-5 rounded-br-lg"></div>
-            </div>
+        <!-- violet color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-violet rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-violetDark rounded-tr-lg"></div>
           </div>
-
-          <!-- green color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-green rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-greenDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-green-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-green-60"></div>
-              <div class="w-1/5 h-25 bg-green-40"></div>
-              <div class="w-1/5 h-25 bg-green-20"></div>
-              <div class="w-1/5 h-25 bg-green-5 rounded-br-lg"></div>
-            </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-violet-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-violet-60"></div>
+            <div class="w-1/5 h-25 bg-violet-40"></div>
+            <div class="w-1/5 h-25 bg-violet-20"></div>
+            <div class="w-1/5 h-25 bg-violet-5 rounded-br-lg"></div>
           </div>
+        </div>
 
-          <!-- basic colors -->
+        <!-- orange color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-orange rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-orangeDark rounded-tr-lg"></div>
+          </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-orange-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-orange-60"></div>
+            <div class="w-1/5 h-25 bg-orange-40"></div>
+            <div class="w-1/5 h-25 bg-orange-20"></div>
+            <div class="w-1/5 h-25 bg-orange-5 rounded-br-lg"></div>
+          </div>
+        </div>
+
+        <!-- red color plate -->
+        <div>
+          <div class="flex">
+            <div class="w-1/2 h-25 bg-red rounded-tl-lg"></div>
+            <div class="w-1/2 h-25 bg-redDark rounded-tr-lg"></div>
+          </div>
+          <div class="flex">
+            <div class="w-1/5 h-25 bg-red-80 rounded-bl-lg"></div>
+            <div class="w-1/5 h-25 bg-red-60"></div>
+            <div class="w-1/5 h-25 bg-red-40"></div>
+            <div class="w-1/5 h-25 bg-red-20"></div>
+            <div class="w-1/5 h-25 bg-red-5 rounded-br-lg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- shadow -->
+    <div class="pt-20 px-25 flex space-x-12 items-center">
+      <span class="text-6xl font-extrabold not-italic text-primary-20">Shadows</span>
+      <div class="flex space-x-12 pt-8 pr-6 pb-10 pl-3.5">
+        <!-- shadow Base -->
+        <div class="flex flex-col space-y-1.5">
+          <span
+            class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider">Base</span>
+          <div class="w-25 h-25 rounded shadow-base"></div>
+        </div>
+
+        <!-- shadow MD -->
+        <div class="flex flex-col space-y-1.5">
+          <span class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider">md</span>
+          <div class="w-25 h-25 rounded shadow-md"></div>
+        </div>
+
+        <!-- shadow LG -->
+        <div class="flex flex-col space-y-1.5">
+          <span class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider">lg</span>
+          <div class="w-25 h-25 rounded shadow-lg"></div>
+        </div>
+
+        <!-- shadow XL -->
+        <div class="flex flex-col space-y-1.5">
+          <span class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider">xl</span>
+          <div class="w-25 h-25 rounded shadow-xl"></div>
+        </div>
+
+        <!-- shadow Inner -->
+        <div class="flex flex-col space-y-1.5">
+          <span
+            class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider">inner</span>
+          <div class="w-25 h-25 rounded shadow-inner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Typography section -->
+  <div class="w-full flex flex-col">
+    <div class="py-20 px-25 bg-background">
+      <span class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic">Typography</span>
+    </div>
+    <!-- Headings section -->
+    <div class="ml-25 mt-20 flex flex-col space-y-11">
+      <span class="text-primary-20 text-6xl font-extrabold">Headings</span>
+      <div class="ml-28 flex flex-col space-y-8">
+        <!-- h1 element -->
+        <div class="flex flex-col">
           <div class="flex space-x-4">
-            <div class="h-25 flex-auto rounded-lg bg-black"></div>
-            <div
-              class="h-25 flex-auto border border-solid rounded-lg bg-white"
-            ></div>
-            <div class="h-25 flex-auto rounded-lg bg-background"></div>
+            <span class="secondary-title">text-3xl 1.875rem/1.625</span>
+            <span class="primary-title">H1 30 BOLD</span>
           </div>
+          <h1 class="mont-heading">
+            The quick brown fox jumps over the lazy dog
+          </h1>
         </div>
-        <div class="flex-auto flex flex-col gap-37">
-          <!-- secondary color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-secondary rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-secondaryDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-secondary-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-secondary-60"></div>
-              <div class="w-1/5 h-25 bg-secondary-40"></div>
-              <div class="w-1/5 h-25 bg-secondary-20"></div>
-              <div class="w-1/5 h-25 bg-secondary-5 rounded-br-lg"></div>
-            </div>
+        <!-- h2 element -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="secondary-title">text-2xl 1.5rem/1.625</span>
+            <span class="primary-title">H2 24 BOLD</span>
           </div>
-
-          <!-- violet color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-violet rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-violetDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-violet-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-violet-60"></div>
-              <div class="w-1/5 h-25 bg-violet-40"></div>
-              <div class="w-1/5 h-25 bg-violet-20"></div>
-              <div class="w-1/5 h-25 bg-violet-5 rounded-br-lg"></div>
-            </div>
-          </div>
-
-          <!-- orange color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-orange rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-orangeDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-orange-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-orange-60"></div>
-              <div class="w-1/5 h-25 bg-orange-40"></div>
-              <div class="w-1/5 h-25 bg-orange-20"></div>
-              <div class="w-1/5 h-25 bg-orange-5 rounded-br-lg"></div>
-            </div>
-          </div>
-
-          <!-- red color plate -->
-          <div>
-            <div class="flex">
-              <div class="w-1/2 h-25 bg-red rounded-tl-lg"></div>
-              <div class="w-1/2 h-25 bg-redDark rounded-tr-lg"></div>
-            </div>
-            <div class="flex">
-              <div class="w-1/5 h-25 bg-red-80 rounded-bl-lg"></div>
-              <div class="w-1/5 h-25 bg-red-60"></div>
-              <div class="w-1/5 h-25 bg-red-40"></div>
-              <div class="w-1/5 h-25 bg-red-20"></div>
-              <div class="w-1/5 h-25 bg-red-5 rounded-br-lg"></div>
-            </div>
-          </div>
+          <h2 class="mont-heading">
+            The quick brown fox jumps over the lazy dog
+          </h2>
         </div>
-      </div>
-      <!-- shadow -->
-      <div class="pt-20 px-25 flex space-x-12 items-center">
-        <span class="text-6xl font-extrabold not-italic text-primary-20"
-          >Shadows</span
-        >
-        <div class="flex space-x-12 pt-8 pr-6 pb-10 pl-3.5">
-          <!-- shadow Base -->
-          <div class="flex flex-col space-y-1.5">
-            <span
-              class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider"
-              >Base</span
-            >
-            <div class="w-25 h-25 rounded shadow-base"></div>
+        <!-- h3 element -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="secondary-title">text-lg 1.125rem/1.625</span>
+            <span class="primary-title">H3 18 BOLD</span>
           </div>
-
-          <!-- shadow MD -->
-          <div class="flex flex-col space-y-1.5">
-            <span
-              class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider"
-              >md</span
-            >
-            <div class="w-25 h-25 rounded shadow-md"></div>
+          <h3 class="mont-heading">
+            The quick brown fox jumps over the lazy dog
+          </h3>
+        </div>
+        <!-- h4 element -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="secondary-title">text-base 1rem/1.625</span>
+            <span class="primary-title">H4 16 BOLD</span>
           </div>
-
-          <!-- shadow LG -->
-          <div class="flex flex-col space-y-1.5">
-            <span
-              class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider"
-              >lg</span
-            >
-            <div class="w-25 h-25 rounded shadow-lg"></div>
-          </div>
-
-          <!-- shadow XL -->
-          <div class="flex flex-col space-y-1.5">
-            <span
-              class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider"
-              >xl</span
-            >
-            <div class="w-25 h-25 rounded shadow-xl"></div>
-          </div>
-
-          <!-- shadow Inner -->
-          <div class="flex flex-col space-y-1.5">
-            <span
-              class="font-Heebo text-primary-60 text-xs leading-normal font-medium uppercase tracking-wider"
-              >inner</span
-            >
-            <div class="w-25 h-25 rounded shadow-inner"></div>
-          </div>
+          <h4 class="heebo-heading">
+            The quick brown fox jumps over the lazy dog
+          </h4>
         </div>
       </div>
     </div>
 
-    <!-- Typography section -->
-    <div class="w-full flex flex-col">
-      <div class="py-20 px-25 bg-background">
-        <span
-          class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic"
-          >Typography</span
-        >
-      </div>
-      <!-- Headings section -->
-      <div class="ml-25 mt-20 flex flex-col space-y-11">
-        <span class="text-primary-20 text-6xl font-extrabold">Headings</span>
-        <div class="ml-28 flex flex-col space-y-8">
-          <!-- h1 element -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span class="secondary-title">text-3xl 1.875rem/1.625</span>
-              <span class="primary-title">H1 30 BOLD</span>
-            </div>
-            <h1 class="mont-heading">
-              The quick brown fox jumps over the lazy dog
-            </h1>
+    <!-- Text section -->
+    <div class="ml-25 mt-36 flex flex-col space-y-15">
+      <span class="text-primary-20 text-6xl font-extrabold">Text</span>
+      <div class="ml-28 flex flex-col space-y-8">
+        <!-- text regular -->
+        <div class="flex flex-col space-y-1.25">
+          <div class="flex space-x-4">
+            <span class="secondary-title">text-base 1rem/1.625</span>
+            <span class="primary-title">Text Regular 16 Regular</span>
           </div>
-          <!-- h2 element -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span class="secondary-title">text-2xl 1.5rem/1.625</span>
-              <span class="primary-title">H2 24 BOLD</span>
-            </div>
-            <h2 class="mont-heading">
-              The quick brown fox jumps over the lazy dog
-            </h2>
+          <span class="regular-text">Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia</span>
+        </div>
+        <!-- text medium -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="secondary-title">text-base 1rem/1.625</span>
+            <span class="primary-title">Text Regular 16 Medium</span>
           </div>
-          <!-- h3 element -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span class="secondary-title">text-lg 1.125rem/1.625</span>
-              <span class="primary-title">H3 18 BOLD</span>
-            </div>
-            <h3 class="mont-heading">
-              The quick brown fox jumps over the lazy dog
-            </h3>
+          <span class="medium-text">Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia</span>
+        </div>
+        <!-- text bold -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="secondary-title">text-base 1rem/1.625</span>
+            <span class="primary-title">Text Regular 16 BOLD</span>
           </div>
-          <!-- h4 element -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span class="secondary-title">text-base 1rem/1.625</span>
-              <span class="primary-title">H4 16 BOLD</span>
-            </div>
-            <h4 class="heebo-heading">
-              The quick brown fox jumps over the lazy dog
-            </h4>
-          </div>
+          <span class="bold-text">Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia</span>
         </div>
       </div>
+    </div>
 
-      <!-- Text section -->
-      <div class="ml-25 mt-36 flex flex-col space-y-15">
-        <span class="text-primary-20 text-6xl font-extrabold">Text</span>
-        <div class="ml-28 flex flex-col space-y-8">
-          <!-- text regular -->
+    <!-- Labels -->
+    <div class="ml-25 mt-36 flex flex-col space-y-15">
+      <span class="text-primary-20 text-6xl font-extrabold">Labels</span>
+      <div class="ml-28 flex flex-col space-y-8">
+        <!-- button label 16 medium -->
+        <div class="flex flex-col space-y-1.25">
+          <div class="flex space-x-4">
+            <span class="secondary-title">text-base 1rem/1.5</span>
+            <span class="primary-title">Button Label 16 MEDIUM</span>
+          </div>
+          <span class="btn-label-medium">This is a demo link</span>
+        </div>
+        <!-- label 12 bold -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="secondary-title">text-xs 0.75rem/1.5</span>
+            <span class="primary-title">LAbel 12 Bold</span>
+          </div>
+          <span class="label-bold-12">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <!-- uppercase label 12 medium -->
+        <div class="flex flex-col">
+          <div class="flex space-x-4">
+            <span class="secondary-title">text-xs 0.75rem/1.5 Uppercase</span>
+            <span class="primary-title">Uppercase LAbel 12 MEDIUM</span>
+          </div>
+          <span class="uppercase-label-medium">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <!-- small labels -->
+        <div class="flex flex-col space-y-8">
+          <!-- regular -->
           <div class="flex flex-col space-y-1.25">
             <div class="flex space-x-4">
-              <span class="secondary-title">text-base 1rem/1.625</span>
-              <span class="primary-title">Text Regular 16 Regular</span>
+              <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-sm leading-normal">text-sm
+                0.875rem/1.5</span>
+              <span class="font-Heebo text-primary-60 uppercase tracking-wider text-sm leading-normal">SMALL LABEL 14
+                Regular</span>
             </div>
-            <span class="regular-text"
-              >Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia</span
-            >
+            <span class="sm-label-regular">The quick brown fox jumps over the lazy dog</span>
           </div>
-          <!-- text medium -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span class="secondary-title">text-base 1rem/1.625</span>
-              <span class="primary-title">Text Regular 16 Medium</span>
-            </div>
-            <span class="medium-text"
-              >Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia</span
-            >
-          </div>
-          <!-- text bold -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span class="secondary-title">text-base 1rem/1.625</span>
-              <span class="primary-title">Text Regular 16 BOLD</span>
-            </div>
-            <span class="bold-text"
-              >Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia</span
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Labels -->
-      <div class="ml-25 mt-36 flex flex-col space-y-15">
-        <span class="text-primary-20 text-6xl font-extrabold">Labels</span>
-        <div class="ml-28 flex flex-col space-y-8">
-          <!-- button label 16 medium -->
+          <!-- medium -->
           <div class="flex flex-col space-y-1.25">
             <div class="flex space-x-4">
-              <span class="secondary-title">text-base 1rem/1.5</span>
-              <span class="primary-title">Button Label 16 MEDIUM</span>
+              <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-sm leading-normal">text-sm
+                0.875rem/1.5</span>
+              <span class="font-Heebo text-primary-60 uppercase tracking-wider text-sm leading-normal">SMALL LABEL 14
+                Medium</span>
             </div>
-            <span class="btn-label-medium">This is a demo link</span>
+            <span class="sm-label-medium">The quick brown fox jumps over the lazy dog</span>
           </div>
-          <!-- label 12 bold -->
-          <div class="flex flex-col">
+          <!-- bold -->
+          <div class="flex flex-col space-y-1.25">
             <div class="flex space-x-4">
-              <span class="secondary-title">text-xs 0.75rem/1.5</span>
-              <span class="primary-title">LAbel 12 Bold</span>
+              <span class="font-Heebo text-secondaryDark uppercase tracking-wider text-sm leading-normal">text-sm
+                0.875rem/1.5</span>
+              <span class="font-Heebo text-primary-60 uppercase tracking-wider text-sm leading-normal">SMALL LABEL 14
+                Bold</span>
             </div>
-            <span class="label-bold-12"
-              >The quick brown fox jumps over the lazy dog</span
-            >
-          </div>
-          <!-- uppercase label 12 medium -->
-          <div class="flex flex-col">
-            <div class="flex space-x-4">
-              <span class="secondary-title">text-xs 0.75rem/1.5 Uppercase</span>
-              <span class="primary-title">Uppercase LAbel 12 MEDIUM</span>
-            </div>
-            <span class="uppercase-label-medium"
-              >The quick brown fox jumps over the lazy dog</span
-            >
-          </div>
-          <!-- small labels -->
-          <div class="flex flex-col space-y-8">
-            <!-- regular -->
-            <div class="flex flex-col space-y-1.25">
-              <div class="flex space-x-4">
-                <span
-                  class="font-Heebo text-secondaryDark uppercase tracking-wider text-sm leading-normal"
-                  >text-sm 0.875rem/1.5</span
-                >
-                <span
-                  class="font-Heebo text-primary-60 uppercase tracking-wider text-sm leading-normal"
-                  >SMALL LABEL 14 Regular</span
-                >
-              </div>
-              <span class="sm-label-regular"
-                >The quick brown fox jumps over the lazy dog</span
-              >
-            </div>
-            <!-- medium -->
-            <div class="flex flex-col space-y-1.25">
-              <div class="flex space-x-4">
-                <span
-                  class="font-Heebo text-secondaryDark uppercase tracking-wider text-sm leading-normal"
-                  >text-sm 0.875rem/1.5</span
-                >
-                <span
-                  class="font-Heebo text-primary-60 uppercase tracking-wider text-sm leading-normal"
-                  >SMALL LABEL 14 Medium</span
-                >
-              </div>
-              <span class="sm-label-medium"
-                >The quick brown fox jumps over the lazy dog</span
-              >
-            </div>
-            <!-- bold -->
-            <div class="flex flex-col space-y-1.25">
-              <div class="flex space-x-4">
-                <span
-                  class="font-Heebo text-secondaryDark uppercase tracking-wider text-sm leading-normal"
-                  >text-sm 0.875rem/1.5</span
-                >
-                <span
-                  class="font-Heebo text-primary-60 uppercase tracking-wider text-sm leading-normal"
-                  >SMALL LABEL 14 Bold</span
-                >
-              </div>
-              <span class="sm-label-bold"
-                >The quick brown fox jumps over the lazy dog</span
-              >
-            </div>
+            <span class="sm-label-bold">The quick brown fox jumps over the lazy dog</span>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Button section -->
-    <div class="w-full flex flex-col">
-      <div class="py-20 px-25 bg-background">
-        <span
-          class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic"
-          >Buttons</span
-        >
-      </div>
-
-      <!-- Basic Buttons Section -->
-      <div class="ml-25 mt-19 flex flex-col space-y-15">
-        <span class="text-primary-20 text-6xl font-extrabold"
-          >Basic Buttons</span
-        >
-        <div class="px-3 py-5 grid grid-cols-2 gap-x-19 gap-y-13">
-          <!-- primary buttons -->
-          <div class="flex flex-col space-y-6">
-            <div class="flex space-x-8">
-              <button class="primary-btn">
-                <label>Submit</label>
-              </button>
-              <button class="primary-mix-btn">
-                <span class="icon-settings"></span>
-                <label>Submit</label>
-              </button>
-              <button class="primary-mix-btn">
-                <label>Submit</label>
-                <span class="icon-arrow-forward"></span>
-              </button>
-              <button class="primary-icon-btn">
-                <span class="icon-arrow-forward"></span>
-              </button>
-            </div>
-            <div class="flex space-x-8">
-              <button class="small-primary-btn">
-                <label>Submit</label>
-              </button>
-              <button class="small-primary-mix-btn">
-                <span class="icon-settings"></span>
-                <label>Submit</label>
-              </button>
-              <button class="small-primary-mix-btn">
-                <label>Submit</label>
-                <span class="icon-arrow-forward"></span>
-              </button>
-              <button class="small-primary-icon-btn">
-                <span class="icon-arrow-forward"></span>
-              </button>
-            </div>
-          </div>
-          <!-- minimal buttons -->
-          <div class="flex flex-col space-y-6">
-            <div class="flex items-center space-x-8">
-              <button class="minimal-btn">
-                <label>Submit</label>
-              </button>
-              <button class="minimal-mix-btn">
-                <span class="icon-settings"></span>
-                <label>Submit</label>
-              </button>
-              <button class="minimal-mix-btn">
-                <label>Submit</label>
-                <span class="icon-arrow-forward"></span>
-              </button>
-              <button class="minimal-icon-btn">
-                <span class="icon-arrow-forward"></span>
-              </button>
-            </div>
-            <div class="flex space-x-8">
-              <button class="small-minimal-btn">
-                <label>Submit</label>
-              </button>
-              <button class="small-minimal-mix-btn">
-                <span class="icon-settings"></span>
-                <label>Submit</label>
-              </button>
-              <button class="small-minimal-mix-btn">
-                <label>Submit</label>
-                <span class="icon-arrow-forward"></span>
-              </button>
-              <button class="small-minimal-icon-btn">
-                <span class="icon-arrow-forward"></span>
-              </button>
-            </div>
-          </div>
-          <!-- disabled primary buttons -->
-          <div class="flex flex-col space-y-6">
-            <div class="flex space-x-8">
-              <button class="primary-btn_disabled">
-                <label>Submit</label>
-              </button>
-              <button class="primary-mix-btn_disabled">
-                <span class="icon-settings"></span>
-                <label>Submit</label>
-              </button>
-              <button class="primary-mix-btn_disabled">
-                <label>Submit</label>
-                <span class="icon-arrow-forward"></span>
-              </button>
-              <button class="primary-icon-btn_disabled">
-                <span class="icon-arrow-forward"></span>
-              </button>
-            </div>
-            <div class="flex space-x-8">
-              <button class="small-primary-btn_disabled">
-                <label>Submit</label>
-              </button>
-              <button class="small-primary-mix-btn_disabled">
-                <span class="icon-settings"></span>
-                <label>Submit</label>
-              </button>
-              <button class="small-primary-mix-btn_disabled">
-                <label>Submit</label>
-                <span class="icon-arrow-forward"></span>
-              </button>
-              <button class="small-primary-icon-btn_disabled">
-                <span class="icon-arrow-forward"></span>
-              </button>
-            </div>
-          </div>
-          <!-- disabled minimal buttons -->
-          <div class="flex flex-col space-y-6">
-            <div class="flex space-x-8">
-              <button class="minimal-btn_disabled">
-                <label>Submit</label>
-              </button>
-              <button class="minimal-mix-btn_disabled">
-                <span class="icon-settings"></span>
-                <label>Submit</label>
-              </button>
-              <button class="minimal-mix-btn_disabled">
-                <label>Submit</label>
-                <span class="icon-arrow-forward"></span>
-              </button>
-              <button class="minimal-icon-btn_disabled">
-                <span class="icon-arrow-forward"></span>
-              </button>
-            </div>
-            <div class="flex space-x-8">
-              <button class="small-minimal-btn_disabled">
-                <label>Submit</label>
-              </button>
-              <button class="small-minimal-mix-btn_disabled">
-                <span class="icon-settings"></span>
-                <label>Submit</label>
-              </button>
-              <button class="small-minimal-mix-btn_disabled">
-                <label>Submit</label>
-                <span class="icon-arrow-forward"></span>
-              </button>
-              <button class="small-minimal-icon-btn_disabled">
-                <span class="icon-arrow-forward"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tiny Icon BTN -->
-      <div class="ml-25 mt-31 flex flex-col space-y-11">
-        <span class="text-primary-20 text-6xl font-extrabold"
-          >Tiny Icon BTN</span
-        >
-        <button class="tiny-icon-btn">
-          <div><span class="icon-close"></span></div>
-        </button>
-        <button class="tiny-icon-btn_disabled" disabled>
-          <div><span class="icon-close"></span></div>
-        </button>
-      </div>
-
-      <!-- Links -->
-      <div class="ml-25 mt-20 flex flex-col space-y-11">
-        <span class="text-primary-20 text-6xl font-extrabold">Links</span>
-        <div class="flex items-center space-x-10">
-          <a href="" class="text-link"> Submit </a>
-          <a href="" class="small-text-link"> Submit </a>
-        </div>
-        <div class="flex items-center space-x-10">
-          <a href="" class="text-link_disabled"> Submit </a>
-          <a href="" class="small-text-link_disabled"> Submit </a>
-        </div>
-      </div>
-
-      <!-- Tags -->
-      <div class="ml-25 mt-20 flex flex-col space-y-11">
-        <span class="text-primary-20 text-6xl font-extrabold">Tags</span>
-        <div class="flex items-center space-x-20">
-          <button class="tag">
-            <span>Tag Label</span>
-            <div>
-              <span class="icon-close"></span>
-            </div>
-          </button>
-          <button class="small-tag">
-            <span>Tag Label</span>
-            <div>
-              <span class="icon-close"></span>
-            </div>
-          </button>
-        </div>
-
-        <div class="flex items-center space-x-20">
-          <button class="tag_disabled" disabled>
-            <span>Tag Label</span>
-            <div>
-              <span class="icon-close"></span>
-            </div>
-          </button>
-          <button class="small-tag_disabled" disabled>
-            <span>Tag Label</span>
-            <div>
-              <span class="icon-close"></span>
-            </div>
-          </button>
-        </div>
-      </div>
+  <!-- Button section -->
+  <div class="w-full flex flex-col">
+    <div class="py-20 px-25 bg-background">
+      <span class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic">Buttons</span>
     </div>
 
-    <!-- Badges section -->
-    <div class="w-full flex flex-col">
-      <div class="w-1/2 py-20 px-25 bg-background">
-        <span
-          class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic"
-          >Badges</span
-        >
-      </div>
-
-      <!-- Badges -->
-      <div class="mt-19 ml-25 flex flex-col space-y-8">
-        <span class="text-primary-20 text-6xl font-extrabold">Badges</span>
-        <div class="p-3 flex items-center space-x-6.5">
-          <div class="neutral-badge">
-            <span>NEUTRAL</span>
-          </div>
-          <div class="blue-badge">
-            <span>BLUE</span>
-          </div>
-          <div class="green-badge">
-            <span>GREEN</span>
-          </div>
-          <div class="orange-badge">
-            <span>ORANGE</span>
-          </div>
-          <div class="red-badge">
-            <span>RED</span>
-          </div>
-          <div class="violet-badge">
-            <span>VIOLET</span>
-          </div>
-          <div class="primary-badge">
-            <span>PRIMARY</span>
-          </div>
-          <div class="secondary-badge">
-            <span>SECONDARY</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Icon Circles -->
-      <div class="mt-19 ml-25 flex flex-col space-y-8">
-        <span class="text-primary-20 text-6xl font-extrabold"
-          >Icon Circles</span
-        >
-        <div class="flex items-center space-x-8">
-          <div
-            class="flex flex-col gap-16 font-Heebo text-primary-60 text-xs leading-normal font-medium tracking-wider"
-          >
-            <span>BIG</span>
-            <span>SMALL</span>
-          </div>
-          <div class="p-5 flex flex-col space-y-12">
-            <div class="flex space-x-10">
-              <div class="flex flex-col items-center justify-center space-y-12">
-                <div class="dark-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-                <div class="small-dark-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-              </div>
-              <div class="flex flex-col items-center justify-center space-y-12">
-                <div class="blue-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-                <div class="small-blue-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-              </div>
-              <div class="flex flex-col items-center justify-center space-y-12">
-                <div class="green-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-                <div class="small-green-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-              </div>
-              <div class="flex flex-col items-center justify-center space-y-12">
-                <div class="orange-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-                <div class="small-orange-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-              </div>
-              <div class="flex flex-col items-center justify-center space-y-12">
-                <div class="red-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-                <div class="small-red-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-              </div>
-              <div class="flex flex-col items-center justify-center space-y-12">
-                <div class="violet-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-                <div class="small-violet-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-              </div>
-              <div class="flex flex-col items-center justify-center space-y-12">
-                <div class="primary-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-                <div class="small-primary-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-              </div>
-              <div class="flex flex-col items-center justify-center space-y-12">
-                <div class="secondary-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-                <div class="small-secondary-circle-icon">
-                  <span class="icon-volume-off"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Controls section -->
-    <div class="w-full flex flex-col">
-      <div class="py-20 px-25 bg-background">
-        <span
-          class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic"
-          >Controls</span
-        >
-      </div>
-
-      <!-- Checkbox -->
-      <div class="mt-19 ml-25 flex flex-col space-y-17">
-        <span class="text-primary-20 text-6xl font-extrabold">Checkbox</span>
-        <div class="flex space-x-15">
-          <div class="flex flex-col items-align content-center">
-            <span
-              class="text-checkboxTitle font-extrabold leading-none text-dark"
-              >Selected</span
-            >
-            <div class="flex justify-center mt-12">
-              <input type="checkbox" class="default-checkbox" checked />
-            </div>
-            <div class="flex justify-center mt-16">
-              <input
-                type="checkbox"
-                class="default-checkbox"
-                checked
-                disabled
-              />
-            </div>
-          </div>
-          <div class="flex flex-col items-align content-center">
-            <span
-              class="text-checkboxTitle font-extrabold leading-none text-dark"
-              >Indeterminate</span
-            >
-            <div class="flex justify-center mt-11">
-              <fieldset class="multi-checkbox">
-                <span class="icon-multiselect"></span>
-              </fieldset>
-            </div>
-            <div class="flex justify-center mt-15">
-              <fieldset class="multi-checkbox" disabled>
-                <span class="icon-multiselect"></span>
-              </fieldset>
-            </div>
-          </div>
-          <div class="flex flex-col items-align content-center">
-            <span
-              class="text-checkboxTitle font-extrabold leading-none text-dark"
-              >Unelected</span
-            >
-            <div class="flex justify-center mt-12">
-              <input type="checkbox" class="default-checkbox" />
-            </div>
-            <div class="flex justify-center mt-16">
-              <input type="checkbox" class="default-checkbox" disabled />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Radio -->
-      <div class="mt-19 mb-7 ml-25 flex flex-col space-y-17">
-        <span class="text-primary-20 text-6xl font-extrabold">Radio</span>
-        <div class="flex space-x-15">
-          <div class="flex flex-col items-align content-center">
-            <span
-              class="text-checkboxTitle font-extrabold leading-none text-dark"
-              >Unselected</span
-            >
-            <div class="flex justify-center mt-12">
-              <label class="inline-flex items-center">
-                <input type="radio" class="default-radio" />
-              </label>
-            </div>
-            <div class="text-lg text-secondary-20 flex justify-center mt-16">
-              <label class="inline-flex items-center">
-                <input type="radio" class="default-radio" disabled />
-              </label>
-            </div>
-          </div>
-          <div class="flex flex-col items-align content-center">
-            <span
-              class="text-checkboxTitle font-extrabold leading-none text-dark"
-              >Selected</span
-            >
-            <div class="flex justify-center mt-12 form-check">
-              <label class="inline-flex items-center">
-                <input type="radio" class="default-radio" checked />
-              </label>
-            </div>
-            <div class="text-lg text-secondary-20 flex justify-center mt-16">
-              <label class="inline-flex items-center">
-                <input type="radio" class="default-radio" checked disabled />
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Toggle -->
-      <div class="mt-12 ml-25 flex flex-col space-y-17">
-        <span class="text-primary-20 text-6xl font-extrabold">Toggle</span>
-        <div class="flex space-x-40 items-center">
-          <div class="flex space-x-16 items-center">
-            <div class="flex flex-col justify-start">
-              <label
-                class="text-dark font-extrabold text-checkboxTitle leading-normal"
-                ><p>Small</p>
-                <p>Selected</p></label
-              >
-              <label class="mt-8 small-toggle">
-                <input type="checkbox" class="peer" checked/>
-                <span
-                  class="peer-checked:bg-secondary after:w-2.75 after:h-2.75 peer-checked:after:bg-white peer-checked:after:translate-x-2"
-                ></span>
-              </label>
-              <label class="mt-8 small-toggle-checked_disabled">
-                <input type="checkbox" checked />
-                <span class="after:w-2.75 after:h-2.75"></span>
-              </label>
-            </div>
-            <div class="flex flex-col justify-start">
-              <label
-                class="text-dark font-extrabold text-checkboxTitle leading-normal"
-                ><p>Small</p>
-                <p>Unselected</p></label
-              >
-              <label class="mt-8 small-toggle">
-                <input type="checkbox" class="peer" />
-                <span
-                  class="peer-checked:bg-secondary peer-checked:hover:bg-dark after:w-2.75 after:h-2.75 peer-checked:after:bg-white peer-checked:after:translate-x-2"
-                ></span>
-              </label>
-
-              <div class="form-check form-switch">
-                <input class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                <label class="form-check-label inline-block text-gray-800" for="flexSwitchCheckDefault">Default switch checkbox input</label>
-              </div>
-              
-              <label class="mt-8 small-toggle-unchecked_disabled">
-                <input type="checkbox" />
-                <span class="after:w-2.75 after:h-2.75"></span>
-              </label>
-            </div>
-          </div>
-          <div class="flex space-x-16 items-center">
-            <div class="flex flex-col justify-start">
-              <label
-                class="text-dark font-extrabold text-checkboxTitle leading-normal"
-                ><p>Big</p>
-                <p>Selected</p></label
-              >
-              <label
-                class="mt-8 w-10 relative flex justify-between items-center text-xl"
-              >
-                <input
-                  type="checkbox"
-                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
-                  checked
-                />
-                <span
-                  class="w-10 h-7 flex items-center flex-shrink-0 p-1 bg-white border-4 border-secondary rounded-full transition duration-100 ease-in-out peer-checked:bg-secondary after:w-4 after:h-4 after:bg-secondary peer-checked:after:bg-white after:rounded-full after:shadow-md after:transition after:duration-100 peer-checked:after:translate-x-2"
-                ></span>
-              </label>
-              <label
-                class="mt-8 w-10 relative flex justify-between items-center text-xl"
-              >
-                <input
-                  type="checkbox"
-                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
-                  checked
-                />
-                <span
-                  class="w-10 h-7 flex items-center flex-shrink-0 p-1 bg-white border-4 border-secondary-20 rounded-full transition duration-100 ease-in-out peer-checked:bg-secondary-20 after:w-4 after:h-4 after:bg-secondary-20 peer-checked:after:bg-white after:rounded-full after:shadow-md after:transition after:duration-100 peer-checked:after:translate-x-2"
-                ></span>
-              </label>
-            </div>
-            <div class="flex flex-col justify-start">
-              <label
-                class="text-dark font-extrabold text-checkboxTitle leading-normal"
-                ><p>Big</p>
-                <p>Unselected</p></label
-              >
-              <label
-                class="mt-8 w-10 relative flex justify-between items-center text-xl"
-              >
-                <input
-                  type="checkbox"
-                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
-                />
-                <span
-                  class="w-10 h-7 flex items-center flex-shrink-0 p-1 bg-white border-4 border-secondary rounded-full transition duration-100 ease-in-out peer-checked:bg-secondary after:w-4 after:h-4 after:bg-secondary peer-checked:after:bg-white after:rounded-full after:shadow-md after:transition after:duration-100 peer-checked:after:translate-x-2"
-                ></span>
-              </label>
-              <label
-                class="mt-8 w-10 relative flex justify-between items-center text-xl"
-              >
-                <input
-                  type="checkbox"
-                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
-                />
-                <span
-                  class="w-10 h-7 flex items-center flex-shrink-0 p-1 bg-white border-4 border-secondary-20 rounded-full transition duration-100 ease-in-out peer-checked:bg-secondary-20 after:w-4 after:h-4 after:bg-secondary-20 peer-checked:after:bg-white after:rounded-full after:shadow-md after:transition after:duration-100 peer-checked:after:translate-x-2"
-                ></span>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pagination -->
-      <div class="ml-25 my-24 flex flex-col space-y-15">
-        <span class="text-primary-20 text-6xl font-extrabold">Pagination</span>
-        <div class="flex items-center space-x-4">
-          <div class="flex space-x-1.5">
-            <span class="pagination-page-text">Page</span>
-            <div class="flex space-x-1.5">
-              <span class="pagination-page-text">1</span>
-              <span class="pagination-page-text_disabled">/</span>
-              <span class="pagination-page-text_disabled">5</span>
-            </div>
-          </div>
-          <div class="flex space-x-2">
-            <button class="pagination-btn" disabled>
-              <span class="icon-arrow-backward"></span>
+    <!-- Basic Buttons Section -->
+    <div class="ml-25 mt-19 flex flex-col space-y-15">
+      <span class="text-primary-20 text-6xl font-extrabold">Basic Buttons</span>
+      <div class="px-3 py-5 grid grid-cols-2 gap-x-19 gap-y-13">
+        <!-- primary buttons -->
+        <div class="flex flex-col space-y-6">
+          <div class="flex space-x-8">
+            <button class="primary-btn">
+              <label>Submit</label>
             </button>
-            <button class="pagination-btn">
+            <button class="primary-mix-btn">
+              <span class="icon-settings"></span>
+              <label>Submit</label>
+            </button>
+            <button class="primary-mix-btn">
+              <label>Submit</label>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button class="primary-icon-btn">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+          <div class="flex space-x-8">
+            <button class="small-primary-btn">
+              <label>Submit</label>
+            </button>
+            <button class="small-primary-mix-btn">
+              <span class="icon-settings"></span>
+              <label>Submit</label>
+            </button>
+            <button class="small-primary-mix-btn">
+              <label>Submit</label>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button class="small-primary-icon-btn">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+        </div>
+        <!-- minimal buttons -->
+        <div class="flex flex-col space-y-6">
+          <div class="flex items-center space-x-8">
+            <button class="minimal-btn">
+              <label>Submit</label>
+            </button>
+            <button class="minimal-mix-btn">
+              <span class="icon-settings"></span>
+              <label>Submit</label>
+            </button>
+            <button class="minimal-mix-btn">
+              <label>Submit</label>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button class="minimal-icon-btn">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+          <div class="flex space-x-8">
+            <button class="small-minimal-btn">
+              <label>Submit</label>
+            </button>
+            <button class="small-minimal-mix-btn">
+              <span class="icon-settings"></span>
+              <label>Submit</label>
+            </button>
+            <button class="small-minimal-mix-btn">
+              <label>Submit</label>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button class="small-minimal-icon-btn">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+        </div>
+        <!-- disabled primary buttons -->
+        <div class="flex flex-col space-y-6">
+          <div class="flex space-x-8">
+            <button class="primary-btn_disabled">
+              <label>Submit</label>
+            </button>
+            <button class="primary-mix-btn_disabled">
+              <span class="icon-settings"></span>
+              <label>Submit</label>
+            </button>
+            <button class="primary-mix-btn_disabled">
+              <label>Submit</label>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button class="primary-icon-btn_disabled">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+          <div class="flex space-x-8">
+            <button class="small-primary-btn_disabled">
+              <label>Submit</label>
+            </button>
+            <button class="small-primary-mix-btn_disabled">
+              <span class="icon-settings"></span>
+              <label>Submit</label>
+            </button>
+            <button class="small-primary-mix-btn_disabled">
+              <label>Submit</label>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button class="small-primary-icon-btn_disabled">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+        </div>
+        <!-- disabled minimal buttons -->
+        <div class="flex flex-col space-y-6">
+          <div class="flex space-x-8">
+            <button class="minimal-btn_disabled">
+              <label>Submit</label>
+            </button>
+            <button class="minimal-mix-btn_disabled">
+              <span class="icon-settings"></span>
+              <label>Submit</label>
+            </button>
+            <button class="minimal-mix-btn_disabled">
+              <label>Submit</label>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button class="minimal-icon-btn_disabled">
+              <span class="icon-arrow-forward"></span>
+            </button>
+          </div>
+          <div class="flex space-x-8">
+            <button class="small-minimal-btn_disabled">
+              <label>Submit</label>
+            </button>
+            <button class="small-minimal-mix-btn_disabled">
+              <span class="icon-settings"></span>
+              <label>Submit</label>
+            </button>
+            <button class="small-minimal-mix-btn_disabled">
+              <label>Submit</label>
+              <span class="icon-arrow-forward"></span>
+            </button>
+            <button class="small-minimal-icon-btn_disabled">
               <span class="icon-arrow-forward"></span>
             </button>
           </div>
         </div>
       </div>
     </div>
-  </body>
+
+    <!-- Tiny Icon BTN -->
+    <div class="ml-25 mt-31 flex flex-col space-y-11">
+      <span class="text-primary-20 text-6xl font-extrabold">Tiny Icon BTN</span>
+      <button class="tiny-icon-btn">
+        <div><span class="icon-close"></span></div>
+      </button>
+      <button class="tiny-icon-btn_disabled" disabled>
+        <div><span class="icon-close"></span></div>
+      </button>
+    </div>
+
+    <!-- Links -->
+    <div class="ml-25 mt-20 flex flex-col space-y-11">
+      <span class="text-primary-20 text-6xl font-extrabold">Links</span>
+      <div class="flex items-center space-x-10">
+        <a href="" class="text-link"> Submit </a>
+        <a href="" class="small-text-link"> Submit </a>
+      </div>
+      <div class="flex items-center space-x-10">
+        <a href="" class="text-link_disabled"> Submit </a>
+        <a href="" class="small-text-link_disabled"> Submit </a>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="ml-25 mt-20 flex flex-col space-y-11">
+      <span class="text-primary-20 text-6xl font-extrabold">Tags</span>
+      <div class="flex items-center space-x-20">
+        <button class="tag">
+          <span>Tag Label</span>
+          <div>
+            <span class="icon-close"></span>
+          </div>
+        </button>
+        <button class="small-tag">
+          <span>Tag Label</span>
+          <div>
+            <span class="icon-close"></span>
+          </div>
+        </button>
+      </div>
+
+      <div class="flex items-center space-x-20">
+        <button class="tag_disabled" disabled>
+          <span>Tag Label</span>
+          <div>
+            <span class="icon-close"></span>
+          </div>
+        </button>
+        <button class="small-tag_disabled" disabled>
+          <span>Tag Label</span>
+          <div>
+            <span class="icon-close"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Badges section -->
+  <div class="w-full flex flex-col">
+    <div class="w-1/2 py-20 px-25 bg-background">
+      <span class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic">Badges</span>
+    </div>
+
+    <!-- Badges -->
+    <div class="mt-19 ml-25 flex flex-col space-y-8">
+      <span class="text-primary-20 text-6xl font-extrabold">Badges</span>
+      <div class="p-3 flex items-center space-x-6.5">
+        <div class="neutral-badge">
+          <span>NEUTRAL</span>
+        </div>
+        <div class="blue-badge">
+          <span>BLUE</span>
+        </div>
+        <div class="green-badge">
+          <span>GREEN</span>
+        </div>
+        <div class="orange-badge">
+          <span>ORANGE</span>
+        </div>
+        <div class="red-badge">
+          <span>RED</span>
+        </div>
+        <div class="violet-badge">
+          <span>VIOLET</span>
+        </div>
+        <div class="primary-badge">
+          <span>PRIMARY</span>
+        </div>
+        <div class="secondary-badge">
+          <span>SECONDARY</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Icon Circles -->
+    <div class="mt-19 ml-25 flex flex-col space-y-8">
+      <span class="text-primary-20 text-6xl font-extrabold">Icon Circles</span>
+      <div class="flex items-center space-x-8">
+        <div class="flex flex-col gap-16 font-Heebo text-primary-60 text-xs leading-normal font-medium tracking-wider">
+          <span>BIG</span>
+          <span>SMALL</span>
+        </div>
+        <div class="p-5 flex flex-col space-y-12">
+          <div class="flex space-x-10">
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="dark-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="small-dark-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="blue-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="small-blue-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="green-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="small-green-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="orange-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="small-orange-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="red-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="small-red-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="violet-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="small-violet-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="primary-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="small-primary-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-12">
+              <div class="secondary-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+              <div class="small-secondary-circle-icon">
+                <span class="icon-volume-off"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls section -->
+  <div class="w-full flex flex-col">
+    <div class="py-20 px-25 bg-background">
+      <span class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic">Controls</span>
+    </div>
+
+    <!-- Checkbox -->
+    <div class="mt-19 ml-25 flex flex-col space-y-17">
+      <span class="text-primary-20 text-6xl font-extrabold">Checkbox</span>
+      <div class="flex space-x-15">
+        <div class="flex flex-col items-align content-center">
+          <span class="text-checkboxTitle font-extrabold leading-none text-dark">Selected</span>
+          <div class="flex justify-center mt-12">
+            <input type="checkbox" class="default-checkbox" checked />
+          </div>
+          <div class="flex justify-center mt-16">
+            <input type="checkbox" class="default-checkbox" checked disabled />
+          </div>
+        </div>
+        <div class="flex flex-col items-align content-center">
+          <span class="text-checkboxTitle font-extrabold leading-none text-dark">Indeterminate</span>
+          <div class="flex justify-center mt-11">
+            <fieldset class="multi-checkbox">
+              <span class="icon-multiselect"></span>
+            </fieldset>
+          </div>
+          <div class="flex justify-center mt-15">
+            <fieldset class="multi-checkbox" disabled>
+              <span class="icon-multiselect"></span>
+            </fieldset>
+          </div>
+        </div>
+        <div class="flex flex-col items-align content-center">
+          <span class="text-checkboxTitle font-extrabold leading-none text-dark">Unelected</span>
+          <div class="flex justify-center mt-12">
+            <input type="checkbox" class="default-checkbox" />
+          </div>
+          <div class="flex justify-center mt-16">
+            <input type="checkbox" class="default-checkbox" disabled />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Radio -->
+    <div class="mt-19 mb-7 ml-25 flex flex-col space-y-17">
+      <span class="text-primary-20 text-6xl font-extrabold">Radio</span>
+      <div class="flex space-x-15">
+        <div class="flex flex-col items-align content-center">
+          <span class="text-checkboxTitle font-extrabold leading-none text-dark">Unselected</span>
+          <div class="flex justify-center mt-12">
+            <label class="inline-flex items-center">
+              <input type="radio" class="default-radio" />
+            </label>
+          </div>
+          <div class="text-lg text-secondary-20 flex justify-center mt-16">
+            <label class="inline-flex items-center">
+              <input type="radio" class="default-radio" disabled />
+            </label>
+          </div>
+        </div>
+        <div class="flex flex-col items-align content-center">
+          <span class="text-checkboxTitle font-extrabold leading-none text-dark">Selected</span>
+          <div class="flex justify-center mt-12 form-check">
+            <label class="inline-flex items-center">
+              <input type="radio" class="default-radio" checked />
+            </label>
+          </div>
+          <div class="text-lg text-secondary-20 flex justify-center mt-16">
+            <label class="inline-flex items-center">
+              <input type="radio" class="default-radio" checked disabled />
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toggle -->
+    <div class="mt-12 ml-25 flex flex-col space-y-17">
+      <span class="text-primary-20 text-6xl font-extrabold">Toggle</span>
+      <div class="flex space-x-40 items-center">
+        <div class="flex space-x-16 items-center">
+          <div class="flex flex-col justify-start space-y-8">
+            <label class="text-dark font-extrabold text-checkboxTitle leading-normal">
+              <p>Small</p>
+              <p>Selected</p>
+            </label>
+            <label class="small-toggle">
+              <input type="checkbox" class="peer" checked />
+              <span
+                class="peer-checked:bg-secondary after:w-2.75 after:h-2.75 peer-checked:after:bg-white peer-checked:after:translate-x-2"></span>
+            </label>
+            <label class=" small-toggle-checked_disabled">
+              <input type="checkbox" checked />
+              <span class="after:w-2.75 after:h-2.75"></span>
+            </label>
+          </div>
+          <div class="flex flex-col justify-start space-y-8">
+            <label class="text-dark font-extrabold text-checkboxTitle leading-normal">
+              <p>Small</p>
+              <p>Unselected</p>
+            </label>
+            <label class=" small-toggle">
+              <input type="checkbox" class="peer" />
+              <span
+                class="peer-checked:bg-secondary peer-checked:hover:bg-dark after:w-2.75 after:h-2.75 peer-checked:after:bg-white peer-checked:after:translate-x-2"></span>
+            </label>
+
+            <label class=" small-toggle-unchecked_disabled">
+              <input type="checkbox" />
+              <span class="after:w-2.75 after:h-2.75"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex space-x-16 items-center">
+        <div class="flex flex-col justify-start space-y-8">
+          <label class="text-dark font-extrabold text-checkboxTitle leading-normal">
+            <p>Big</p>
+            <p>Selected</p>
+          </label>
+          <label class="big-toggle">
+            <input type="checkbox" class="peer" checked />
+            <span
+              class="peer-checked:bg-secondary after:w-4 after:h-4 peer-checked:after:bg-white peer-checked:after:translate-x-2.25"></span>
+          </label>
+          <label class="big-toggle-checked_disabled">
+            <input type="checkbox" checked />
+            <span class="after:w-4 after:h-4"></span>
+          </label>
+        </div>
+        <div class="flex flex-col justify-start">
+          <label class="text-dark font-extrabold text-checkboxTitle leading-normal">
+            <p>Big</p>
+            <p>Unselected</p>
+          </label>
+          <label class="mt-8 big-toggle">
+            <input type="checkbox" class="peer" />
+            <span
+              class=" peer-checked:bg-secondary after:w-4 after:h-4  peer-checked:after:bg-white peer-checked:after:translate-x-2"></span>
+          </label>
+          <label class="mt-8 big-toggle-unchecked_disabled">
+            <input type="checkbox" />
+            <span class="  after:w-4 after:h-4 "></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="ml-25 my-24 flex flex-col space-y-15">
+    <span class="text-primary-20 text-6xl font-extrabold">Pagination</span>
+    <div class="flex items-center space-x-4">
+      <div class="flex space-x-1.5">
+        <span class="pagination-page-text">Page</span>
+        <div class="flex space-x-1.5">
+          <span class="pagination-page-text">1</span>
+          <span class="pagination-page-text_disabled">/</span>
+          <span class="pagination-page-text_disabled">5</span>
+        </div>
+      </div>
+      <div class="flex space-x-2">
+        <button class="pagination-btn" disabled>
+          <span class="icon-arrow-backward"></span>
+        </button>
+        <button class="pagination-btn">
+          <span class="icon-arrow-forward"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
 </html>
