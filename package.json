@@ -18,7 +18,10 @@
         "postcss-extend": "^1.0.5",
         "postcss-import": "^14.0.2",
         "postcss-nesting": "^10.1.2",
-        "postcss-scss": "^4.0.3"
+        "postcss-scss": "^4.0.3",
+        "@tailwindcss/custom-forms": "^0.2.1",
+        "postcss": "^8.4.5",
+        "tailwindcss": "^3.0.13"
     },
     "engines": {
         "node": "^12.11.1"
