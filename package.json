@@ -13,14 +13,13 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@tailwindcss/custom-forms": "^0.2.1",
         "express": "^4.17.2",
         "postcss-cli": "^8.3.1",
         "postcss-extend": "^1.0.5",
         "postcss-import": "^14.0.2",
         "postcss-nesting": "^10.1.2",
         "postcss-scss": "^4.0.3",
-        "@tailwindcss/custom-forms": "^0.2.1",
-        "postcss": "^8.4.5",
         "tailwindcss": "^3.0.13"
     },
     "engines": {
@@ -30,6 +29,7 @@
         "@tailwindcss/custom-forms": "^0.2.1",
         "autoprefixer": "^10.4.2",
         "postcss": "^8.4.5",
+        "postcss-nested": "^5.0.6",
         "tailwindcss": "^3.0.13"
     }
 }

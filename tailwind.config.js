@@ -6,7 +6,7 @@ module.exports = {
         enabled: true,
         content: ["src/*.html"],
     },
-    darkMode: false, // or 'media' or 'class'
+    
     theme: {
         fontFamily: {
             Heebo: ["Heebo", "sans-serif"],
