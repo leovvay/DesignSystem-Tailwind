@@ -1,10 +1,5 @@
 @tailwind base;
 @tailwind components;
-@font-face {
-    font-family: "Mont";
-    src: local("Mont"), url(./src/fonts/Mont.otf) format("otf");
-}
-
 @tailwind utilities;
 @layer base {
     h1 {
@@ -18,5 +13,579 @@
     }
     h4 {
         @apply text-base;
+    }
+}
+
+@layer components {
+    /* fonts */
+    .heebo-font {
+        font-family: theme('fontFamily.Heebo');
+    }
+    .mont-font {
+        font-family: theme('fontFamily.Mont');
+    }
+    /* headings */
+    .mont-heading {
+        @extend .mont-font;
+        @apply font-extrabold leading-relaxed text-primary;
+    }
+    .heebo-heading {
+        @extend .heebo-font;
+        @apply font-extrabold leading-relaxed text-primary;
+    }
+    /* titles */
+    .primary-title {
+        @extend .heebo-font;
+        @apply text-primary-60 uppercase tracking-wider text-xs leading-normal;
+    }
+    .secondary-title {
+        @extend .heebo-font;
+        @apply text-secondaryDark uppercase tracking-wider text-xs leading-normal;
+    }
+    /* texts */
+    .regular-text {
+        @extend .heebo-font;
+        @apply text-base leading-relaxed text-dark font-normal;
+    }
+    .medium-text {
+        @extend .heebo-font;
+        @apply text-base leading-relaxed text-dark font-medium;
+    }
+    .bold-text {
+        @extend .heebo-font;
+        @apply text-base leading-relaxed text-dark font-bold;
+    }
+    /* labels */
+    .btn-label-medium {
+        @extend .heebo-font;
+        @apply text-base leading-normal text-dark font-medium
+    }
+    .label-bold-12 {
+        @extend .heebo-font;
+        @apply text-xs leading-normal tracking-wide text-dark font-bold
+    }
+    .uppercase-label-medium {
+        @extend .heebo-font;
+        @apply text-xs leading-normal tracking-wider text-dark font-medium uppercase;
+    }
+    .sm-label {
+        @extend .heebo-font;
+        @apply text-sm leading-normal text-dark
+    }
+    .sm-label-regular {
+        @extend .sm-label;
+        @apply font-normal;
+    }
+    .sm-label-medium {
+        @extend .sm-label;
+        @apply font-medium;
+    }
+    .sm-label-bold {
+        @extend .sm-label;
+        @apply font-extrabold;
+    }
+    /* buttons */
+    /* primary buttons */
+    .default-primary-btn {
+        @extend .heebo-font;
+        @apply bg-primary rounded-lg text-white font-medium leading-normal;
+        &:hover {
+            @apply bg-primary-80;
+        }
+        &:active {
+            @apply bg-primaryDark;
+        }
+        &:focus {
+            @apply outline-none ring-2 ring-secondary-40;
+        }
+        span {
+            @apply text-base leading-none;
+        }
+    }
+    .primary-btn {
+        @extend .default-primary-btn;
+        @apply py-3 px-5 text-base;
+    }
+    .primary-mix-btn {
+        @extend .primary-btn;
+        @apply flex items-center space-x-2;
+    }
+    .primary-icon-btn {
+        @extend .default-primary-btn;
+        @apply flex p-4 text-base;
+    }
+    .small-primary-btn {
+        @extend .default-primary-btn;
+        @apply px-3 py-2 text-sm;
+    }
+    .small-primary-mix-btn {
+        @extend .small-primary-btn;
+        @apply flex items-center space-x-2;
+    }
+    .small-primary-icon-btn {
+        @extend .default-primary-btn;
+        @apply flex text-sm p-2.5;
+    }
+    /* disabled primary buttons */
+    .default-primary-btn_disabled {
+        @extend .heebo-font;
+        @apply bg-primary-5 rounded-lg text-primary-20 font-medium leading-normal cursor-not-allowed;
+        &:focus {
+            @apply outline-none;
+        }
+        span {
+            @apply text-base leading-none;
+        }
+    }
+    .primary-btn_disabled {
+        @extend .default-primary-btn_disabled;
+        @apply py-3 px-5 text-base;
+    }
+    .primary-mix-btn_disabled {
+        @extend .primary-btn_disabled;
+        @apply flex items-center space-x-2;
+    }
+    .primary-icon-btn_disabled {
+        @extend .default-primary-btn_disabled;
+        @apply flex p-4 text-base;
+    }
+    .small-primary-btn_disabled {
+        @extend .default-primary-btn_disabled;
+        @apply px-3 py-2 text-sm;
+    }
+    .small-primary-mix-btn_disabled {
+        @extend .small-primary-btn_disabled;
+        @apply flex items-center space-x-2;
+    }
+    .small-primary-icon-btn_disabled {
+        @extend .default-primary-btn_disabled;
+        @apply flex text-sm p-2.5;
+    }
+    /* minimal buttons */
+    .default-minimal-btn {
+        @extend .heebo-font;
+        @apply bg-white rounded-lg border-2 border-solid border-primary-5 text-primaryDark font-medium leading-normal;
+        &:focus {
+            @apply bg-primary-5 outline-none border-primary-40;
+        }
+        &:active {
+            @apply border-primary;
+        }
+        &:hover {
+            @apply border-primary-20;
+        }
+        span {
+            @apply text-base leading-none;
+        }
+    }
+    .minimal-btn {
+        @extend .default-minimal-btn;
+        @apply text-base py-2.5 px-4.5;
+    }
+    .minimal-mix-btn {
+        @extend .minimal-btn;
+        @apply flex items-center space-x-2;
+    }
+    .minimal-icon-btn {
+        @extend .default-minimal-btn;
+        @apply flex text-base p-3.5;
+    }
+    .small-minimal-btn {
+        @extend .default-minimal-btn;
+        @apply text-sm py-1.5 px-2.5;
+    }
+    .small-minimal-mix-btn {
+        @extend .small-minimal-btn;
+        @apply flex items-center space-x-2;
+    }
+    .small-minimal-icon-btn {
+        @extend .default-minimal-btn;
+        @apply flex text-sm p-2;
+    }
+    /* disabled minimal buttons */
+    .default-minimal-btn_disabled {
+        @extend .heebo-font;
+        @apply bg-white rounded-lg border-2 border-solid border-primary-5 text-primary-20 font-medium leading-normal cursor-not-allowed;
+        &:focus {
+            @apply outline-none;
+        }
+        span {
+            @apply text-base leading-none;
+        }
+    }
+    .minimal-btn_disabled {
+        @extend .default-minimal-btn_disabled;
+        @apply text-base py-2.5 px-4.5;
+    }
+    .minimal-mix-btn_disabled {
+        @extend .minimal-btn_disabled;
+        @apply flex items-center space-x-2;
+    }
+    .minimal-icon-btn_disabled {
+        @extend .default-minimal-btn_disabled;
+        @apply flex text-base p-3.5;
+    }
+    .small-minimal-btn_disabled {
+        @extend .default-minimal-btn_disabled;
+        @apply text-sm py-1.5 px-2.5;
+    }
+    .small-minimal-mix-btn_disabled {
+        @extend .small-minimal-btn_disabled;
+        @apply flex items-center space-x-2;
+    }
+    .small-minimal-icon-btn_disabled {
+        @extend .default-minimal-btn_disabled;
+        @apply flex text-sm p-2;
+    }
+    /* tiny icon button */
+    .tiny-icon-btn {
+        @apply w-8 h-8 p-1;
+        div {
+            @apply w-6 h-6 p-2 bg-primary-5 flex items-center justify-center rounded-lg text-base text-primaryDark;
+        }
+        &:hover {
+            div {
+                @apply bg-primary-80 text-white;
+            }
+        }
+        &:active {
+            div {
+                @apply bg-primaryDark text-white;
+            }
+        }
+        &:focus {
+            div {
+                @apply bg-primary-20;
+            }
+        }
+    }
+    .tiny-icon-btn_disabled {
+        @apply w-8 h-8 p-1;
+        div {
+            @apply w-6 h-6 p-2 bg-primary-5 flex items-center justify-center rounded-lg text-base text-primary-20 cursor-not-allowed;
+        }
+    }
+    /* links */
+    .default-text-link {
+        @extend .heebo-font;
+        @apply text-primaryDark leading-normal font-medium underline decoration-secondary-5;
+        &:hover {
+            @apply decoration-secondary;
+        }
+        &:active {
+            @apply decoration-secondaryDark;
+        }
+        &:focus {
+            @apply decoration-secondary-5;
+        }
+    }
+    .text-link {
+        @extend .default-text-link;
+        @apply text-base;
+    }
+    .small-text-link {
+        @extend .default-text-link;
+        @apply text-sm;
+    }
+    .default-text-link_disabled {
+        @extend .heebo-font;
+        @apply text-primary-20 leading-normal font-medium underline decoration-primary-5 cursor-none pointer-events-none;
+    }
+    .text-link_disabled {
+        @extend .default-text-link_disabled;
+        @apply text-base;
+    }
+    .small-text-link_disabled {
+        @extend .default-text-link_disabled;
+        @apply text-sm;
+    }
+    /* tags */
+    .default-tag {
+        @extend .heebo-font;
+        @apply flex items-center space-x-2 rounded-lg border-2 border-primary-5 text-primaryDark leading-normal font-medium;
+        &:hover {
+            @apply border-primary-20;
+            div {
+                @apply bg-primary-80 text-white;
+            }
+        }
+        &:active {
+            @apply border-primary;
+            div {
+                @apply text-white bg-primaryDark;
+            }
+        }
+        &:focus {
+            @apply bg-primary-5 border-primary-40;
+            div {
+                @apply text-primaryDark bg-primary-20;
+            }
+        }
+        div {
+            @apply p-1 bg-primary-5 flex items-center rounded-lg text-primaryDark leading-none;
+        }
+    }
+    .tag {
+        @extend .default-tag;
+        @apply py-2.5 pr-2.5 pl-3.5 text-base space-x-3;
+    }
+    .small-tag {
+        @extend .default-tag;
+        @apply py-1.5 pr-1.5 pl-2.5 text-sm space-x-2;
+        div {
+            @apply text-xs;
+        }
+    }
+    .default-tag_disabled {
+        @extend .heebo-font;
+        @apply flex items-center rounded-lg border-2 border-primary-5 cursor-not-allowed pointer-events-none text-primary-20 leading-normal font-medium;
+        div {
+            @apply p-1 bg-primary-5 flex items-center rounded-lg text-primary-20;
+        }
+    }
+    .tag_disabled {
+        @extend .default-tag_disabled;
+        @apply py-2.5 pr-2.5 pl-3.5 text-base space-x-3;
+    }
+    .small-tag_disabled {
+        @extend .default-tag_disabled;
+        @apply py-1.5 pr-1.5 pl-2.5 text-sm space-x-2;
+        div {
+            @apply text-xs;
+        }
+    }
+    /* badges */
+    .default-badge {
+        @extend .heebo-font;
+        @apply px-1.5 py-0.5 flex items-center rounded font-bold text-xs leading-normal tracking-wide
+    }
+    .neutral-badge {
+        @extend .default-badge;
+        @apply bg-dark-5 text-dark-80;
+    }
+    .blue-badge {
+        @extend .default-badge;
+        @apply bg-blue-5 text-blue;
+    }
+    .green-badge {
+        @extend .default-badge;
+        @apply bg-green-5 text-green;
+    }
+    .orange-badge {
+        @extend .default-badge;
+        @apply bg-orange-5 text-orange;
+    }
+    .red-badge {
+        @extend .default-badge;
+        @apply bg-red-5 text-red-80;
+    }
+    .violet-badge {
+        @extend .default-badge;
+        @apply bg-violet-5 text-violet-80;
+    }
+    .primary-badge {
+        @extend .default-badge;
+        @apply bg-primary-5 text-primary-80;
+    }
+    .secondary-badge {
+        @extend .default-badge;
+        @apply bg-secondary-5 text-secondary;
+    }
+    /* circle icons */
+    .default-circle-icon {
+        @apply p-2.5 flex items-center justify-center rounded-full text-xl leading-none;
+    }
+    .dark-circle-icon {
+        @extend .default-circle-icon;
+        @apply bg-dark-5 text-dark-80;
+    }
+    .blue-circle-icon {
+        @extend .default-circle-icon;
+        @apply bg-blue-5 text-blue;
+    }
+    .green-circle-icon {
+        @extend .default-circle-icon;
+        @apply bg-green-5 text-green;
+    }
+    .orange-circle-icon {
+        @extend .default-circle-icon;
+        @apply bg-orange-5 text-orange;
+    }
+    .red-circle-icon {
+        @extend .default-circle-icon;
+        @apply bg-red-5 text-red-80;
+    }
+    .violet-circle-icon {
+        @extend .default-circle-icon;
+        @apply bg-violet-5 text-violet-80;
+    }
+    .primary-circle-icon {
+        @extend .default-circle-icon;
+        @apply bg-primary-5 text-primary-80;
+    }
+    .secondary-circle-icon {
+        @extend .default-circle-icon;
+        @apply bg-secondary-5 text-secondary;
+    }
+    /* small circle icons */
+    .small-default-circle-icon {
+        @apply p-2 flex items-center justify-center rounded-full text-base leading-none;
+    }
+    .small-dark-circle-icon {
+        @extend .small-default-circle-icon;
+        @apply bg-dark-5 text-dark-80;
+    }
+    .small-blue-circle-icon {
+        @extend .small-default-circle-icon;
+        @apply bg-blue-5 text-blue;
+    }
+    .small-green-circle-icon {
+        @extend .small-default-circle-icon;
+        @apply bg-green-5 text-green;
+    }
+    .small-orange-circle-icon {
+        @extend .small-default-circle-icon;
+        @apply bg-orange-5 text-orange;
+    }
+    .small-red-circle-icon {
+        @extend .small-default-circle-icon;
+        @apply bg-red-5 text-red-80;
+    }
+    .small-violet-circle-icon {
+        @extend .small-default-circle-icon;
+        @apply bg-violet-5 text-violet-80;
+    }
+    .small-primary-circle-icon {
+        @extend .small-default-circle-icon;
+        @apply bg-primary-5 text-primary-80;
+    }
+    .small-secondary-circle-icon {
+        @extend .small-default-circle-icon;
+        @apply bg-secondary-5 text-secondary;
+    }
+    /* checkbox */
+    .default-checkbox {
+        @apply form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary;
+        &:hover {
+            @apply text-secondary-80 border-secondary-80;
+        }
+        &:active {
+            @apply outline-0 ring-0 text-secondaryDark border-secondaryDark;
+        }
+        &:focus {
+            @apply border-secondary outline-0;
+        }
+        &:disabled {
+            @apply text-secondary-20 border-secondary-20;
+        }
+    }
+    .multi-checkbox {
+        @apply p-0.5 text-xl leading-none text-secondary flex items-center;
+        &:hover {
+            @apply text-secondary-80;
+        }
+        &:active {
+            @apply text-secondaryDark;
+        }
+        &:disabled {
+            @apply text-secondary-20;
+        }
+    }
+    /* radio */
+    .default-radio {
+        @apply form-radio w-4.5 h-4.5 rounded-full border-2 border-secondary;
+        &:hover {
+            @apply border-secondary-80;
+        }
+        &:active {
+            @apply outline-0 ring-0 border-secondaryDark;
+        }
+        &:focus {
+            @apply ring-0 outline-0;
+        }
+        &:disabled {
+            @apply border-secondary-20;
+        }
+        &:checked {
+            @apply bg-white border-secondary bg-bgImgDark;
+            &:hover {
+                @apply border-secondary-80 bg-bgImgDefault;
+            }
+            &:active {
+                @apply outline-0 ring-0 border-secondaryDark bg-bgImgDefault;
+            }
+            &:disabled {
+                @apply bg-bgImgLight border-secondary-20;
+            }
+        }
+    }
+    /* toggle */
+    .small-toggle {
+        @apply w-8 relative flex justify-between items-center text-xl;
+        input {
+            @apply absolute left-1/2 -translate-x-1/2 w-full h-full appearance-none rounded-md;
+        }
+        span {
+            @apply w-7.5 h-5.5 flex items-center flex-shrink-0 p-1 bg-white border-2 border-secondary rounded-full transition duration-100 ease-in-out;
+            &::after {
+                @apply bg-secondary rounded-full shadow-md transition duration-100;
+            }
+        }
+        &:hover {
+            span {
+                @apply border-secondary-80;
+                &::after {
+                    @apply bg-secondary-80;
+                }
+            }
+        }
+    }
+    .small-toggle-checked_disabled {
+        @apply w-8 relative flex justify-between items-center text-xl;
+        input {
+            @apply absolute left-1/2 -translate-x-1/2 w-full h-full appearance-none rounded-md;
+        }
+        span {
+            @apply w-7.5 h-5.5 flex items-center flex-shrink-0 p-1 bg-secondary-20 border-2 border-secondary-20 rounded-full transition duration-100 ease-in-out;
+            &::after {
+                @apply bg-white rounded-full shadow-md transition duration-100 translate-x-2;
+            }
+        }
+    }
+    .small-toggle-unchecked_disabled {
+        @apply w-8 relative flex justify-between items-center text-xl;
+        input {
+            @apply absolute left-1/2 -translate-x-1/2 w-full h-full appearance-none rounded-md;
+        }
+        span {
+            @apply w-7.5 h-5.5 flex items-center flex-shrink-0 p-1 bg-white border-2 border-secondary-20 rounded-full transition duration-100 ease-in-out;
+            &::after {
+                @apply bg-secondary-20 rounded-full shadow-md transition duration-100;
+            }
+        }
+    }
+    /* pagination */
+    .pagination-page-text {
+        @extend .heebo-font;
+        @apply text-base text-primaryDark font-medium leading-normal;
+    }
+    .pagination-page-text_disabled {
+        @extend .heebo-font;
+        @apply text-base text-primary-40 font-medium leading-normal;
+    }
+    .pagination-btn {
+        @apply flex items-center bg-white rounded-lg border-2 border-primary-5 p-2 text-base text-primaryDark;
+        &:hover {
+            @apply border-primary-20;
+        }
+        &:active {
+            @apply border-primary;
+        }
+        &:focus {
+            @apply outline-none border-primary-40 bg-primary-5;
+        }
+        &:disabled {
+            @apply border-primary-5 text-primary-20;
+        }
     }
 }

@@ -9,8 +9,8 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         fontFamily: {
-            Mont: ["Mont", "sans-serif"],
             Heebo: ["Heebo", "sans-serif"],
+            Mont: ["Mont", "sans-serif"],
         },
         borderRadius: {
             none: "0",
@@ -20,15 +20,16 @@ module.exports = {
             lg: "0.5rem",
             full: "9999px",
             large: "12px",
-            tag: "7px",
         },
         extend: {
-        fontSize: {
-            checkboxTitle: '22px'
-        },
-        backgroundImage:{
-            bgImg: `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='rgba(167, 47, 159, 1)' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`,       
-        },
+            fontSize: {
+                checkboxTitle: '22px'
+            },
+            backgroundImage: {
+                bgImgDefault: `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='rgba(209, 59, 199, 1)' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`,
+                bgImgDark: `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='rgba(167, 47, 159, 1)' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`,
+                bgImgLight: `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='rgba(232, 157, 227, 1)' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`
+            },
             boxShadow: {
                 base: "0px 1px 2px rgba(16, 16, 155, 0.08), 0px 1px 3px rgba(16, 16, 155, 0.08)",
                 md: "0px 2px 4px rgba(16, 16, 155, 0.08), 0px 4px 6px rgba(16, 16, 155, 0.08)",
@@ -39,8 +40,11 @@ module.exports = {
             spacing: {
                 1.25: "0.3125rem",
                 2.25: "0.5625rem",
+                2.75: "0.65625rem",
                 4.5: "1.125rem",
+                5.5: "1.3125rem",
                 6.5: "1.625rem",
+                7.5: "1.875rem",
                 13: "3.3125rem",
                 15: "3.75rem",
                 17: "4.375rem",
