@@ -964,7 +964,7 @@
             @apply border-green-5 text-greenDark;
         }
     }
-    .default-inline-alert {
+    /* .default-inline-alert {
         @extend .heebo-font;
         @apply w-max p-0.75 border-2 rounded-md;
         .content {
@@ -1002,5 +1002,5 @@
     }
     .success-icon-inline-alert {
         @extend .default-icon-inline-alert;
-    }
+    } */
 }
