@@ -7,6 +7,7 @@
   <meta name="description" content="Basic HTML/Tailwind starter" />
   <meta name="author" content="Daily Dev Tips" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.2.2/cdn.js" defer></script>
   <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./css/icomoon.css" />
   <link rel="stylesheet" href="styles.css" />
@@ -548,6 +549,38 @@
         </button>
       </div>
     </div>
+
+    <!-- Dropdown -->
+    <div class="ml-25 mt-20 flex flex-col space-y-11">
+      <span class="text-primary-20 text-6xl font-extrabold">Dropdown</span>
+      <div class="flex items-center">
+        <select class="form-select form-select-lg mb-3
+            appearance-none
+            block
+            w-3
+            px-4
+            py-2
+            text-xl
+            font-normal
+            text-gray-700
+            bg-white bg-clip-padding bg-no-repeat
+            border border-solid border-gray-300
+            rounded
+            transition
+            ease-in-out
+            m-0
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+          aria-label=".form-select-lg example">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="flex items-center">
+
+      </div>
+    </div>
   </div>
 
   <!-- Badges section -->
@@ -662,6 +695,57 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- circle percent -->
+    <div class="mt-19 ml-25 flex flex-col space-y-8">
+      <span class="text-primary-20 text-6xl font-extrabold">Circle Percent</span>
+      <div class="flex justify-items-start p-5 space-x-5">
+        <div x-data="progress" class="circle-progressbar">
+          <svg>
+            <circle id="main-circle" stroke-width="5" stroke="currentColor" fill="transparent" r="20" cx="30"
+              cy="30" />
+            <circle id="progress-circle" stroke-width="5" :stroke-dasharray="circumference"
+              :stroke-dashoffset="(1 - percent / 100) * circumference" stroke-linecap="round" stroke="currentColor"
+              fill="transparent" r="20" cx="30" cy="30" />
+          </svg>
+          <span x-text="`${percent}%`"></span>
+        </div>
+        <div x-data="progress1" class="circle-progressbar">
+          <svg>
+            <circle id="main-circle1" stroke-width="5" stroke="currentColor" fill="transparent" r="20" cx="30"
+              cy="30" />
+            <circle id="progress-circle1" stroke-width="5" :stroke-dasharray="circumference"
+              :stroke-dashoffset="(1 - percent1 / 100) * circumference" stroke-linecap="round" stroke="currentColor"
+              fill="transparent" r="20" cx="30" cy="30" />
+          </svg>
+          <span x-text="`${percent1}%`"></span>
+        </div>
+        <div x-data="progress2" class="circle-progressbar">
+          <svg>
+            <circle id="main-circle2" stroke-width="5" stroke="currentColor" fill="transparent" r="20" cx="30"
+              cy="30" />
+            <circle id="progress-circle2" stroke-width="5" :stroke-dasharray="circumference"
+              :stroke-dashoffset="(1 - percent2 / 100) * circumference" stroke-linecap="round" stroke="currentColor"
+              fill="transparent" r="20" cx="30" cy="30" />
+          </svg>
+          <span x-text="`${percent2}%`"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Icon + Background -->
+    <div class="mt-19 ml-25 flex flex-col space-y-8">
+      <span class="text-primary-20 text-6xl font-extrabold">Icon + Background</span>
+      <div class="w-max flex flex-col items-center p-2.5 space-y-3.5">
+        <div class="small-icon-bg">
+          <span class="icon-note"></span>
+        </div>
+        <div class="big-icon-bg">
+          <span class="icon-note"></span>
         </div>
       </div>
     </div>
@@ -816,6 +900,33 @@
         </div>
       </div>
     </div>
+
+    <!-- Tabs -->
+    <div class="mt-16 ml-25 flex flex-col space-y-10">
+      <span class="text-primary-20 text-6xl font-extrabold">Tabs</span>
+      <div class="flex items-center space-x-32">
+        <div class="flex flex-col space-y-8">
+          <span class="mont-font text-dark text-2xl leading-relaxed font-extrabold">Inactive</span>
+          <button class="tab"><label>Tab</label>
+            <div></div>
+          </button>
+        </div>
+
+        <div class="flex flex-col space-y-8">
+          <span class="mont-font text-dark text-2xl leading-relaxed font-extrabold">Inactive</span>
+          <button class="tab_active"><label>Tab</label>
+            <div></div>
+          </button>
+        </div>
+
+        <div class="flex flex-col space-y-8">
+          <span class="mont-font text-dark text-2xl leading-relaxed font-extrabold">Inactive</span>
+          <button class="tab_blocked"><label class="tab_blocked">Tab<span class="tab-tag">SOON</span></label>
+            <div></div>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Pagination -->
@@ -841,6 +952,270 @@
     </div>
   </div>
   </div>
+
+  <!-- Navigation Components -->
+  <div class="w-full flex flex-col">
+    <div class="py-20 px-25 bg-background">
+      <span class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic">Navigation Components</span>
+    </div>
+    <!-- Top Horizontal Menu -->
+    <div class="mt-19 ml-25 flex flex-col space-y-17">
+      <span class="text-primary-20 text-6xl font-extrabold">Top Horizontal Menu</span>
+      <span class="mont-font text-checkboxTitle leading-none font-bold text-dark">Buttons</span>
+      <div class="flex space-x-17">
+        <div class="flex space-x-3 px-3 py-4">
+          <button class="top-nav-left-icon-btn">
+            <span class="icon icon-dotseparator"></span>
+            <span>Changes</span>
+          </button>
+          <button class="top-nav-label-btn">
+            <span>Help</span>
+          </button>
+        </div>
+        <div class="px-3 py-5">
+          <button class="user-dropdown-btn">
+            <div class="label">
+              <span class="user-name">Andrew Alvaroq</span>
+              <span class="user-title">Purrs and Paws Cat Cafe</span>
+            </div>
+            <div class="icon">
+              <span class="icon-dropdown"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Left Menu -->
+    <div class="mt-39 ml-25 flex flex-col space-y-17">
+      <span class="text-primary-20 text-6xl font-extrabold">Top Horizontal Menu</span>
+      <span class="mont-font text-checkboxTitle leading-none font-bold text-dark">Icons Menu</span>
+      <div class="flex space-x-">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Alerts -->
+  <div class="w-full flex flex-col">
+    <div class="py-20 px-25 bg-background">
+      <span class="text-headlineTextColor text-4xl font-extrabold text-justify not-italic">Navigation Components</span>
+    </div>
+    <!-- Toast Alerts -->
+    <div class="mt-19 ml-25 flex flex-col space-y-17">
+      <span class="text-primary-20 text-6xl font-extrabold">Top Horizontal Menu</span>
+      <div class="grid grid-cols-2 gap-10 p-10">
+        <!-- success -->
+        <div class="success-toast-alert">
+          <div class="content">
+            <div class="left-content">
+              <span class="title">Success</span>
+              <span class="description">Optional Description</span>
+            </div>
+            <div class="close-icon">
+              <div>
+                <span class="icon-close"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="success-icon-toast-alert">
+          <div class="content">
+            <div class="left-content">
+              <div class="icon">
+              <span class="icon-check-circled"></span>
+              </div>
+              <div class="info-content">
+              <span class="title">Success</span>
+              <span class="description">Optional Description</span>
+              </div>
+            </div>
+            <div class="close-icon">
+              <div>
+                <span class="icon-close"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- info -->
+        <div class="info-toast-alert">
+          <div class="content">
+            <div class="left-content">
+              <span class="title">Info</span>
+              <span class="description">Optional Description</span>
+            </div>
+            <div class="close-icon">
+              <div>
+                <span class="icon-close"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info-icon-toast-alert">
+          <div class="content">
+            <div class="left-content">
+              <div class="icon">
+              <span class="icon-alert-circled"></span>
+              </div>
+              <div class="info-content">
+              <span class="title">Info</span>
+              <span class="description">Optional Description</span>
+              </div>
+            </div>
+            <div class="close-icon">
+              <div>
+                <span class="icon-close"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- warning -->
+        <div class="warn-toast-alert">
+          <div class="content">
+            <div class="left-content">
+              <span class="title">Warning</span>
+              <span class="description">Optional Description</span>
+            </div>
+            <div class="close-icon">
+              <div>
+                <span class="icon-close"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="warn-icon-toast-alert">
+          <div class="content">
+            <div class="left-content">
+              <div class="icon">
+              <span class="icon-warning"></span>
+              </div>
+              <div class="info-content">
+              <span class="title">Warning</span>
+              <span class="description">Optional Description</span>
+              </div>
+            </div>
+            <div class="close-icon">
+              <div>
+                <span class="icon-close"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- error -->
+        <div class="error-toast-alert">
+          <div class="content">
+            <div class="left-content">
+              <span class="title">Error</span>
+              <span class="description">Optional Description</span>
+            </div>
+            <div class="close-icon">
+              <div>
+                <span class="icon-close"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="error-icon-toast-alert">
+          <div class="content">
+            <div class="left-content">
+              <div class="icon">
+              <span class="icon-close-circled"></span>
+              </div>
+              <div class="info-content">
+              <span class="title">Success</span>
+              <span class="description">Optional Description</span>
+              </div>
+            </div>
+            <div class="close-icon">
+              <div>
+                <span class="icon-close"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inline Alerts -->
+    <div class="mt-19 ml-25 flex flex-col space-y-17">
+      <span class="text-primary-20 text-6xl font-extrabold">Inline Alerts</span>
+      <div class="grid grid-cols-2 gap-10 p-10">
+        <!-- success -->
+        <div class="success-inline-alert">
+          <div class="content">
+            <span class="title">Success</span>
+            <span class="description">Optional Description</span>
+          </div>
+        </div>
+        <div class="success-icon-inline-alert">
+          <div class="content">
+            <div class="left-content">
+              <div class="icon">
+                <span class="icon-check-circled"></span>
+              </div>
+              <div class="info-content">
+                <span class="title">Success</span>
+                <span class="description">Optional Description</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const progress = () => {
+      const percent = 40;
+      if (percent < 50) {
+        document.getElementById("main-circle").setAttribute('class', "text-red-20");
+        document.getElementById("progress-circle").setAttribute('class', "text-red");
+      } else if (percent < 90) {
+        document.getElementById("main-circle").setAttribute('class', "text-orange-20");
+        document.getElementById("progress-circle").setAttribute('class', "text-orange");
+      } else {
+        document.getElementById("main-circle").setAttribute('class', "text-green-20");
+        document.getElementById("progress-circle").setAttribute('class', "text-green");
+      }
+      return {
+        circumference: 20 * 2 * Math.PI,
+        percent,
+      }
+    }
+    const progress1 = () => {
+      const percent1 = 70;
+      if (percent1 < 50) {
+        document.getElementById("main-circle1").setAttribute('class', "text-red-20");
+        document.getElementById("progress-circle1").setAttribute('class', "text-red");
+      } else if (percent1 < 90) {
+        document.getElementById("main-circle1").setAttribute('class', "text-orange-20");
+        document.getElementById("progress-circle1").setAttribute('class', "text-orange");
+      } else {
+        document.getElementById("main-circle1").setAttribute('class', "text-green-20");
+        document.getElementById("progress-circle1").setAttribute('class', "text-green");
+      }
+      return {
+        circumference: 20 * 2 * Math.PI,
+        percent1,
+      }
+    }
+    const progress2 = () => {
+      const percent2 = 91;
+      if (percent2 < 50) {
+        document.getElementById("main-circle2").setAttribute('class', "text-red-20");
+        document.getElementById("progress-circle2").setAttribute('class', "text-red");
+      } else if (percent2 < 90) {
+        document.getElementById("main-circle2").setAttribute('class', "text-orange-20");
+        document.getElementById("progress-circle2").setAttribute('class', "text-orange");
+      } else {
+        document.getElementById("main-circle2").setAttribute('class', "text-green-20");
+        document.getElementById("progress-circle2").setAttribute('class', "text-green");
+      }
+      return {
+        circumference: 20 * 2 * Math.PI,
+        percent2,
+      }
+    }
+  </script>
 </body>
 
 </html>

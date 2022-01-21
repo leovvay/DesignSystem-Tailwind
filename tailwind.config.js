@@ -22,7 +22,8 @@ module.exports = {
         },
         extend: {
             fontSize: {
-                checkboxTitle: '22px'
+                checkboxTitle: '22px',
+                dot: '8px'
             },
             backgroundImage: {
                 bgImgDefault: `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='rgba(209, 59, 199, 1)' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`,
@@ -35,13 +36,23 @@ module.exports = {
                 lg: "0px 10px 15px rgba(16, 16, 155, 0.08), 0px 4px 6px rgba(16, 16, 155, 0.08)",
                 xl: "0px 20px 25px rgba(16, 16, 155, 0.08), 0px 10px 10px rgba(16, 16, 155, 0.08)",
                 inner: "inset 2px 2px 4px rgba(13, 13, 88, 0.08)",
+                'success-toast': "0px 8px 12px rgba(14, 149, 99, 0.06)",
+                'info-toast': "0px 8px 12px rgba(0, 144, 204, 0.06)",
+                'warn-toast': "0px 8px 12px rgba(226, 151, 15, 0.08)",
+                'err-toast': "0px 8px 12px rgba(189, 9, 54, 0.08)",
             },
             spacing: {
+                0.75: "0.1875rem",
                 1.25: "0.3125rem",
+                1.9: "0.4375rem",
                 2.25: "0.5625rem",
                 2.75: "0.65625rem",
+                2.9: "0.6875rem",
+                3.9: "0.9375rem",
                 4.5: "1.125rem",
+                4.9: "1.1875rem",
                 5.5: "1.3125rem",
+                5.8: "1.4375rem",
                 6.5: "1.625rem",
                 7.5: "1.875rem",
                 13: "3.3125rem",
@@ -53,6 +64,11 @@ module.exports = {
                 31: "7.75rem",
                 37: "9.375rem",
                 39: "9.6875rem",
+                73: "18.125rem",
+                82: "21.875rem",
+            },
+            lineHeight: {
+                4.5: "18px"
             },
             colors: {
                 "daily-dev-tips": "#F89283",
