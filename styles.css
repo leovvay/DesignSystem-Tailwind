@@ -729,39 +729,41 @@
     }
     /* icon + background */
     .small-icon-bg {
-        @apply w-max p-1.5 rounded bg-primary-5 text-primaryDark text-xs leading-none font-bold;
+        @apply flex items-center w-max p-1 rounded bg-primary-5 text-primaryDark text-base leading-none font-bold;
     }
     .big-icon-bg {
-        @apply w-max p-2 rounded-lg bg-primary-5 text-primaryDark text-xl leading-none font-bold;
+        @apply flex items-center w-max p-1.5 rounded-lg bg-primary-5 text-primaryDark text-2xl leading-none font-bold;
     }
     /* top horizontal menu */
     .default-top-nav-btn {
         @extend .heebo-font;
-        @apply py-2.9 bg-white flex items-center text-primaryDark text-base leading-normal font-medium border border-white rounded-lg;
+        @apply py-3 px-5 bg-white flex items-center text-primaryDark text-base leading-normal font-medium rounded-lg;
         &:focus {
-            @apply bg-white border-secondary;
+            @apply bg-white ring-1 ring-secondary;
         }
         &:hover {
             @apply bg-secondary-5;
         }
         &:active {
-            @apply border-secondary-20 bg-secondary-5;
+            @apply ring-1 ring-secondary-20 bg-secondary-5;
         }
     }
     .top-nav-left-icon-btn {
         @extend .default-top-nav-btn;
-        @apply pr-4.9 pl-5.8 bg-white space-x-3;
+        @apply space-x-2;
         .icon {
-            @apply text-secondary text-dot leading-none;
+            @apply text-secondary text-base leading-none animate-blink;
         }
-    }
-    .top-nav-label-btn {
-        @extend .default-top-nav-btn;
-        @apply px-4.9;
+        &:active,
+        &:focus {
+            .icon {
+                @apply invisible;
+            }
+        }
     }
     .user-dropdown-btn {
         @extend .heebo-font;
-        @apply py-3.9 px-4.9 border border-white flex items-center space-x-5 bg-white;
+        @apply py-4 px-5 flex items-center space-x-5 bg-white;
         .label {
             @apply w-max flex flex-col items-start font-normal;
             .user-name {
@@ -775,7 +777,7 @@
             @apply flex items-center rounded-lg bg-primary-5 p-1.9 text-xs leading-none text-black;
         }
         &:focus {
-            @apply bg-secondary-5 border-secondary-20;
+            @apply bg-secondary-5 ring-1 ring-secondary-20;
             .icon {
                 @apply bg-secondary text-white;
             }
@@ -787,7 +789,7 @@
             }
         }
         &:active {
-            @apply border-secondary;
+            @apply ring-1 ring-secondary;
             .icon {
                 @apply bg-primary-5 text-black;
             }
@@ -866,7 +868,7 @@
             .left-content {
                 @apply w-max pt-2 flex items-center space-x-4 text-sm leading-normal;
                 .icon {
-                    @apply p-1 text-xl leading-none;
+                    @apply flex items-center text-2xl leading-none;
                 }
                 .info-content {
                     @apply flex flex-col w-73;
@@ -878,12 +880,6 @@
                     }
                 }
             }
-            /* .tiny-icon-btn {
-                @apply p-1 w-max h-max;
-                div {
-                    @apply px-1 py-0.75 h-max bg-white rounded-lg text-base leading-none text-primaryDark;
-                }
-            } */
         }
     }
     .success-icon-toast-alert {
@@ -901,7 +897,7 @@
     }
     .info-icon-toast-alert {
         @extend .default-icon-toast-alert;
-        @apply border-blue-20 shadow-success-toast;
+        @apply border-blue-20 shadow-info-toast;
         .content {
             @apply bg-blue-5;
             .icon {
@@ -914,7 +910,7 @@
     }
     .warn-icon-toast-alert {
         @extend .default-icon-toast-alert;
-        @apply border-orange-40 shadow-success-toast;
+        @apply border-orange-40 shadow-warn-toast;
         .content {
             @apply bg-orange-5;
             .icon {
@@ -927,7 +923,7 @@
     }
     .error-icon-toast-alert {
         @extend .default-icon-toast-alert;
-        @apply border-red-20 shadow-success-toast;
+        @apply border-red-20 shadow-err-toast;
         .content {
             @apply bg-red-5;
             .icon {
@@ -997,7 +993,7 @@
                     }
                 }
                 .icon {
-                    @apply p-1 text-xl leading-none;
+                    @apply flex items-center text-2xl leading-none;
                 }
             }
         }
@@ -1041,7 +1037,7 @@
             @apply text-base font-medium;
         }
         &:focus {
-            @apply py-2.9 border bg-secondary-5 border-secondary-20;
+            @apply ring-1 bg-secondary-5 ring-secondary-20;
         }
         &:hover {
             @apply bg-secondary-5;
@@ -1054,7 +1050,7 @@
         @extend .heebo-font;
         @apply w-61 flex items-center space-x-3 py-3 pl-3 bg-white rounded text-primaryDark text-base font-medium;
         &:focus {
-            @apply py-2.9 border bg-secondary-5 border-secondary-20;
+            @apply ring-1 bg-secondary-5 ring-secondary-20;
         }
         &:hover {
             @apply bg-secondary-5;
@@ -1070,7 +1066,7 @@
             @extend .heebo-font;
             @apply flex items-center py-1.5 pl-3.5 pr-1.5 space-x-2 text-primaryDark text-base leading-normal font-medium rounded-lg border-2 border-primary-5;
             div {
-                @apply p-2.5 text-xs leading-none bg-primary-5 rounded-lg flex items-center;
+                @apply p-1.9 text-lg leading-none bg-primary-5 rounded-lg flex items-center;
             }
             &:focus {
                 @apply border-primary-40;
@@ -1118,7 +1114,7 @@
             @extend .heebo-font;
             @apply flex items-center py-1.5 pl-2.5 pr-1.5 space-x-2 text-primaryDark text-sm leading-normal font-medium rounded-lg border-2 border-primary-5;
             div {
-                @apply p-1.5 text-xs leading-none bg-primary-5 rounded-lg flex items-center;
+                @apply p-1 text-base leading-none bg-primary-5 rounded-lg flex items-center;
             }
             &:focus {
                 @apply border-primary-40;

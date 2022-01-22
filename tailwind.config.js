@@ -21,9 +21,17 @@ module.exports = {
             large: "12px",
         },
         extend: {
+            keyframes: {
+                pulse: {
+                    '0%, 100%': { opacity: 1 },
+                    '50%': { opacity: 0 }
+                }
+            },
+            animation: {
+                blink: 'pulse 2s ease-in-out infinite'
+            },
             fontSize: {
                 checkboxTitle: '22px',
-                dot: '8px'
             },
             backgroundImage: {
                 bgImgDefault: `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='rgba(209, 59, 199, 1)' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`,
@@ -47,12 +55,8 @@ module.exports = {
                 1.9: "0.4375rem",
                 2.25: "0.5625rem",
                 2.75: "0.65625rem",
-                2.9: "0.6875rem",
-                3.9: "0.9375rem",
                 4.5: "1.125rem",
-                4.9: "1.1875rem",
                 5.5: "1.3125rem",
-                5.8: "1.4375rem",
                 6.5: "1.625rem",
                 7.5: "1.875rem",
                 13: "3.3125rem",
