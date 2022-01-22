@@ -89,6 +89,9 @@
     .default-primary-btn {
         @extend .heebo-font;
         @apply bg-primary rounded-lg text-white font-medium leading-normal;
+        &:focus {
+            @apply outline-none ring-2 ring-secondary-40;
+        }
         &:hover {
             @apply bg-primary-80;
             label {
@@ -97,9 +100,6 @@
         }
         &:active {
             @apply bg-primaryDark;
-        }
-        &:focus {
-            @apply outline-none ring-2 ring-secondary-40;
         }
         span {
             @apply text-base leading-none;
@@ -133,13 +133,13 @@
     .default-primary-btn_disabled {
         @extend .heebo-font;
         @apply bg-primary-5 rounded-lg text-primary-20 font-medium leading-normal cursor-not-allowed;
+        &:focus {
+            @apply outline-none;
+        }
         &:hover {
             label {
                 @apply cursor-not-allowed;
             }
-        }
-        &:focus {
-            @apply outline-none;
         }
         span {
             @apply text-base leading-none;
@@ -176,14 +176,14 @@
         &:focus {
             @apply bg-primary-5 outline-none border-primary-40;
         }
-        &:active {
-            @apply border-primary;
-        }
         &:hover {
             @apply border-primary-20;
             label {
                 @apply cursor-pointer;
             }
+        }
+        &:active {
+            @apply border-primary;
         }
         span {
             @apply text-base leading-none;
@@ -217,13 +217,13 @@
     .default-minimal-btn_disabled {
         @extend .heebo-font;
         @apply bg-white rounded-lg border-2 border-solid border-primary-5 text-primary-20 font-medium leading-normal cursor-not-allowed;
+        &:focus {
+            @apply outline-none;
+        }
         &:hover {
             label {
                 @apply cursor-not-allowed;
             }
-        }
-        &:focus {
-            @apply outline-none;
         }
         span {
             @apply text-base leading-none;
@@ -259,6 +259,11 @@
         div {
             @apply w-6 h-6 p-2 bg-primary-5 flex items-center justify-center rounded-lg text-base text-primaryDark;
         }
+        &:focus {
+            div {
+                @apply bg-primary-20;
+            }
+        }
         &:hover {
             div {
                 @apply bg-primary-80 text-white;
@@ -267,11 +272,6 @@
         &:active {
             div {
                 @apply bg-primaryDark text-white;
-            }
-        }
-        &:focus {
-            div {
-                @apply bg-primary-20;
             }
         }
     }
@@ -285,14 +285,14 @@
     .default-text-link {
         @extend .heebo-font;
         @apply text-primaryDark leading-normal font-medium underline decoration-secondary-5;
+        &:focus {
+            @apply decoration-secondary-5 bg-secondary-5;
+        }
         &:hover {
             @apply decoration-secondary;
         }
         &:active {
             @apply decoration-secondaryDark;
-        }
-        &:focus {
-            @apply decoration-secondary-5 bg-secondary-5;
         }
     }
     .text-link {
@@ -319,6 +319,12 @@
     .default-tag {
         @extend .heebo-font;
         @apply flex items-center space-x-2 rounded-lg border-2 border-primary-5 text-primaryDark leading-normal font-medium;
+        &:focus {
+            @apply bg-primary-5 border-primary-40;
+            div {
+                @apply text-primaryDark bg-primary-20;
+            }
+        }
         &:hover {
             @apply border-primary-20;
             div {
@@ -329,12 +335,6 @@
             @apply border-primary;
             div {
                 @apply text-white bg-primaryDark;
-            }
-        }
-        &:focus {
-            @apply bg-primary-5 border-primary-40;
-            div {
-                @apply text-primaryDark bg-primary-20;
             }
         }
         div {
@@ -482,14 +482,14 @@
     /* checkbox */
     .default-checkbox {
         @apply form-checkbox text-secondary w-4.5 h-4.5 rounded border-2 border-secondary;
+        &:focus {
+            @apply border-secondary outline-0;
+        }
         &:hover {
             @apply text-secondary-80 border-secondary-80;
         }
         &:active {
             @apply outline-0 ring-0 text-secondaryDark border-secondaryDark;
-        }
-        &:focus {
-            @apply border-secondary outline-0;
         }
         &:disabled {
             @apply text-secondary-20 border-secondary-20;
@@ -510,14 +510,14 @@
     /* radio */
     .default-radio {
         @apply form-radio w-4.5 h-4.5 rounded-full border-2 border-secondary;
+        &:focus {
+            @apply ring-0 outline-0;
+        }
         &:hover {
             @apply border-secondary-80;
         }
         &:active {
             @apply outline-0 ring-0 border-secondaryDark;
-        }
-        &:focus {
-            @apply ring-0 outline-0;
         }
         &:disabled {
             @apply border-secondary-20;
@@ -651,14 +651,14 @@
     }
     .pagination-btn {
         @apply flex items-center bg-white rounded-lg border-2 border-primary-5 p-2 text-base text-primaryDark;
+        &:focus {
+            @apply outline-none border-primary-40 bg-primary-5;
+        }
         &:hover {
             @apply border-primary-20;
         }
         &:active {
             @apply border-primary;
-        }
-        &:focus {
-            @apply outline-none border-primary-40 bg-primary-5;
         }
         &:disabled {
             @apply border-primary-5 text-primary-20;
@@ -708,6 +708,7 @@
         label {
             @apply flex items-center;
             span {
+                @extend .heebo-font;
                 @apply ml-2 px-1.5 py-0.5 text-secondary text-xs leading-normal font-bold tracking-wide;
             }
         }
@@ -737,14 +738,14 @@
     .default-top-nav-btn {
         @extend .heebo-font;
         @apply py-2.9 bg-white flex items-center text-primaryDark text-base leading-normal font-medium border border-white rounded-lg;
+        &:focus {
+            @apply bg-white border-secondary;
+        }
         &:hover {
             @apply bg-secondary-5;
         }
         &:active {
             @apply border-secondary-20 bg-secondary-5;
-        }
-        &:focus {
-            @apply bg-white border-secondary;
         }
     }
     .top-nav-left-icon-btn {
@@ -773,6 +774,12 @@
         .icon {
             @apply flex items-center rounded-lg bg-primary-5 p-1.9 text-xs leading-none text-black;
         }
+        &:focus {
+            @apply bg-secondary-5 border-secondary-20;
+            .icon {
+                @apply bg-secondary text-white;
+            }
+        }
         &:hover {
             @apply bg-secondary-5;
             .icon {
@@ -783,12 +790,6 @@
             @apply border-secondary;
             .icon {
                 @apply bg-primary-5 text-black;
-            }
-        }
-        &:focus {
-            @apply bg-secondary-5 border-secondary-20;
-            .icon {
-                @apply bg-secondary text-white;
             }
         }
     }
@@ -808,7 +809,7 @@
                 }
             }
             .close-icon {
-                @apply p-1 w-max h-max cursor-pointer;
+                @apply p-1 w-max h-max;
                 div {
                     @apply px-1 py-0.75 h-max bg-white rounded-lg text-base leading-none text-primaryDark;
                 }
@@ -884,7 +885,7 @@
                 }
             }
             .close-icon {
-                @apply p-1 w-max h-max cursor-pointer;
+                @apply p-1 w-max h-max;
                 div {
                     @apply px-1 py-0.75 h-max bg-white rounded-lg text-base leading-none text-primaryDark;
                 }
@@ -964,43 +965,205 @@
             @apply border-green-5 text-greenDark;
         }
     }
-    /* .default-inline-alert {
-        @extend .heebo-font;
-        @apply w-max p-0.75 border-2 rounded-md;
+    .info-inline-alert {
+        @extend .default-inline-alert;
+        @apply border-blue-20;
         .content {
-            @apply w-82 py-2.5 px-4 flex flex-col text-sm leading-normal border rounded;
-            .title {
-                @apply font-extrabold;
-            }
-            .description {
-                @apply text-dark-60 font-normal;
-            }
+            @apply border-blue-5 text-blueDark;
         }
     }
-    .success-inline-alert {
+    .warning-inline-alert {
         @extend .default-inline-alert;
-        @apply border-green-20;
+        @apply border-orange-40;
         .content {
-            @apply border-green-5 text-greenDark;
+            @apply border-orange-5 text-orangeDark;
+        }
+    }
+    .error-inline-alert {
+        @extend .default-inline-alert;
+        @apply border-red-20;
+        .content {
+            @apply border-red-5 text-redDark;
         }
     }
     .default-icon-inline-alert {
         @extend .heebo-font;
         @apply w-max p-0.75 border-2 rounded-md;
         .content {
-            @apply w-82 py-2.5 px-4 flex text-sm leading-normal border rounded;
+            @apply w-82 py-2.5 px-4 flex items-center text-sm leading-normal border rounded;
             .left-content {
-                @apply flex flex-col;
-                .title {
-                    @apply font-extrabold;
+                @apply flex items-center space-x-4;
+                .info-content {
+                    @apply flex flex-col;
+                    .title {
+                        @apply font-extrabold;
+                    }
+                    .description {
+                        @apply text-dark-60 font-normal;
+                    }
                 }
-                .description {
-                    @apply text-dark-60 font-normal;
+                .icon {
+                    @apply p-1 text-xl leading-none;
                 }
             }
         }
     }
     .success-icon-inline-alert {
         @extend .default-icon-inline-alert;
-    } */
+        @apply border-green-20;
+        .content {
+            @apply border-green-5 text-greenDark;
+        }
+    }
+    .info-icon-inline-alert {
+        @extend .default-icon-inline-alert;
+        @apply border-blue-20;
+        .content {
+            @apply border-blue-5 text-blueDark;
+        }
+    }
+    .warning-icon-inline-alert {
+        @extend .default-icon-inline-alert;
+        @apply border-orange-40;
+        .content {
+            @apply border-orange-5 text-orangeDark;
+        }
+    }
+    .error-icon-inline-alert {
+        @extend .default-icon-inline-alert;
+        @apply border-red-20;
+        .content {
+            @apply border-red-5 text-redDark;
+        }
+    }
+    /* select options */
+    .icon-option {
+        @apply w-61 flex items-center space-x-3 py-3 pl-3 bg-white rounded text-primaryDark;
+        .icon {
+            @apply text-2xl leading-none;
+        }
+        .text {
+            @extend .heebo-font;
+            @apply text-base font-medium;
+        }
+        &:focus {
+            @apply py-2.9 border bg-secondary-5 border-secondary-20;
+        }
+        &:hover {
+            @apply bg-secondary-5;
+        }
+        &:disabled {
+            @apply text-primary-20 cursor-not-allowed;
+        }
+    }
+    .text-option {
+        @extend .heebo-font;
+        @apply w-61 flex items-center space-x-3 py-3 pl-3 bg-white rounded text-primaryDark text-base font-medium;
+        &:focus {
+            @apply py-2.9 border bg-secondary-5 border-secondary-20;
+        }
+        &:hover {
+            @apply bg-secondary-5;
+        }
+        &:disabled {
+            @apply text-primary-20 cursor-not-allowed;
+        }
+    }
+    /* dropdwon */
+    .big-dropdown {
+        @apply w-max;
+        button {
+            @extend .heebo-font;
+            @apply flex items-center py-1.5 pl-3.5 pr-1.5 space-x-2 text-primaryDark text-base leading-normal font-medium rounded-lg border-2 border-primary-5;
+            div {
+                @apply p-2.5 text-xs leading-none bg-primary-5 rounded-lg flex items-center;
+            }
+            &:focus {
+                @apply border-primary-40;
+                div {
+                    @apply bg-primary-20 text-primaryDark;
+                }
+            }
+            &:hover {
+                @apply border-primary-20;
+                div {
+                    @apply bg-primary text-white;
+                }
+            }
+            &:active {
+                @apply border-primary;
+                div {
+                    @apply bg-primary text-white;
+                }
+            }
+            &:disabled {
+                @apply border-primary-5 text-primary-20 cursor-not-allowed;
+                div {
+                    @apply bg-primary-5 text-primary-20;
+                }
+            }
+        }
+        .dropdown-menu {
+            @apply h-0 bg-green-20 rounded-sm invisible;
+            li {
+                @apply px-2 py-1;
+                &:hover {
+                    @apply bg-dark-20;
+                }
+            }
+        }
+        &:focus-within {
+            .dropdown-menu {
+                @apply h-max visible py-1 mt-1;
+            }
+        }
+    }
+    .small-dropdown {
+        @apply w-max;
+        button {
+            @extend .heebo-font;
+            @apply flex items-center py-1.5 pl-2.5 pr-1.5 space-x-2 text-primaryDark text-sm leading-normal font-medium rounded-lg border-2 border-primary-5;
+            div {
+                @apply p-1.5 text-xs leading-none bg-primary-5 rounded-lg flex items-center;
+            }
+            &:focus {
+                @apply border-primary-40;
+                div {
+                    @apply bg-primary-20 text-primaryDark;
+                }
+            }
+            &:hover {
+                @apply border-primary-20;
+                div {
+                    @apply bg-primary text-white;
+                }
+            }
+            &:active {
+                @apply border-primary;
+                div {
+                    @apply bg-primary text-white;
+                }
+            }
+            &:disabled {
+                @apply border-primary-5 text-primary-20 cursor-not-allowed;
+                div {
+                    @apply bg-primary-5 text-primary-20;
+                }
+            }
+        }
+        .dropdown-menu {
+            @apply h-0 bg-green-20 rounded-sm invisible;
+            li {
+                @apply px-2 py-1;
+                &:hover {
+                    @apply bg-dark-20;
+                }
+            }
+        }
+        &:focus-within {
+            .dropdown-menu {
+                @apply h-max visible py-1 mt-1;
+            }
+        }
+    }
 }

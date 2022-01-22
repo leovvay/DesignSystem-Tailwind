@@ -553,32 +553,102 @@
     <!-- Dropdown -->
     <div class="ml-25 mt-20 flex flex-col space-y-11">
       <span class="text-primary-20 text-6xl font-extrabold">Dropdown</span>
-      <div class="flex items-center">
-        <select class="form-select form-select-lg mb-3
-            appearance-none
-            block
-            w-3
-            px-4
-            py-2
-            text-xl
-            font-normal
-            text-gray-700
-            bg-white bg-clip-padding bg-no-repeat
-            border border-solid border-gray-300
-            rounded
-            transition
-            ease-in-out
-            m-0
-          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-          aria-label=".form-select-lg example">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
+      <div class="flex items-center space-x-12">
+        <div class="flex flex-col space-y-8">
+          <div class="big-dropdown">
+            <button class="dropdown-btn">
+              <span>Select Option</span>
+              <div class="dropdown-icon">
+                <span class="icon-dropdown"></span>
+              </div>
+            </button>
+            <!-- dropdown-menu -->
+            <div class="dropdown-menu">
+              <ul>
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="big-dropdown">
+            <button class="dropdown-btn" disabled>
+              <span>Select Option</span>
+              <div class="dropdown-icon">
+                <span class="icon-dropdown"></span>
+              </div>
+            </button>
+            <!-- dropdown-menu -->
+            <div class="dropdown-menu">
+              <ul>
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-8">
+          <div class="small-dropdown">
+            <button class="dropdown-btn">
+              <span>Select Option</span>
+              <div class="dropdown-icon">
+                <span class="icon-dropdown"></span>
+              </div>
+            </button>
+            <!-- dropdown-menu -->
+            <div class="dropdown-menu">
+              <ul>
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="small-dropdown">
+            <button class="dropdown-btn" disabled>
+              <span>Select Option</span>
+              <div class="dropdown-icon">
+                <span class="icon-dropdown"></span>
+              </div>
+            </button>
+            <!-- dropdown-menu -->
+            <div class="dropdown-menu">
+              <ul>
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center">
+    </div>
 
+    <!-- Select Options -->
+    <div class="ml-25 mt-20 flex flex-col space-y-11">
+      <span class="text-primary-20 text-6xl font-extrabold">Select Options</span>
+      <div class="flex space-x-8">
+        <div class="flex flex-col space-y-8">
+          <span class="mont-font text-checkboxTitle leading-none font-bold text-dark">Options with Icon</span>
+          <button class="icon-option">
+            <span class="icon icon-tune"></span>
+            <span class="text">Account Settings</span>
+          </button>
+          <button class="icon-option" disabled>
+            <span class="icon icon-tune"></span>
+            <span class="text">Account Settings</span>
+          </button>
+        </div>
+        <div class="flex flex-col space-y-8">
+          <span class="mont-font text-checkboxTitle leading-none font-bold text-dark">Options with Icon</span>
+          <button class="text-option">
+            <span class="text">Account Settings</span>
+          </button>
+          <button class="text-option" disabled>
+            <span class="text">Account Settings</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -921,7 +991,7 @@
 
         <div class="flex flex-col space-y-8">
           <span class="mont-font text-dark text-2xl leading-relaxed font-extrabold">Inactive</span>
-          <button class="tab_blocked"><label class="tab_blocked">Tab<span class="tab-tag">SOON</span></label>
+          <button class="tab_blocked"><label>Tab<span>SOON</span></label>
             <div></div>
           </button>
         </div>
@@ -962,7 +1032,7 @@
     <div class="mt-19 ml-25 flex flex-col space-y-17">
       <span class="text-primary-20 text-6xl font-extrabold">Top Horizontal Menu</span>
       <span class="mont-font text-checkboxTitle leading-none font-bold text-dark">Buttons</span>
-      <div class="flex space-x-17">
+      <div class="flex items-center space-x-17">
         <div class="flex space-x-3 px-3 py-4">
           <button class="top-nav-left-icon-btn">
             <span class="icon icon-dotseparator"></span>
@@ -1011,11 +1081,11 @@
               <span class="title">Success</span>
               <span class="description">Optional Description</span>
             </div>
-            <div class="close-icon">
+            <button class="close-icon">
               <div>
                 <span class="icon-close"></span>
               </div>
-            </div>
+            </button>
           </div>
         </div>
         <div class="success-icon-toast-alert">
@@ -1029,11 +1099,11 @@
               <span class="description">Optional Description</span>
               </div>
             </div>
-            <div class="close-icon">
+            <button class="close-icon">
               <div>
                 <span class="icon-close"></span>
               </div>
-            </div>
+            </button>
           </div>
         </div>
         <!-- info -->
@@ -1043,11 +1113,11 @@
               <span class="title">Info</span>
               <span class="description">Optional Description</span>
             </div>
-            <div class="close-icon">
+            <button class="close-icon">
               <div>
                 <span class="icon-close"></span>
               </div>
-            </div>
+            </button>
           </div>
         </div>
         <div class="info-icon-toast-alert">
@@ -1061,11 +1131,11 @@
               <span class="description">Optional Description</span>
               </div>
             </div>
-            <div class="close-icon">
+            <button class="close-icon">
               <div>
                 <span class="icon-close"></span>
               </div>
-            </div>
+            </button>
           </div>
         </div>
         <!-- warning -->
@@ -1075,11 +1145,11 @@
               <span class="title">Warning</span>
               <span class="description">Optional Description</span>
             </div>
-            <div class="close-icon">
+            <button class="close-icon">
               <div>
                 <span class="icon-close"></span>
               </div>
-            </div>
+            </button>
           </div>
         </div>
         <div class="warn-icon-toast-alert">
@@ -1093,11 +1163,11 @@
               <span class="description">Optional Description</span>
               </div>
             </div>
-            <div class="close-icon">
+            <button class="close-icon">
               <div>
                 <span class="icon-close"></span>
               </div>
-            </div>
+            </button>
           </div>
         </div>
         <!-- error -->
@@ -1107,11 +1177,11 @@
               <span class="title">Error</span>
               <span class="description">Optional Description</span>
             </div>
-            <div class="close-icon">
+            <button class="close-icon">
               <div>
                 <span class="icon-close"></span>
               </div>
-            </div>
+            </button>
           </div>
         </div>
         <div class="error-icon-toast-alert">
@@ -1125,11 +1195,11 @@
               <span class="description">Optional Description</span>
               </div>
             </div>
-            <div class="close-icon">
+            <button class="close-icon">
               <div>
                 <span class="icon-close"></span>
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </div>
@@ -1140,7 +1210,7 @@
       <span class="text-primary-20 text-6xl font-extrabold">Inline Alerts</span>
       <div class="grid grid-cols-2 gap-10 p-10">
         <!-- success -->
-        <!-- <div class="success-inline-alert">
+        <div class="success-inline-alert">
           <div class="content">
             <span class="title">Success</span>
             <span class="description">Optional Description</span>
@@ -1158,7 +1228,67 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
+        <!-- info -->
+        <div class="info-inline-alert">
+          <div class="content">
+            <span class="title">Info</span>
+            <span class="description">Optional Description</span>
+          </div>
+        </div>
+        <div class="info-icon-inline-alert">
+          <div class="content">
+            <div class="left-content">
+              <div class="icon">
+                <span class="icon-alert-circled"></span>
+              </div>
+              <div class="info-content">
+                <span class="title">Info</span>
+                <span class="description">Optional Description</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- warning -->
+        <div class="warning-inline-alert">
+          <div class="content">
+            <span class="title">Warning</span>
+            <span class="description">Optional Description</span>
+          </div>
+        </div>
+        <div class="warning-icon-inline-alert">
+          <div class="content">
+            <div class="left-content">
+              <div class="icon">
+                <span class="icon-warning"></span>
+              </div>
+              <div class="info-content">
+                <span class="title">Warning</span>
+                <span class="description">Optional Description</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- error -->
+        <div class="error-inline-alert">
+          <div class="content">
+            <span class="title">Error</span>
+            <span class="description">Optional Description</span>
+          </div>
+        </div>
+        <div class="error-icon-inline-alert">
+          <div class="content">
+            <div class="left-content">
+              <div class="icon">
+                <span class="icon-close-circled"></span>
+              </div>
+              <div class="info-content">
+                <span class="title">Error</span>
+                <span class="description">Optional Description</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
