@@ -808,12 +808,6 @@
                     @apply text-dark-60 font-normal;
                 }
             }
-            .tiny-icon-btn {
-                @apply p-1 w-max h-max;
-                div {
-                    @apply px-1 py-0.75 h-max bg-white rounded-lg text-base leading-none text-primaryDark;
-                }
-            }
         }
     }
     .success-toast-alert {
@@ -884,12 +878,12 @@
                     }
                 }
             }
-            .tiny-icon-btn {
+            /* .tiny-icon-btn {
                 @apply p-1 w-max h-max;
                 div {
                     @apply px-1 py-0.75 h-max bg-white rounded-lg text-base leading-none text-primaryDark;
                 }
-            }
+            } */
         }
     }
     .success-icon-toast-alert {
