@@ -808,11 +808,6 @@
                     @apply text-dark-60 font-normal;
                 }
             }
-            .tiny-icon-btn {
-                div {
-                    @apply bg-white;
-                }
-            }
         }
     }
     .success-toast-alert {
