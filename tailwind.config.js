@@ -146,6 +146,7 @@ module.exports = {
         extend: {},
     },
     plugins: [
+        require('tailwind-scrollbar'),
         require('@tailwindcss/custom-forms'),
         function({ addUtilities }) {
             const extendUnderline = {
