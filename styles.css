@@ -1233,7 +1233,7 @@
     .extreme-select {
         @apply flex flex-col max-h-138 px-0.25 space-y-0.25 overflow-y-scroll;
         .text-option {
-            @apply w-93.5 min-h-12;
+            @apply w-93.5 min-h-12 whitespace-nowrap overflow-hidden;
         }
         &::-webkit-scrollbar {
             @apply w-0.5 ml-2;
