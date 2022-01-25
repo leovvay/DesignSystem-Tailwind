@@ -203,7 +203,7 @@
     }
     .minimal-icon-btn {
         @extend .default-minimal-btn;
-        @apply flex text-base p-3.5;
+        @apply flex items-center text-base p-3.5;
     }
     .small-minimal-btn {
         @extend .default-minimal-btn;
@@ -215,7 +215,7 @@
     }
     .small-minimal-icon-btn {
         @extend .default-minimal-btn;
-        @apply flex text-sm p-2 leading-normal;
+        @apply flex items-center text-sm p-2 leading-normal;
     }
     /* disabled minimal buttons */
     .default-minimal-btn_disabled {
@@ -698,7 +698,7 @@
     }
     .tab_active {
         @extend .default-tab;
-        @apply text-primary;
+        @apply flex flex-col space-y-2 text-primary;
         label {
             @apply cursor-pointer;
         }
@@ -1008,12 +1008,18 @@
         .content {
             @apply border-green-5 text-greenDark;
         }
+        .icon {
+            @apply text-green;
+        }
     }
     .info-icon-inline-alert {
         @extend .default-icon-inline-alert;
         @apply border-blue-20;
         .content {
             @apply border-blue-5 text-blueDark;
+        }
+        .icon {
+            @apply text-blue;
         }
     }
     .warning-icon-inline-alert {
@@ -1022,12 +1028,18 @@
         .content {
             @apply border-orange-5 text-orangeDark;
         }
+        .icon {
+            @apply text-orange;
+        }
     }
     .error-icon-inline-alert {
         @extend .default-icon-inline-alert;
         @apply border-red-20;
         .content {
             @apply border-red-5 text-redDark;
+        }
+        .icon {
+            @apply text-red;
         }
     }
     /* select options */
@@ -1068,7 +1080,7 @@
         @apply w-max;
         .dropdown-btn {
             @extend .heebo-font;
-            @apply flex items-center py-1.5 pl-3.5 pr-1.5 space-x-2 text-primaryDark text-base leading-normal font-medium rounded-lg border-2 border-primary-5;
+            @apply flex items-center py-1.5 pl-3.5 pr-1.5 space-x-2 text-primaryDark text-base leading-normal font-medium rounded-lg border-2 border-primary-5 overflow-auto;
             div {
                 @apply p-1.9 text-lg leading-none bg-primary-5 rounded-lg flex items-center;
             }
@@ -1215,6 +1227,255 @@
         }
         .divider {
             @apply my-2 bg-primary-5;
+        }
+    }
+    /* extreme select scroll-ml-2 */
+    .extreme-select {
+        @apply flex flex-col max-h-138 px-0.25 space-y-0.25 overflow-y-scroll;
+        .text-option {
+            @apply w-93.5 min-h-12;
+        }
+        &::-webkit-scrollbar {
+            @apply w-0.5 ml-2;
+        }
+        &::-webkit-scrollbar-track {
+            @apply bg-secondary-5 border border-l-8 border-transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            @apply bg-secondary rounded;
+        }
+    }
+    /* Cards - No Description */
+    .no-des-btn-line-card {
+        @apply w-85 px-3 flex flex-col space-y-4;
+        .card-main-content {
+            @extend .mont-font;
+            @apply flex items-center justify-between text-primary text-lg font-extrabold leading-relaxed;
+        }
+        .divider {
+            @apply bg-primary-5 rounded;
+        }
+    }
+    .no-des-btn-card {
+        @extend .mont-font;
+        @apply px-3 flex items-center justify-between w-85 text-primary text-lg font-extrabold leading-relaxed;
+    }
+    .no-des-line-card {
+        @extend .mont-font;
+        @apply w-85 px-3 flex flex-col text-primary text-lg font-extrabold leading-relaxed space-y-3.9;
+        span {
+            @apply -mt-0.125 w-max;
+        }
+        .divider {
+            @apply bg-primary-5 rounded;
+        }
+    }
+    .no-des-empty-card {
+        @extend .mont-font;
+        @apply w-85 px-3 flex items-center text-primary text-lg font-extrabold leading-relaxed;
+        span {
+            @apply -my-0.125 w-max;
+        }
+    }
+    /* Cards - with Description */
+    .with-des-btn-line-card {
+        @apply w-85 px-3 flex flex-col space-y-4;
+        .card-main-content {
+            @apply flex items-center justify-between;
+            div {
+                @apply flex flex-col;
+                label {
+                    @extend .mont-font;
+                    @apply text-primary text-lg font-extrabold leading-relaxed;
+                }
+                span {
+                    @extend .heebo-font;
+                    @apply text-sm leading-normal text-dark-80 font-normal;
+                }
+            }
+        }
+        .divider {
+            @apply bg-primary-5 rounded;
+        }
+    }
+    .with-des-btn-card {
+        @apply w-85 px-3 flex items-center justify-between;
+        div {
+            @apply flex flex-col;
+            label {
+                @extend .mont-font;
+                @apply text-primary text-lg font-extrabold leading-relaxed;
+            }
+            span {
+                @extend .heebo-font;
+                @apply text-sm leading-normal text-dark-80 font-normal;
+            }
+        }
+    }
+    .with-des-line-card {
+        @apply w-85 px-3 flex flex-col space-y-4;
+        .card-main-content {
+            @apply flex flex-col;
+            label {
+                @extend .mont-font;
+                @apply text-primary text-lg font-extrabold leading-relaxed;
+            }
+            span {
+                @extend .heebo-font;
+                @apply text-sm leading-normal text-dark-80 font-normal;
+            }
+        }
+        .divider {
+            @apply bg-primary-5 rounded;
+        }
+    }
+    .with-des-empty-card {
+        @apply w-85 px-3 flex flex-col;
+        label {
+            @extend .mont-font;
+            @apply text-primary text-lg font-extrabold leading-relaxed;
+        }
+        span {
+            @extend .heebo-font;
+            @apply text-sm leading-normal text-dark-80 font-normal;
+        }
+    }
+    /* card */
+    .default-card {
+        @apply flex flex-col space-y-4 px-3 py-6 bg-white rounded-lg shadow-base;
+        .with-des-btn-line-card {
+            @apply w-144;
+        }
+        .card-footer {
+            @extend .heebo-font;
+            @apply pl-3 text-primary-40 text-xs font-medium leading-normal tracking-wider uppercase;
+        }
+    }
+    /* desktop modal */
+    .desktop-modal {
+        @extend .heebo-font;
+        @apply w-150 pb-6 flex flex-col rounded-lg ring-1 ring-dark-5 bg-white shadow-xl space-y-2;
+        .modal-header {
+            @apply px-4 py-3 flex items-center justify-between bg-background shadow-modal rounded-t-lg;
+            .modal-title {
+                @apply text-primary text-base leading-relaxed font-bold;
+            }
+        }
+        .modal-footer {
+            @apply py-3 pl-4 text-dark text-xs leading-normal font-medium tracking-wider;
+        }
+    }
+    /* mobile modal */
+    .mobile-modal {
+        @extend .heebo-font;
+        @apply w-95 h-134.5 flex flex-col bg-white space-y-2;
+        left: calc(50% - 375px/2);
+        top: calc(50% - 538px/2);
+        .modal-header {
+            @apply px-4 py-3 flex items-center justify-between bg-background shadow-modal;
+            .modal-title {
+                @apply text-primary text-base leading-relaxed font-bold;
+            }
+        }
+        .modal-footer {
+            @apply min-h-35.25 py-3 px-4 text-dark text-xs leading-normal font-medium tracking-wider;
+        }
+    }
+    /* tooltip */
+    .tooltip {
+        a {
+            .tooltip-content {
+                @apply max-w-64 px-1 py-2 bg-primaryDark hidden text-white text-sm leading-normal font-medium rounded;
+            }
+            &:hover {
+                .tooltip-content {
+                    @apply block fixed overflow-hidden no-underline;
+                }
+            }
+        }
+    }
+    /* top bar */
+    .topbar {
+        @apply w-full max-w-7xl flex items-center justify-between pl-5;
+        .logo-container {
+            @apply flex items-center w-max;
+        }
+        .right-content {
+            @apply flex items-center space-x-0.25;
+            .change-help-container {
+                @apply w-max pr-3 flex items-center space-x-1;
+            }
+        }
+    }
+    /* footer */
+    .footer-bar {
+        @extend .heebo-font;
+        @apply w-full max-w-7xl px-5 pt-5 pb-4 flex items-center bg-primary-5;
+        .footer-text {
+            @apply text-primary-40 text-sm leading-5.5 font-medium;
+            a {
+                @apply no-underline;
+            }
+        }
+        .footer-menu {
+            @apply flex-1 flex justify-center items-center space-x-6 text-primary-40 text-sm leading-normal font-normal;
+        }
+    }
+    /* topbar with menu */
+    .menu-topbar {
+        @apply w-full max-w-7xl flex items-center justify-between pl-5;
+        .left-content {
+            @apply flex items-center space-x-9;
+            .logo-content {
+                @apply flex items-center w-max;
+            }
+            .menu-container {
+                @extend .heebo-font;
+                @apply flex items-center space-x-4 text-base text-primaryDark leading-normal font-medium;
+                label {
+                    @apply flex items-center space-x-1.5 cursor-pointer;
+                    div {
+                        @apply flex items-center p-1.5 text-sm leading-none bg-primary-5 rounded-1.75;
+                    }
+                }
+            }
+        }
+        .right-content {
+            @apply flex items-center space-x-0.25;
+            .change-help-container {
+                @apply w-max pr-3 flex items-center space-x-1;
+            }
+        }
+    }
+    /* tabs bar */
+    .tabs-bar {
+        @apply px-8 max-w-7xl py-6 flex flex-col space-y-1;
+        .title-content {
+            @extend .heebo-font;
+            @apply flex items-center w-max space-x-1 text-primary-80 text-sm leading-normal font-normal;
+            .icon {
+                @apply text-xs leading-none;
+            }
+        }
+        .tabs-content {
+            @apply flex items-center space-x-10;
+        }
+    }
+    /* tabs bar with button */
+    .tabs-button-bar {
+        @apply px-8 py-6 max-w-7xl flex flex-col space-y-1;
+        .title-content {
+            @extend .heebo-font;
+            @apply flex items-center w-max space-x-1 text-primary-80 text-sm leading-normal font-normal;
+            .icon {
+                @apply text-xs leading-none;
+            }
+        }
+        .tabs-content {
+            @apply flex items-center justify-between;
+            .tabs-content-left {
+                @apply flex items-center space-x-10
+            }
         }
     }
 }

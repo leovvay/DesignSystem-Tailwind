@@ -19,8 +19,29 @@ module.exports = {
             lg: "0.5rem",
             full: "9999px",
             large: "12px",
+            1.75: "7px"
+        },
+        scrollbar: {
+            0.5: '2px'
         },
         extend: {
+            maxWidth: {
+                93.5: '23.375rem',
+                64: '16rem'
+            },
+            width: {
+                85: '340px',
+                93.5: '23.375rem',
+                144: '36rem',
+                150: '37.5rem'
+            },
+            maxHeight: {
+                138: '34.5rem',
+            },
+            minHeight: {
+                12: '3rem',
+                35.25: "141px",
+            },
             keyframes: {
                 pulse: {
                     '0%, 100%': { opacity: 1 },
@@ -49,8 +70,10 @@ module.exports = {
                 'warn-toast': "0px 8px 12px rgba(226, 151, 15, 0.08)",
                 'err-toast': "0px 8px 12px rgba(189, 9, 54, 0.08)",
                 'dropdown-menu': "0px 10px 15px rgba(16, 16, 155, 0.08), 0px 4px 6px rgba(16, 16, 155, 0.08)",
+                'modal': "0px 1px 0px #F1F1F9",
             },
             spacing: {
+                0.125: "0.5px",
                 0.25: "1px",
                 0.5: "2px",
                 0.75: "0.1875rem",
@@ -59,6 +82,7 @@ module.exports = {
                 1.9: "0.4375rem",
                 2.25: "0.5625rem",
                 2.75: "0.65625rem",
+                3.9: "15.5px",
                 4.25: "1.0625rem",
                 4.5: "1.125rem",
                 5.5: "1.3125rem",
@@ -76,9 +100,12 @@ module.exports = {
                 61: "15.25rem",
                 73: "18.125rem",
                 82: "21.875rem",
+                95: "23.4375rem",
+                134.5: "538px"
             },
             lineHeight: {
-                4.5: "18px"
+                4.5: "18px",
+                5.5: "22px"
             },
             colors: {
                 "daily-dev-tips": "#F89283",
@@ -142,11 +169,7 @@ module.exports = {
             },
         },
     },
-    variants: {
-        extend: {},
-    },
     plugins: [
-        require('tailwind-scrollbar'),
         require('@tailwindcss/custom-forms'),
         function({ addUtilities }) {
             const extendUnderline = {
@@ -158,4 +181,9 @@ module.exports = {
             addUtilities(extendUnderline);
         },
     ],
+    variants: {
+        extend: {
+            scrollbar: 'rounded',
+        },
+    },
 };
