@@ -805,7 +805,7 @@
         }
         &:focus-within {
             .dropdown-menu {
-                @apply h-max max-w-99.75 visible p-2 mt-1 shadow-dropdown-menu ring-1 ring-primary-5;
+                @apply h-max max-w-99.75 right-0 left-auto visible p-2 mt-1 shadow-dropdown-menu ring-1 ring-primary-5;
             }
         }
     }
