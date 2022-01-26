@@ -507,12 +507,12 @@
     <div class="ml-25 mt-20 flex flex-col space-y-11">
       <span class="text-primary-20 text-6xl font-extrabold">Links</span>
       <div class="flex items-center space-x-10">
-        <a href="" class="text-link"> Submit </a>
-        <a href="" class="small-text-link"> Submit </a>
+        <a href="" class="text-link"> <label>Submit</label> </a>
+        <a href="" class="small-text-link"> <label>Submit</label> </a>
       </div>
       <div class="flex items-center space-x-10">
-        <a href="" class="text-link_disabled"> Submit </a>
-        <a href="" class="small-text-link_disabled"> Submit </a>
+        <a class="text-link_disabled"> <label>Submit</label> </a>
+        <a class="small-text-link_disabled"> <label>Submit</label> </a>
       </div>
     </div>
 
@@ -565,11 +565,20 @@
             <!-- dropdown-menu -->
             <div class="dropdown-menu">
               <div class="dropdown-container">
-                <ul>
-                  <li>Option 1</li>
-                  <li>Option 2</li>
-                  <li>Option 3</li>
-                </ul>
+                <div class="main-content">
+                  <button class="text-option">
+                    <span class="text">Option A1</span>
+                  </button>
+                  <button class="text-option">
+                    <span class="text">Option A2</span>
+                  </button>
+                  <button class="text-option">
+                    <span class="text">Option A3</span>
+                  </button>
+                  <button class="text-option">
+                    <span class="text">Option A4</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -583,11 +592,20 @@
             <!-- dropdown-menu -->
             <div class="dropdown-menu">
               <div class="dropdown-container">
-                <ul>
-                  <li>Option 1</li>
-                  <li>Option 2</li>
-                  <li>Option 3</li>
-                </ul>
+                <div class="main-content">
+                  <button class="text-option">
+                    <span class="text">Option A1</span>
+                  </button>
+                  <button class="text-option">
+                    <span class="text">Option A2</span>
+                  </button>
+                  <button class="text-option">
+                    <span class="text">Option A3</span>
+                  </button>
+                  <button class="text-option">
+                    <span class="text">Option A4</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -603,11 +621,20 @@
             <!-- dropdown-menu -->
             <div class="dropdown-menu">
               <div class="dropdown-container">
-                <ul>
-                  <li>Option 1</li>
-                  <li>Option 2</li>
-                  <li>Option 3</li>
-                </ul>
+                <div class="main-content">
+                  <button class="text-option">
+                    <span class="text">Option A1</span>
+                  </button>
+                  <button class="text-option">
+                    <span class="text">Option A2</span>
+                  </button>
+                  <button class="text-option">
+                    <span class="text">Option A3</span>
+                  </button>
+                  <button class="text-option">
+                    <span class="text">Option A4</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -621,11 +648,20 @@
             <!-- dropdown-menu -->
             <div class="dropdown-menu">
               <div class="dropdown-container">
-                <ul>
-                  <li>Option 1</li>
-                  <li>Option 2</li>
-                  <li>Option 3</li>
-                </ul>
+                <div class="main-content">
+                  <button class="text-option">
+                    <span class="text">Option A1</span>
+                  </button>
+                  <button class="text-option">
+                    <span class="text">Option A2</span>
+                  </button>
+                  <button class="text-option">
+                    <span class="text">Option A3</span>
+                  </button>
+                  <button class="text-option">
+                    <span class="text">Option A4</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -755,20 +791,26 @@
                 <div class="main-content">
                   <span class="sub-content-title">Category A</span>
                   <button class="icon-option">
-                    <input type="checkbox" class="icon default-checkbox" />
-                    <span class="text">Option A1</span>
+                    <label>
+                      <input type="checkbox" class="icon default-checkbox" />
+                      <span class="text">Option A1</span>
+                    </label>
                   </button>
                   <button class="icon-option">
-                    <input type="checkbox" class="icon default-checkbox" />
-                    <span class="text">Option A2</span>
+                    <label>
+                      <input type="checkbox" class="icon default-checkbox" />
+                      <span class="text">Option A2</span>
+                    </label>
                   </button>
                 </div>
                 <div class="divider"></div>
                 <div class="main-content">
                   <span class="sub-content-title">Category B</span>
                   <button class="icon-option">
-                    <input type="checkbox" class="icon default-checkbox" checked />
-                    <span class="text">Option A3</span>
+                    <label>
+                      <input type="checkbox" class="icon form-checkbox default-checkbox" checked />
+                      <span class="text">Option A3</span>
+                    </label>
                   </button>
                 </div>
               </div>
@@ -1235,6 +1277,11 @@
             </button>
             <div class="dropdown-menu">
               <div class="dropdown-container">
+                <div class="badge-content">
+                  <div class="blue-badge">
+                    <span>PRO PARTNER</span>
+                  </div>
+                </div>
                 <div class="main-content">
                   <button class="icon-option">
                     <span class="icon icon-tune"></span>
@@ -1251,6 +1298,13 @@
                   <button class="icon-option">
                     <span class="icon icon-window"></span>
                     <span class="text">Billing</span>
+                  </button>
+                </div>
+                <div class="divider"></div>
+                <div class="main-content">
+                  <button class="icon-option">
+                    <span class="icon icon-logout"></span>
+                    <span class="text">Log Out</span>
                   </button>
                 </div>
               </div>
@@ -1296,6 +1350,11 @@
             </button>
             <div class="dropdown-menu">
               <div class="dropdown-container">
+                <div class="badge-content">
+                  <div class="blue-badge">
+                    <span>PRO PARTNER</span>
+                  </div>
+                </div>
                 <div class="main-content">
                   <button class="icon-option">
                     <span class="icon icon-tune"></span>
@@ -1312,6 +1371,13 @@
                   <button class="icon-option">
                     <span class="icon icon-window"></span>
                     <span class="text">Billing</span>
+                  </button>
+                </div>
+                <div class="divider"></div>
+                <div class="main-content">
+                  <button class="icon-option">
+                    <span class="icon icon-logout"></span>
+                    <span class="text">Log Out</span>
                   </button>
                 </div>
               </div>
@@ -1343,7 +1409,7 @@
             <a href="">Orders</a>
             <a href="">Boxed</a>
             <a href="">Listings</a>
-            <div class="small-dropdown">
+            <div class="small-dropdown nav-dropdown">
               <button class="dropdown-btn">
                 <span>Reports</span>
                 <div class="dropdown-icon">
@@ -1364,7 +1430,7 @@
                 </div>
               </div>
             </div>
-            <div class="small-dropdown">
+            <div class="nav-dropdown small-dropdown">
               <button class="dropdown-btn">
                 <span>Marketing</span>
                 <div class="dropdown-icon">
@@ -1386,13 +1452,16 @@
         </div>
         <div class="right-content">
           <div class="change-help-container">
-            <label class="change-footer">
+            <a href=""><label class="change-footer">
               <span class="icon icon-dotseparator"></span>
               <span>Changes</span>
             </label>
+          </a>
+          <a href="">
             <label class="help-footer">
               <span>Help</span>
             </label>
+          </a>
           </div>
           <div class="user-dropdown">
             <button class="user-dropdown-btn">
@@ -1406,6 +1475,11 @@
             </button>
             <div class="dropdown-menu">
               <div class="dropdown-container">
+                <div class="badge-content">
+                  <div class="blue-badge">
+                    <span>PRO PARTNER</span>
+                  </div>
+                </div>
                 <div class="main-content">
                   <button class="icon-option">
                     <span class="icon icon-tune"></span>
@@ -1422,6 +1496,13 @@
                   <button class="icon-option">
                     <span class="icon icon-window"></span>
                     <span class="text">Billing</span>
+                  </button>
+                </div>
+                <div class="divider"></div>
+                <div class="main-content">
+                  <button class="icon-option">
+                    <span class="icon icon-logout"></span>
+                    <span class="text">Log Out</span>
                   </button>
                 </div>
               </div>
