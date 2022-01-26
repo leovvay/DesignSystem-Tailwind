@@ -377,7 +377,7 @@
     /* badges */
     .default-badge {
         @extend .heebo-font;
-        @apply px-1.5 py-0.5 flex items-center rounded font-bold text-xs leading-normal tracking-wide
+        @apply px-1.5 py-0.5 w-max flex items-center rounded font-bold text-xs leading-normal tracking-wide
     }
     .neutral-badge {
         @extend .default-badge;
@@ -758,44 +758,51 @@
         .icon {
             @apply text-secondary text-base leading-none animate-blink;
         }
-        &:active,
-        &:focus {
+        /* &:focus {
             .icon {
                 @apply invisible;
             }
-        }
+        } */
     }
-    .user-dropdown-btn {
-        @extend .heebo-font;
-        @apply py-4 px-5 flex items-center space-x-5 bg-white;
-        .label {
-            @apply w-max flex flex-col items-start font-normal;
-            .user-name {
-                @apply text-sm leading-normal text-dark;
+    .user-dropdown {
+        @apply relative inline-block w-max;
+        .user-dropdown-btn {
+            @extend .heebo-font;
+            @apply py-4 px-5 inline-flex items-center space-x-5 bg-white;
+            .label {
+                @apply w-max flex flex-col items-start font-normal;
+                .user-name {
+                    @apply text-sm leading-normal text-dark;
+                }
+                .user-title {
+                    @apply text-xs leading-4.5 text-dark-60
+                }
             }
-            .user-title {
-                @apply text-xs leading-4.5 text-dark-60
-            }
-        }
-        .icon {
-            @apply flex items-center rounded-lg bg-primary-5 p-1.9 text-xs leading-none text-black;
-        }
-        &:focus {
-            @apply bg-secondary-5 ring-1 ring-secondary-20;
             .icon {
-                @apply bg-secondary text-white;
+                @apply flex items-center rounded-lg bg-primary-5 p-1.9 text-xs leading-none text-black;
+            }
+            &:focus {
+                @apply bg-secondary-5 ring-1 ring-secondary-20;
+                .icon {
+                    @apply bg-secondary text-white;
+                }
+            }
+            &:hover {
+                @apply bg-secondary-5;
+                .icon {
+                    @apply bg-secondary text-white;
+                }
+            }
+            &:active {
+                @apply ring-1 ring-secondary;
+                .icon {
+                    @apply bg-primary-5 text-black;
+                }
             }
         }
-        &:hover {
-            @apply bg-secondary-5;
-            .icon {
-                @apply bg-secondary text-white;
-            }
-        }
-        &:active {
-            @apply ring-1 ring-secondary;
-            .icon {
-                @apply bg-primary-5 text-black;
+        &:focus-within {
+            .dropdown-menu {
+                @apply h-max max-w-99.75 visible p-2 mt-1 shadow-dropdown-menu ring-1 ring-primary-5;
             }
         }
     }
@@ -1044,7 +1051,7 @@
     }
     /* select options */
     .icon-option {
-        @apply w-61 flex items-center space-x-3 py-3 pl-3 bg-white rounded text-primaryDark;
+        @apply min-w-61 flex items-center space-x-3 py-3 pl-3 bg-white rounded text-primaryDark;
         .icon {
             @apply text-2xl leading-none;
         }
@@ -1064,7 +1071,8 @@
     }
     .text-option {
         @extend .heebo-font;
-        @apply w-61 flex items-center space-x-3 py-3 pl-3 bg-white rounded text-primaryDark text-base font-medium;
+        @apply min-w-61 flex items-center space-x-3 py-3 pl-3 bg-white rounded text-primaryDark text-base font-medium whitespace-nowrap overflow-hidden;
+        ;
         &:focus {
             @apply ring-1 bg-secondary-5 ring-secondary-20;
         }
@@ -1075,12 +1083,47 @@
             @apply text-primary-20 cursor-not-allowed;
         }
     }
+    /* dropdown menu */
+    .dropdown-menu {
+        @apply absolute left-0 h-0 rounded-md invisible z-10 min-w-full bg-white;
+        .dropdown-container {
+            @apply flex flex-col space-y-2 overflow-y-auto overflow-x-hidden h-max max-h-129 px-0.25;
+            &::-webkit-scrollbar {
+                @apply w-0.5 ml-2;
+            }
+            &::-webkit-scrollbar-track {
+                @apply bg-secondary-5 border border-l-8 border-transparent;
+            }
+            &::-webkit-scrollbar-thumb {
+                @apply bg-secondary rounded;
+            }
+            .badge-content {
+                @apply pl-1.5 py-1.6;
+            }
+            .main-content {
+                @apply flex flex-col space-y-0.25 py-0.25;
+            }
+            .divider {
+                @apply bg-primary-5 my-2;
+            }
+            .sub-content-title {
+                @extend .heebo-font;
+                @apply py-1 px-3 text-primary-40 text-xs leading-normal font-medium uppercase tracking-wider;
+            }
+            li {
+                @apply px-2 py-1;
+                &:hover {
+                    @apply bg-dark-20;
+                }
+            }
+        }
+    }
     /* dropdwon */
     .big-dropdown {
-        @apply w-max;
+        @apply relative inline-block w-max;
         .dropdown-btn {
             @extend .heebo-font;
-            @apply flex items-center py-1.5 pl-3.5 pr-1.5 space-x-2 text-primaryDark text-base leading-normal font-medium rounded-lg border-2 border-primary-5 overflow-auto;
+            @apply inline-flex items-center py-1.5 pl-3.5 pr-1.5 space-x-2 text-primaryDark text-base leading-normal font-medium rounded-lg border-2 border-primary-5 overflow-auto;
             div {
                 @apply p-1.9 text-lg leading-none bg-primary-5 rounded-lg flex items-center;
             }
@@ -1109,26 +1152,17 @@
                 }
             }
         }
-        .dropdown-menu {
-            @apply h-0 rounded-md invisible;
-            li {
-                @apply px-2 py-1;
-                &:hover {
-                    @apply bg-dark-20;
-                }
-            }
-        }
         &:focus-within {
             .dropdown-menu {
-                @apply h-max visible p-2 mt-1 shadow-dropdown-menu ring-1 ring-primary-5;
+                @apply h-max max-w-99.75 visible p-2 mt-1 shadow-dropdown-menu ring-1 ring-primary-5;
             }
         }
     }
     .small-dropdown {
-        @apply w-max;
+        @apply relative inline-block w-max;
         button {
             @extend .heebo-font;
-            @apply flex items-center py-1.5 pl-2.5 pr-1.5 space-x-2 text-primaryDark text-sm leading-normal font-medium rounded-lg border-2 border-primary-5;
+            @apply inline-flex items-center py-1.5 pl-2.5 pr-1.5 space-x-2 text-primaryDark text-sm leading-normal font-medium rounded-lg border-2 border-primary-5;
             div {
                 @apply p-1 text-base leading-none bg-primary-5 rounded-lg flex items-center;
             }
@@ -1158,7 +1192,7 @@
             }
         }
         .dropdown-menu {
-            @apply h-0 bg-green-20 rounded-sm invisible;
+            @apply absolute left-0 z-10 min-w-full bg-white h-0 rounded-sm invisible;
             li {
                 @apply px-2 py-1;
                 &:hover {
@@ -1168,81 +1202,8 @@
         }
         &:focus-within {
             .dropdown-menu {
-                @apply h-max visible py-1 mt-1;
+                @apply h-max visible py-1 mt-1 shadow-dropdown-menu;
             }
-        }
-    }
-    /* Select with Badge */
-    .select-with-badge {
-        @apply flex flex-col w-max;
-        .dropdown-menu-title {
-            @extend .heebo-font;
-            @apply text-blue text-xs leading-normal tracking-wide font-bold pl-1.5 py-1.6;
-            div {
-                @apply w-max px-1.5 py-0.5 bg-blue-5 rounded;
-            }
-        }
-        .dropdown-main-menu {
-            @apply flex flex-col mt-2 space-y-0.25;
-        }
-        .divider {
-            @apply bg-primary-5 my-2;
-        }
-        .icon-option {
-            @apply w-60;
-        }
-    }
-    /* Classic Select */
-    .classic-dropdown-menu {
-        @apply flex flex-col w-max;
-        .sub-content {
-            @apply flex flex-col space-y-0.25;
-            .sub-content-title {
-                @extend .heebo-font;
-                @apply py-1 px-3 text-primary-40 text-xs leading-normal font-medium uppercase tracking-wider;
-            }
-            .text-option {
-                @apply w-60;
-            }
-        }
-        .divider {
-            @apply bg-primary-5 my-2;
-        }
-    }
-    /* multiselect */
-    .multi-select {
-        @apply flex flex-col w-max;
-        .sub-content {
-            @apply flex flex-col space-y-0.25;
-            .sub-content-title {
-                @extend .heebo-font;
-                @apply py-1 px-3 text-primary-40 text-xs leading-normal font-medium uppercase tracking-wider;
-            }
-            .icon-option {
-                @apply w-60;
-                input {
-                    @apply w-6 h-6;
-                }
-            }
-        }
-        .divider {
-            @apply my-2 bg-primary-5;
-        }
-    }
-    /* extreme select scroll-ml-2 */
-    .extreme-select {
-        @apply flex flex-col max-h-138 px-0.25 space-y-0.25 overflow-y-scroll;
-        .text-option {
-            @apply w-93.5 min-h-12 whitespace-nowrap overflow-hidden;
-        }
-        &::-webkit-scrollbar {
-            @apply w-0.5 ml-2;
-        }
-        &::-webkit-scrollbar-track {
-            @apply bg-secondary-5 border border-l-8 border-transparent;
-        }
-        &::-webkit-scrollbar-thumb {
-            @apply bg-secondary rounded;
         }
     }
     /* Cards - No Description */
@@ -1385,7 +1346,7 @@
     .tooltip {
         a {
             .tooltip-content {
-                @apply max-w-64 px-1 py-2 bg-primaryDark hidden text-white text-sm leading-normal font-medium rounded;
+                @apply max-w-64 px-2 py-1 bg-primaryDark hidden text-white text-sm leading-normal font-medium rounded;
             }
             &:hover {
                 .tooltip-content {
@@ -1396,7 +1357,7 @@
     }
     /* top bar */
     .topbar {
-        @apply w-full max-w-7xl flex items-center justify-between pl-5;
+        @apply w-full flex items-center justify-between px-5;
         .logo-container {
             @apply flex items-center w-max;
         }
@@ -1410,7 +1371,7 @@
     /* footer */
     .footer-bar {
         @extend .heebo-font;
-        @apply w-full max-w-7xl px-5 pt-5 pb-4 flex items-center bg-primary-5;
+        @apply w-full px-5 pt-5 pb-4 flex items-center bg-primary-5;
         .footer-text {
             @apply text-primary-40 text-sm leading-5.5 font-medium;
             a {
@@ -1423,7 +1384,7 @@
     }
     /* topbar with menu */
     .menu-topbar {
-        @apply w-full max-w-7xl flex items-center justify-between pl-5;
+        @apply w-full flex items-center justify-between px-5;
         .left-content {
             @apply flex items-center space-x-9;
             .logo-content {
@@ -1443,13 +1404,20 @@
         .right-content {
             @apply flex items-center space-x-0.25;
             .change-help-container {
-                @apply w-max pr-3 flex items-center space-x-1;
+                @extend .heebo-font;
+                @apply w-max pr-5 flex items-center space-x-5 text-base leading-normal font-medium text-primaryDark;
+                .change-footer {
+                    @apply flex items-center space-x-2;
+                    .icon {
+                        @apply text-secondary text-base leading-none animate-blink;
+                    }
+                }
             }
         }
     }
     /* tabs bar */
     .tabs-bar {
-        @apply px-8 max-w-7xl py-6 flex flex-col space-y-1;
+        @apply px-8 py-6 flex flex-col space-y-1;
         .title-content {
             @extend .heebo-font;
             @apply flex items-center w-max space-x-1 text-primary-80 text-sm leading-normal font-normal;
@@ -1463,7 +1431,7 @@
     }
     /* tabs bar with button */
     .tabs-button-bar {
-        @apply px-8 py-6 max-w-7xl flex flex-col space-y-1;
+        @apply px-8 py-6 flex flex-col space-y-1;
         .title-content {
             @extend .heebo-font;
             @apply flex items-center w-max space-x-1 text-primary-80 text-sm leading-normal font-normal;

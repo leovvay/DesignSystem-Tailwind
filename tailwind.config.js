@@ -27,7 +27,11 @@ module.exports = {
         extend: {
             maxWidth: {
                 93.5: '23.375rem',
-                64: '16rem'
+                64: '16rem',
+                99.75: '399px'
+            },
+            minWidth: {
+                61: "244px",
             },
             width: {
                 85: '340px',
@@ -36,6 +40,7 @@ module.exports = {
                 150: '37.5rem'
             },
             maxHeight: {
+                129: '32.25rem',
                 138: '34.5rem',
             },
             minHeight: {
