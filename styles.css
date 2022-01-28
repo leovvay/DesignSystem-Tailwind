@@ -805,7 +805,7 @@
         }
         &:focus-within {
             .dropdown-menu {
-                @apply h-max max-w-99.75 right-0 left-auto visible p-2 mt-1 shadow-dropdown-menu ring-1 ring-primary-5;
+                @apply h-max max-w-99.75 visible p-2 mt-1 shadow-dropdown-menu ring-1 ring-primary-5 left-auto;
             }
         }
     }
@@ -1091,7 +1091,7 @@
     }
     /* dropdown menu */
     .dropdown-menu {
-        @apply absolute left-0 h-0 rounded-md invisible z-10 min-w-full bg-white;
+        @apply absolute h-0 rounded-md invisible z-10 min-w-full bg-white left-0 right-0;
         .dropdown-container {
             @apply flex flex-col space-y-2 overflow-y-auto overflow-x-hidden h-max max-h-129 px-0.25;
             &::-webkit-scrollbar {
@@ -1160,7 +1160,7 @@
         }
         &:focus-within {
             .dropdown-menu {
-                @apply h-max max-w-99.75 visible p-2 mt-1 shadow-dropdown-menu ring-1 ring-primary-5;
+                @apply h-max max-w-99.75 visible p-2 mt-1 shadow-dropdown-menu ring-1 ring-primary-5 left-auto;
             }
         }
     }
@@ -1199,7 +1199,7 @@
         }
         .dropdown-menu {
             .text-option {
-                @apply py-1.5 pl-2.5 pr-1.5 space-x-2;
+                @apply py-1.5 pl-2.5 pr-1.5 space-x-2 right-0;
             }
         }
         &:focus-within {
@@ -1375,7 +1375,7 @@
         }
         .right-content {
             @apply flex items-center space-x-0.25;
-            .change-help-container {
+            .change-help-content {
                 @apply w-max pr-3 flex items-center space-x-1;
             }
         }
@@ -1396,7 +1396,7 @@
     }
     /* topbar with menu */
     .menu-topbar {
-        @apply w-full flex items-center justify-between px-5;
+        @apply w-full flex items-center justify-between pl-3 lg:pl-5 py-2 lg:py-0 pr-1 lg:pr-0;
         .left-content {
             @apply flex items-center space-x-9;
             .logo-content {
@@ -1404,7 +1404,7 @@
             }
             .menu-container {
                 @extend .heebo-font;
-                @apply flex items-center space-x-4 text-base text-primaryDark leading-normal font-medium;
+                @apply hidden lg:flex items-center space-x-4 text-base text-primaryDark leading-normal font-medium;
                 label {
                     @apply flex items-center space-x-1.5 cursor-pointer;
                     div {
@@ -1412,24 +1412,92 @@
                     }
                 }
             }
+            .mobile-menu-title {
+                @extend .heebo-font;
+                @apply lg:hidden text-sm leading-normal font-extrabold text-white hidden;
+            }
         }
         .right-content {
-            @apply flex items-center space-x-0.25;
-            .change-help-container {
-                @extend .heebo-font;
-                @apply w-max pr-5 flex items-center space-x-5 text-base leading-normal font-medium text-primaryDark;
-                label {
-                    @apply cursor-pointer;
+            @apply hidden lg:flex items-center lg:space-x-0.25;
+        }
+        /* Hamburger btn */
+        .hamburger {
+            @apply relative lg:hidden flex items-center p-3;
+        }
+        .change-help-container {
+            @extend .heebo-font;
+            @apply w-max pr-5 flex items-center space-x-5 text-base leading-normal font-medium text-primaryDark;
+            label {
+                @apply cursor-pointer;
+            }
+            .change-footer {
+                @apply flex items-center space-x-2;
+                .icon {
+                    @apply text-secondary text-base leading-none animate-blink;
                 }
-                .change-footer {
-                    @apply flex items-center space-x-2;
-                    .icon {
-                        @apply text-secondary text-base leading-none animate-blink;
+            }
+        }
+    }
+
+    .navbar-dropdown-menu {
+        @apply flex-col py-4 space-y-2 hidden;
+        .navbar-dropdown-top-section {
+            @apply flex flex-col space-y-4 bg-background;
+            .change-help-content {
+                @apply flex px-4 space-x-3.8;
+                button {
+                    @apply flex-1 justify-center;
+                }
+            }
+            .user-dropdown {
+                @apply w-full px-0.25;
+                .user-dropdown-btn {
+                    @apply w-full justify-between;
+                }
+                .dropdown-menu {
+                    @apply relative;
+                }
+            }
+            .divider {
+                @apply bg-secondary-5;
+            }
+        }
+        .menu-list {
+            @extend .mont-font;
+            @apply flex flex-col space-y-1 px-1;
+            a {
+                div {
+                    @apply w-full p-3 rounded bg-white text-base leading-5 text-primaryDark font-extrabold;
+                }
+            }
+            .menu-with-dropdown {
+                @apply w-full flex flex-col space-y-1 text-primaryDark;
+                .menu-tab {
+                    @apply p-3 flex justify-between items-center text-base leading-5 font-extrabold;
+                    div {
+                        @apply text-xs leading-none text-primaryDark p-4 rounded;
+                    }
+                }
+                .content-list {
+                    @apply hidden flex-col space-y-1;
+                    div {
+                        @extend .heebo-font;
+                        @apply flex items-center py-2 pl-5 space-x-5 text-base leading-relaxed text-primaryDark font-normal;
+                        .icon {
+                            @apply text-playIcon text-primary leading-none;
+                        }
+                    }
+                    .active {
+                        @apply font-medium text-primary bg-primary-5 rounded;
+                        .icon {
+                            @apply text-secondary;
+                        }
                     }
                 }
             }
         }
     }
+
     /* tabs bar */
     .tabs-bar {
         @apply px-8 py-6 flex flex-col space-y-1;

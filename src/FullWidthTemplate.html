@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Basic HTML/Tailwind starter</title>
+    <meta name="description" content="Basic HTML/Tailwind starter" />
+    <meta name="author" content="Daily Dev Tips" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.2.2/cdn.js" defer></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,600,700,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/icomoon.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="lg:p-0.25 sticky top-0">
+        <div>
+            <div class="menu-topbar">
+                <div class="left-content">
+                    <div class="logo-content"><img src="./images/Logo.svg" alt="Logo"></div>
+                    <div class="menu-container">
+                        <a href="">Home</a>
+                        <a href="">Calendar</a>
+                        <a href="">Orders</a>
+                        <a href="">Boxed</a>
+                        <a href="">Listings</a>
+                        <div class="small-dropdown nav-dropdown">
+                            <button class="dropdown-btn">
+                                <span>Reports</span>
+                                <div class="dropdown-icon">
+                                    <span class="icon-dropdown"></span>
+                                </div>
+                            </button>
+                            <!-- dropdown-menu -->
+                            <div class="dropdown-menu">
+                                <div class="dropdown-container">
+                                    <div class="main-content">
+                                        <button class="text-option">
+                                            <span class="text">Option A1</span>
+                                        </button>
+                                        <button class="text-option">
+                                            <span class="text">Option A2</span>
+                                        </button>
+                                        <button class="text-option">
+                                            <span class="text">Option A3</span>
+                                        </button>
+                                        <button class="text-option">
+                                            <span class="text">Option A4</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-dropdown small-dropdown">
+                            <button class="dropdown-btn">
+                                <span>Marketing</span>
+                                <div class="dropdown-icon">
+                                    <span class="icon-dropdown"></span>
+                                </div>
+                            </button>
+                            <!-- dropdown-menu -->
+                            <div class="dropdown-menu">
+                                <div class="dropdown-container">
+                                    <div class="main-content">
+                                        <button class="text-option">
+                                            <span class="text">Option A1</span>
+                                        </button>
+                                        <button class="text-option">
+                                            <span class="text">Option A2</span>
+                                        </button>
+                                        <button class="text-option">
+                                            <span class="text">Option A3</span>
+                                        </button>
+                                        <button class="text-option">
+                                            <span class="text">Option A4</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="mobile-menu-title">MENU</span>
+                </div>
+                <div class="right-content">
+                    <div class="change-help-container">
+                        <a href=""><label class="change-footer">
+                                <span class="icon icon-dotseparator"></span>
+                                <span>Changes</span>
+                            </label>
+                        </a>
+                        <a href="">
+                            <label class="help-footer">
+                                <span>Help</span>
+                            </label>
+                        </a>
+                    </div>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-btn">
+                            <div class="label">
+                                <span class="user-name">Andrew Alvaroq</span>
+                                <span class="user-title">Purrs and Paws Cat Cafe</span>
+                            </div>
+                            <div class="icon">
+                                <span class="icon-dropdown"></span>
+                            </div>
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-container">
+                                <div class="badge-content">
+                                    <div class="blue-badge">
+                                        <span>PRO PARTNER</span>
+                                    </div>
+                                </div>
+                                <div class="main-content">
+                                    <button class="icon-option">
+                                        <span class="icon icon-tune"></span>
+                                        <span class="text">Account Settings</span>
+                                    </button>
+                                    <button class="icon-option">
+                                        <span class="icon icon-web-development"></span>
+                                        <span class="text">Website Setup</span>
+                                    </button>
+                                    <button class="icon-option">
+                                        <span class="icon icon-person"></span>
+                                        <span class="text">Manage Staff</span>
+                                    </button>
+                                    <button class="icon-option">
+                                        <span class="icon icon-window"></span>
+                                        <span class="text">Billing</span>
+                                    </button>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="main-content">
+                                    <button class="icon-option">
+                                        <span class="icon icon-logout"></span>
+                                        <span class="text">Log Out</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <button class="small-minimal-icon-btn">
+                        <span class="icon-justify"></span>
+                    </button>
+                </div>
+            </div>
+            <!-- dropdown navbar menu on mobile -->
+            <div class="navbar-dropdown-menu" id="navbar-dropdown-menu">
+                <div class="navbar-dropdown-top-section">
+                    <div class="change-help-content">
+                        <button class="top-nav-left-icon-btn">
+                            <span class="icon icon-dotseparator"></span>
+                            <span>Changes</span>
+                        </button>
+                        <button class="default-top-nav-btn">
+                            <span>Help</span>
+                        </button>
+                    </div>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-btn" @click="open=!open">
+                            <div class="label">
+                                <span class="user-name">Andrew Alvaroq</span>
+                                <span class="user-title">Purrs and Paws Cat Cafe</span>
+                            </div>
+                            <div class="icon transition-transform duration-200 transform"
+                                :class="{'rotate-180':open, 'rotate-0':!open}">
+                                <span class="icon-dropdown"></span>
+                            </div>
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-container">
+                                <div class="badge-content">
+                                    <div class="blue-badge">
+                                        <span>PRO PARTNER</span>
+                                    </div>
+                                </div>
+                                <div class="main-content">
+                                    <button class="icon-option">
+                                        <span class="icon icon-tune"></span>
+                                        <span class="text">Account Settings</span>
+                                    </button>
+                                    <button class="icon-option">
+                                        <span class="icon icon-web-development"></span>
+                                        <span class="text">Website Setup</span>
+                                    </button>
+                                    <button class="icon-option">
+                                        <span class="icon icon-person"></span>
+                                        <span class="text">Manage Staff</span>
+                                    </button>
+                                    <button class="icon-option">
+                                        <span class="icon icon-window"></span>
+                                        <span class="text">Billing</span>
+                                    </button>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="main-content">
+                                    <button class="icon-option">
+                                        <span class="icon icon-logout"></span>
+                                        <span class="text">Log Out</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                </div>
+                <div class="menu-list">
+                    <a href=""><div><span>Home</span></div></a>
+                    <a href=""><div><span>Calendar</span></div></a>
+                    <a href=""><div><span>Orders</span></div></a>
+                    <a href=""><div><span>Boxed</span></div></a>
+                    <a href=""><div><span>Listings</span></div></a>
+                    <div class="menu-with-dropdown" id="reports-list">
+                        <div class="menu-tab">
+                            <span>Reports</span>
+                            <div><span class="icon-dropdown"></span></div>
+                        </div>
+                        <div class="content-list">
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Experience</span>
+                            </div>
+                            <div class="active">
+                                <span class="icon icon-play"></span>
+                                <span>Private Events</span>
+                            </div>
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Appointments</span>
+                            </div>
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-with-dropdown" id="reports-list">
+                        <div class="menu-tab">
+                            <span>Reports</span>
+                            <div><span class="icon-dropdown"></span></div>
+                        </div>
+                        <div class="content-list">
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Experience</span>
+                            </div>
+                            <div class="active">
+                                <span class="icon icon-play"></span>
+                                <span>Private Events</span>
+                            </div>
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Appointments</span>
+                            </div>
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+    <section>
+        <div class="w-full h-screen"></div>
+        <div class="w-full h-screen"></div>
+    </section>
+
+    <!-- footer -->
+    <section>
+        <div class="footer-bar">
+            <span class="footer-text">© Occasion 2014-2022</span>
+            <div class="footer-menu">
+                <a href="">App Status</a>
+                <a href="">Latest Changes</a>
+                <a href="">Get Help</a>
+                <a href="">Our Website</a>
+            </div>
+            <button class="small-minimal-mix-btn" id="scrollTop" @onclick="scrollTop()">
+                <span class="icon-arrow-up"></span>
+                <label>Top</label>
+            </button>
+        </div>
+    </section>
+
+    <script>
+        var scrollTopBtn = document.getElementById("scrollTop")
+        var rootElement = document.documentElement
+        function scrollTop() {
+            rootElement.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
+        scrollTopBtn.addEventListener("click", scrollTop)
+
+        var hamburgerBtn = document.getElementById("hamburger")
+
+        var navbarOpen = false
+        hamburgerBtn.addEventListener("click", () => {
+            navbarOpen = !navbarOpen;
+            var reportsListOpen = false;
+            if (navbarOpen) {
+                document.querySelector('.logo-content').style.display="none";
+                document.querySelector('.menu-topbar').children[0].children[2].style.display="block";
+                document.querySelector('.menu-topbar').children[0].children[2].style.margin="0 4px";
+                document.querySelector('.menu-topbar').classList.add('bg-primary');
+                hamburgerBtn.children[0].children[0].className = "icon-close";
+                document.getElementById("navbar-dropdown-menu").style.display = "flex";
+
+                const reports = document.querySelector('#reports-list').children[1].children;
+                for (let i = 0; i < reports.length; i++) {
+                    const element = reports[i];
+                    if (element.classList.contains("active")) {
+                        reportsListOpen = true;
+                        document.querySelector('#reports-list').children[0].children[1].children[0].className = "icon-dropdown_up";
+                        document.querySelector('#reports-list').children[1].style.display = "flex";
+                        document.querySelector('#reports-list').children[0].classList.add("text-primary");
+                    }
+                }
+                
+                document.querySelector('#reports-list').children[0].addEventListener('click', () => {
+                    reportsListOpen = !reportsListOpen;
+                    if (reportsListOpen) {
+                        document.querySelector('#reports-list').children[0].children[1].children[0].className = "icon-dropdown_up";
+                        document.querySelector('#reports-list').children[1].style.display = "flex";
+                    } else {
+                        document.querySelector('#reports-list').children[0].children[1].children[0].className = "icon-dropdown";
+                        document.querySelector('#reports-list').children[1].style.display = "none";
+                    }
+                })
+            }
+            else {
+                document.querySelector('.logo-content').style.display="flex";
+                document.querySelector('.menu-topbar').children[0].children[2].style.display="none";
+                document.querySelector('.menu-topbar').children[0].children[2].style.margin="auto";
+                document.querySelector('.menu-topbar').classList.remove('bg-primary');
+                hamburgerBtn.children[0].children[0].className = "icon-justify";
+                document.getElementById("navbar-dropdown-menu").style.display = "none";
+            }
+
+        })
+    </script>
+</body>
+
+</html>

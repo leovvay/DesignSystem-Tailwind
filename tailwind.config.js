@@ -57,6 +57,7 @@ module.exports = {
                 blink: 'pulse 2s ease-in-out infinite'
             },
             fontSize: {
+                playIcon: '10px',
                 checkboxTitle: '22px',
             },
             backgroundImage: {
@@ -87,6 +88,7 @@ module.exports = {
                 1.9: "0.4375rem",
                 2.25: "0.5625rem",
                 2.75: "0.65625rem",
+                3.8: "15px",
                 3.9: "15.5px",
                 4.25: "1.0625rem",
                 4.5: "1.125rem",
