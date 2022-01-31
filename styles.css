@@ -294,6 +294,9 @@
   .default-text-link {
     @extend .heebo-font;
     @apply text-primaryDark leading-normal font-medium underline decoration-secondary-5;
+    label {
+        @apply cursor-pointer;
+    }
     &:focus {
       @apply decoration-secondary-5 bg-secondary-5;
     }
@@ -521,7 +524,7 @@
   }
   /* radio */
   .default-radio {
-    @apply form-radio w-4.5 h-4.5 rounded-full border-2 border-secondary;
+    @apply form-radio w-4.5 h-4.5 rounded-full border-2 border-secondary cursor-pointer;
     &:focus {
       @apply ring-0 outline-0;
     }
@@ -549,9 +552,9 @@
   }
   /* toggle */
   .small-toggle {
-    @apply w-8 relative flex justify-between items-center text-xl;
+    @apply w-8 relative flex justify-between items-center text-xl cursor-pointer;
     input {
-      @apply absolute left-1/2 -translate-x-1/2 w-full h-full appearance-none rounded-md;
+      @apply absolute left-1/2 -translate-x-1/2 w-full h-full appearance-none rounded-md cursor-pointer;
     }
     span {
       @apply w-7.5 h-5.5 flex items-center flex-shrink-0 p-1 bg-white border-2 border-secondary rounded-full transition duration-100 ease-in-out;
@@ -601,9 +604,9 @@
     }
   }
   .big-toggle {
-    @apply w-10 relative flex justify-between items-center text-xl;
+    @apply w-10 relative flex justify-between items-center text-xl cursor-pointer;
     input {
-      @apply absolute left-1/2 -translate-x-1/2 w-full h-full appearance-none rounded-md;
+      @apply absolute left-1/2 -translate-x-1/2 w-full h-full appearance-none rounded-md cursor-pointer;
     }
     span {
       @apply w-10 h-7 flex items-center flex-shrink-0 p-1 bg-white border-4 border-secondary rounded-full transition duration-100 ease-in-out;
@@ -1615,7 +1618,7 @@
   }
   /* tabs bar with button */
   .tabs-button-bar {
-    @apply px-8 py-6 flex flex-col space-y-1;
+    @apply py-6 flex flex-col space-y-1;
     .title-content {
       @extend .heebo-font;
       @apply flex items-center w-max space-x-1 text-primary-80 text-sm leading-normal font-normal;
