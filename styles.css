@@ -1332,8 +1332,7 @@
   /* desktop modal */
   .desktop-modal {
     @extend .heebo-font;
-    @apply mx-auto w-full md:w-150 h-max pb-6 flex flex-col rounded-lg ring-1 ring-dark-5 bg-white shadow-xl space-y-2;
-    max-height: 90vh;
+    @apply mx-auto w-full md:w-150 h-max pb-6 flex flex-col md:rounded-lg md:ring-1 md:ring-dark-5 bg-white md:shadow-xl space-y-2 max-h-screen md:max-h-90vh;
     .modal-header {
       @apply px-4 py-3 flex items-center justify-between bg-background shadow-modal rounded-t-lg;
       .modal-title {
