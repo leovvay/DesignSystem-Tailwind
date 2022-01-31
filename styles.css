@@ -510,16 +510,29 @@
       @apply text-secondary-20 border-secondary-20 cursor-not-allowed;
     }
   }
-  .multi-checkbox {
-    @apply p-0.5 text-xl leading-none text-secondary flex items-center;
+  .indeterminate-checkbox {
+    /* @apply p-0.5 text-xl leading-none text-secondary flex items-center; */
+    @apply form-check-input appearance-none h-4.5 w-4.5 border-2 border-secondary rounded bg-white transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer;
+    &:checked {
+        @apply bg-secondary border-secondary;
+    }
+    &:indeterminate {
+        @apply bg-secondary border-secondary !important;
+    }
+    &:focus {
+        @apply outline-none;
+    }
     &:hover {
-      @apply text-secondary-80 cursor-pointer;
+      @apply border-secondary-80 !important;
+      &:checked, &:indeterminate {
+          @apply bg-secondary-80 !important;
+      }
     }
     &:active {
-      @apply text-secondaryDark;
+      @apply bg-secondaryDark border-secondaryDark !important;
     }
     &:disabled {
-      @apply text-secondary-20 cursor-not-allowed;
+      @apply bg-secondary-20 border-secondary-20 cursor-not-allowed !important;
     }
   }
   /* radio */

@@ -1065,14 +1065,10 @@
         <div class="flex flex-col items-align content-center">
           <span class="text-checkboxTitle font-extrabold leading-none text-dark">Indeterminate</span>
           <div class="flex justify-center mt-11">
-            <fieldset class="multi-checkbox">
-              <span class="icon-multiselect"></span>
-            </fieldset>
+            <input class="indeterminate-checkbox" type="checkbox" value="" id="flexCheckIndeterminate">
           </div>
           <div class="flex justify-center mt-15">
-            <fieldset class="multi-checkbox" disabled>
-              <span class="icon-multiselect"></span>
-            </fieldset>
+            <input class="indeterminate-checkbox" type="checkbox" value="" id="flexCheckIndeterminateDisabled" disabled>
           </div>
         </div>
         <div class="flex flex-col items-align content-center">
@@ -2018,6 +2014,13 @@
       tooltipSpan.style.top = y + 'px';
       tooltipSpan.style.left = (x + 28) + 'px';
     };
+
+    const interminateCheckbox = document.getElementById("flexCheckIndeterminate");
+    interminateCheckbox.indeterminate = true;
+
+    const disabledInterminateCheckbox = document.getElementById("flexCheckIndeterminateDisabled");
+    disabledInterminateCheckbox.indeterminate = true;
+
   </script>
 </body>
 

@@ -135,7 +135,7 @@ $('#successBtn').click(() => {
     }
 })
 
-$('#successToastClose').click(() => {
+$('#successToastClose').on('click',() => {
     isToastOpened = false
     $('#success-toast').animate({
         opacity: 0,
@@ -145,14 +145,14 @@ $('#successToastClose').click(() => {
 })
 
 // dialog
-$('#overlayBtn').click(() => {
+$('#overlayBtn').on('click', () => {
+    $('.desktop-modal').animate({marginTop: "50px"}, 300);
     $('#desktop-dialog').fadeIn(200);
     document.querySelector('body').style.overflowY = "hidden";
 })
 
-$('#modalCloseBtn').click(() => {
+$('#modalCloseBtn').on('click', () => {
+    $('.desktop-modal').animate({marginTop: "0px"}, 300);
     $('#desktop-dialog').fadeOut(200);
     document.querySelector('body').style.overflowY = "auto";
 })
-
-$(document).re
