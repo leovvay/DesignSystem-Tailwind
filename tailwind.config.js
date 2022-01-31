@@ -28,7 +28,8 @@ module.exports = {
             maxWidth: {
                 93.5: '23.375rem',
                 64: '16rem',
-                99.75: '399px'
+                99.75: '399px',
+                '7.2xl': '1312px'
             },
             minWidth: {
                 61: "244px",
@@ -51,10 +52,15 @@ module.exports = {
                 pulse: {
                     '0%, 100%': { opacity: 1 },
                     '50%': { opacity: 0 }
+                },
+                slide: {
+                    '0%': {opacity: 0, maxHeight: 0},
+                    '100%': {opacity: 1, maxHeight: 'max-content'}
                 }
             },
             animation: {
-                blink: 'pulse 2s ease-in-out infinite'
+                blink: 'pulse 2s ease-in-out infinite',
+                slide: 'slide .5s ease-in-out'
             },
             fontSize: {
                 playIcon: '10px',
