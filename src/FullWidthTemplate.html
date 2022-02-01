@@ -8,8 +8,7 @@
     <meta name="author" content="Daily Dev Tips" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.2.2/cdn.js" defer></script> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,600,700,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/icomoon.css" />
@@ -18,7 +17,7 @@
 
 <body>
     <!-- header -->
-    <header class="lg:p-0.25 sticky top-0 bg-white">
+    <header class="lg:px-0.25 lg:pt-0.25 sticky top-0 bg-white flex flex-col">
         <div class="flex flex-col">
             <div class="menu-topbar">
                 <div class="left-content">
@@ -31,7 +30,7 @@
                         <a href="">Listings</a>
                         <div class="small-dropdown nav-dropdown">
                             <button class="dropdown-btn">
-                                <span>Reports</span>
+                                <span class="navbtn-title">Reports</span>
                                 <div class="dropdown-icon">
                                     <span class="icon-dropdown"></span>
                                 </div>
@@ -58,7 +57,7 @@
                         </div>
                         <div class="nav-dropdown small-dropdown">
                             <button class="dropdown-btn">
-                                <span>Marketing</span>
+                                <span class="navbtn-title">Marketing</span>
                                 <div class="dropdown-icon">
                                     <span class="icon-dropdown"></span>
                                 </div>
@@ -164,6 +163,7 @@
                         </button>
                     </div>
                     <div class="mobile-user-dropdown">
+                        <div class="divider"></div>
                         <button class="user-dropdown-btn" id="userDropdownBtn">
                             <div class="label">
                                 <span class="user-name">Andrew Alvaroq</span>
@@ -173,6 +173,7 @@
                                 <span class="icon-dropdown"></span>
                             </div>
                         </button>
+                        <div class="divider"></div>
                         <div class="user-dropdown-menu">
                             <div class="dropdown-container">
                                 <div class="badge-content">
@@ -206,6 +207,7 @@
                                     </button>
                                 </div>
                             </div>
+                            <div class="divider"></div>
                         </div>
                     </div>
                     <div class="divider"></div>
@@ -277,16 +279,16 @@
                 </div>
             </div>
         </div>
+        <div class="divider bg-primary-5"></div>
     </header>
 
     <!-- content -->
     <section>
-        <div class="w-full h-screen"></div>
-        <div class="w-full h-screen"></div>
+        
     </section>
 
     <!-- footer -->
-    <section>
+    <section class="absolute w-full bottom-0">
         <div class="desktop-footer-bar">
             <span class="footer-text">© Occasion 2014-2022</span>
             <div class="footer-menu">

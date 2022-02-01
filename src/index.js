@@ -1,3 +1,6 @@
+const currentArray = window.location.href.split("/")
+const currentPage = currentArray[currentArray.length - 1];
+
 // Handling scroll top event
 var desktopScrollTopBtn = document.querySelector("#desktopScrollTop")
 var mobileScrollTopBtn = document.querySelector("#mobileScrollTop")
@@ -99,60 +102,94 @@ hamburgerBtn.addEventListener("click", () => {
 
 })
 
-// tab bar
-const openTab = (e, tabName) => {
-    var tabContents = document.getElementsByClassName("tab-content");
-    for (let i = 0; i < tabContents.length; i++) {
-        tabContents[i].style.display = "none";
-    }
-    var tabs = document.getElementsByClassName("tab");
-    for (let i = 0; i < tabs.length; i++) {
-        console.log(123)
-        tabs[i].className = tabs[i].className.replace(" tab_active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    e.currentTarget.className += " tab_active";
+if(currentPage == "TabsTemplateToastAlert.html") {
+    // animated alert
+    var isToastOpened = false;
+    var timeout;
+    $('#successBtn').on('click', () => {
+        clearTimeout(timeout);
+        isToastOpened = true
+        $('#success-toast').animate({
+            opacity: 1,
+            top: "92",
+            behavior: 'smooth'
+        }, 300);
+        if(isToastOpened) {
+            timeout = setTimeout(() => {
+                isToastOpened = false
+                $('#success-toast').animate({
+                    opacity: 0,
+                    top: "0",
+                    behavior: 'smooth'
+                }, 300)
+            }, 10000)
+        }
+    })
+
+    $('#successToastClose').on('click',() => {
+        clearTimeout(timeout);
+        isToastOpened = false
+        $('#success-toast').animate({
+            opacity: 0,
+            top: "0",
+            behavior: 'smooth'
+        }, 300);
+    })
 }
 
-// animated alert
-var isToastOpened = false;
-$('#successBtn').click(() => {
-    isToastOpened = true
-    $('#success-toast').animate({
-        opacity: 1,
-        top: "92",
-        behavior: 'smooth'
-    }, 300);
-    if(isToastOpened) {
-        setTimeout(() => {
-            isToastOpened = false
-            $('#success-toast').animate({
-                opacity: 0,
-                top: "0",
-                behavior: 'smooth'
-            }, 300)
-        }, 3000)
-    }
-})
+if(currentPage == "OverlayModal.html") {
+    // dialog
+    $('#overlayBtn').on('click', () => {
+        $('.desktop-modal').animate({marginTop: "50px", opacity: 1}, 300);
+        $('#desktop-dialog').show();
+        document.querySelector('body').style.overflowY = "hidden";
+    })
 
-$('#successToastClose').on('click',() => {
-    isToastOpened = false
-    $('#success-toast').animate({
-        opacity: 0,
-        top: "0",
-        behavior: 'smooth'
-    }, 300);
-})
+    $('#modalCloseBtn').on('click', () => {
+        $('.desktop-modal').animate({marginTop: "0px", opacity: 0}, 300);
+        $('#desktop-dialog').hide();
+        document.querySelector('body').style.overflowY = "auto";
+    })
+}
 
-// dialog
-$('#overlayBtn').on('click', () => {
-    $('.desktop-modal').animate({marginTop: "50px"}, 300);
-    $('#desktop-dialog').fadeIn(200);
-    document.querySelector('body').style.overflowY = "hidden";
-})
+if(currentPage == "Homepage.html") {
+    // status card
+    var salesCard = document.querySelector('#sales-card-right');
+    salesCard.children[0].children[1].style.height = "4px";
+    salesCard.children[1].children[1].style.height = "26px";
+    salesCard.children[2].children[1].style.height = "9px";
+    salesCard.children[3].children[1].style.height = "12px";
+    salesCard.children[4].children[1].style.height = "21px";
+    salesCard.children[5].children[1].style.height = "16px";
+    salesCard.children[6].children[1].style.height = "24px";
 
-$('#modalCloseBtn').on('click', () => {
-    $('.desktop-modal').animate({marginTop: "0px"}, 300);
-    $('#desktop-dialog').fadeOut(200);
-    document.querySelector('body').style.overflowY = "auto";
-})
+    // orders card
+    var ordersCard = document.querySelector('#orders-card-right');
+    ordersCard.children[0].children[1].style.height = "4px";
+    ordersCard.children[1].children[1].style.height = "5px";
+    ordersCard.children[2].children[1].style.height = "10px";
+    ordersCard.children[3].children[1].style.height = "3px";
+    ordersCard.children[4].children[1].style.height = "21px";
+    ordersCard.children[5].children[1].style.height = "16px";
+    ordersCard.children[6].children[1].style.height = "5px";
+
+    // calendar views card
+    var calendarCard = document.querySelector('#calendar-card-right');
+    calendarCard.children[0].children[1].style.height = "15px";
+    calendarCard.children[1].children[1].style.height = "10px";
+    calendarCard.children[2].children[1].style.height = "17px";
+    calendarCard.children[3].children[1].style.height = "19px";
+    calendarCard.children[4].children[1].style.height = "21px";
+    calendarCard.children[5].children[1].style.height = "24px";
+    calendarCard.children[6].children[1].style.height = "24px";
+
+    // booking views card
+    var bookingCard = document.querySelector('#booking-card-right');
+    bookingCard.children[0].children[1].style.height = "10px";
+    bookingCard.children[1].children[1].style.height = "26px";
+    bookingCard.children[2].children[1].style.height = "14px";
+    bookingCard.children[3].children[1].style.height = "17px";
+    bookingCard.children[4].children[1].style.height = "24px";
+    bookingCard.children[5].children[1].style.height = "10px";
+    bookingCard.children[6].children[1].style.height = "14px";
+}

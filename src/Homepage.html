@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Basic HTML/Tailwind starter</title>
+    <meta name="description" content="Basic HTML/Tailwind starter" />
+    <meta name="author" content="Daily Dev Tips" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,600,700,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/icomoon.css" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="lg:px-0.25 lg:pt-0.25 sticky top-0 bg-white flex flex-col">
+        <div class="flex flex-col">
+            <div class="menu-topbar">
+                <div class="left-content">
+                    <div class="logo-content"><img src="./images/Logo.svg" alt="Logo"></div>
+                    <div class="menu-container">
+                        <a href="">Home</a>
+                        <a href="">Calendar</a>
+                        <a href="">Orders</a>
+                        <a href="">Boxed</a>
+                        <a href="">Listings</a>
+                        <div class="small-dropdown nav-dropdown">
+                            <button class="dropdown-btn">
+                                <span class="navbtn-title">Reports</span>
+                                <div class="dropdown-icon">
+                                    <span class="icon-dropdown"></span>
+                                </div>
+                            </button>
+                            <!-- dropdown-menu -->
+                            <div class="dropdown-menu">
+                                <div class="dropdown-container">
+                                    <div class="main-content">
+                                        <button class="text-option">
+                                            <span class="text">Option A1</span>
+                                        </button>
+                                        <button class="text-option">
+                                            <span class="text">Option A2</span>
+                                        </button>
+                                        <button class="text-option">
+                                            <span class="text">Option A3</span>
+                                        </button>
+                                        <button class="text-option">
+                                            <span class="text">Option A4</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-dropdown small-dropdown">
+                            <button class="dropdown-btn">
+                                <span class="navbtn-title">Marketing</span>
+                                <div class="dropdown-icon">
+                                    <span class="icon-dropdown"></span>
+                                </div>
+                            </button>
+                            <!-- dropdown-menu -->
+                            <div class="dropdown-menu">
+                                <div class="dropdown-container">
+                                    <div class="main-content">
+                                        <button class="text-option">
+                                            <span class="text">Option A1</span>
+                                        </button>
+                                        <button class="text-option">
+                                            <span class="text">Option A2</span>
+                                        </button>
+                                        <button class="text-option">
+                                            <span class="text">Option A3</span>
+                                        </button>
+                                        <button class="text-option">
+                                            <span class="text">Option A4</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="mobile-menu-title">MENU</span>
+                </div>
+                <div class="right-content">
+                    <div class="change-help-container">
+                        <a href=""><label class="change-footer">
+                                <span class="icon icon-dotseparator"></span>
+                                <span>Changes</span>
+                            </label>
+                        </a>
+                        <a href="">
+                            <label class="help-footer">
+                                <span>Help</span>
+                            </label>
+                        </a>
+                    </div>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-btn">
+                            <div class="label">
+                                <span class="user-name">Andrew Alvaroq</span>
+                                <span class="user-title">Purrs and Paws Cat Cafe</span>
+                            </div>
+                            <div class="icon">
+                                <span class="icon-dropdown"></span>
+                            </div>
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-container">
+                                <div class="badge-content">
+                                    <div class="blue-badge">
+                                        <span>PRO PARTNER</span>
+                                    </div>
+                                </div>
+                                <div class="main-content">
+                                    <button class="icon-option">
+                                        <span class="icon icon-tune"></span>
+                                        <span class="text">Account Settings</span>
+                                    </button>
+                                    <button class="icon-option">
+                                        <span class="icon icon-web-development"></span>
+                                        <span class="text">Website Setup</span>
+                                    </button>
+                                    <button class="icon-option">
+                                        <span class="icon icon-person"></span>
+                                        <span class="text">Manage Staff</span>
+                                    </button>
+                                    <button class="icon-option">
+                                        <span class="icon icon-window"></span>
+                                        <span class="text">Billing</span>
+                                    </button>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="main-content">
+                                    <button class="icon-option">
+                                        <span class="icon icon-logout"></span>
+                                        <span class="text">Log Out</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <button class="small-minimal-icon-btn">
+                        <span class="icon-justify"></span>
+                    </button>
+                </div>
+            </div>
+            <!-- dropdown navbar menu on mobile -->
+            <div class="navbar-dropdown-menu" id="navbar-dropdown-menu">
+                <div class="navbar-dropdown-top-section">
+                    <div class="change-help-content">
+                        <button class="top-nav-left-icon-btn">
+                            <span class="icon icon-dotseparator"></span>
+                            <span>Changes</span>
+                        </button>
+                        <button class="default-top-nav-btn">
+                            <span>Help</span>
+                        </button>
+                    </div>
+                    <div class="mobile-user-dropdown">
+                        <div class="divider"></div>
+                        <button class="user-dropdown-btn" id="userDropdownBtn">
+                            <div class="label">
+                                <span class="user-name">Andrew Alvaroq</span>
+                                <span class="user-title">Purrs and Paws Cat Cafe</span>
+                            </div>
+                            <div class="icon transition-transform duration-200 transform">
+                                <span class="icon-dropdown"></span>
+                            </div>
+                        </button>
+                        <div class="divider"></div>
+                        <div class="user-dropdown-menu">
+                            <div class="dropdown-container">
+                                <div class="badge-content">
+                                    <div class="blue-badge">
+                                        <span>PRO PARTNER</span>
+                                    </div>
+                                </div>
+                                <div class="main-content">
+                                    <button class="icon-option">
+                                        <span class="icon icon-tune"></span>
+                                        <span class="text">Account Settings</span>
+                                    </button>
+                                    <button class="icon-option">
+                                        <span class="icon icon-web-development"></span>
+                                        <span class="text">Website Setup</span>
+                                    </button>
+                                    <button class="icon-option">
+                                        <span class="icon icon-person"></span>
+                                        <span class="text">Manage Staff</span>
+                                    </button>
+                                    <button class="icon-option">
+                                        <span class="icon icon-window"></span>
+                                        <span class="text">Billing</span>
+                                    </button>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="main-content">
+                                    <button class="icon-option">
+                                        <span class="icon icon-logout"></span>
+                                        <span class="text">Log Out</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                </div>
+                <div class="menu-list">
+                    <a href="">
+                        <div><span>Home</span></div>
+                    </a>
+                    <a href="">
+                        <div><span>Calendar</span></div>
+                    </a>
+                    <a href="">
+                        <div><span>Orders</span></div>
+                    </a>
+                    <a href="">
+                        <div><span>Boxed</span></div>
+                    </a>
+                    <a href="">
+                        <div><span>Listings</span></div>
+                    </a>
+                    <div class="menu-with-dropdown" id="reports-list">
+                        <div class="menu-tab">
+                            <span>Reports</span>
+                            <div><span class="icon-dropdown" id="reports-icon"></span></div>
+                        </div>
+                        <div class="content-list" id="reports-content">
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Experience</span>
+                            </div>
+                            <div class="active">
+                                <span class="icon icon-play"></span>
+                                <span>Private Events</span>
+                            </div>
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Appointments</span>
+                            </div>
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-with-dropdown" id="marketing-list">
+                        <div class="menu-tab">
+                            <span>Marketing</span>
+                            <div><span class="icon-dropdown"></span></div>
+                        </div>
+                        <div class="content-list" id="marketing-content">
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Experience</span>
+                            </div>
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Private Events</span>
+                            </div>
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Appointments</span>
+                            </div>
+                            <div>
+                                <span class="icon icon-play"></span>
+                                <span>Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider bg-primary-5"></div>
+    </header>
+
+    <!-- content -->
+    <section class="w-full flex items-center justify-center">
+        <div class="w-full desktop:w-328 h-screen overflow-hidden py-6.5 flex flex-col">
+            <div class="w-full flex flex-col py-4 px-5 space-y-2 bg-white rounded-lg border-2 border-primary-5">
+                <div class="w-full flex justify-between items-center">
+                    <div class="flex items-center space-x-2">
+                        <span class="mont-font text-primary text-lg leading-relaxed font-extrabold">Free Occasion
+                            Webinar this Sunday at 8:30 PM CET</span>
+                        <div class="secondary-badge">
+                            <span>WEBINAR</span>
+                        </div>
+                    </div>
+                    <button class="small-minimal-icon-btn">
+                        <span class="icon-close"></span>
+                    </button>
+                </div>
+                <div class="flex flex-col space-y-3">
+                    <div class="flex flex-col text-base leading-relaxed font-normal text-primaryDark">
+                        <p>Do you have questions about our tool? Interested in meeting other shop owners?</p>
+                        <p>We are launching weekly webinars. Join now and learn how to make most out of Occasion</p>
+                    </div>
+                    <button class="small-primary-mix-btn">
+                        <span class="icon-open"></span>
+                        <label>Learn more</label>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-8 flex justify-between">
+                <!-- left -->
+                <div class="flex flex-col space-y-8">
+                    <!-- status cards section -->
+                    <div class="bg-white shadow-base rounded-2.5 p-4 grid grid-cols-2 gap-4">
+                        <!-- sales card -->
+                        <div class="status-card">
+                            <div class="left-part">
+                                <span class="card-title">Sales Today</span>
+                                <div class="card-content">
+                                    <span class="card-value">$3560.50</span>
+                                    <div class="down-status">
+                                        <span class="icon icon-trending-down"></span>
+                                        <label>
+                                            <span class="status-value">9.06%</span>
+                                            <span class="compare-label">vs yesterday</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-part" id="sales-card-right">
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="current-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- orders card -->
+                        <div class="status-card">
+                            <div class="left-part">
+                                <span class="card-title">Orders Today</span>
+                                <div class="card-content">
+                                    <span class="card-value">102</span>
+                                    <div class="up-status">
+                                        <span class="icon icon-trending-up"></span>
+                                        <label>
+                                            <span class="status-value">9.06%</span>
+                                            <span class="compare-label">vs yesterday</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-part" id="orders-card-right">
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="current-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- calendar views card -->
+                        <div class="status-card">
+                            <div class="left-part">
+                                <span class="card-title">Calendar Views Today</span>
+                                <div class="card-content">
+                                    <span class="card-value">1530</span>
+                                    <div class="up-status">
+                                        <span class="icon icon-trending-down"></span>
+                                        <label>
+                                            <span class="status-value">9.06%</span>
+                                            <span class="compare-label">vs yesterday</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-part" id="calendar-card-right">
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="current-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- booking views card -->
+                        <div class="status-card">
+                            <div class="left-part">
+                                <span class="card-title">Booking Views Today</span>
+                                <div class="card-content">
+                                    <span class="card-value">306</span>
+                                    <div class="neutral-status">
+                                        <span class="icon icon-remove"></span>
+                                        <label>
+                                            <span class="status-value">0%</span>
+                                            <span class="compare-label">vs yesterday</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-part" id="booking-card-right">
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="previous-bar"></div>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="empty-bar"></div>
+                                    <div class="current-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- events section -->
+                    <div class="px-3 pt-6 pb-16 flex flex-col space-y-3 rounded-2.5 bg-white shadow-base">
+                        <div class="no-des-btn-line-card w-full">
+                            <div class="card-main-content">
+                                <span>19 Events This Week</span>
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex space-x-1.5">
+                                        <div class="flex space-x-1.5">
+                                            <span class="pagination-page-text">1</span>
+                                            <span class="pagination-page-text_disabled">/</span>
+                                            <span class="pagination-page-text_disabled">3</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-2">
+                                        <button class="pagination-btn" disabled>
+                                            <span class="icon-arrow-backward"></span>
+                                        </button>
+                                        <button class="pagination-btn">
+                                            <span class="icon-arrow-forward"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="flex flex-col space-y-3">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right -->
+                <div class="flex flex-col space-y-8 w-150">
+                    <div class="grid grid-cols-2 gap-4">
+                        <button class="quick-btn">
+                            <div class="bg-primary-80">
+                                <span class="icon-add-circled"></span>
+                            </div>
+                            <div class="bg-primary">
+                                <span>Add Event / Experience</span>
+                            </div>
+                        </button>
+                        <button class="quick-btn">
+                            <div class="bg-blue-80">
+                                <span class="icon-file"></span>
+                            </div>
+                            <div class="bg-blue">
+                                <span>Orders Lists</span>
+                            </div>
+                        </button>
+                        <button class="quick-btn">
+                            <div class="bg-violet-80">
+                                <span class="icon-check-circled"></span>
+                            </div>
+                            <div class="bg-violet">
+                                <span>Quick Order</span>
+                            </div>
+                        </button>
+                        <button class="quick-btn">
+                            <div class="bg-secondary-80">
+                                <span class="icon-pie-chart"></span>
+                            </div>
+                            <div class="bg-secondary">
+                                <span>Marketing Stats</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="w-full flex flex-col space-y-4 px-3 pt-6 pb-4 bg-white rounded-2.5 shadow-base">
+                        <div class="no-des-btn-line-card w-full">
+                            <div class="card-main-content">
+                                <span>Last Activities</span>
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex space-x-1.5">
+                                        <div class="flex space-x-1.5">
+                                            <span class="pagination-page-text">1</span>
+                                            <span class="pagination-page-text_disabled">/</span>
+                                            <span class="pagination-page-text_disabled">5</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-2">
+                                        <button class="pagination-btn" disabled>
+                                            <span class="icon-arrow-backward"></span>
+                                        </button>
+                                        <button class="pagination-btn">
+                                            <span class="icon-arrow-forward"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="flex flex-col space-y-3">
+                            <div class="single-activity">
+                                <div class="violet-circle-icon text-violet">
+                                    <span class="icon-volume-off"></span>
+                                </div>
+                                <div>
+                                    <label>
+                                        <span>1 spot booked</span>
+                                        <span class=""></span>
+                                        <span>Just now</span>
+                                    </label>
+                                    <span>Private Play Date Space Rental</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="absolute w-full bottom-0">
+        <div class="desktop-footer-bar">
+            <span class="footer-text">© Occasion 2014-2022</span>
+            <div class="footer-menu">
+                <a href="">App Status</a>
+                <a href="">Latest Changes</a>
+                <a href="">Get Help</a>
+                <a href="">Our Website</a>
+            </div>
+            <button class="small-minimal-mix-btn" id="desktopScrollTop">
+                <span class="icon-arrow-up"></span>
+                <label>Top</label>
+            </button>
+        </div>
+        <div class="mobile-footer-bar">
+            <div class="top-section">
+                <a href="">App Status</a>
+                <a href="">Latest Changes</a>
+                <a href="">Get Help</a>
+                <a href="">Our Website</a>
+            </div>
+            <div class="bottom-section">
+                <div class="divider"></div>
+                <div class="main-footer">
+                    <span class="footer-text">© Occasion 2014-2022</span>
+                    <button class="small-minimal-mix-btn" id="mobileScrollTop">
+                        <span class="icon-arrow-up"></span>
+                        <label>Top</label>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

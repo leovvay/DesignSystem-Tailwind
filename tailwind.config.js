@@ -19,12 +19,20 @@ module.exports = {
             lg: "0.5rem",
             full: "9999px",
             large: "12px",
-            1.75: "7px"
+            1.75: "7px",
+            2.5: '10px'
         },
         scrollbar: {
             0.5: '2px'
         },
         extend: {
+            zIndex: {
+                1: '1',
+                2: '2'
+            },
+            screens: {
+                desktop: '1440px'
+            },
             maxWidth: {
                 93.5: '23.375rem',
                 64: '16rem',
@@ -35,10 +43,16 @@ module.exports = {
                 61: "244px",
             },
             width: {
+                7.5: '30px',
+                79: '316px',
                 85: '340px',
                 93.5: '23.375rem',
                 144: '36rem',
-                150: '37.5rem'
+                150: '37.5rem',
+                328: '1312px'
+            },
+            height: {
+                7.5: '30px',
             },
             maxHeight: {
                 129: '32.25rem',
@@ -119,7 +133,8 @@ module.exports = {
             },
             lineHeight: {
                 4.5: "18px",
-                5.5: "22px"
+                5.5: "22px",
+                9.5: "38px"
             },
             colors: {
                 "daily-dev-tips": "#F89283",

@@ -24,6 +24,10 @@
   .mont-font {
     font-family: theme("fontFamily.Mont");
   }
+  body {
+    @extend .heebo-font;
+    @apply bg-background relative min-h-screen;
+  }
   /* divider */
   .divider {
     @apply h-px w-full;
@@ -765,7 +769,7 @@
   /* top horizontal menu */
   .default-top-nav-btn {
     @extend .heebo-font;
-    @apply py-3 px-5 bg-white flex items-center text-primaryDark text-base leading-normal font-medium rounded-lg;
+    @apply py-3 px-5 bg-white flex items-center text-primaryDark text-base leading-normal font-medium rounded-lg ring-2 ring-primary-5;
     &:focus {
       @apply bg-white ring-1 ring-secondary;
     }
@@ -833,8 +837,8 @@
   /* Toast Alerts */
   .default-toast-alert {
     @extend .heebo-font;
-    @apply fixed lg:right-5 top-0 w-max p-0.75 border rounded-md z-10 opacity-0;
     right: calc(50vw - 180px);
+    @apply fixed lg:right-5 top-0 w-max p-0.75 border rounded-md z-10 opacity-0 bg-white;
     .content {
       @apply pl-4 pr-1 pt-1 pb-3 flex space-x-2.5 rounded;
       .left-content {
@@ -898,7 +902,7 @@
   }
   .default-icon-toast-alert {
     @extend .heebo-font;
-    @apply w-max p-0.75 border rounded-md;
+    @apply w-max p-0.75 border rounded-md bg-white;
     .content {
       @apply pl-4 pr-1 pt-1 pb-3 flex space-x-2.5 rounded;
       .left-content {
@@ -1014,7 +1018,7 @@
   }
   .default-icon-inline-alert {
     @extend .heebo-font;
-    @apply w-max p-0.75 border-2 rounded-md;
+    @apply w-max p-0.75 border-2 rounded-md bg-white;
     .content {
       @apply w-82 py-2.5 px-4 flex items-center text-sm leading-normal border rounded;
       .left-content {
@@ -1220,7 +1224,7 @@
     }
     .dropdown-menu {
       .text-option {
-        @apply py-1.5 pl-2.5 pr-1.5 space-x-2 right-0;
+        @apply py-1.5 pl-2.5 pr-1.5 space-x-2 min-w-full;
       }
     }
     &:focus-within {
@@ -1232,10 +1236,17 @@
   .nav-dropdown {
     .dropdown-btn {
       @apply border-0 text-base p-0;
-      &:hover,
-      &:active,
-      &:focus {
+      &:hover {
         @apply border-0 bg-transparent;
+        .navbtn-title {
+            @apply text-primary;
+        }
+      }
+      &:focus, &:active {
+        @apply border-0 bg-transparent;
+        .navbtn-title {
+            @apply text-secondary;
+        }
       }
     }
   }
@@ -1355,7 +1366,7 @@
         @apply text-primary text-base leading-relaxed font-bold;
       }
     }
-    .modal-footer {
+    .modal-content {
       @apply py-3 px-4 text-dark text-xs leading-normal font-medium tracking-wider overflow-y-auto;
       &::-webkit-scrollbar {
         @apply w-0.5 ml-2;
@@ -1454,6 +1465,14 @@
       .menu-container {
         @extend .heebo-font;
         @apply hidden lg:flex items-center space-x-4 text-base text-primaryDark leading-normal font-medium;
+        a {
+            &:hover {
+                @apply text-primary;
+            }
+            &:active, &:focus {
+                @apply text-secondary;
+            }
+        }
         label {
           @apply flex items-center space-x-1.5 cursor-pointer;
           div {
@@ -1468,6 +1487,22 @@
     }
     .right-content {
       @apply hidden lg:flex items-center lg:space-x-0.25;
+      a {
+          &:hover {
+              label {
+                  span:last-child {
+                      @apply text-primary;
+                  }
+              }
+          }
+          &:active, &:focus {
+              label {
+                  span:last-child {
+                      @apply text-secondary;
+                  }
+              }
+          }
+      }
     }
     /* Hamburger btn */
     .hamburger {
@@ -1489,7 +1524,7 @@
   }
   .navbar-dropdown-menu {
     @apply w-full flex-col py-4 space-y-2 hidden overflow-y-auto bg-white;
-    max-height: calc(100vh - 76px);
+    height: calc(100vh - 76px);
     .navbar-dropdown-top-section {
       @apply flex flex-col space-y-4 bg-background;
       .change-help-content {
@@ -1500,6 +1535,9 @@
       }
       .mobile-user-dropdown {
         @apply w-full px-0.25;
+        .divider {
+            @apply bg-primary-5;
+        }
         .user-dropdown-btn {
           @extend .heebo-font;
           @apply w-full py-4 px-5 inline-flex items-center justify-between space-x-5 bg-white;
@@ -1535,9 +1573,9 @@
           }
         }
         .user-dropdown-menu {
-            @apply relative rounded-md w-full bg-white left-0 right-0 mt-1 p-2 hidden;
+            @apply relative rounded-md w-full bg-white left-0 right-0 mt-0.25 hidden;
             .dropdown-container {
-              @apply flex flex-col space-y-2 overflow-y-auto overflow-x-hidden h-max max-h-129 px-0.25;
+              @apply flex flex-col space-y-2 overflow-y-auto overflow-x-hidden h-max max-h-129 px-0.25 m-2;
               &::-webkit-scrollbar {
                 @apply w-0.5 ml-2;
               }
@@ -1586,7 +1624,7 @@
         .menu-tab {
           @apply p-3 flex justify-between items-center text-base leading-5 font-extrabold;
           div {
-            @apply text-xs leading-none text-primaryDark p-4 rounded;
+            @apply text-xs leading-none text-primaryDark p-1 rounded flex items-center;
             span {
                 transition: transform 1s;
             }
@@ -1649,5 +1687,104 @@
   /* filter */
   .filter {
       @apply fixed table top-0 left-0 w-screen h-screen z-50;
+  }
+  /* status-value-container */
+  .status-value-container {
+      @apply w-max flex items-center space-x-2 py-1 ;
+      .icon {
+          @apply text-base leading-normal;
+      }
+      label {
+          @extend .heebo-font;
+          @apply flex items-center space-x-1.25 text-sm leading-normal;
+          .status-value {
+              @apply font-bold;
+          }
+          .compare-label {
+              @apply font-normal text-dark;
+          }
+      }
+  }
+  .down-status {
+      @extend .status-value-container;
+      .icon {
+          @apply text-red;
+      }
+      label {
+        .status-value {
+            @apply text-red;
+        }
+      }
+  }
+  .up-status {
+    @extend .status-value-container;
+    .icon {
+        @apply text-green;
+    }
+    label {
+      .status-value {
+          @apply text-green;
+      }
+    }
+  }
+  .neutral-status {
+    @extend .status-value-container;
+    .icon {
+        @apply text-dark-60;
+    }
+    label {
+      .status-value {
+          @apply text-dark-60;
+      }
+    }
+  }
+  /* status card */
+  .status-card {
+      @apply w-79 px-8 py-6 flex items-center justify-between rounded-2.5 border border-primary-5;
+      .left-part {
+          @apply flex flex-col space-y-2;
+          .card-title {
+              @extend .heebo-font;
+              @apply text-dark text-xs leading-normal font-medium uppercase tracking-wider;
+          }
+          .card-content {
+              @apply flex flex-col;
+              .card-value {
+                  @extend .mont-font;
+                  @apply text-primary text-3xl leading-9.5 font-extrabold;
+              }
+          }
+      }
+      .right-part {
+          @apply p-2 flex items-center space-x-1.5;
+          .bar-container {
+              @apply flex flex-col space-y-0.25 w-1 h-7.5;
+              .empty-bar {
+                  @apply flex-1 bg-dark-5 rounded;
+              }
+              .previous-bar {
+                  @apply bg-primary rounded;
+              }
+              .current-bar {
+                  @apply bg-blue rounded;
+              }
+          }
+      }
+  }
+  /* quick button */
+  .quick-btn {
+      @apply flex w-full;
+      div:first-child {
+          @apply rounded-l-2.5 p-4 flex items-center text-2xl leading-none text-white;
+      }
+      div:nth-child(2) {
+          @extend .heebo-font;
+          @apply rounded-r-2.5 py-4 pl-4 flex-1 flex items-center text-white text-base leading-normal font-bold;
+      }
+  }
+
+  /* single activity card */
+  .single-activity {
+      @apply w-full py-2 px-3 flex items-center space-x-4;
   }
 }
