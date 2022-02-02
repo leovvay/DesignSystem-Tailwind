@@ -53,7 +53,7 @@ hamburgerBtn.addEventListener("click", () => {
                 reportsListOpen = true;
                 document.querySelector('#reports-list').children[0].children[1].children[0].className = "icon-dropdown_up";
                 document.querySelector('#reports-list').children[1].style.display = "flex";
-                document.querySelector('#reports-list').children[0].children[0].style.color = "#10109B";
+                document.querySelector('#reports-list').children[0].children[0].style.color = "#D13BC7";
             }
         }
 
@@ -64,7 +64,7 @@ hamburgerBtn.addEventListener("click", () => {
                 marketingsListOpen = true;
                 document.querySelector('#marketing-list').children[0].children[1].children[0].className = "icon-dropdown_up";
                 document.querySelector('#marketing-list').children[1].style.display = "flex";
-                document.querySelector('#marketing-list').children[0].children[0].style.color = "#10109B";
+                document.querySelector('#marketing-list').children[0].children[0].style.color = "#D13BC7";
             }
         }
 
@@ -139,16 +139,23 @@ if(currentPage == "TabsTemplateToastAlert.html") {
 
 if(currentPage == "OverlayModal.html") {
     // dialog
+    
     $('#overlayBtn').on('click', () => {
         $('.desktop-modal').animate({marginTop: "50px", opacity: 1}, 300);
-        $('#desktop-dialog').show();
-        document.querySelector('body').style.overflowY = "hidden";
+        $('#modal-container').fadeIn();
+        const modalWidth = document.querySelector('.desktop-modal').offsetWidth;
+        const modalHeight = document.querySelector('.desktop-modal').offsetHeight;
+        document.querySelector('.desktop-modal').style.left = (window.innerWidth - modalWidth)/2 + 'px';
+        if(window.innerHeight - 100 > modalHeight) {
+            document.querySelector('.desktop-modal').style.top = (window.innerHeight - modalHeight)/2 + 'px';
+        }
+        document.querySelector('body').style.overflow = "hidden";
     })
 
     $('#modalCloseBtn').on('click', () => {
         $('.desktop-modal').animate({marginTop: "0px", opacity: 0}, 300);
-        $('#desktop-dialog').hide();
-        document.querySelector('body').style.overflowY = "auto";
+        $('#modal-container').fadeOut();
+        document.querySelector('body').style.overflow = "auto";
     })
 }
 

@@ -1359,7 +1359,7 @@
   /* desktop modal */
   .desktop-modal {
     @extend .heebo-font;
-    @apply mx-auto w-full md:w-150 h-max pb-6 flex flex-col md:rounded-lg md:ring-1 md:ring-dark-5 bg-white md:shadow-xl space-y-2 max-h-screen md:max-h-90vh;
+    @apply absolute mx-auto w-full md:w-150 h-max pb-6 flex flex-col md:rounded-lg md:ring-1 md:ring-dark-5 bg-white md:shadow-xl space-y-2;
     .modal-header {
       @apply px-4 py-3 flex items-center justify-between bg-background shadow-modal rounded-t-lg;
       .modal-title {
@@ -1640,7 +1640,7 @@
             }
           }
           .active {
-            @apply font-medium text-primary bg-primary-5 rounded;
+            @apply font-medium text-secondary bg-primary-5 rounded;
             .icon {
               @apply text-secondary;
             }
