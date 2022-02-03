@@ -1359,7 +1359,7 @@
   /* desktop modal */
   .desktop-modal {
     @extend .heebo-font;
-    @apply absolute mx-auto w-full md:w-150 h-max pb-6 flex flex-col md:rounded-lg md:ring-1 md:ring-dark-5 bg-white md:shadow-xl space-y-2;
+    @apply relative mx-auto my-8 w-full md:w-150 h-max pb-6 flex flex-col md:rounded-lg md:ring-1 md:ring-dark-5 bg-white md:shadow-xl space-y-2;
     .modal-header {
       @apply px-4 py-3 flex items-center justify-between bg-background shadow-modal rounded-t-lg;
       .modal-title {
@@ -1407,6 +1407,9 @@
         }
       }
     }
+  }
+  .tooltip-content {
+    @apply hidden max-w-64 px-2 py-1 bg-primaryDark text-white text-sm leading-normal font-medium rounded fixed z-10;
   }
   /* top bar */
   .topbar {
@@ -1786,5 +1789,45 @@
   /* single activity card */
   .single-activity {
       @apply w-full py-2 px-3 flex items-center space-x-4;
+      div:last-child {
+        @extend .heebo-font;
+        @apply flex flex-col;
+        span:last-child {
+          @apply text-sm text-dark-80 leading-normal font-normal;
+        }
+        label {
+          @apply flex items-center space-x-1.5;
+          span:first-child {
+            @apply text-dark text-base leading-relaxed font-medium;
+          }
+          span:last-child {
+            @apply text-sm text-dark-80 leading-normal font-medium;
+          }
+          .icon {
+            @apply text-dotIcon text-black leading-none;
+          }
+        }
+      }
+      &:hover {
+        @apply bg-secondary-5 rounded-lg;
+      }
+  }
+
+  /* single event element */
+  .event-single-element {
+    @extend .heebo-font;
+    @apply w-full py-2 pl-3 flex items-center space-x-4;
+    .event-description-content {
+      @apply flex flex-col;
+      span:first-child {
+        @apply text-dark text-base leading-relaxed font-medium;
+      }
+      span:last-child {
+        @apply text-dark-80 text-sm leading-normal font-normal;
+      }
+    }
+    &:hover {
+      @apply bg-secondary-5 rounded-lg;
+    }
   }
 }

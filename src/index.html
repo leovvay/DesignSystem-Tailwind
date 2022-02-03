@@ -7,7 +7,8 @@
   <meta name="description" content="Basic HTML/Tailwind starter" />
   <meta name="author" content="Daily Dev Tips" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.2.2/cdn.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./css/icomoon.css" />
   <link rel="stylesheet" href="styles.css" />
@@ -997,34 +998,28 @@
     <div class="mt-19 ml-25 flex flex-col space-y-8">
       <span class="text-primary-20 text-6xl font-extrabold">Circle Percent</span>
       <div class="flex justify-items-start p-5 space-x-5">
-        <div x-data="progress" class="circle-progressbar">
+        <div class="circle-progressbar">
           <svg>
-            <circle id="main-circle" stroke-width="5" stroke="currentColor" fill="transparent" r="20" cx="30" cy="30" />
-            <circle id="progress-circle" stroke-width="5" :stroke-dasharray="circumference"
-              :stroke-dashoffset="(1 - percent / 100) * circumference" stroke-linecap="round" stroke="currentColor"
-              fill="transparent" r="20" cx="30" cy="30" />
+            <circle stroke-width="5" stroke="#00f" fill="transparent" r="20" cx="30" cy="30" />
+            <circle stroke-width="5" stroke-linecap="round" stroke="red" fill="transparent" r="20" cx="30" cy="30" />
           </svg>
-          <span x-text="`${percent}%`"></span>
+          <span></span>
         </div>
-        <div x-data="progress1" class="circle-progressbar">
+        <div class="circle-progressbar">
           <svg>
-            <circle id="main-circle1" stroke-width="5" stroke="currentColor" fill="transparent" r="20" cx="30"
+            <circle stroke-width="5" stroke="currentColor" fill="transparent" r="20" cx="30" cy="30" />
+            <circle stroke-width="5" stroke-linecap="round" stroke="currentColor" fill="transparent" r="20" cx="30"
               cy="30" />
-            <circle id="progress-circle1" stroke-width="5" :stroke-dasharray="circumference"
-              :stroke-dashoffset="(1 - percent1 / 100) * circumference" stroke-linecap="round" stroke="currentColor"
-              fill="transparent" r="20" cx="30" cy="30" />
           </svg>
-          <span x-text="`${percent1}%`"></span>
+          <span></span>
         </div>
-        <div x-data="progress2" class="circle-progressbar">
+        <div class="circle-progressbar">
           <svg>
-            <circle id="main-circle2" stroke-width="5" stroke="currentColor" fill="transparent" r="20" cx="30"
+            <circle stroke-width="5" stroke="currentColor" fill="transparent" r="20" cx="30" cy="30" />
+            <circle stroke-width="5" stroke-linecap="round" stroke="currentColor" fill="transparent" r="20" cx="30"
               cy="30" />
-            <circle id="progress-circle2" stroke-width="5" :stroke-dasharray="circumference"
-              :stroke-dashoffset="(1 - percent2 / 100) * circumference" stroke-linecap="round" stroke="currentColor"
-              fill="transparent" r="20" cx="30" cy="30" />
           </svg>
-          <span x-text="`${percent2}%`"></span>
+          <span></span>
         </div>
       </div>
     </div>
@@ -1385,16 +1380,16 @@
       <div class="desktop-footer-bar">
         <span class="footer-text">© Occasion 2014-2022</span>
         <div class="footer-menu">
-            <a href="">App Status</a>
-            <a href="">Latest Changes</a>
-            <a href="">Get Help</a>
-            <a href="">Our Website</a>
+          <a href="">App Status</a>
+          <a href="">Latest Changes</a>
+          <a href="">Get Help</a>
+          <a href="">Our Website</a>
         </div>
         <button class="small-minimal-mix-btn" id="desktopScrollTop">
-            <span class="icon-arrow-up"></span>
-            <label>Top</label>
+          <span class="icon-arrow-up"></span>
+          <label>Top</label>
         </button>
-    </div>
+      </div>
       <!-- top bar with menu -->
       <nav class="menu-topbar">
         <div class="left-content">
@@ -1464,15 +1459,15 @@
         <div class="right-content">
           <div class="change-help-container">
             <a href=""><label class="change-footer">
-              <span class="icon icon-dotseparator"></span>
-              <span>Changes</span>
-            </label>
-          </a>
-          <a href="">
-            <label class="help-footer">
-              <span>Help</span>
-            </label>
-          </a>
+                <span class="icon icon-dotseparator"></span>
+                <span>Changes</span>
+              </label>
+            </a>
+            <a href="">
+              <label class="help-footer">
+                <span>Help</span>
+              </label>
+            </a>
           </div>
           <div class="user-dropdown">
             <button class="user-dropdown-btn">
@@ -1913,7 +1908,7 @@
     <div class="mt-19 ml-25 flex flex-col space-y-17">
       <span class="text-primary-20 text-6xl font-extrabold">Modal Desktop</span>
       <div class="w-max px-52 py-56 bg-dark">
-        
+
         <div class="desktop-modal">
           <div class="modal-header">
             <span class="modal-title">Modal Name</span>
@@ -1956,57 +1951,36 @@
   </div>
 
   <script>
-    const progress = () => {
-      const percent = 40;
-      if (percent < 50) {
-        document.getElementById("main-circle").setAttribute('class', "text-red-20");
-        document.getElementById("progress-circle").setAttribute('class', "text-red");
-      } else if (percent < 90) {
-        document.getElementById("main-circle").setAttribute('class', "text-orange-20");
-        document.getElementById("progress-circle").setAttribute('class', "text-orange");
-      } else {
-        document.getElementById("main-circle").setAttribute('class', "text-green-20");
-        document.getElementById("progress-circle").setAttribute('class', "text-green");
-      }
-      return {
-        circumference: 20 * 2 * Math.PI,
-        percent,
-      }
-    }
-    const progress1 = () => {
-      const percent1 = 70;
-      if (percent1 < 50) {
-        document.getElementById("main-circle1").setAttribute('class', "text-red-20");
-        document.getElementById("progress-circle1").setAttribute('class', "text-red");
-      } else if (percent1 < 90) {
-        document.getElementById("main-circle1").setAttribute('class', "text-orange-20");
-        document.getElementById("progress-circle1").setAttribute('class', "text-orange");
-      } else {
-        document.getElementById("main-circle1").setAttribute('class', "text-green-20");
-        document.getElementById("progress-circle1").setAttribute('class', "text-green");
-      }
-      return {
-        circumference: 20 * 2 * Math.PI,
-        percent1,
-      }
-    }
-    const progress2 = () => {
-      const percent2 = 91;
-      if (percent2 < 50) {
-        document.getElementById("main-circle2").setAttribute('class', "text-red-20");
-        document.getElementById("progress-circle2").setAttribute('class', "text-red");
-      } else if (percent2 < 90) {
-        document.getElementById("main-circle2").setAttribute('class', "text-orange-20");
-        document.getElementById("progress-circle2").setAttribute('class', "text-orange");
-      } else {
-        document.getElementById("main-circle2").setAttribute('class', "text-green-20");
-        document.getElementById("progress-circle2").setAttribute('class', "text-green");
-      }
-      return {
-        circumference: 20 * 2 * Math.PI,
-        percent2,
-      }
-    }
+    const percent1 = 42;
+    const percent2 = 13;
+    const percent3 = 85;
+    var bgCircleColor1, bgCircleColor2, bgCircleColor3;
+    var mainCircleColor1, mainCircleColor2, mainCircleColor3;
+
+    bgCircleColor1 = percent1 > 50 ? '#F1FBF7' : percent1 > 20 ? '#FFFBF4' : '#FEF0F4';
+    mainCircleColor1 = percent1 > 50 ? '#12BA7C' : percent1 > 20 ? '#FFBC42' : '#EC0B43';
+    $('.circle-progressbar')[0].children[1].innerHTML = percent1 / 100;
+    $('.circle-progressbar')[0].children[0].children[0].setAttribute('stroke', bgCircleColor1);
+    $('.circle-progressbar')[0].children[0].children[1].setAttribute('stroke', mainCircleColor1);
+    $('.circle-progressbar')[0].children[0].children[1].setAttribute('stroke-dasharray', 2 * 20 * Math.PI);
+    $('.circle-progressbar')[0].children[0].children[1].setAttribute('stroke-dashoffset', (1 - percent1 / 100) * 2 * 20 * Math.PI);
+
+    bgCircleColor2 = percent2 > 50 ? '#F1FBF7' : percent2 > 20 ? '#FFFBF4' : '#FEF0F4';
+    mainCircleColor2 = percent2 > 50 ? '#12BA7C' : percent2 > 20 ? '#FFBC42' : '#EC0B43';
+    $('.circle-progressbar')[1].children[1].innerHTML = percent2 / 100;
+    $('.circle-progressbar')[1].children[0].children[0].setAttribute('stroke', bgCircleColor2);
+    $('.circle-progressbar')[1].children[0].children[1].setAttribute('stroke', mainCircleColor2);
+    $('.circle-progressbar')[1].children[0].children[1].setAttribute('stroke-dasharray', 2 * 20 * Math.PI);
+    $('.circle-progressbar')[1].children[0].children[1].setAttribute('stroke-dashoffset', (1 - percent2 / 100) * 2 * 20 * Math.PI);
+
+    bgCircleColor3 = percent3 > 50 ? '#F1FBF7' : percent3 > 20 ? '#FFFBF4' : '#FEF0F4';
+    mainCircleColor3 = percent3 > 50 ? '#12BA7C' : percent3 > 20 ? '#FFBC42' : '#EC0B43';
+    $('.circle-progressbar')[2].children[1].innerHTML = percent3 / 100;
+    $('.circle-progressbar')[2].children[0].children[0].setAttribute('stroke', bgCircleColor3);
+    $('.circle-progressbar')[2].children[0].children[1].setAttribute('stroke', mainCircleColor3);
+    $('.circle-progressbar')[2].children[0].children[1].setAttribute('stroke-dasharray', 2 * 20 * Math.PI);
+    $('.circle-progressbar')[2].children[0].children[1].setAttribute('stroke-dashoffset', (1 - percent3 / 100) * 2 * 20 * Math.PI);
+
     var tooltipSpan = document.getElementById('tooltip');
     window.onmousemove = function (e) {
       var x = e.clientX,
@@ -2020,7 +1994,6 @@
 
     const disabledInterminateCheckbox = document.getElementById("flexCheckIndeterminateDisabled");
     disabledInterminateCheckbox.indeterminate = true;
-
   </script>
 </body>
 

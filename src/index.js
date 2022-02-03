@@ -139,21 +139,14 @@ if(currentPage == "TabsTemplateToastAlert.html") {
 
 if(currentPage == "OverlayModal.html") {
     // dialog
-    
     $('#overlayBtn').on('click', () => {
-        $('.desktop-modal').animate({marginTop: "50px", opacity: 1}, 300);
+        // $('.desktop-modal').animate({marginTop: "50px", opacity: 1}, 300);
         $('#modal-container').fadeIn();
-        const modalWidth = document.querySelector('.desktop-modal').offsetWidth;
-        const modalHeight = document.querySelector('.desktop-modal').offsetHeight;
-        document.querySelector('.desktop-modal').style.left = (window.innerWidth - modalWidth)/2 + 'px';
-        if(window.innerHeight - 100 > modalHeight) {
-            document.querySelector('.desktop-modal').style.top = (window.innerHeight - modalHeight)/2 + 'px';
-        }
         document.querySelector('body').style.overflow = "hidden";
     })
 
     $('#modalCloseBtn').on('click', () => {
-        $('.desktop-modal').animate({marginTop: "0px", opacity: 0}, 300);
+        // $('.desktop-modal').animate({marginTop: "0px", opacity: 0}, 300);
         $('#modal-container').fadeOut();
         document.querySelector('body').style.overflow = "auto";
     })

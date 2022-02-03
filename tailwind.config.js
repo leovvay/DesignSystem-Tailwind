@@ -53,6 +53,8 @@ module.exports = {
             },
             height: {
                 7.5: '30px',
+                18.25: '73px',
+                34.25: '137px'
             },
             maxHeight: {
                 129: '32.25rem',
@@ -78,6 +80,7 @@ module.exports = {
                 slide: 'slide .5s ease-in-out'
             },
             fontSize: {
+                dotIcon: '8px',
                 playIcon: '10px',
                 checkboxTitle: '22px',
             },
