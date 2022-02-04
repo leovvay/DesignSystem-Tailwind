@@ -7,7 +7,8 @@
     <meta name="description" content="Basic HTML/Tailwind starter" />
     <meta name="author" content="Daily Dev Tips" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,600,700,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/icomoon.css" />
@@ -22,7 +23,7 @@
                 <div class="left-content">
                     <div class="logo-content"><img src="./images/Logo.svg" alt="Logo"></div>
                     <div class="menu-container">
-                        <a href="">Home</a>
+                        <a href="" class="active">Home</a>
                         <a href="">Calendar</a>
                         <a href="">Orders</a>
                         <a href="">Boxed</a>
@@ -38,18 +39,18 @@
                             <div class="dropdown-menu">
                                 <div class="dropdown-container">
                                     <div class="main-content">
-                                        <button class="text-option">
-                                            <span class="text">Option A1</span>
-                                        </button>
-                                        <button class="text-option">
-                                            <span class="text">Option A2</span>
-                                        </button>
-                                        <button class="text-option">
-                                            <span class="text">Option A3</span>
-                                        </button>
-                                        <button class="text-option">
-                                            <span class="text">Option A4</span>
-                                        </button>
+                                        <a href=""><button class="text-option">
+                                                <span class="text">Option A1</span>
+                                            </button></a>
+                                        <a href=""><button class="text-option">
+                                                <span class="text">Option A2</span>
+                                            </button></a>
+                                        <a href=""><button class="text-option">
+                                                <span class="text">Option A3</span>
+                                            </button></a>
+                                        <a href=""><button class="text-option">
+                                                <span class="text">Option A4</span>
+                                            </button></a>
                                     </div>
                                 </div>
                             </div>
@@ -65,18 +66,18 @@
                             <div class="dropdown-menu">
                                 <div class="dropdown-container">
                                     <div class="main-content">
-                                        <button class="text-option">
-                                            <span class="text">Option A1</span>
-                                        </button>
-                                        <button class="text-option">
-                                            <span class="text">Option A2</span>
-                                        </button>
-                                        <button class="text-option">
-                                            <span class="text">Option A3</span>
-                                        </button>
-                                        <button class="text-option">
-                                            <span class="text">Option A4</span>
-                                        </button>
+                                        <a href=""><button class="text-option">
+                                                <span class="text">Option A1</span>
+                                            </button></a>
+                                        <a href=""><button class="text-option">
+                                                <span class="text">Option A2</span>
+                                            </button></a>
+                                        <a href=""><button class="text-option">
+                                                <span class="text">Option A3</span>
+                                            </button></a>
+                                        <a href=""><button class="text-option">
+                                                <span class="text">Option A4</span>
+                                            </button></a>
                                     </div>
                                 </div>
                             </div>
@@ -153,13 +154,13 @@
             <div class="navbar-dropdown-menu" id="navbar-dropdown-menu">
                 <div class="navbar-dropdown-top-section">
                     <div class="change-help-content">
-                        <button class="top-nav-left-icon-btn">
-                            <span class="icon icon-dotseparator"></span>
-                            <span>Changes</span>
-                        </button>
-                        <button class="default-top-nav-btn">
-                            <span>Help</span>
-                        </button>
+                        <a href=""><button class="top-nav-left-icon-btn">
+                                <span class="icon icon-dotseparator"></span>
+                                <span>Changes</span>
+                            </button></a>
+                        <a href=""><button class="default-top-nav-btn">
+                                <span>Help</span>
+                            </button></a>
                     </div>
                     <div class="mobile-user-dropdown">
                         <div class="divider"></div>
@@ -212,7 +213,7 @@
                     <div class="divider"></div>
                 </div>
                 <div class="menu-list">
-                    <a href="">
+                    <a href="" class="active">
                         <div><span>Home</span></div>
                     </a>
                     <a href="">
@@ -237,7 +238,7 @@
                                 <span class="icon icon-play"></span>
                                 <span>Experience</span>
                             </div>
-                            <div class="active">
+                            <div>
                                 <span class="icon icon-play"></span>
                                 <span>Private Events</span>
                             </div>
@@ -284,18 +285,24 @@
     <!-- content -->
     <section class="w-full flex flex-col items-center justify-center">
         <div class="w-full lg:w-259 miniDesktop:w-328 overflow-hidden lg:py-6.5 flex flex-col">
-            <div class="w-full flex flex-col py-4 px-5 space-y-2 bg-white rounded-lg border-2 border-primary-5 mb-8" id="custom-message">
-                <div class="w-full flex justify-between items-center">
-                    <div class="flex items-center space-x-2">
-                        <span class="mont-font text-primary text-lg leading-relaxed font-extrabold">Free Occasion
-                            Webinar this Sunday at 8:30 PM CET</span>
-                        <div class="secondary-badge">
-                            <span>WEBINAR</span>
+            <div class="lg:w-full flex flex-col py-4 px-5 space-y-2 bg-white rounded-lg border-2 border-primary-5 mt-6 mx-2 lg:mx-0 lg:mt-0 lg:mb-8"
+                id="custom-message">
+                <div>
+                    <div class="w-full flex justify-between items-center">
+                        <div class="flex items-center lg:space-x-2">
+                            <span class="mont-font text-primary text-lg leading-relaxed font-extrabold hidden lg:block">Free
+                                Occasion
+                                Webinar this Sunday at 8:30 PM CET</span>
+                            <div class="secondary-badge">
+                                <span>WEBINAR</span>
+                            </div>
                         </div>
+                        <button class="small-minimal-icon-btn" id="close-custom-message">
+                            <span class="icon-close"></span>
+                        </button>
                     </div>
-                    <button class="small-minimal-icon-btn" id="close-custom-message">
-                        <span class="icon-close"></span>
-                    </button>
+                    <span class="mont-font text-primary text-lg leading-relaxed font-extrabold lg:hidden">Free Occasion
+                        Webinar this Sunday at 8:30 PM CET</span>
                 </div>
                 <div class="flex flex-col space-y-3">
                     <div class="flex flex-col text-base leading-relaxed font-normal text-primaryDark">
@@ -313,7 +320,8 @@
                 <!-- left -->
                 <div class="flex-1 flex flex-col space-y-8">
                     <!-- status cards section -->
-                    <div class="bg-white shadow-base rounded-2.5 p-4 miniDesktop:grid lg:flex lg:flex-col lg:space-y-4 miniDesktop:grid-cols-2 miniDesktop:gap-4">
+                    <div
+                        class="bg-white shadow-base rounded-2.5 p-4 miniDesktop:grid lg:flex lg:flex-col lg:space-y-4 miniDesktop:space-y-0 miniDesktop:grid-cols-2 miniDesktop:gap-4">
                         <!-- sales card -->
                         <div class="status-card">
                             <div class="left-part">
@@ -530,7 +538,7 @@
                             </div>
                             <div class="event-single-element">
                                 <div class="main-content">
-                                    <div class="circle-progressbar">
+                                    <div class="circle-progressbar" data-total="40" data-val="36">
                                         <svg>
                                             <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                             <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
@@ -549,7 +557,7 @@
                             </div>
                             <div class="event-single-element">
                                 <div class="main-content">
-                                    <div class="circle-progressbar">
+                                    <div class="circle-progressbar" data-total="40" data-val="26">
                                         <svg>
                                             <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                             <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
@@ -568,7 +576,7 @@
                             </div>
                             <div class="event-single-element">
                                 <div class="main-content">
-                                    <div class="circle-progressbar">
+                                    <div class="circle-progressbar" data-total="40" data-val="32">
                                         <svg>
                                             <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                             <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
@@ -587,7 +595,7 @@
                             </div>
                             <div class="event-single-element">
                                 <div class="main-content">
-                                    <div class="circle-progressbar">
+                                    <div class="circle-progressbar" data-total="40" data-val="16">
                                         <svg>
                                             <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                             <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
@@ -606,7 +614,7 @@
                             </div>
                             <div class="event-single-element">
                                 <div class="main-content">
-                                    <div class="circle-progressbar">
+                                    <div class="circle-progressbar" data-total="40" data-val="22">
                                         <svg>
                                             <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                             <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
@@ -625,7 +633,7 @@
                             </div>
                             <div class="event-single-element">
                                 <div class="main-content">
-                                    <div class="circle-progressbar">
+                                    <div class="circle-progressbar" data-total="40" data-val="30">
                                         <svg>
                                             <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                             <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
@@ -644,7 +652,7 @@
                             </div>
                             <div class="event-single-element">
                                 <div class="main-content">
-                                    <div class="circle-progressbar">
+                                    <div class="circle-progressbar" data-total="40" data-val="10">
                                         <svg>
                                             <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                             <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
@@ -663,7 +671,7 @@
                             </div>
                             <div class="event-single-element">
                                 <div class="main-content">
-                                    <div class="circle-progressbar">
+                                    <div class="circle-progressbar" data-total="40" data-val="28">
                                         <svg>
                                             <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                             <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
@@ -674,6 +682,25 @@
                                     <div class="event-description-content">
                                         <span>Family Fun Creative Canvas - Heart</span>
                                         <span>Sun 28 Feb, 2:50 PM - 4:20 PM</span>
+                                    </div>
+                                </div>
+                                <button class="hidden small-minimal-icon-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
+                            </div>
+                            <div class="event-single-element">
+                                <div class="main-content">
+                                    <div class="circle-progressbar" data-total="40" data-val="36">
+                                        <svg>
+                                            <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                            <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
+                                                cx="22" cy="22" />
+                                        </svg>
+                                        <span name="1"></span>
+                                    </div>
+                                    <div class="event-description-content">
+                                        <span>Private Play Date Space Rental</span>
+                                        <span>Today, 9:50 AM - 11:20 AM</span>
                                     </div>
                                 </div>
                                 <button class="hidden small-minimal-icon-btn">
@@ -1130,7 +1157,7 @@
                     </div>
                     <div class="event-single-element">
                         <div class="main-content">
-                            <div class="circle-progressbar">
+                            <div class="circle-progressbar" data-total="40" data-val="36">
                                 <svg>
                                     <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                     <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
@@ -1143,10 +1170,13 @@
                                 <span>Today, 9:50 AM - 11:20 AM</span>
                             </div>
                         </div>
+                        <button class="hidden small-minimal-icon-btn">
+                            <span class="icon-arrow-forward"></span>
+                        </button>
                     </div>
                     <div class="event-single-element">
                         <div class="main-content">
-                            <div class="circle-progressbar">
+                            <div class="circle-progressbar" data-total="40" data-val="26">
                                 <svg>
                                     <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                     <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
@@ -1159,10 +1189,13 @@
                                 <span>Today, 9:50 AM - 11:20 AM</span>
                             </div>
                         </div>
+                        <button class="hidden small-minimal-icon-btn">
+                            <span class="icon-arrow-forward"></span>
+                        </button>
                     </div>
                     <div class="event-single-element">
                         <div class="main-content">
-                            <div class="circle-progressbar">
+                            <div class="circle-progressbar" data-total="40" data-val="32">
                                 <svg>
                                     <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                     <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
@@ -1175,10 +1208,13 @@
                                 <span>Tomorrow, 10:30 AM</span>
                             </div>
                         </div>
+                        <button class="hidden small-minimal-icon-btn">
+                            <span class="icon-arrow-forward"></span>
+                        </button>
                     </div>
                     <div class="event-single-element">
                         <div class="main-content">
-                            <div class="circle-progressbar">
+                            <div class="circle-progressbar" data-total="40" data-val="16">
                                 <svg>
                                     <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                     <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
@@ -1191,10 +1227,13 @@
                                 <span>Tue, 23 Feb, 3:30 PM - 4:30 PM</span>
                             </div>
                         </div>
+                        <button class="hidden small-minimal-icon-btn">
+                            <span class="icon-arrow-forward"></span>
+                        </button>
                     </div>
                     <div class="event-single-element">
                         <div class="main-content">
-                            <div class="circle-progressbar">
+                            <div class="circle-progressbar" data-total="40" data-val="22">
                                 <svg>
                                     <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                     <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
@@ -1207,10 +1246,13 @@
                                 <span>Thu, 25 Feb, 7:00 PM - 8:30 PM</span>
                             </div>
                         </div>
+                        <button class="hidden small-minimal-icon-btn">
+                            <span class="icon-arrow-forward"></span>
+                        </button>
                     </div>
                     <div class="event-single-element">
                         <div class="main-content">
-                            <div class="circle-progressbar">
+                            <div class="circle-progressbar" data-total="40" data-val="30">
                                 <svg>
                                     <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                     <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
@@ -1223,10 +1265,13 @@
                                 <span>Thu, 25 Feb, 9:50 PM - 11:20 PM</span>
                             </div>
                         </div>
+                        <button class="hidden small-minimal-icon-btn">
+                            <span class="icon-arrow-forward"></span>
+                        </button>
                     </div>
                     <div class="event-single-element">
                         <div class="main-content">
-                            <div class="circle-progressbar">
+                            <div class="circle-progressbar" data-total="40" data-val="10">
                                 <svg>
                                     <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                     <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
@@ -1239,10 +1284,13 @@
                                 <span>Fri, 26 Feb, 10:20 AM - 11:20 AM</span>
                             </div>
                         </div>
+                        <button class="hidden small-minimal-icon-btn">
+                            <span class="icon-arrow-forward"></span>
+                        </button>
                     </div>
                     <div class="event-single-element">
                         <div class="main-content">
-                            <div class="circle-progressbar">
+                            <div class="circle-progressbar" data-total="40" data-val="28">
                                 <svg>
                                     <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
                                     <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
@@ -1255,25 +1303,28 @@
                                 <span>Sun 28 Feb, 2:50 PM - 4:20 PM</span>
                             </div>
                         </div>
+                        <button class="hidden small-minimal-icon-btn">
+                            <span class="icon-arrow-forward"></span>
+                        </button>
                     </div>
-                    <div class="flex items-center justify-center py-2">
-                        <div class="flex items-center space-x-4">
-                            <div class="flex space-x-1.5">
-                                <div class="flex space-x-1.5">
-                                    <span class="pagination-page-text">1</span>
-                                    <span class="pagination-page-text_disabled">/</span>
-                                    <span class="pagination-page-text_disabled">3</span>
-                                </div>
+                    <div class="event-single-element">
+                        <div class="main-content">
+                            <div class="circle-progressbar" data-total="40" data-val="36">
+                                <svg>
+                                    <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                    <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
+                                        cy="22" />
+                                </svg>
+                                <span name="1"></span>
                             </div>
-                            <div class="flex space-x-2">
-                                <button class="pagination-btn" disabled>
-                                    <span class="icon-arrow-backward"></span>
-                                </button>
-                                <button class="pagination-btn">
-                                    <span class="icon-arrow-forward"></span>
-                                </button>
+                            <div class="event-description-content">
+                                <span>Private Play Date Space Rental</span>
+                                <span>Today, 9:50 AM - 11:20 AM</span>
                             </div>
                         </div>
+                        <button class="hidden small-minimal-icon-btn">
+                            <span class="icon-arrow-forward"></span>
+                        </button>
                     </div>
                 </div>
                 <div class="mx-2 px-3 pt-6 pb-4 bg-white flex flex-col space-y-3 shadow-base rounded-2.5">
@@ -1456,7 +1507,8 @@
             </div>
         </div>
         <div class="w-full h-34.25 lg:h-18.25"></div>
-        <div class="fixed bg-dark/20 top-0 left-0 right-0 bottom-0 hidden items-center overflow-auto z-1" id="modal-container">
+        <div class="fixed bg-dark/20 top-0 left-0 right-0 bottom-0 hidden items-center overflow-auto z-1"
+            id="modal-container">
             <div class="desktop-modal">
                 <div class="modal-header">
                     <span class="modal-title">Modal Name</span>
@@ -1512,8 +1564,10 @@
             $('#custom-message').fadeOut();
         })
 
-        $('.circle-progressbar').each(function() {
-            var percent = $("span", this).attr("name");
+        $('.circle-progressbar').each(function () {
+            const total = $(this).attr("data-total");
+            const realVal = $(this).attr("data-val");
+            var percent = realVal / total;
             var circumference = $("svg>circle:first-child", this).attr("r") * 2 * Math.PI;
             var colorBG = percent < 0.4 ? "#FEF0F4" : percent < 0.8 ? "#FFFBF4" : "#F1FBF7";
             var color = percent < 0.4 ? "#EC0B43" : percent < 0.8 ? "#FFBC42" : "#12BA7C";
@@ -1521,10 +1575,10 @@
             $("svg>circle:last-child", this).attr("stroke", color).attr("stroke-dasharray", circumference).attr("stroke-dashoffset", (1 - percent) * circumference);
             $("span", this).text(Math.round(percent * 100) + "%");
 
-            $(this).on('mouseenter', function() {
+            $(this).on('mouseenter', function () {
                 document.querySelector('#tooltip').style.display = "block";
-                document.querySelector('#tooltip').children[0].innerHTML = Math.round(40 * percent) + ' of 40 spots booked';
-                window.onmousemove = function(e) {
+                document.querySelector('#tooltip').children[0].innerHTML = realVal + ' of ' + total + ' spots booked';
+                window.onmousemove = function (e) {
                     var x = e.clientX;
                     var y = e.clientY;
                     document.querySelector('#tooltip').style.top = y + 'px';
@@ -1533,13 +1587,15 @@
             })
             $(this).on('mouseleave', () => {
                 document.querySelector('#tooltip').style.display = "none";
-                document.querySelector('#tooltip').children[0].innerHTML = '12312'
+                document.querySelector('#tooltip').children[0].innerHTML = ''
+                document.querySelector('#tooltip').style.top = '0px';
+                document.querySelector('#tooltip').style.left = '0px';
             })
         });
 
-        $('.event-single-element').each(function() {
+        $('.event-single-element').each(function () {
             $(this).on('click', () => {
-                $('.desktop-modal').css("transform", "translate(0, -20px)");
+                $('.desktop-modal').css("transform", "translate(0, 20px)");
                 $('#modal-container').css('display', 'flex').hide().fadeIn();
                 document.querySelector('body').style.overflow = "hidden";
             })

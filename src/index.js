@@ -140,8 +140,8 @@ if (currentPage == "TabsTemplateToastAlert.html") {
 if (currentPage == "OverlayModal.html") {
     // dialog
     $('#overlayBtn').on('click', () => {
-        $('.desktop-modal').css("transform", "translate(0, -20px)");
-        $('#modal-container').fadeIn();
+        $('.desktop-modal').css("transform", "translate(0, 20px)");
+        $('#modal-container').css('display', 'flex').hide().fadeIn();
         document.querySelector('body').style.overflow = "hidden";
     })
 

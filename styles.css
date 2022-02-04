@@ -51,6 +51,10 @@
   .divider {
     @apply h-px w-full;
   }
+  /* active color */
+  .active {
+    @apply text-secondary;
+  }
   /* rotate 180 degrees */
   .flip {
     transition: transform .5s;
@@ -1643,6 +1647,13 @@
       a {
         div {
           @apply w-full p-3 rounded bg-white text-base leading-5 text-primaryDark font-extrabold;
+        }
+      }
+      .active {
+        div{
+          span {
+            @apply text-secondary;
+          }
         }
       }
       .menu-with-dropdown {
