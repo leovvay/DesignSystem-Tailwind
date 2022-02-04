@@ -1558,9 +1558,12 @@
     .navbar-dropdown-top-section {
       @apply flex flex-col space-y-4 bg-background;
       .change-help-content {
-        @apply flex px-4 space-x-3.8;
-        button {
-          @apply flex-1 justify-center;
+        @apply w-full flex px-4 space-x-3.8;
+        a {
+          @apply flex-1;
+          button {
+            @apply w-full justify-center;
+          }
         }
       }
       .mobile-user-dropdown {
