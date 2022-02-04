@@ -16,7 +16,7 @@
 
 <body>
     <!-- header -->
-    <header class="lg:px-0.25 lg:pt-0.25 sticky top-0 bg-white flex flex-col z-50">
+    <header class="lg:px-0.25 lg:pt-0.25 sticky top-0 bg-white flex flex-col z-1">
         <div class="flex flex-col">
             <div class="menu-topbar">
                 <div class="left-content">
@@ -283,8 +283,8 @@
 
     <!-- content -->
     <section class="w-full flex flex-col items-center justify-center">
-        <div class="w-full desktop:w-328 overflow-hidden py-6.5 flex flex-col">
-            <div class="w-full flex flex-col py-4 px-5 space-y-2 bg-white rounded-lg border-2 border-primary-5">
+        <div class="w-full lg:w-259 miniDesktop:w-328 overflow-hidden lg:py-6.5 flex flex-col">
+            <div class="w-full flex flex-col py-4 px-5 space-y-2 bg-white rounded-lg border-2 border-primary-5 mb-8" id="custom-message">
                 <div class="w-full flex justify-between items-center">
                     <div class="flex items-center space-x-2">
                         <span class="mont-font text-primary text-lg leading-relaxed font-extrabold">Free Occasion
@@ -293,7 +293,7 @@
                             <span>WEBINAR</span>
                         </div>
                     </div>
-                    <button class="small-minimal-icon-btn">
+                    <button class="small-minimal-icon-btn" id="close-custom-message">
                         <span class="icon-close"></span>
                     </button>
                 </div>
@@ -302,17 +302,18 @@
                         <p>Do you have questions about our tool? Interested in meeting other shop owners?</p>
                         <p>We are launching weekly webinars. Join now and learn how to make most out of Occasion</p>
                     </div>
-                    <button class="small-primary-mix-btn">
-                        <span class="icon-open"></span>
-                        <label>Learn more</label>
-                    </button>
+                    <a href=""><button class="small-primary-mix-btn">
+                            <span class="icon-open"></span>
+                            <label>Learn more</label>
+                        </button></a>
                 </div>
             </div>
-            <div class="mt-8 flex justify-between">
+            <!-- desktop version -->
+            <div class="hidden lg:flex lg:space-x-8">
                 <!-- left -->
-                <div class="flex flex-col space-y-8">
+                <div class="flex-1 flex flex-col space-y-8">
                     <!-- status cards section -->
-                    <div class="bg-white shadow-base rounded-2.5 p-4 grid grid-cols-2 gap-4">
+                    <div class="bg-white shadow-base rounded-2.5 p-4 miniDesktop:grid lg:flex lg:flex-col lg:space-y-4 miniDesktop:grid-cols-2 miniDesktop:gap-4">
                         <!-- sales card -->
                         <div class="status-card">
                             <div class="left-part">
@@ -328,7 +329,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="right-part" id="sales-card-right">
+                            <div class="right-part sales-card-right" id="sales-card-right">
                                 <div class="bar-container">
                                     <div class="empty-bar"></div>
                                     <div class="previous-bar"></div>
@@ -374,7 +375,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="right-part" id="orders-card-right">
+                            <div class="right-part orders-card-right" id="orders-card-right">
                                 <div class="bar-container">
                                     <div class="empty-bar"></div>
                                     <div class="previous-bar"></div>
@@ -420,7 +421,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="right-part" id="calendar-card-right">
+                            <div class="right-part calendar-card-right" id="calendar-card-right">
                                 <div class="bar-container">
                                     <div class="empty-bar"></div>
                                     <div class="previous-bar"></div>
@@ -466,7 +467,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="right-part" id="booking-card-right">
+                            <div class="right-part booking-card-right" id="booking-card-right">
                                 <div class="bar-container">
                                     <div class="empty-bar"></div>
                                     <div class="previous-bar"></div>
@@ -499,7 +500,7 @@
                         </div>
                     </div>
                     <!-- events section -->
-                    <div class="px-3 pt-6 pb-16 flex flex-col space-y-3 rounded-2.5 bg-white shadow-base">
+                    <div class="w-full flex flex-col space-y-3 px-3 pt-6 pb-4 rounded-2.5 bg-white shadow-base">
                         <div class="no-des-btn-line-card w-full">
                             <div class="card-main-content">
                                 <span>19 Events This Week</span>
@@ -523,170 +524,201 @@
                             </div>
                             <div class="divider"></div>
                         </div>
-                        <div class="flex flex-col space-y-3">
+                        <div class="flex flex-col space-y-2">
                             <div class="tooltip-content" id="tooltip">
-                                <span>Segment syncs a list of users to these destinations and keeps it up to
-                                    date.</span>
+                                <span></span>
                             </div>
                             <div class="event-single-element">
-                                <div class="circle-progressbar">
-                                    <svg>
-                                        <circle stroke-width="5" stroke="#F1FBF7" fill="transparent" r="20" cx="30"
-                                            cy="30" />
-                                        <circle stroke-width="5" stroke-linecap="round" stroke="#12BA7C"
-                                            fill="transparent" r="20" cx="30" cy="30" />
-                                    </svg>
-                                    <span>1</span>
+                                <div class="main-content">
+                                    <div class="circle-progressbar">
+                                        <svg>
+                                            <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                            <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
+                                                cx="22" cy="22" />
+                                        </svg>
+                                        <span name="1"></span>
+                                    </div>
+                                    <div class="event-description-content">
+                                        <span>Private Play Date Space Rental</span>
+                                        <span>Today, 9:50 AM - 11:20 AM</span>
+                                    </div>
                                 </div>
-                                <div class="event-description-content">
-                                    <span>Private Play Date Space Rental</span>
-                                    <span>Today, 9:50 AM - 11:20 AM</span>
-                                </div>
+                                <button class="hidden small-minimal-icon-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
                             </div>
                             <div class="event-single-element">
-                                <div class="circle-progressbar">
-                                    <svg>
-                                        <circle stroke-width="5" stroke="#F1FBF7" fill="transparent" r="20" cx="30"
-                                            cy="30" />
-                                        <circle stroke-width="5" stroke-linecap="round" stroke="#12BA7C"
-                                            fill="transparent" r="20" cx="30" cy="30" />
-                                    </svg>
-                                    <span>.99</span>
+                                <div class="main-content">
+                                    <div class="circle-progressbar">
+                                        <svg>
+                                            <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                            <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
+                                                cx="22" cy="22" />
+                                        </svg>
+                                        <span name="0.99"></span>
+                                    </div>
+                                    <div class="event-description-content">
+                                        <span>Family Fun Creative Canvas - Heart</span>
+                                        <span>Today, 9:50 AM - 11:20 AM</span>
+                                    </div>
                                 </div>
-                                <div class="event-description-content">
-                                    <span>Family Fun Creative Canvas - Heart</span>
-                                    <span>Today, 9:50 AM - 11:20 AM</span>
-                                </div>
+                                <button class="hidden small-minimal-icon-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
                             </div>
                             <div class="event-single-element">
-                                <div class="circle-progressbar">
-                                    <svg>
-                                        <circle stroke-width="5" stroke="#FFFBF4" fill="transparent" r="20" cx="30"
-                                            cy="30" />
-                                        <circle stroke-width="5" stroke-linecap="round" stroke="#FFBC42"
-                                            fill="transparent" r="20" cx="30" cy="30" />
-                                    </svg>
-                                    <span>.43</span>
+                                <div class="main-content">
+                                    <div class="circle-progressbar">
+                                        <svg>
+                                            <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                            <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
+                                                cx="22" cy="22" />
+                                        </svg>
+                                        <span name="0.43"></span>
+                                    </div>
+                                    <div class="event-description-content">
+                                        <span>Private Play Date Space Rental</span>
+                                        <span>Tomorrow, 10:30 AM</span>
+                                    </div>
                                 </div>
-                                <div class="event-description-content">
-                                    <span>Private Play Date Space Rental</span>
-                                    <span>Tomorrow, 10:30 AM</span>
-                                </div>
+                                <button class="hidden small-minimal-icon-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
                             </div>
                             <div class="event-single-element">
-                                <div class="circle-progressbar">
-                                    <svg>
-                                        <circle stroke-width="5" stroke="#F1FBF7" fill="transparent" r="20" cx="30"
-                                            cy="30" />
-                                        <circle stroke-width="5" stroke-linecap="round" stroke="#12BA7C"
-                                            fill="transparent" r="20" cx="30" cy="30" />
-                                    </svg>
-                                    <span>.9</span>
+                                <div class="main-content">
+                                    <div class="circle-progressbar">
+                                        <svg>
+                                            <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                            <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
+                                                cx="22" cy="22" />
+                                        </svg>
+                                        <span name="0.9"></span>
+                                    </div>
+                                    <div class="event-description-content">
+                                        <span>Private Play Date Space Rental</span>
+                                        <span>Tue, 23 Feb, 3:30 PM - 4:30 PM</span>
+                                    </div>
                                 </div>
-                                <div class="event-description-content">
-                                    <span>Private Play Date Space Rental</span>
-                                    <span>Tue, 23 Feb, 3:30 PM - 4:30 PM</span>
-                                </div>
+                                <button class="hidden small-minimal-icon-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
                             </div>
                             <div class="event-single-element">
-                                <div class="circle-progressbar">
-                                    <svg>
-                                        <circle stroke-width="5" stroke="#FEF0F4" fill="transparent" r="20" cx="30"
-                                            cy="30" />
-                                        <circle stroke-width="5" stroke-linecap="round" stroke="#EC0B43"
-                                            fill="transparent" r="20" cx="30" cy="30" />
-                                    </svg>
-                                    <span>.05</span>
+                                <div class="main-content">
+                                    <div class="circle-progressbar">
+                                        <svg>
+                                            <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                            <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
+                                                cx="22" cy="22" />
+                                        </svg>
+                                        <span name="0.05"></span>
+                                    </div>
+                                    <div class="event-description-content">
+                                        <span>Family Fun Creative Canvas - Heart Pizza</span>
+                                        <span>Thu, 25 Feb, 7:00 PM - 8:30 PM</span>
+                                    </div>
                                 </div>
-                                <div class="event-description-content">
-                                    <span>Family Fun Creative Canvas - Heart Pizza</span>
-                                    <span>Thu, 25 Feb, 7:00 PM - 8:30 PM</span>
-                                </div>
+                                <button class="hidden small-minimal-icon-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
                             </div>
                             <div class="event-single-element">
-                                <div class="circle-progressbar">
-                                    <svg>
-                                        <circle stroke-width="5" stroke="#F1FBF7" fill="transparent" r="20" cx="30"
-                                            cy="30" />
-                                        <circle stroke-width="5" stroke-linecap="round" stroke="#12BA7C"
-                                            fill="transparent" r="20" cx="30" cy="30" />
-                                    </svg>
-                                    <span>.89</span>
+                                <div class="main-content">
+                                    <div class="circle-progressbar">
+                                        <svg>
+                                            <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                            <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
+                                                cx="22" cy="22" />
+                                        </svg>
+                                        <span name="0.89"></span>
+                                    </div>
+                                    <div class="event-description-content">
+                                        <span>Family Fun Creative Canvas - Heart</span>
+                                        <span>Thu, 25 Feb, 9:50 PM - 11:20 PM</span>
+                                    </div>
                                 </div>
-                                <div class="event-description-content">
-                                    <span>Family Fun Creative Canvas - Heart</span>
-                                    <span>Thu, 25 Feb, 9:50 PM - 11:20 PM</span>
-                                </div>
+                                <button class="hidden small-minimal-icon-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
                             </div>
                             <div class="event-single-element">
-                                <div class="circle-progressbar">
-                                    <svg>
-                                        <circle stroke-width="5" stroke="#F1FBF7" fill="transparent" r="20" cx="30"
-                                            cy="30" />
-                                        <circle stroke-width="5" stroke-linecap="round" stroke="#12BA7C"
-                                            fill="transparent" r="20" cx="30" cy="30" />
-                                    </svg>
-                                    <span>.79</span>
+                                <div class="main-content">
+                                    <div class="circle-progressbar">
+                                        <svg>
+                                            <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                            <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
+                                                cx="22" cy="22" />
+                                        </svg>
+                                        <span name="0.79"></span>
+                                    </div>
+                                    <div class="event-description-content">
+                                        <span>Art Foundation Program for Kids</span>
+                                        <span>Fri, 26 Feb, 10:20 AM - 11:20 AM</span>
+                                    </div>
                                 </div>
-                                <div class="event-description-content">
-                                    <span>Art Foundation Program for Kids</span>
-                                    <span>Fri, 26 Feb, 10:20 AM - 11:20 AM</span>
-                                </div>
+                                <button class="hidden small-minimal-icon-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
                             </div>
                             <div class="event-single-element">
-                                <div class="circle-progressbar">
-                                    <svg>
-                                        <circle stroke-width="5" stroke="#F1FBF7" fill="transparent" r="20" cx="30"
-                                            cy="30" />
-                                        <circle stroke-width="5" stroke-linecap="round" stroke="#12BA7C"
-                                            fill="transparent" r="20" cx="30" cy="30" />
-                                    </svg>
-                                    <span>.68</span>
+                                <div class="main-content">
+                                    <div class="circle-progressbar">
+                                        <svg>
+                                            <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                            <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20"
+                                                cx="22" cy="22" />
+                                        </svg>
+                                        <span name="0.68"></span>
+                                    </div>
+                                    <div class="event-description-content">
+                                        <span>Family Fun Creative Canvas - Heart</span>
+                                        <span>Sun 28 Feb, 2:50 PM - 4:20 PM</span>
+                                    </div>
                                 </div>
-                                <div class="event-description-content">
-                                    <span>Family Fun Creative Canvas - Heart</span>
-                                    <span>Sun 28 Feb, 2:50 PM - 4:20 PM</span>
-                                </div>
+                                <button class="hidden small-minimal-icon-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- right -->
-                <div class="flex flex-col space-y-8 w-150">
+                <div class="flex flex-col space-y-8 desktop:w-150 miniDesktop:w-130 lg:w-125.5">
                     <div class="grid grid-cols-2 gap-4">
-                        <button class="quick-btn">
-                            <div class="bg-primary-80">
-                                <span class="icon-add-circled"></span>
-                            </div>
-                            <div class="bg-primary">
-                                <span>Add Event / Experience</span>
-                            </div>
-                        </button>
-                        <button class="quick-btn">
-                            <div class="bg-blue-80">
-                                <span class="icon-file"></span>
-                            </div>
-                            <div class="bg-blue">
-                                <span>Orders Lists</span>
-                            </div>
-                        </button>
-                        <button class="quick-btn">
-                            <div class="bg-violet-80">
-                                <span class="icon-check-circled"></span>
-                            </div>
-                            <div class="bg-violet">
-                                <span>Quick Order</span>
-                            </div>
-                        </button>
-                        <button class="quick-btn">
-                            <div class="bg-secondary-80">
-                                <span class="icon-pie-chart"></span>
-                            </div>
-                            <div class="bg-secondary">
-                                <span>Marketing Stats</span>
-                            </div>
-                        </button>
+                        <a href=""><button class="quick-btn">
+                                <div class="bg-primary-80">
+                                    <span class="icon-add-circled"></span>
+                                </div>
+                                <div class="bg-primary">
+                                    <span>Add Event / Experience</span>
+                                </div>
+                            </button></a>
+                        <a href=""><button class="quick-btn">
+                                <div class="bg-blue-80">
+                                    <span class="icon-file"></span>
+                                </div>
+                                <div class="bg-blue">
+                                    <span>Orders Lists</span>
+                                </div>
+                            </button></a>
+                        <a href=""><button class="quick-btn">
+                                <div class="bg-violet-80">
+                                    <span class="icon-check-circled"></span>
+                                </div>
+                                <div class="bg-violet">
+                                    <span>Quick Order</span>
+                                </div>
+                            </button></a>
+                        <a href=""><button class="quick-btn">
+                                <div class="bg-secondary-80">
+                                    <span class="icon-pie-chart"></span>
+                                </div>
+                                <div class="bg-secondary">
+                                    <span>Marketing Stats</span>
+                                </div>
+                            </button></a>
                     </div>
                     <div class="w-full flex flex-col space-y-4 px-3 pt-6 pb-4 bg-white rounded-2.5 shadow-base">
                         <div class="no-des-btn-line-card w-full">
@@ -713,135 +745,710 @@
                             <div class="divider"></div>
                         </div>
                         <div class="flex flex-col space-y-3">
-                            <div class="single-activity">
-                                <div class="violet-circle-icon text-violet">
-                                    <span class="icon-check-circled"></span>
+                            <a href="">
+                                <div class="single-activity">
+                                    <div class="violet-circle-icon text-violet">
+                                        <span class="icon-check-circled"></span>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <span>1 spot booked</span>
+                                            <span class="icon icon-dotseparator"></span>
+                                            <span>Just now</span>
+                                        </label>
+                                        <span>Private Play Date Space Rental</span>
+                                    </div>
                                 </div>
-                                <div>
+                            </a>
+                            <a href="">
+                                <div class="single-activity">
+                                    <div class="red-circle-icon text-red">
+                                        <span class="icon-warning"></span>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <span>Card Declined</span>
+                                            <span class="icon icon-dotseparator"></span>
+                                            <span>Just now</span>
+                                        </label>
+                                        <span>Family Fun Creative Canvas - Heart</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="single-activity">
+                                    <div class="violet-circle-icon text-violet">
+                                        <span class="icon-check-circled"></span>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <span>2 spot booked</span>
+                                            <span class="icon icon-dotseparator"></span>
+                                            <span>Just now</span>
+                                        </label>
+                                        <span>Family Fun Creative Canvas - Heart Pizza</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="single-activity">
+                                    <div class="secondary-circle-icon">
+                                        <span class="icon-notification"></span>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <span>New Positive Review</span>
+                                            <span class="icon icon-dotseparator"></span>
+                                            <span>Just now</span>
+                                        </label>
+                                        <span>Family Fun Creative Canvas - Heart</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="single-activity">
+                                    <div class="green-circle-icon">
+                                        <span class="icon-star"></span>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <span>New Feature in Occasion</span>
+                                            <span class="icon icon-dotseparator"></span>
+                                            <span>Just now</span>
+                                        </label>
+                                        <span>Occasion Changes</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="single-activity">
+                                    <div class="violet-circle-icon text-violet">
+                                        <span class="icon-check-circled"></span>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <span>2 seats booked</span>
+                                            <span class="icon icon-dotseparator"></span>
+                                            <span>Just now</span>
+                                        </label>
+                                        <span>Family Fun Creative Canvas - Heart</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="single-activity">
+                                    <div class="red-circle-icon text-red">
+                                        <span class="icon-warning"></span>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <span>Booking Canceled</span>
+                                            <span class="icon icon-dotseparator"></span>
+                                            <span>Just now</span>
+                                        </label>
+                                        <span>Private Play Date Space Rental</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="single-activity">
+                                    <div class="blue-circle-icon">
+                                        <span class="icon-payment"></span>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <span>New payment $150.04</span>
+                                            <span class="icon icon-dotseparator"></span>
+                                            <span>Just now</span>
+                                        </label>
+                                        <span>Family Fun Creative Canvas - Heart</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="single-activity">
+                                    <div class="secondary-circle-icon">
+                                        <span class="icon-notification"></span>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <span>New Neutral Review</span>
+                                            <span class="icon icon-dotseparator"></span>
+                                            <span>Just now</span>
+                                        </label>
+                                        <span>Private Play Date Space Rental</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="single-activity">
+                                    <div class="blue-circle-icon">
+                                        <span class="icon-payment"></span>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <span>New Deposit $10.00</span>
+                                            <span class="icon icon-dotseparator"></span>
+                                            <span>Just now</span>
+                                        </label>
+                                        <span>Family Fun Creative Canvas - Heart</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile version -->
+            <div class="flex flex-col pt-6 pb-4 space-y-6 lg:hidden overflow-hidden">
+                <div class="min-w-full px-2 flex items-center space-x-3 overflow-x-auto whitespace-nowrap">
+                    <a href=""><button class="quick-btn">
+                            <div class="bg-primary-80">
+                                <span class="icon-add-circled"></span>
+                            </div>
+                            <div class="bg-primary">
+                                <span>Add Event / Experience</span>
+                            </div>
+                        </button></a>
+                    <a href=""><button class="quick-btn">
+                            <div class="bg-blue-80">
+                                <span class="icon-file"></span>
+                            </div>
+                            <div class="bg-blue">
+                                <span>Orders Lists</span>
+                            </div>
+                        </button></a>
+                    <a href=""><button class="quick-btn">
+                            <div class="bg-violet-80">
+                                <span class="icon-check-circled"></span>
+                            </div>
+                            <div class="bg-violet">
+                                <span>Quick Order</span>
+                            </div>
+                        </button></a>
+                    <a href=""><button class="quick-btn">
+                            <div class="bg-secondary-80">
+                                <span class="icon-pie-chart"></span>
+                            </div>
+                            <div class="bg-secondary">
+                                <span>Marketing Stats</span>
+                            </div>
+                        </button></a>
+                </div>
+                <div class="min-w-full px-2 flex items-center space-x-4 overflow-x-auto whitespace-nowrap">
+                    <!-- sales card -->
+                    <div class="status-card">
+                        <div class="left-part">
+                            <span class="card-title">Sales Today</span>
+                            <div class="card-content">
+                                <span class="card-value">$3560.50</span>
+                                <div class="down-status">
+                                    <span class="icon icon-trending-down"></span>
                                     <label>
-                                        <span>1 spot booked</span>
-                                        <span class="icon icon-dotseparator"></span>
-                                        <span>Just now</span>
+                                        <span class="status-value">9.06%</span>
+                                        <span class="compare-label">vs yesterday</span>
                                     </label>
-                                    <span>Private Play Date Space Rental</span>
                                 </div>
                             </div>
-                            <div class="single-activity">
-                                <div class="red-circle-icon text-red">
-                                    <span class="icon-warning"></span>
-                                </div>
-                                <div>
+                        </div>
+                        <div class="right-part sales-card-right" id="sales-card-right">
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="current-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- orders card -->
+                    <div class="status-card">
+                        <div class="left-part">
+                            <span class="card-title">Orders Today</span>
+                            <div class="card-content">
+                                <span class="card-value">102</span>
+                                <div class="up-status">
+                                    <span class="icon icon-trending-up"></span>
                                     <label>
-                                        <span>Card Declined</span>
-                                        <span class="icon icon-dotseparator"></span>
-                                        <span>Just now</span>
+                                        <span class="status-value">9.06%</span>
+                                        <span class="compare-label">vs yesterday</span>
                                     </label>
-                                    <span>Family Fun Creative Canvas - Heart</span>
                                 </div>
                             </div>
-                            <div class="single-activity">
-                                <div class="violet-circle-icon text-violet">
-                                    <span class="icon-check-circled"></span>
-                                </div>
-                                <div>
+                        </div>
+                        <div class="right-part orders-card-right" id="orders-card-right">
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="current-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- calendar views card -->
+                    <div class="status-card">
+                        <div class="left-part">
+                            <span class="card-title">Calendar Views Today</span>
+                            <div class="card-content">
+                                <span class="card-value">1530</span>
+                                <div class="up-status">
+                                    <span class="icon icon-trending-down"></span>
                                     <label>
-                                        <span>2 spot booked</span>
-                                        <span class="icon icon-dotseparator"></span>
-                                        <span>Just now</span>
+                                        <span class="status-value">9.06%</span>
+                                        <span class="compare-label">vs yesterday</span>
                                     </label>
-                                    <span>Family Fun Creative Canvas - Heart Pizza</span>
                                 </div>
                             </div>
-                            <div class="single-activity">
-                                <div class="secondary-circle-icon">
-                                    <span class="icon-notification"></span>
-                                </div>
-                                <div>
+                        </div>
+                        <div class="right-part calendar-card-right" id="calendar-card-right">
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="current-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- booking views card -->
+                    <div class="status-card">
+                        <div class="left-part">
+                            <span class="card-title">Booking Views Today</span>
+                            <div class="card-content">
+                                <span class="card-value">306</span>
+                                <div class="neutral-status">
+                                    <span class="icon icon-remove"></span>
                                     <label>
-                                        <span>New Positive Review</span>
-                                        <span class="icon icon-dotseparator"></span>
-                                        <span>Just now</span>
+                                        <span class="status-value">0%</span>
+                                        <span class="compare-label">vs yesterday</span>
                                     </label>
-                                    <span>Family Fun Creative Canvas - Heart</span>
                                 </div>
                             </div>
-                            <div class="single-activity">
-                                <div class="green-circle-icon">
-                                    <span class="icon-star"></span>
-                                </div>
-                                <div>
-                                    <label>
-                                        <span>New Feature in Occasion</span>
-                                        <span class="icon icon-dotseparator"></span>
-                                        <span>Just now</span>
-                                    </label>
-                                    <span>Occasion Changes</span>
+                        </div>
+                        <div class="right-part booking-card-right" id="booking-card-right">
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="previous-bar"></div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="empty-bar"></div>
+                                <div class="current-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-2 px-3 pt-6 pb-4 bg-white flex flex-col space-y-3 shadow-base rounded-2.5">
+                    <div class="no-des-btn-line-card w-full">
+                        <div class="card-main-content">
+                            <span>19 Events This Week</span>
+                        </div>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="event-single-element">
+                        <div class="main-content">
+                            <div class="circle-progressbar">
+                                <svg>
+                                    <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                    <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
+                                        cy="22" />
+                                </svg>
+                                <span name="1"></span>
+                            </div>
+                            <div class="event-description-content">
+                                <span>Private Play Date Space Rental</span>
+                                <span>Today, 9:50 AM - 11:20 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-single-element">
+                        <div class="main-content">
+                            <div class="circle-progressbar">
+                                <svg>
+                                    <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                    <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
+                                        cy="22" />
+                                </svg>
+                                <span name="0.99"></span>
+                            </div>
+                            <div class="event-description-content">
+                                <span>Family Fun Creative Canvas - Heart</span>
+                                <span>Today, 9:50 AM - 11:20 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-single-element">
+                        <div class="main-content">
+                            <div class="circle-progressbar">
+                                <svg>
+                                    <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                    <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
+                                        cy="22" />
+                                </svg>
+                                <span name="0.43"></span>
+                            </div>
+                            <div class="event-description-content">
+                                <span>Private Play Date Space Rental</span>
+                                <span>Tomorrow, 10:30 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-single-element">
+                        <div class="main-content">
+                            <div class="circle-progressbar">
+                                <svg>
+                                    <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                    <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
+                                        cy="22" />
+                                </svg>
+                                <span name="0.9"></span>
+                            </div>
+                            <div class="event-description-content">
+                                <span>Private Play Date Space Rental</span>
+                                <span>Tue, 23 Feb, 3:30 PM - 4:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-single-element">
+                        <div class="main-content">
+                            <div class="circle-progressbar">
+                                <svg>
+                                    <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                    <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
+                                        cy="22" />
+                                </svg>
+                                <span name="0.05"></span>
+                            </div>
+                            <div class="event-description-content">
+                                <span>Family Fun Creative Canvas - Heart Pizza</span>
+                                <span>Thu, 25 Feb, 7:00 PM - 8:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-single-element">
+                        <div class="main-content">
+                            <div class="circle-progressbar">
+                                <svg>
+                                    <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                    <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
+                                        cy="22" />
+                                </svg>
+                                <span name="0.89"></span>
+                            </div>
+                            <div class="event-description-content">
+                                <span>Family Fun Creative Canvas - Heart</span>
+                                <span>Thu, 25 Feb, 9:50 PM - 11:20 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-single-element">
+                        <div class="main-content">
+                            <div class="circle-progressbar">
+                                <svg>
+                                    <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                    <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
+                                        cy="22" />
+                                </svg>
+                                <span name="0.79"></span>
+                            </div>
+                            <div class="event-description-content">
+                                <span>Art Foundation Program for Kids</span>
+                                <span>Fri, 26 Feb, 10:20 AM - 11:20 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-single-element">
+                        <div class="main-content">
+                            <div class="circle-progressbar">
+                                <svg>
+                                    <circle stroke-width="4" fill="transparent" r="20" cx="22" cy="22" />
+                                    <circle stroke-width="4" stroke-linecap="round" fill="transparent" r="20" cx="22"
+                                        cy="22" />
+                                </svg>
+                                <span name="0.68"></span>
+                            </div>
+                            <div class="event-description-content">
+                                <span>Family Fun Creative Canvas - Heart</span>
+                                <span>Sun 28 Feb, 2:50 PM - 4:20 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center py-2">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex space-x-1.5">
+                                <div class="flex space-x-1.5">
+                                    <span class="pagination-page-text">1</span>
+                                    <span class="pagination-page-text_disabled">/</span>
+                                    <span class="pagination-page-text_disabled">3</span>
                                 </div>
                             </div>
-                            <div class="single-activity">
-                                <div class="violet-circle-icon text-violet">
-                                    <span class="icon-check-circled"></span>
-                                </div>
-                                <div>
-                                    <label>
-                                        <span>2 seats booked</span>
-                                        <span class="icon icon-dotseparator"></span>
-                                        <span>Just now</span>
-                                    </label>
-                                    <span>Family Fun Creative Canvas - Heart</span>
+                            <div class="flex space-x-2">
+                                <button class="pagination-btn" disabled>
+                                    <span class="icon-arrow-backward"></span>
+                                </button>
+                                <button class="pagination-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-2 px-3 pt-6 pb-4 bg-white flex flex-col space-y-3 shadow-base rounded-2.5">
+                    <div class="no-des-btn-line-card w-full">
+                        <div class="card-main-content">
+                            <span>Last Activities</span>
+                        </div>
+                        <div class="divider"></div>
+                    </div>
+                    <a href="">
+                        <div class="single-activity">
+                            <div class="violet-circle-icon text-violet">
+                                <span class="icon-check-circled"></span>
+                            </div>
+                            <div>
+                                <label>
+                                    <span>1 spot booked</span>
+                                    <span class="icon icon-dotseparator"></span>
+                                    <span>Just now</span>
+                                </label>
+                                <span>Private Play Date Space Rental</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="single-activity">
+                            <div class="red-circle-icon text-red">
+                                <span class="icon-warning"></span>
+                            </div>
+                            <div>
+                                <label>
+                                    <span>Card Declined</span>
+                                    <span class="icon icon-dotseparator"></span>
+                                    <span>Just now</span>
+                                </label>
+                                <span>Family Fun Creative Canvas - Heart</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="single-activity">
+                            <div class="violet-circle-icon text-violet">
+                                <span class="icon-check-circled"></span>
+                            </div>
+                            <div>
+                                <label>
+                                    <span>2 spot booked</span>
+                                    <span class="icon icon-dotseparator"></span>
+                                    <span>Just now</span>
+                                </label>
+                                <span>Family Fun Creative Canvas - Heart Pizza</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="single-activity">
+                            <div class="secondary-circle-icon">
+                                <span class="icon-notification"></span>
+                            </div>
+                            <div>
+                                <label>
+                                    <span>New Positive Review</span>
+                                    <span class="icon icon-dotseparator"></span>
+                                    <span>Just now</span>
+                                </label>
+                                <span>Family Fun Creative Canvas - Heart</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="single-activity">
+                            <div class="green-circle-icon">
+                                <span class="icon-star"></span>
+                            </div>
+                            <div>
+                                <label>
+                                    <span>New Feature in Occasion</span>
+                                    <span class="icon icon-dotseparator"></span>
+                                    <span>Just now</span>
+                                </label>
+                                <span>Occasion Changes</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="single-activity">
+                            <div class="violet-circle-icon text-violet">
+                                <span class="icon-check-circled"></span>
+                            </div>
+                            <div>
+                                <label>
+                                    <span>2 seats booked</span>
+                                    <span class="icon icon-dotseparator"></span>
+                                    <span>Just now</span>
+                                </label>
+                                <span>Family Fun Creative Canvas - Heart</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="single-activity">
+                            <div class="red-circle-icon text-red">
+                                <span class="icon-warning"></span>
+                            </div>
+                            <div>
+                                <label>
+                                    <span>Booking Canceled</span>
+                                    <span class="icon icon-dotseparator"></span>
+                                    <span>Just now</span>
+                                </label>
+                                <span>Private Play Date Space Rental</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="single-activity">
+                            <div class="blue-circle-icon">
+                                <span class="icon-payment"></span>
+                            </div>
+                            <div>
+                                <label>
+                                    <span>New payment $150.04</span>
+                                    <span class="icon icon-dotseparator"></span>
+                                    <span>Just now</span>
+                                </label>
+                                <span>Family Fun Creative Canvas - Heart</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="single-activity">
+                            <div class="secondary-circle-icon">
+                                <span class="icon-notification"></span>
+                            </div>
+                            <div>
+                                <label>
+                                    <span>New Neutral Review</span>
+                                    <span class="icon icon-dotseparator"></span>
+                                    <span>Just now</span>
+                                </label>
+                                <span>Private Play Date Space Rental</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="single-activity">
+                            <div class="blue-circle-icon">
+                                <span class="icon-payment"></span>
+                            </div>
+                            <div>
+                                <label>
+                                    <span>New Deposit $10.00</span>
+                                    <span class="icon icon-dotseparator"></span>
+                                    <span>Just now</span>
+                                </label>
+                                <span>Family Fun Creative Canvas - Heart</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="flex items-center justify-center py-2">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex space-x-1.5">
+                                <div class="flex space-x-1.5">
+                                    <span class="pagination-page-text">1</span>
+                                    <span class="pagination-page-text_disabled">/</span>
+                                    <span class="pagination-page-text_disabled">3</span>
                                 </div>
                             </div>
-                            <div class="single-activity">
-                                <div class="red-circle-icon text-red">
-                                    <span class="icon-warning"></span>
-                                </div>
-                                <div>
-                                    <label>
-                                        <span>Booking Canceled</span>
-                                        <span class="icon icon-dotseparator"></span>
-                                        <span>Just now</span>
-                                    </label>
-                                    <span>Private Play Date Space Rental</span>
-                                </div>
-                            </div>
-                            <div class="single-activity">
-                                <div class="blue-circle-icon">
-                                    <span class="icon-payment"></span>
-                                </div>
-                                <div>
-                                    <label>
-                                        <span>New payment $150.04</span>
-                                        <span class="icon icon-dotseparator"></span>
-                                        <span>Just now</span>
-                                    </label>
-                                    <span>Family Fun Creative Canvas - Heart</span>
-                                </div>
-                            </div>
-                            <div class="single-activity">
-                                <div class="secondary-circle-icon">
-                                    <span class="icon-notification"></span>
-                                </div>
-                                <div>
-                                    <label>
-                                        <span>New Neutral Review</span>
-                                        <span class="icon icon-dotseparator"></span>
-                                        <span>Just now</span>
-                                    </label>
-                                    <span>Private Play Date Space Rental</span>
-                                </div>
-                            </div>
-                            <div class="single-activity">
-                                <div class="blue-circle-icon">
-                                    <span class="icon-payment"></span>
-                                </div>
-                                <div>
-                                    <label>
-                                        <span>New Deposit $10.00</span>
-                                        <span class="icon icon-dotseparator"></span>
-                                        <span>Just now</span>
-                                    </label>
-                                    <span>Family Fun Creative Canvas - Heart</span>
-                                </div>
+                            <div class="flex space-x-2">
+                                <button class="pagination-btn" disabled>
+                                    <span class="icon-arrow-backward"></span>
+                                </button>
+                                <button class="pagination-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -849,6 +1456,19 @@
             </div>
         </div>
         <div class="w-full h-34.25 lg:h-18.25"></div>
+        <div class="fixed bg-dark/20 top-0 left-0 right-0 bottom-0 hidden items-center overflow-auto z-1" id="modal-container">
+            <div class="desktop-modal">
+                <div class="modal-header">
+                    <span class="modal-title">Modal Name</span>
+                    <button class="small-minimal-icon-btn" id="modalCloseBtn">
+                        <span class="icon-close"></span>
+                    </button>
+                </div>
+                <div class="modal-content">
+                    <span>This is content.</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- footer -->
@@ -888,31 +1508,22 @@
 
     <script src="./index.js"></script>
     <script>
-        [percent1, percent2, percent3, percent4, percent5, percent6, percent7, percent8] = [100, 99, 43, 90, 5, 89, 79, 68]
-        $('.circle-progressbar')[0].children[0].children[1].setAttribute('stroke-dasharray', 2 * 20 * Math.PI);
-        $('.circle-progressbar')[0].children[0].children[1].setAttribute('stroke-dashoffset', (1 - percent1 / 100) * 2 * 20 * Math.PI);
-        $('.circle-progressbar')[1].children[0].children[1].setAttribute('stroke-dasharray', 2 * 20 * Math.PI);
-        $('.circle-progressbar')[1].children[0].children[1].setAttribute('stroke-dashoffset', (1 - percent2 / 100) * 2 * 20 * Math.PI);
-        $('.circle-progressbar')[2].children[0].children[1].setAttribute('stroke-dasharray', 2 * 20 * Math.PI);
-        $('.circle-progressbar')[2].children[0].children[1].setAttribute('stroke-dashoffset', (1 - percent3 / 100) * 2 * 20 * Math.PI);
-        $('.circle-progressbar')[3].children[0].children[1].setAttribute('stroke-dasharray', 2 * 20 * Math.PI);
-        $('.circle-progressbar')[3].children[0].children[1].setAttribute('stroke-dashoffset', (1 - percent4 / 100) * 2 * 20 * Math.PI);
-        $('.circle-progressbar')[4].children[0].children[1].setAttribute('stroke-dasharray', 2 * 20 * Math.PI);
-        $('.circle-progressbar')[4].children[0].children[1].setAttribute('stroke-dashoffset', (1 - percent5 / 100) * 2 * 20 * Math.PI);
-        $('.circle-progressbar')[5].children[0].children[1].setAttribute('stroke-dasharray', 2 * 20 * Math.PI);
-        $('.circle-progressbar')[5].children[0].children[1].setAttribute('stroke-dashoffset', (1 - percent6 / 100) * 2 * 20 * Math.PI);
-        $('.circle-progressbar')[6].children[0].children[1].setAttribute('stroke-dasharray', 2 * 20 * Math.PI);
-        $('.circle-progressbar')[6].children[0].children[1].setAttribute('stroke-dashoffset', (1 - percent7 / 100) * 2 * 20 * Math.PI);
-        $('.circle-progressbar')[7].children[0].children[1].setAttribute('stroke-dasharray', 2 * 20 * Math.PI);
-        $('.circle-progressbar')[7].children[0].children[1].setAttribute('stroke-dashoffset', (1 - percent8 / 100) * 2 * 20 * Math.PI);
+        $('#close-custom-message').on('click', () => {
+            $('#custom-message').fadeOut();
+        })
 
-        var circleProgressBars = document.getElementsByClassName('circle-progressbar');
+        $('.circle-progressbar').each(function() {
+            var percent = $("span", this).attr("name");
+            var circumference = $("svg>circle:first-child", this).attr("r") * 2 * Math.PI;
+            var colorBG = percent < 0.4 ? "#FEF0F4" : percent < 0.8 ? "#FFFBF4" : "#F1FBF7";
+            var color = percent < 0.4 ? "#EC0B43" : percent < 0.8 ? "#FFBC42" : "#12BA7C";
+            $("svg>circle:first-child", this).attr("stroke", colorBG);
+            $("svg>circle:last-child", this).attr("stroke", color).attr("stroke-dasharray", circumference).attr("stroke-dashoffset", (1 - percent) * circumference);
+            $("span", this).text(Math.round(percent * 100) + "%");
 
-
-        for (let i = 0; i < circleProgressBars.length; i++) {
-            circleProgressBars[i].addEventListener('mouseenter', (event) => {
+            $(this).on('mouseenter', function() {
                 document.querySelector('#tooltip').style.display = "block";
-                document.querySelector('#tooltip').children[0].innerHTML = '12 of 40 spots booked';
+                document.querySelector('#tooltip').children[0].innerHTML = Math.round(40 * percent) + ' of 40 spots booked';
                 window.onmousemove = function(e) {
                     var x = e.clientX;
                     var y = e.clientY;
@@ -920,10 +1531,60 @@
                     document.querySelector('#tooltip').style.left = (x + 28) + 'px';
                 };
             })
-            circleProgressBars[i].addEventListener('mouseleave', () => {
+            $(this).on('mouseleave', () => {
                 document.querySelector('#tooltip').style.display = "none";
                 document.querySelector('#tooltip').children[0].innerHTML = '12312'
             })
+        });
+
+        $('.event-single-element').each(function() {
+            $(this).on('click', () => {
+                $('.desktop-modal').css("transform", "translate(0, -20px)");
+                $('#modal-container').css('display', 'flex').hide().fadeIn();
+                document.querySelector('body').style.overflow = "hidden";
+            })
+        });
+
+        $('#modalCloseBtn').on('click', () => {
+            $('.desktop-modal').css("transform", "translate(0, 0)");
+            $('#modal-container').fadeOut();
+            document.querySelector('body').style.overflow = "auto";
+        })
+
+        // status card
+        var salesCardValArray = [7.5, 82, 30, 35, 70, 56, 80];
+        var salesCard = document.getElementsByClassName('sales-card-right');
+        for (let i = 0; i < salesCard.length; i++) {
+            for (let j = 0; j < salesCard[i].children.length; j++) {
+                salesCard[i].children[j].children[1].style.height = salesCardValArray[j] + '%';
+            }
+        }
+
+        // orders card
+        var ordersCardValArray = [12, 15, 30, 10, 70, 56, 17];
+        var ordersCard = document.getElementsByClassName('orders-card-right');
+        for (let i = 0; i < ordersCard.length; i++) {
+            for (let j = 0; j < ordersCard[i].children.length; j++) {
+                ordersCard[i].children[j].children[1].style.height = ordersCardValArray[j] + '%';
+            }
+        }
+
+        // calendar views card
+        var calendarCardValArray = [50, 33, 56, 65, 70, 80, 80];
+        var calendarCard = document.getElementsByClassName('calendar-card-right');
+        for (let i = 0; i < calendarCard.length; i++) {
+            for (let j = 0; j < calendarCard[i].children.length; j++) {
+                calendarCard[i].children[j].children[1].style.height = calendarCardValArray[j] + '%';
+            }
+        }
+
+        // booking views card
+        var bookingCardValArray = [33, 87, 48, 56, 80, 33, 48];
+        var bookingCard = document.getElementsByClassName('booking-card-right');
+        for (let i = 0; i < bookingCard.length; i++) {
+            for (let j = 0; j < bookingCard[i].children.length; j++) {
+                bookingCard[i].children[j].children[1].style.height = bookingCardValArray[j] + '%';
+            }
         }
     </script>
 </body>

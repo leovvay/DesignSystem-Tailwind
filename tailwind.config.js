@@ -25,13 +25,19 @@ module.exports = {
         scrollbar: {
             0.5: '2px'
         },
+        screens: {
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+            'miniDesktop': '1366px',
+            'desktop': '1440px',
+            '2xl': '1536px',
+          },
         extend: {
             zIndex: {
                 1: '1',
                 2: '2'
-            },
-            screens: {
-                desktop: '1440px'
             },
             maxWidth: {
                 93.5: '23.375rem',
@@ -44,15 +50,21 @@ module.exports = {
             },
             width: {
                 7.5: '30px',
+                11: '44px',
                 79: '316px',
                 85: '340px',
                 93.5: '23.375rem',
+                125.5: '502px',
+                130: '32.5rem',
                 144: '36rem',
                 150: '37.5rem',
+                170: '680px',
+                259: '64.75rem',
                 328: '1312px'
             },
             height: {
                 7.5: '30px',
+                11: '44px',
                 18.25: '73px',
                 34.25: '137px'
             },
@@ -118,6 +130,7 @@ module.exports = {
                 4.5: "1.125rem",
                 5.5: "1.3125rem",
                 6.5: "1.625rem",
+                6.75: "1.6875rem",
                 7.5: "1.875rem",
                 13: "3.3125rem",
                 15: "3.75rem",
