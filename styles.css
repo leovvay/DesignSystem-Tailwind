@@ -1161,7 +1161,7 @@
         @apply flex flex-col space-y-0.25 py-0.25;
       }
       .divider {
-        @apply bg-primary-5 my-2;
+        @apply bg-primary-5;
       }
       .sub-content-title {
         @extend .heebo-font;
@@ -1626,7 +1626,7 @@
                 @apply flex flex-col space-y-0.25 py-0.25;
               }
               .divider {
-                @apply bg-primary-5 my-2;
+                @apply bg-primary-5;
               }
               .sub-content-title {
                 @extend .heebo-font;
