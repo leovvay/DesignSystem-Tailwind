@@ -76,6 +76,7 @@ module.exports = {
             minHeight: {
                 12: '3rem',
                 35.25: "141px",
+                50: "200px"
             },
             keyframes: {
                 pulse: {

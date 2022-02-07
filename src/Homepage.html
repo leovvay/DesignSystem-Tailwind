@@ -7,8 +7,7 @@
     <meta name="description" content="Basic HTML/Tailwind starter" />
     <meta name="author" content="Daily Dev Tips" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,600,700,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/icomoon.css" />
@@ -285,8 +284,7 @@
     <!-- content -->
     <section class="w-full flex flex-col items-center justify-center">
         <div class="w-full lg:w-259 miniDesktop:w-328 overflow-hidden lg:py-6.5 flex flex-col">
-            <div class="lg:w-full flex flex-col py-4 px-5 space-y-2 bg-white rounded-lg border-2 border-primary-5 mt-6 mx-2 lg:mx-0 lg:mt-0 lg:mb-8"
-                id="custom-message">
+            <div class="lg:w-full flex flex-col py-4 px-5 space-y-2 bg-white rounded-lg border-2 border-primary-5 mt-6 mx-2 lg:mx-0 lg:mt-0 lg:mb-8" id="custom-message">
                 <div>
                     <div class="w-full flex justify-between items-center">
                         <div class="flex items-center lg:space-x-2">
@@ -320,8 +318,7 @@
                 <!-- left -->
                 <div class="flex-1 flex flex-col space-y-8">
                     <!-- status cards section -->
-                    <div
-                        class="bg-white shadow-base rounded-2.5 p-4 miniDesktop:grid lg:flex lg:flex-col lg:space-y-4 miniDesktop:space-y-0 miniDesktop:grid-cols-2 miniDesktop:gap-4">
+                    <div class="bg-white shadow-base rounded-2.5 p-4 miniDesktop:grid lg:flex lg:flex-col lg:space-y-4 miniDesktop:space-y-0 miniDesktop:grid-cols-2 miniDesktop:gap-4">
                         <!-- sales card -->
                         <div class="status-card">
                             <div class="left-part">
@@ -515,16 +512,16 @@
                                 <div class="flex items-center space-x-4">
                                     <div class="flex space-x-1.5">
                                         <div class="flex space-x-1.5">
-                                            <span class="pagination-page-text">1</span>
+                                            <span class="pagination-page-text" id="current-page">1</span>
                                             <span class="pagination-page-text_disabled">/</span>
                                             <span class="pagination-page-text_disabled">3</span>
                                         </div>
                                     </div>
                                     <div class="flex space-x-2">
-                                        <button class="pagination-btn" disabled>
+                                        <button class="pagination-btn" id="prevPageBtn" disabled>
                                             <span class="icon-arrow-backward"></span>
                                         </button>
-                                        <button class="pagination-btn">
+                                        <button class="pagination-btn" id="nextPageBtn">
                                             <span class="icon-arrow-forward"></span>
                                         </button>
                                     </div>
@@ -532,7 +529,12 @@
                             </div>
                             <div class="divider"></div>
                         </div>
-                        <div class="flex flex-col space-y-2">
+                        <div class="min-h-50 flex items-center justify-center" id="spinner-loader">
+                            <div class="animate-spin w-15 h-15">
+                                <img src="./images/Spiner.svg" width="100%" height="100%" />
+                            </div>
+                        </div>
+                        <div class="flex-col space-y-2 hidden" id="event-list">
                             <div class="tooltip-content" id="tooltip">
                                 <span></span>
                             </div>
@@ -1326,6 +1328,25 @@
                             <span class="icon-arrow-forward"></span>
                         </button>
                     </div>
+                    <div class="flex items-center justify-center py-2">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex space-x-1.5">
+                                <div class="flex space-x-1.5">
+                                    <span class="pagination-page-text">1</span>
+                                    <span class="pagination-page-text_disabled">/</span>
+                                    <span class="pagination-page-text_disabled">3</span>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="pagination-btn" disabled>
+                                    <span class="icon-arrow-backward"></span>
+                                </button>
+                                <button class="pagination-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="mx-2 px-3 pt-6 pb-4 bg-white flex flex-col space-y-3 shadow-base rounded-2.5">
                     <div class="no-des-btn-line-card w-full">
@@ -1507,8 +1528,7 @@
             </div>
         </div>
         <div class="w-full h-34.25 lg:h-18.25"></div>
-        <div class="fixed bg-dark/20 top-0 left-0 right-0 bottom-0 hidden items-center overflow-auto z-1"
-            id="modal-container">
+        <div class="fixed bg-dark/20 top-0 left-0 right-0 bottom-0 hidden items-center overflow-auto z-1" id="modal-container">
             <div class="desktop-modal">
                 <div class="modal-header">
                     <span class="modal-title">Modal Name</span>
@@ -1560,11 +1580,43 @@
 
     <script src="./index.js"></script>
     <script>
+        const pageSize = 9;
+        const totalPageNum = 3;
+        var currentPageNum = 1;
+        var spinnerLoader = setTimeout(()=>{}, 0)
+        const showEventList = (page) => {
+            spinnerLoader = setTimeout(() => {
+                $('#spinner-loader').fadeOut('fast');
+                $('#event-list').fadeIn('slow');
+            }, 3000);
+            
+        }
+        showEventList(currentPageNum);
+        $('#prevPageBtn').on('click', () => {
+            clearTimeout(spinnerLoader);
+            $('#spinner-loader').show();
+            $('#event-list').hide();
+            if (currentPageNum > 1) currentPageNum--;
+            $('#current-page').text(currentPageNum);
+            $('#nextPageBtn').prop('disabled', false);
+            if (currentPageNum == 1) $('#prevPageBtn').prop('disabled', true);
+            showEventList(currentPageNum);
+        });
+        $('#nextPageBtn').on('click', () => {
+            clearTimeout(spinnerLoader);
+            $('#spinner-loader').show();
+            $('#event-list').hide();
+            if (currentPageNum < totalPageNum) currentPageNum++;
+            $('#current-page').text(currentPageNum);
+            $('#prevPageBtn').prop('disabled', false);
+            if (currentPageNum == totalPageNum) $('#nextPageBtn').prop('disabled', true);
+            showEventList(currentPageNum);
+        })
         $('#close-custom-message').on('click', () => {
             $('#custom-message').fadeOut();
         })
 
-        $('.circle-progressbar').each(function () {
+        $('.circle-progressbar').each(function() {
             const total = $(this).attr("data-total");
             const realVal = $(this).attr("data-val");
             var percent = realVal / total;
@@ -1575,10 +1627,10 @@
             $("svg>circle:last-child", this).attr("stroke", color).attr("stroke-dasharray", circumference).attr("stroke-dashoffset", (1 - percent) * circumference);
             $("span", this).text(Math.round(percent * 100) + "%");
 
-            $(this).on('mouseenter', function () {
+            $(this).on('mouseenter', function() {
                 document.querySelector('#tooltip').style.display = "block";
                 document.querySelector('#tooltip').children[0].innerHTML = realVal + ' of ' + total + ' spots booked';
-                window.onmousemove = function (e) {
+                window.onmousemove = function(e) {
                     var x = e.clientX;
                     var y = e.clientY;
                     document.querySelector('#tooltip').style.top = y + 'px';
@@ -1593,7 +1645,7 @@
             })
         });
 
-        $('.event-single-element').each(function () {
+        $('.event-single-element').each(function() {
             $(this).on('click', () => {
                 $('.desktop-modal').css("transform", "translate(0, 20px)");
                 $('#modal-container').css('display', 'flex').hide().fadeIn();

@@ -7,7 +7,6 @@ var mobileScrollTopBtn = document.querySelector("#mobileScrollTop")
 var rootElement = document.documentElement
 
 const scrollTop = () => {
-    console.log(1213)
     rootElement.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -35,7 +34,6 @@ var reportsListOpen = false;
 var marketingsListOpen = false;
 document.querySelector('#reports-list').children[0].addEventListener('click', () => {
     reportsListOpen = !reportsListOpen;
-    console.log(reportsListOpen)
     if (reportsListOpen) {
         document.querySelector('#reports-list').children[0].children[1].children[0].className = "icon-dropdown_up";
         $('#reports-content').slideDown();
