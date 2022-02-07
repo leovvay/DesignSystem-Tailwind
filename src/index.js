@@ -106,6 +106,8 @@ hamburgerBtn.addEventListener("click", () => {
 
 })
 
+const toastMsg = () => {}
+
 if (currentPage == "TabsTemplateToastAlert.html") {
     // animated alert
     var isToastOpened = false;
