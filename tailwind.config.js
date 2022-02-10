@@ -33,7 +33,7 @@ module.exports = {
             'miniDesktop': '1366px',
             'desktop': '1440px',
             '2xl': '1536px',
-          },
+        },
         extend: {
             zIndex: {
                 1: '1',
@@ -43,6 +43,7 @@ module.exports = {
                 93.5: '23.375rem',
                 64: '16rem',
                 99.75: '399px',
+                150: '600px',
                 '7.2xl': '1312px'
             },
             minWidth: {
@@ -74,7 +75,9 @@ module.exports = {
                 '90vh': '90vh'
             },
             minHeight: {
+                4.5: '18px',
                 12: '3rem',
+                13.5: '3.375rem',
                 35.25: "141px",
                 50: "200px"
             },
@@ -84,8 +87,8 @@ module.exports = {
                     '50%': { opacity: 0 }
                 },
                 slide: {
-                    '0%': {opacity: 0, maxHeight: 0},
-                    '100%': {opacity: 1, maxHeight: 'max-content'}
+                    '0%': { opacity: 0, maxHeight: 0 },
+                    '100%': { opacity: 1, maxHeight: 'max-content' }
                 }
             },
             animation: {

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Basic HTML/Tailwind starter</title>
+    <meta name="description" content="Basic HTML/Tailwind starter" />
+    <meta name="author" content="Daily Dev Tips" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,600,700,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/icomoon.css" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <div class="fixed bg-dark/20 top-0 left-0 right-0 bottom-0 flex items-center justify-center overflow-auto">
+        <div class="event-overlay">
+            <div class="overlay-header">
+                <div class="color-separator"></div>
+                <div class="top-controls">
+                    <div class="main-control">
+                        <div class="left-content">
+                            <div class="left-title">
+                                <span class="text">Timeslot</span>
+                                <span class="text">1</span>
+                            </div>
+                            <div class="button-group">
+                                <button class="small-minimal-icon-btn_disabled">
+                                    <span class="icon-arrow-backward"></span>
+                                </button>
+                                <button class="small-minimal-icon-btn">
+                                    <span class="icon-arrow-forward"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <span class="text">Print Roster</span>
+                    </div>
+                    <button class="small-minimal-icon-btn">
+                        <span class="icon-close"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="overlay-body">
+                <div class="overlay-body-content">
+                    <div class="top-content">
+                        <div class="top-text-content">
+                            <label class="green-label">open</label>
+                            <span class="icon-dotseparator"></span>
+                            <label>private</label>
+                        </div>
+                        <div class="bottom-text-content">
+                            <h3>MOPS Brush Lettering Planter Box Workshop</h3>
+                            <span>Flourish Studio and Classroom</span>
+                        </div>
+                    </div>
+                    <div class="bottom-content">
+                        <div class="time-info-panel">
+                            <label>Thu, 25 Feb 2021</label>
+                            <h2>5:00 PM - 6:30 PM</h2>
+                            <span>1hr 30 min</span>
+                        </div>
+                        <div class="button-group">
+                            <button class="minimal-mix-btn">
+                                <span class="icon-timer"></span>
+                                <label>Quick Order</label>
+                            </button>
+                            <button class="primary-mix-btn">
+                                <span class="icon-share"></span>
+                                <label>Share Event</label>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="roster-content">
+                    <div class="roster-header">
+                        <h3>Roster</h3>
+                        <div class="dropdown-group">
+                            <div class="big-dropdown">
+                                <button class="dropdown-btn">
+                                    <span>Contact</span>
+                                    <div class="dropdown-icon">
+                                        <span class="icon-dropdown"></span>
+                                    </div>
+                                </button>
+                                <!-- dropdown-menu -->
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-container">
+                                        <div class="main-content">
+                                            <button class="text-option">
+                                                <span class="text">Option A1</span>
+                                            </button>
+                                            <button class="text-option">
+                                                <span class="text">Option A2</span>
+                                            </button>
+                                            <button class="text-option">
+                                                <span class="text">Option A3</span>
+                                            </button>
+                                            <button class="text-option">
+                                                <span class="text">Option A4</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="big-dropdown">
+                                <button class="dropdown-btn">
+                                    <span>Download</span>
+                                    <div class="dropdown-icon">
+                                        <span class="icon-dropdown"></span>
+                                    </div>
+                                </button>
+                                <!-- dropdown-menu -->
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-container">
+                                        <div class="main-content">
+                                            <button class="text-option">
+                                                <span class="text">Option A1</span>
+                                            </button>
+                                            <button class="text-option">
+                                                <span class="text">Option A2</span>
+                                            </button>
+                                            <button class="text-option">
+                                                <span class="text">Option A3</span>
+                                            </button>
+                                            <button class="text-option">
+                                                <span class="text">Option A4</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="roster-body">
+                        <div class="roster-content-header">
+                            <div class="left-content">
+                                <div class="top-part">
+                                    <label>7 spots booked</label>
+                                    <span>(5 orders)</span>
+                                </div>
+                                <div class="bottom-part">
+                                    <div><span class="icon icon-dollar"></span></div>
+                                    <span>$26.30 Collected</span>
+                                </div>
+                            </div>
+                            <div class="right-content">
+                                <label class="info-text">23/30 spots left</label>
+                                <button class="small-minimal-mix-btn">
+                                    <span class="icon-edit"></span>
+                                    <label>Edit</label>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="roster-content-body">
+                            <table class="">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><span>Order By</span></th>
+                                        <th scope="col">Attendees</th>
+                                        <th scope="col">Payment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Adam Sandler</td>
+                                        <td>
+                                            <span>Adam Sandler</span>
+                                            <span>Jessica Alba</span>
+                                            <span>Bruce Willis</span>
+                                        </td>
+                                        <td>
+                                            <label class="deposit-paid">
+                                                <span class="icon-add-circled"></span>
+                                                <span>$40.00</span>
+                                            </label>
+                                            <button class="small-minimal-icon-btn">
+                                                <span class="icon-arrow-forward"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>Amy Adams</span><label>1</label></td>
+                                        <td>
+                                            <span>Amy Adams</span>
+                                        </td>
+                                        <td>
+                                            <label class="fully-paid">
+                                                <span class="icon icon-check-circled"></span>
+                                                <span>$32.19</span>
+                                            </label>
+                                            <button class="small-minimal-icon-btn">
+                                                <span class="icon-arrow-forward"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>Jack Ma</span><label>3</label></td>
+                                        <td>
+                                            <span>Will Smith</span>
+                                            <span>Tom Hanks</span>
+                                            <span>Bruce Willis</span>
+                                        </td>
+                                        <td>
+                                            <label class="fully-paid">
+                                                <span class="icon icon-check-circled"></span>
+                                                <span>$42.05</span>
+                                            </label>
+                                            <button class="small-minimal-icon-btn">
+                                                <span class="icon-arrow-forward"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>Jimi Hendrix</span><label>3</label></td>
+                                        <td>
+                                            <span>Will Smith</span>
+                                            <span>Tom Hanks</span>
+                                            <span>Bruce Willis</span>
+                                        </td>
+                                        <td>
+                                            <label class="fully-paid">
+                                                <span class="icon icon-check-circled"></span>
+                                                <span>$149.40</span>
+                                            </label>
+                                            <button class="small-minimal-icon-btn">
+                                                <span class="icon-arrow-forward"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>Lester John</span><label>3</label></td>
+                                        <td>
+                                            <span>Tom Hankson</span>
+                                            <span>Bruce Willisson</span>
+                                            <span>Lester John</span>
+                                        </td>
+                                        <td>
+                                            <label class="deposit-paid">
+                                                <span class="icon icon-check-circled"></span>
+                                                <span>$100.00</span>
+                                            </label>
+                                            <button class="small-minimal-icon-btn">
+                                                <span class="icon-arrow-forward"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>Jackob Maff</span><label>2</label></td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                            <label class="fully-paid">
+                                                <span class="icon icon-check-circled"></span>
+                                                <span>$104.20</span>
+                                            </label>
+                                            <button class="small-minimal-icon-btn">
+                                                <span class="icon-arrow-forward"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-content">
+                    <div class="tabs-header">
+                        <button class="tab tab_active">
+                            <h3>Settings</h3>
+                            <div></div>
+                        </button>
+                        <button class="tab">
+                            <h3>Notes (2)</h3>
+                            <div></div>
+                        </button>
+                        <button class="tab">
+                            <h3>Listing</h3>
+                            <div></div>
+                        </button>
+                    </div>
+                    <div class="tabs-body">
+                        <div class="tab-settings" id="tab-settings">
+                            <div class="main-content">
+                                <button class="minimal-mix-btn">
+                                    <span class="icon-edit"></span>
+                                    <label>Edit Timeslot</label>
+                                </button>
+                                <button class="minimal-mix-btn">
+                                    <span class="icon-lock"></span>
+                                    <label>Disable Sales</label>
+                                </button>
+                                <button class="minimal-mix-btn">
+                                    <span class="icon-trash"></span>
+                                    <label>Delete</label>
+                                </button>
+                            </div>
+                            <div class="delete-message-content">
+                                <label class="text-group">
+                                    <span class="medium-text">Do you want to delete this timeslot?</span>
+                                    <span class="sm-label-regular">Warning! This action cannot be undone</span>
+                                </label>
+                                <div class="button-group">
+                                    <button class="minimal-mix-btn">
+                                        <span class="icon-check"></span>
+                                        <label>Yes, delete timeslot</label>
+                                    </button>
+                                    <button class="primary-mix-btn">
+                                        <span class="icon-close"></span>
+                                        <label>No, don’t delete</label>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-notes"></div>
+                        <div id="tab-listing"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.tab').on('click', function(e) {
+                $(this).addClass('tab_active').siblings().removeClass('tab_active');
+            });
+        });
+    </script>
+</body>
