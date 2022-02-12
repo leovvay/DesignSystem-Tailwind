@@ -35,7 +35,7 @@
                                 </button>
                             </div>
                         </div>
-                        <span class="text">Print Roster</span>
+                        <a href="" class="text-link"><label>Print Roster</label></a>
                     </div>
                     <button class="small-minimal-icon-btn">
                         <span class="icon-close"></span>
@@ -43,6 +43,8 @@
                 </div>
             </div>
             <div class="divider"></div>
+            <div class="mobile-tag"><a href="" class="text-link"><label>Print Roster</label></a></div>
+            <div class="divider sm:hidden"></div>
             <div class="overlay-body">
                 <div class="overlay-body-content">
                     <div class="top-content">
@@ -67,10 +69,45 @@
                                 <span class="icon-timer"></span>
                                 <label>Quick Order</label>
                             </button>
-                            <button class="primary-mix-btn">
+                            <button class="primary-mix-btn" id="open-share-event">
                                 <span class="icon-share"></span>
                                 <label>Share Event</label>
                             </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="share-event">
+                    <div class="no-des-btn-line-card">
+                        <div class="card-main-content">
+                            <span>Share Event</span>
+                            <button class="small-minimal-icon-btn" id="close-share-event">
+                                <span class="icon-close"></span>
+                            </button>
+                        </div>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="share-event-content">
+                        <div class="share-event-type">
+                            <span class="bold-text">Share a Booking Link</span>
+                            <label>
+                                <div class="small-icon-bg">
+                                    <span class="icon-note"></span>
+                                </div>
+                                <span class="sm-label-regular">Share URL in emails and on social media</span>
+                            </label>
+                        </div>
+                        <div class="event-link-container">
+                            <span class="sm-label-regular">https://app.getoccasion.com/p/n/G2QDskLN?utm</span>
+                            <div class="button-group">
+                                <button class="minimal-mix-btn sm:small-minimal-mix-btn">
+                                    <span class="icon-open"></span>
+                                    <label>Open</label>
+                                </button>
+                                <button class="minimal-mix-btn sm:small-minimal-mix-btn">
+                                    <span class="icon-copy"></span>
+                                    <label>Copy Link</label>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -298,10 +335,55 @@
                                     <label>Delete</label>
                                 </button>
                             </div>
+                            <div class="delete-message-content" id="delete-message-content">
+                                <label class="text-group">
+                                    <span class="medium-text" id="delete-msg-title">Do you want to delete this
+                                        timeslot?</span>
+                                    <span class="sm-label-regular">Warning! This action cannot be undone</span>
+                                </label>
+                                <div class="button-group">
+                                    <button class="minimal-mix-btn">
+                                        <span class="icon-check"></span>
+                                        <label id="delete-btn-label">Yes, delete timeslot</label>
+                                    </button>
+                                    <button class="primary-mix-btn">
+                                        <span class="icon-close"></span>
+                                        <label>No, don’t delete</label>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-notes" id="tab-notes">
-                            <div class="note-list"></div>
-                            <form class="create-note">
+                            <div class="note-list">
+                                <!-- <div class="note-item">
+                                    <div class="note-settings">
+                                        <div class="note-time-label">
+                                            <span class="sm-label-regular">Mar 23, 2021 02:30 PM</span>
+                                        </div>
+                                        <div class="button-group">
+                                            <button class="small-minimal-icon-btn">
+                                                <span class="icon-edit"></span>
+                                            </button>
+                                            <button class="small-minimal-icon-btn remove-note">
+                                                <span class="icon-trash"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="note-text">
+                                        <div></div>
+                                        <label>
+                                            <span class="regular-text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit,
+                                                sed do eiusd tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis
+                                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                consequat.</span>
+                                        </label>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <form class="create-note" id="create-note">
                                 <div class="create-label">
                                     <label>
                                         <div class="small-icon-bg">
@@ -311,14 +393,31 @@
                                     </label>
                                     <span class="sm-label-regular">Write a message to yourself about this item</span>
                                 </div>
-                                <textarea name="note" id="" cols="" rows="5"></textarea>
+                                <textarea name="note" id="new-note" cols="" rows="5" required></textarea>
                                 <div class="submit-btn-container">
                                     <button type="submit" class="primary-mix-btn">
-                                        <span class="icon-add-circled"></span>
-                                        <label>Add note</label>
+                                        <span class="icon icon-add-circled"></span>
+                                        <span class="text">Add note</span>
                                     </button>
                                 </div>
                             </form>
+                            <div class="delete-message-content" id="delete-note-content">
+                                <label class="text-group">
+                                    <span class="medium-text" id="delete-msg-title">Do you want to delete this
+                                        note?</span>
+                                    <span class="sm-label-regular">Warning! This action cannot be undone</span>
+                                </label>
+                                <div class="button-group">
+                                    <button class="minimal-mix-btn">
+                                        <span class="icon-check"></span>
+                                        <label id="delete-btn-label">Yes, delete note</label>
+                                    </button>
+                                    <button class="primary-mix-btn">
+                                        <span class="icon-close"></span>
+                                        <label>No, don’t delete</label>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-listing" id="tab-listing">
                             <label>
@@ -337,22 +436,6 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="delete-message-content">
-                            <label class="text-group">
-                                <span class="medium-text" id="delete-msg-title">title</span>
-                                <span class="sm-label-regular">Warning! This action cannot be undone</span>
-                            </label>
-                            <div class="button-group">
-                                <button class="minimal-mix-btn">
-                                    <span class="icon-check"></span>
-                                    <label id="delete-btn-label"></label>
-                                </button>
-                                <button class="primary-mix-btn">
-                                    <span class="icon-close"></span>
-                                    <label>No, don’t delete</label>
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -361,6 +444,14 @@
 
     <script>
         $(document).ready(function() {
+            $('#open-share-event').on('click', function() {
+                $('.overlay-body-content').after($('.share-event').css('display', 'flex').hide().slideDown());
+            });
+
+            $('#close-share-event').on('click', function() {
+                $('.share-event').slideUp();
+            });
+
             $('.tab').on('click', function(e) {
                 $(this).addClass('tab_active').siblings().removeClass('tab_active');
                 const tab_content_id = $(this).attr('data-id');
@@ -368,16 +459,50 @@
                 $('.delete-message-content').hide();
             });
 
-            function deleteMsg(title) {
-                $('#delete-msg-title').text('Do you want to delete this ' + title + '?');
-                $('#delete-btn-label').text('Yes, delete ' + title);
-            }
-
             $('.delete-msg-event').on('click', function(e) {
-                const title = $(this).attr('data-title');
-                deleteMsg(title);
-                $('.delete-message-content').css('display', 'flex');
-                $(this).parent().after($('.delete-message-content'));
+                $(this).parent().after($('#delete-message-content').css('display', 'flex').hide().fadeIn());
+            });
+
+            function formatCurrentTime() {
+                const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                const currentTime = new Date();
+                var currentHour = currentTime.getHours();
+                const ampm = currentHour < 12 ? 'am' : 'pm';
+                currentHour = currentHour % 12 ? currentHour : 12;
+                const currentMinute = currentTime.getMinutes() < 10 ? '0' + currentTime.getMinutes() : currentTime.getMinutes();
+                return (monthNames[currentTime.getMonth()]) + " " + currentTime.getDate() + ", " + currentTime.getFullYear() + " " + currentHour + ":" + currentMinute + " " + ampm;
+            };
+
+            $('#create-note').on('submit', function(e) {
+                e.preventDefault();
+                const text = $('#new-note').val();
+                const timenow = formatCurrentTime();
+                $('.note-list').append(`<div class="note-item">
+                    <div class="note-settings">
+                        <div class="note-time-label">
+                            <span class="sm-label-regular">` + timenow + `</span>
+                        </div>
+                        <div class="button-group">
+                            <button class="small-minimal-icon-btn">
+                                <span class="icon-edit"></span>
+                            </button>
+                            <button class="small-minimal-icon-btn remove-note">
+                                <span class="icon-trash"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="note-text">
+                        <div></div>
+                        <label>
+                            <span class="regular-text">` + text + `</span>
+                        </label>
+                    </div>
+                </div>`);
+            })
+
+            $(document).delegate('.remove-note', 'click', function() {
+                console.log('sdfasdas')
+                $(this).parent().parent().after($('#delete-note-content').css('display', 'flex').hide().fadeIn());
             });
         });
     </script>

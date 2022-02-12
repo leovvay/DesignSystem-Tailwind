@@ -124,7 +124,7 @@
   /* primary buttons */
   .default-primary-btn {
     @extend .heebo-font;
-    @apply w-max bg-primary rounded-lg text-white font-medium leading-normal;
+    @apply w-max bg-primary rounded-lg text-white font-medium leading-normal flex items-center justify-center;
     &:focus {
       @apply outline-none ring-2 ring-secondary-40;
     }
@@ -139,6 +139,12 @@
     }
     span {
       @apply text-base leading-none;
+    }
+    .icon {
+      @apply text-base leading-none;
+    }
+    .text {
+      @apply text-base leading-normal font-medium;
     }
   }
   .primary-btn {
@@ -168,7 +174,7 @@
   /* disabled primary buttons */
   .default-primary-btn_disabled {
     @extend .heebo-font;
-    @apply bg-primary-5 rounded-lg text-primary-20 font-medium leading-normal cursor-not-allowed;
+    @apply bg-primary-5 rounded-lg text-primary-20 font-medium leading-normal cursor-not-allowed flex items-center justify-center;
     &:focus {
       @apply outline-none;
     }
@@ -208,7 +214,7 @@
   /* minimal buttons */
   .default-minimal-btn {
     @extend .heebo-font;
-    @apply w-max bg-white rounded-lg border-2 border-solid border-primary-5 text-primaryDark font-medium leading-normal flex items-center;
+    @apply w-max bg-white rounded-lg border-2 border-solid border-primary-5 text-primaryDark font-medium leading-normal flex items-center justify-center;
     &:focus {
       @apply bg-primary-5 outline-none border-primary-40;
     }
@@ -255,7 +261,7 @@
   /* disabled minimal buttons */
   .default-minimal-btn_disabled {
     @extend .heebo-font;
-    @apply bg-white rounded-lg border-2 border-solid border-primary-5 text-primary-20 font-medium leading-normal cursor-not-allowed flex items-center;
+    @apply bg-white rounded-lg border-2 border-solid border-primary-5 text-primary-20 font-medium leading-normal cursor-not-allowed flex items-center justify-center;
     &:focus {
       @apply outline-none;
     }
@@ -1180,7 +1186,7 @@
     @apply relative inline-block w-max;
     .dropdown-btn {
       @extend .heebo-font;
-      @apply inline-flex items-center py-1.5 pl-3.5 pr-1.5 space-x-2 text-primaryDark text-base leading-normal font-medium rounded-lg border-2 border-primary-5 overflow-auto;
+      @apply inline-flex items-center py-1.5 pl-3.5 pr-1.5 space-x-2 justify-between text-primaryDark text-base leading-normal font-medium rounded-lg border-2 border-primary-5 overflow-auto;
       div {
         @apply p-1.9 text-lg leading-none bg-primary-5 rounded-lg flex items-center;
       }
@@ -1880,7 +1886,7 @@
 
   /* event overlay */
   .event-overlay {
-    @apply w-150 flex flex-col bg-background border border-dark-5 rounded-lg shadow-lg;
+    @apply w-full sm:w-150 flex flex-col bg-background border border-dark-5 rounded-lg shadow-lg overflow-hidden;
     .overlay-header {
       @apply flex flex-col bg-white;
       .color-separator {
@@ -1902,6 +1908,9 @@
           .text {
             @extend .heebo-font;
             @apply text-base leading-normal text-primaryDark font-medium;
+          }
+          .text-link {
+            @apply hidden sm:block;
           }
         }
       }
@@ -1941,10 +1950,10 @@
           }
         }
         .bottom-content {
-          @apply flex items-center justify-between;
+          @apply flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0;
           .time-info-panel {
             @extend .heebo-font;
-            @apply flex flex-col py-4 pl-5 pr-8 bg-white border rounded-2.5 border-primary-5;
+            @apply w-full sm:w-auto flex flex-col py-4 pl-5 pr-8 bg-white border rounded-2.5 border-primary-5;
             label {
               @apply text-base leading-relaxed font-medium text-dark;
             }
@@ -1957,20 +1966,32 @@
             }
           }
           .button-group {
-            @apply flex flex-col space-y-3;
+            @apply w-full sm:w-auto flex sm:flex-col space-x-4 sm:space-x-0 sm:space-y-3;
+            button {
+              @apply flex-1 sm:flex-auto;
+            }
           }
         }
       }
       .roster-content {
         @apply flex flex-col space-y-2 bg-white;
         .roster-header {
-          @apply p-4 flex items-center justify-between;
+          @apply p-4 flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:items-center sm:justify-between;
           h3 {
             @extend .mont-font;
             @apply text-primary font-extrabold;
           }
           .dropdown-group {
-            @apply flex items-center space-x-4;
+            @apply w-full sm:w-auto flex items-center space-x-4;
+            .big-dropdown {
+              @apply flex-1 sm:flex-auto;
+              .dropdown-btn {
+                @apply w-full;
+              }
+              .text-option {
+                @apply min-w-max sm:min-w-61;
+              }
+            }
           }
         }
         .divider {
@@ -1980,7 +2001,7 @@
           @extend .heebo-font;
           @apply flex flex-col space-y-4;
           .roster-content-header {
-            @apply px-4 py-2 flex items-center justify-between;
+            @apply px-4 py-2 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:items-center sm:justify-between;
             .left-content {
               @apply flex flex-col space-y-1;
               .top-part {
@@ -2013,6 +2034,9 @@
             @apply flex items-center px-2;
             table {
               @apply w-full;
+              th:last-child {
+                @apply hidden sm:block;
+              }
               tr {
                 @apply p-2 flex items-center space-x-6;
                 th:nth-child(2n+1), td:nth-child(2n+1) {
@@ -2044,7 +2068,7 @@
                     @apply border-l-2 border-primary-5 pl-3.5 flex flex-col space-y-1.9 text-sm leading-normal font-normal text-dark;
                   }
                   td:last-child {
-                    @apply flex items-center justify-between;
+                    @apply hidden sm:flex items-center justify-between;
                     button {
                       @apply hidden;
                     }
@@ -2074,19 +2098,9 @@
       .tabs-content {
         @apply flex flex-col bg-white pb-4;
         .tabs-header {
-          @apply p-4 flex items-center space-x-10;
-          .modal-nav-tab {
-            @extend .mont-font;
-            @apply py-1.25 flex flex-col space-y-2 text-primary-80 font-extrabold cursor-pointer;
-            div {
-              @apply bg-primary-5 rounded h-0.5;
-            }
-          }
-          .modal-nav-tab-active {
-            @apply text-primary;
-            div {
-              @apply bg-secondary;
-            }
+          @apply p-4 flex items-center space-x-10 overflow-x-auto;
+          .tab {
+            @apply whitespace-nowrap;
           }
         }
         .tabs-body {
@@ -2094,11 +2108,17 @@
           .tab-settings {
             @apply hidden flex-col;
             .main-content {
-              @apply flex items-center space-x-4.5 mb-3;
+              @apply flex flex-col sm:flex-row sm:items-center sm:space-x-4.5 sm:mb-3 space-y-2.5 sm:space-y-0;
+              button {
+                @apply w-full sm:w-auto;
+              }
             }
           }
           .tab-notes {
-            @apply hidden flex-col space-y-6;
+            @apply hidden flex-col;
+            .note-list {
+              @apply flex flex-col;
+            }
             .create-note {
               @apply flex flex-col space-y-4;
               .create-label {
@@ -2117,7 +2137,10 @@
                 @apply w-full px-3 py-2 border border-primary-20 rounded min-h-16 h-max bg-white;
               }
               .submit-btn-container {
-                @apply flex justify-end;
+                @apply flex sm:justify-end;
+                button {
+                  @apply w-full sm:w-auto;
+                }
               }
             }
           }
@@ -2130,7 +2153,10 @@
               }
             }
             .button-group {
-              @apply flex items-center space-x-4;
+              @apply w-full sm:w-auto flex items-center space-x-1 sm:space-x-4;
+              button {
+                @apply flex-1 sm:flex-none sm:w-max;
+              }
             }
           }
           .active-content {
@@ -2147,7 +2173,34 @@
       @apply flex flex-col;
     }
     .button-group {
+      @apply flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:items-center sm:space-x-4;
+      button {
+        @apply w-full sm:w-auto;
+      }
+    }
+  }
+
+  /* note element */
+  .note-item {
+    @extend .heebo-font;
+    @apply flex flex-col space-y-3 mb-6;
+    .note-settings {
       @apply flex items-center space-x-4;
+      .note-time-label {
+        @apply flex-1 bg-background rounded px-3 py-2 text-dark-80;
+      }
+      .button-group {
+        @apply flex items-center space-x-2;
+      }
+    }
+    .note-text {
+      @apply flex items-center space-x-4;
+      div {
+        @apply w-0.5 h-full bg-primary-5;
+      }
+      label {
+        @apply py-1 whitespace-normal;
+      }
     }
   }
   /* payment status */
@@ -2172,5 +2225,41 @@
   .refunded {
     @extend .default-payment-status;
     @apply text-violet;
+  }
+
+  /* share event */
+  .share-event {
+    @apply hidden flex-col pt-3 space-y-6 bg-white;
+    .no-des-btn-line-card {
+      @apply w-full px-4;
+    }
+    .share-event-content {
+      @apply flex flex-col pb-6 px-4 space-y-6;
+      .share-event-type {
+        @apply flex flex-col space-y-1;
+        label {
+          @apply flex items-center space-x-2;
+          .sm-label-regular {
+            @apply text-dark-80;
+          }
+        }
+      }
+      .event-link-container {
+        @apply flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:items-center sm:pl-3 sm:pr-2 sm:py-2 sm:justify-between sm:bg-background sm:rounded-lg sm:border sm:border-primary-5;
+        .sm-label-regular {
+          @apply text-primaryDark sm:max-w-[320px] py-2 sm:py-0 pl-4 sm:pl-0 pr-3 sm:pr-3 bg-background sm:bg-none rounded-lg sm:rounded-none border border-primary-5 sm:border-none whitespace-nowrap overflow-hidden;
+        }
+        .button-group {
+          @apply w-full sm:w-auto flex items-center space-x-1;
+          button {
+            @apply flex-1 sm:flex-auto;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-tag {
+    @apply sm:hidden bg-white w-full p-4 flex items-center;
   }
 }
