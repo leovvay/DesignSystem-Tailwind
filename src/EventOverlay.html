@@ -354,35 +354,7 @@
                             </div>
                         </div>
                         <div class="tab-notes" id="tab-notes">
-                            <div class="note-list">
-                                <!-- <div class="note-item">
-                                    <div class="note-settings">
-                                        <div class="note-time-label">
-                                            <span class="sm-label-regular">Mar 23, 2021 02:30 PM</span>
-                                        </div>
-                                        <div class="button-group">
-                                            <button class="small-minimal-icon-btn">
-                                                <span class="icon-edit"></span>
-                                            </button>
-                                            <button class="small-minimal-icon-btn remove-note">
-                                                <span class="icon-trash"></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="note-text">
-                                        <div></div>
-                                        <label>
-                                            <span class="regular-text">Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing elit,
-                                                sed do eiusd tempor
-                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                quis
-                                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                consequat.</span>
-                                        </label>
-                                    </div>
-                                </div> -->
-                            </div>
+                            <div class="note-list"></div>
                             <form class="create-note" id="create-note">
                                 <div class="create-label">
                                     <label>
@@ -442,6 +414,7 @@
         </div>
     </div>
 
+    <script src="./index.js"></script>
     <script>
         $(document).ready(function() {
             $('#open-share-event').on('click', function() {
@@ -462,16 +435,6 @@
             $('.delete-msg-event').on('click', function(e) {
                 $(this).parent().after($('#delete-message-content').css('display', 'flex').hide().fadeIn());
             });
-
-            function formatCurrentTime() {
-                const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                const currentTime = new Date();
-                var currentHour = currentTime.getHours();
-                const ampm = currentHour < 12 ? 'am' : 'pm';
-                currentHour = currentHour % 12 ? currentHour : 12;
-                const currentMinute = currentTime.getMinutes() < 10 ? '0' + currentTime.getMinutes() : currentTime.getMinutes();
-                return (monthNames[currentTime.getMonth()]) + " " + currentTime.getDate() + ", " + currentTime.getFullYear() + " " + currentHour + ":" + currentMinute + " " + ampm;
-            };
 
             $('#create-note').on('submit', function(e) {
                 e.preventDefault();

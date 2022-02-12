@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer base {
   h1 {
-    @apply text-3xl;
+    @apply text-3xl leading-relaxed;
   }
   h2 {
     @apply text-2xl leading-relaxed;
@@ -1950,7 +1950,7 @@
           }
         }
         .bottom-content {
-          @apply flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0;
+          @apply flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0;
           .time-info-panel {
             @extend .heebo-font;
             @apply w-full sm:w-auto flex flex-col py-4 pl-5 pr-8 bg-white border rounded-2.5 border-primary-5;
@@ -1970,6 +1970,51 @@
             button {
               @apply flex-1 sm:flex-auto;
             }
+          }
+        }
+        .order-manage {
+          @apply flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:items-center sm:justify-between py-3 sm:py-2 px-4 bg-white rounded-2.5 border border-primary-5;
+          label {
+            @apply pt-1.25 flex flex-col;
+            .bold-text {
+              @apply text-primaryDark;
+            }
+            .sm-label-regular {
+              @apply text-dark-80;
+            }
+          }
+          .button-group {
+            @apply flex items-center space-x-4;
+            button {
+              @apply flex-1;
+            }
+          }
+        }
+      }
+      .customer-info {
+        @apply flex flex-col pt-4 pb-2 space-y-3 bg-white;
+        .no-des-btn-line-card {
+          @apply w-full px-4;
+        }
+        .customer-accountInfo {
+          @apply pl-4 py-2;
+          .top-content {
+            @apply flex items-center space-x-3;
+          }
+          .bottom-content {
+            @apply flex items-center space-x-3 text-dark-80;
+            .icon {
+              @apply text-black text-dotIcon leading-none;
+            }
+          }
+        }
+        .customer-personalInfo {
+          @apply px-2 flex flex-col space-y-2;
+          .child {
+            @apply flex flex-col space-y-1 p-2 rounded-lg;
+          }
+          .child:nth-child(2n) {
+            @apply bg-background;
           }
         }
       }
@@ -2261,5 +2306,137 @@
 
   .mobile-tag {
     @apply sm:hidden bg-white w-full p-4 flex items-center;
+  }
+
+  .payment-info-group {
+    @apply flex flex-col w-[180px];
+    label {
+      @extend .heebo-font;
+      @apply flex items-center space-x-2 text-base leading-relaxed font-bold;
+      .icon {
+        @apply text-xl leading-none;
+      }
+    }
+    h1 {
+      @extend .mont-font;
+      @apply font-extrabold text-dark;
+    }
+    .reason {
+      @extend .heebo-font;
+      @apply text-dark-80 font-bold text-lg leading-relaxed;
+    }
+  }
+
+  .full-pay-group, .await-pay-group {
+    @extend .payment-info-group;
+    label {
+      @apply text-primary;
+    }
+  }
+
+  .canceled-pay-group, .failed-pay-group {
+    @extend .payment-info-group;
+    label {
+      @apply text-red;
+    }
+  }
+
+  .deposit-pay-group {
+    @extend .payment-info-group;
+    label {
+      @apply text-secondary;
+    }
+  }
+
+  .refund-pay-group {
+    @extend .payment-info-group;
+    label {
+      @apply text-violet;
+    }
+  }
+
+  /* pricing and information */
+  .pricing-information {
+    @apply flex flex-col pb-2 space-y-1 bg-white;
+    .tab-bar {
+      @apply p-4 flex items-center space-x-10 whitespace-nowrap overflow-x-auto;
+    }
+    .pricing-tab-content {
+      @apply flex flex-col space-y-1;
+      .pricing-questions {
+        @apply px-4 flex items-center justify-between;
+      }
+      .pricing-answers {
+        @apply px-2 space-y-2 flex flex-col;
+        .child {
+          @apply p-2 flex flex-col space-y-1 rounded-lg;
+          label {
+            @apply flex items-center space-x-2;
+            span:first-child {
+              @apply text-primary-60;
+            }
+          }
+        }
+        .child:nth-child(2n) {
+          @apply bg-background;
+        }
+      }
+    }
+  }
+
+  /* transactions */
+  .transactions {
+    @apply flex flex-col bg-white pt-4 pb-2 space-y-3;
+    .no-des-btn-line-card {
+      @apply w-full px-4;
+    }
+    .transactions-content {
+      @apply px-2 space-y-2 flex flex-col;
+      .headline {
+        @apply px-2 flex items-center justify-between;
+        span:last-child {
+          @apply w-32.5 sm:w-40;
+        }
+      }
+      .child {
+        @apply flex items-center px-2 py-3 rounded-lg justify-between;
+        .type-content {
+          @apply flex items-center space-x-3;
+          label {
+            @apply flex flex-col;
+            .sm-label-regular {
+              @apply text-dark-80;
+            }
+          }
+        }
+        .payment-content {
+          @apply w-32.5 sm:w-40 flex flex-col space-y-0.5;
+          label {
+            @apply text-sm leading-none text-primaryDark flex items-center space-x-2;
+            .sm-label-regular {
+              @apply text-dark-80;
+            }
+          }
+        }
+        .payment {
+          .sm-label-bold {
+            @apply text-greenDark;
+          }
+        }
+        .refund {
+          .sm-label-bold {
+            @apply text-red;
+          }
+        }
+        .failed {
+          .sm-label-bold {
+            @apply text-dark-60;
+          }
+        }
+      }
+      .child:nth-child(2n+1) {
+        @apply bg-background;
+      }
+    }
   }
 }

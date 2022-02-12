@@ -157,3 +157,13 @@ if (currentPage == "OverlayModal.html") {
         document.querySelector('body').style.overflow = "auto";
     })
 }
+
+function formatCurrentTime() {
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const currentTime = new Date();
+    var currentHour = currentTime.getHours();
+    const ampm = currentHour < 12 ? 'am' : 'pm';
+    currentHour = currentHour % 12 ? currentHour : 12;
+    const currentMinute = currentTime.getMinutes() < 10 ? '0' + currentTime.getMinutes() : currentTime.getMinutes();
+    return (monthNames[currentTime.getMonth()]) + " " + currentTime.getDate() + ", " + currentTime.getFullYear() + " " + currentHour + ":" + currentMinute + " " + ampm;
+};
