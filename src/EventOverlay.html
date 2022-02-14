@@ -18,7 +18,6 @@
     <div class="bg-dark/20 top-0 left-0 right-0 bottom-0 flex items-center justify-center overflow-auto py-8">
         <div class="event-overlay">
             <div class="overlay-header">
-                <div class="color-separator"></div>
                 <div class="top-controls">
                     <div class="main-control">
                         <div class="left-content">
@@ -115,7 +114,7 @@
                     <div class="roster-header">
                         <h3>Roster</h3>
                         <div class="dropdown-group">
-                            <div class="big-dropdown">
+                            <div class="small-dropdown">
                                 <button class="dropdown-btn">
                                     <span>Contact</span>
                                     <div class="dropdown-icon">
@@ -127,22 +126,16 @@
                                     <div class="dropdown-container">
                                         <div class="main-content">
                                             <button class="text-option">
-                                                <span class="text">Option A1</span>
+                                                <span class="text">Email Attendees</span>
                                             </button>
                                             <button class="text-option">
-                                                <span class="text">Option A2</span>
-                                            </button>
-                                            <button class="text-option">
-                                                <span class="text">Option A3</span>
-                                            </button>
-                                            <button class="text-option">
-                                                <span class="text">Option A4</span>
+                                                <span class="text">Text Attendees</span>
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="big-dropdown">
+                            <div class="small-dropdown">
                                 <button class="dropdown-btn">
                                     <span>Download</span>
                                     <div class="dropdown-icon">
@@ -154,16 +147,13 @@
                                     <div class="dropdown-container">
                                         <div class="main-content">
                                             <button class="text-option">
-                                                <span class="text">Option A1</span>
+                                                <span class="text">Download PDF</span>
                                             </button>
                                             <button class="text-option">
-                                                <span class="text">Option A2</span>
+                                                <span class="text">Print</span>
                                             </button>
                                             <button class="text-option">
-                                                <span class="text">Option A3</span>
-                                            </button>
-                                            <button class="text-option">
-                                                <span class="text">Option A4</span>
+                                                <span class="text">Orders Report</span>
                                             </button>
                                         </div>
                                     </div>
@@ -203,7 +193,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Adam Sandler</td>
+                                        <td><span>Adam Sandler</span><label>3</label></td>
                                         <td>
                                             <span>Adam Sandler</span>
                                             <span>Jessica Alba</span>
@@ -287,7 +277,7 @@
                                     </tr>
                                     <tr>
                                         <td><span>Jackob Maff</span><label>2</label></td>
-                                        <td>
+                                        <td><span class="uppercase-label-medium text-dark-20">EMPTY</span>
                                         </td>
                                         <td>
                                             <label class="fully-paid">
@@ -346,7 +336,7 @@
                                         <span class="icon-check"></span>
                                         <label id="delete-btn-label">Yes, delete timeslot</label>
                                     </button>
-                                    <button class="primary-mix-btn">
+                                    <button class="primary-mix-btn cancel-remove">
                                         <span class="icon-close"></span>
                                         <label>No, don’t delete</label>
                                     </button>
@@ -384,7 +374,7 @@
                                         <span class="icon-check"></span>
                                         <label id="delete-btn-label">Yes, delete note</label>
                                     </button>
-                                    <button class="primary-mix-btn">
+                                    <button class="primary-mix-btn cancel-remove">
                                         <span class="icon-close"></span>
                                         <label>No, don’t delete</label>
                                     </button>
@@ -436,6 +426,10 @@
                 $(this).parent().after($('#delete-message-content').css('display', 'flex').hide().fadeIn());
             });
 
+            $('.cancel-remove').on('click', function(){
+                $(this).parent().parent().fadeOut('fast');
+            })
+
             $('#create-note').on('submit', function(e) {
                 e.preventDefault();
                 const text = $('#new-note').val();
@@ -464,7 +458,6 @@
             })
 
             $(document).delegate('.remove-note', 'click', function() {
-                console.log('sdfasdas')
                 $(this).parent().parent().after($('#delete-note-content').css('display', 'flex').hide().fadeIn());
             });
         });

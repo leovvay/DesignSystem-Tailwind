@@ -863,6 +863,9 @@
     &:focus-within {
       .dropdown-menu {
         @apply h-max max-w-99.75 visible p-2 mt-1 shadow-dropdown-menu ring-1 ring-primary-5 left-auto;
+        .dropdown-container {
+          @apply max-h-full;
+        }
       }
     }
   }
@@ -1135,7 +1138,7 @@
   }
   .text-option {
     @extend .heebo-font;
-    @apply min-w-61 flex items-center space-x-3 py-3 pl-3 bg-white rounded text-primaryDark text-base font-medium whitespace-nowrap overflow-hidden;
+    @apply min-w-61 flex items-center space-x-3 py-3 pl-3 bg-white rounded text-primaryDark text-base font-normal whitespace-nowrap overflow-hidden;
     &:focus {
       @apply ring-1 bg-secondary-5 ring-secondary-20;
     }
@@ -1225,7 +1228,7 @@
     @apply relative inline-block w-max;
     .dropdown-btn {
       @extend .heebo-font;
-      @apply inline-flex items-center py-1.5 pl-2.5 pr-1.5 space-x-2 text-primaryDark text-sm leading-normal font-medium rounded-lg border-2 border-primary-5;
+      @apply inline-flex items-center justify-between py-1.5 pl-2.5 pr-1.5 space-x-2 text-primaryDark text-sm leading-normal font-medium rounded-lg border-2 border-primary-5;
       div {
         @apply p-1 text-base leading-none bg-primary-5 rounded-lg flex items-center;
       }
@@ -1974,7 +1977,7 @@
         }
         .order-manage {
           @apply flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:items-center sm:justify-between py-3 sm:py-2 px-4 bg-white rounded-2.5 border border-primary-5;
-          label {
+          .order-manage-time-label {
             @apply pt-1.25 flex flex-col;
             .bold-text {
               @apply text-primaryDark;
@@ -2028,10 +2031,13 @@
           }
           .dropdown-group {
             @apply w-full sm:w-auto flex items-center space-x-4;
-            .big-dropdown {
+            .small-dropdown {
               @apply flex-1 sm:flex-auto;
               .dropdown-btn {
                 @apply w-full;
+              }
+              .dropdown-menu {
+                @apply left-auto right-0;
               }
               .text-option {
                 @apply min-w-max sm:min-w-61;
@@ -2048,7 +2054,7 @@
           .roster-content-header {
             @apply px-4 py-2 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:items-center sm:justify-between;
             .left-content {
-              @apply flex flex-col space-y-1;
+              @apply flex flex-col;
               .top-part {
                 @apply flex items-center space-x-2 text-base leading-relaxed;
                 label {
@@ -2204,12 +2210,12 @@
               }
             }
           }
-          .active-content {
-            @apply flex;
-          }
         }
       }
     }
+  }
+  .active-content {
+    @apply flex !important;
   }
   /* delete message */
   .delete-message-content {
@@ -2250,7 +2256,7 @@
   }
   /* payment status */
   .default-payment-status {
-    @apply flex items-center space-x-1.5 text-sm leading-normal font-medium;
+    @apply flex items-center space-x-1.5 text-base leading-normal font-medium;
     .icon {
       @apply text-base leading-none;
     }
@@ -2362,7 +2368,7 @@
       @apply p-4 flex items-center space-x-10 whitespace-nowrap overflow-x-auto;
     }
     .pricing-tab-content {
-      @apply flex flex-col space-y-1;
+      @apply hidden flex-col space-y-1;
       .pricing-questions {
         @apply px-4 flex items-center justify-between;
       }
@@ -2381,6 +2387,9 @@
           @apply bg-background;
         }
       }
+    }
+    .information-tab-content {
+      @apply hidden px-4;
     }
   }
 
